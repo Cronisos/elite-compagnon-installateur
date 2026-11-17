@@ -59,6 +59,7 @@ const MODELES = {
   typex_3: 'Alliance Challenger', krait_light: 'Krait Phantom', mamba: 'Mamba', python_nx: 'Python Mk II', type8: 'Type-8 Transporter',
   mandalay: 'Mandalay', cobramkv: 'Cobra Mk V', corsair: 'Corsair', panthermkii: 'Panther Clipper Mk II', lakonminer: 'Type-11 Prospector',
   explorer_nx: 'Caspian Explorer', mediumtransport01: 'Lynx Highliner', smallcombat01_nx: 'Kestrel Mk II',
+  anacondamkii: 'Anaconda Mk II',
 };
 
 /** Nom en clair d'un modèle du journal, ou null s'il est inconnu (vaisseau sorti depuis). */

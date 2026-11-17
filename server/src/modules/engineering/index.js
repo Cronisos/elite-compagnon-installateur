@@ -7,6 +7,7 @@ import { Passage } from './services/passage.js';
 import { strictBody } from './services/input.js';
 import { portraitDe } from './services/portraits.js';
 import { ShipNicknames } from '../../core/shipNicknames.js';
+import { dessinRecadre } from '../../core/reference/vaisseaux.js';
 
 const wrap = (fn) => (req, res, next) => fn(req, res).catch(next);
 
@@ -86,7 +87,8 @@ export default {
         ...s,
         nickname: nicknames.get(s.shipId, svc.commander()) || null,
         planId: byShip.get(s.shipId) || null,
-        hasImage: svc.hasImage(s.key),
+        // Sans clé de référence (Lynx Highliner) : l'image est rangée sous le nom du journal, comme la page la demande
+        hasImage: svc.hasImage(s.key || s.type),
       })));
     }));
 
@@ -100,6 +102,9 @@ export default {
       if (!p) return res.status(404).end();
       // Dessins SVG téléchargés et images envoyées par le joueur : ouverts seuls dans un onglet, aucun
       // script ne s'exécute (sandbox) et le navigateur ne devine pas un autre type de contenu (nosniff)
+      // Dessin du pack : envoyé recadré sur le vaisseau (core/reference/vaisseaux.js), le fichier reste intact
+      const recadre = dessinRecadre(p);
+      if (recadre) return res.set(IMAGE_HEADERS).type('image/svg+xml').send(recadre);
       res.set(IMAGE_HEADERS).sendFile(p);
     }));
 

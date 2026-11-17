@@ -206,7 +206,7 @@ export function mapLoadout(ref, shipKey, loadout) {
 
   const sizeOf = (name) => Number(/_Size(\d+)/i.exec(name)?.[1] ?? NaN);
   const num = (name) => Number(/(\d+)/.exec(name)?.[1] ?? 0);
-  const journalInternal = modules.map((m) => m.Slot).filter((s) => /^(Slot|Military|Cargo)\d+/i.test(s)).sort((a, b) => num(a) - num(b));
+  const journalInternal = modules.map((m) => m.Slot).filter((s) => /^(Slot|Military|Cargo|Passenger)\d+/i.test(s)).sort((a, b) => num(a) - num(b));
   const nextInternal = (prefix, size) =>
     journalInternal.find((s) => !used.has(s) && s.toLowerCase().startsWith(prefix) && (size == null || Number.isNaN(sizeOf(s)) || sizeOf(s) === size));
 
@@ -223,6 +223,7 @@ export function mapLoadout(ref, shipKey, loadout) {
     } else if (slot.restriction === 'PlanetaryApproachSuite') journal = 'PlanetaryApproachSuite';
     else if (slot.restriction === 'Military') journal = nextInternal('military', null);
     else if (slot.restriction === 'Cargo') journal = nextInternal('cargo', null);
+    else if (slot.restriction === 'Passenger') journal = nextInternal('passenger', null); // Lynx Highliner : « Passenger01 »
     else journal = nextInternal('slot', slot.size);
     if (journal) m = take(journal);
     return { ...slot, journalSlot: journal || null, current: currentOf(m) };

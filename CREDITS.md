@@ -41,6 +41,11 @@ n'emporte ni `server/data/` ni les photographies de test (`__golden__/`).
 licence. Ils passent avant les dessins téléchargés ci-dessus (même auteur, édition plus ancienne). Vérifiés par
 `vaisseaux.test.js` : aucun script, attribut d'événement ni lien extérieur ; servis avec `Content-Security-Policy: sandbox`.
 
+**Vaisseaux sans dessin dans ce pack** (trop récents) : l'Anaconda Mk II, le Caspian Explorer, le Kestrel Mk II et le
+Lynx Highliner ont chacun une image dessinée par l'auteur de l'app, **Cronisos Lysiris** (`anacondamkii.webp`,
+`explorer_nx.webp`, `kestrel.webp`, `mediumtransport01.webp`, détourées et réduites). Ce sont des créations de fan ;
+les vaisseaux sont ceux d'Elite Dangerous, © Frontier Developments plc, sans lien avec ce projet.
+
 Versions figées, relevées le 7 novembre 2026 (dernier commit de `master` ce jour-là) ; le bouton
 « Mettre à jour les données » télécharge exactement ces versions (`server/src/core/reference/download.js`) :
 

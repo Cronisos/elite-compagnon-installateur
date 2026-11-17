@@ -151,3 +151,25 @@ test('remplacement coupé net : dossier absent et données restées en « .old �
     fs.rmSync(old, { recursive: true, force: true });
   }
 });
+
+test('shipKey : par l’identifiant Frontier, sinon par le nom (Corsair), sinon rien (vaisseau absent de coriolis)', () => {
+  const dir = fixture();
+  try {
+    fs.writeFileSync(path.join(dir, 'coriolis/ships/vide.json'), JSON.stringify({
+      federal_corvette: { edID: 128049369, properties: { name: 'Federal Corvette' } },
+      imperial_corsair: { edID: 1, properties: { name: 'Corsair' } },
+    }));
+    fs.writeFileSync(path.join(dir, 'fdevids/shipyard.csv'), `id,symbol,name,entitlement
+128049369,Federation_Corvette,Federal Corvette,
+129032000,Corsair,Corsair,
+129033000,MediumTransport01,Lynx Highliner,
+`);
+    const ref = loadReference(dir);
+    assert.equal(ref.shipKey('federation_corvette'), 'federal_corvette');
+    assert.equal(ref.shipKey('corsair'), 'imperial_corsair', 'identifiant différent : retrouvé par le nom');
+    assert.equal(ref.shipKey('mediumtransport01'), null);
+    assert.equal(ref.shipKey('imperial_corsair'), 'imperial_corsair', 'une clé coriolis reste elle-même');
+  } finally {
+    fs.rmSync(dir, { recursive: true, force: true });
+  }
+});

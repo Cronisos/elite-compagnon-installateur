@@ -7,6 +7,8 @@ import { REF_DIR, SHIP_IMAGES, readMeta, recoverInterruptedReplace, verifyRefere
 import {
   BLUEPRINT_LABELS, SPECIAL_LABELS, SPECIAL_NAME_LABELS, GROUP_LABELS, RAW_LABELS, STANDARD_SLOTS, HARDPOINT_SIZES, HARDPOINT_LABELS,
 } from './labels.js';
+import { loadEddb } from './eddbData.js';
+import { vaisseauxEdsy } from './vaisseauxEdsy.js';
 
 /** Fin du nom d'une modification, commune à ses variantes pour un même module. */
 export const blueprintTail = (b) => String(b || '').toLowerCase().split('_').pop();
@@ -208,10 +210,24 @@ function buildReference(dir) {
   // Vaisseaux : ShipType du journal → clé coriolis (via les identifiants Frontier)
   const ships = Object.create(null); // sans prototype : « constructor » n'est pas un vaisseau
   for (const file of readJsonTree(c('ships'))) Object.assign(ships, file);
+  // Vaisseaux que coriolis ne connaît pas encore (Lynx Highliner, Anaconda Mk II) : repris d'EDSY (vaisseauxEdsy.js).
+  // Des tables d'EDSY absentes ou illisibles ne privent pas des autres vaisseaux : ceux-là manquent, c'est tout.
+  try {
+    Object.assign(ships, vaisseauxEdsy(loadEddb(dir), ships));
+  } catch (err) {
+    console.warn(`Vaisseaux d'EDSY non repris : ${err?.message ?? err}`);
+  }
   const shipByEdId = new Map(Object.entries(ships).map(([k, s]) => [String(s.edID), k]));
   const shipyard = readCsv(path.join(dir, 'fdevids', 'shipyard.csv'));
   const journalShip = new Map();
-  for (const y of shipyard) journalShip.set(y.symbol.toLowerCase(), { key: shipByEdId.get(y.id) || null, name: y.name });
+  // Repli par le nom : coriolis n'a pas le bon identifiant Frontier pour certains vaisseaux récents (Corsair), qui
+  // restaient sans clé, donc sans dessin ni fiche
+  const shipByName = new Map(Object.entries(ships).map(([k, s]) => [String(s.properties?.name || '').toLowerCase(), k]));
+  shipByName.delete('');
+  for (const y of shipyard) {
+    const key = shipByEdId.get(y.id) || shipByName.get(String(y.name || '').toLowerCase()) || null;
+    journalShip.set(y.symbol.toLowerCase(), { key, name: y.name });
+  }
 
   const engineerRows = readCsv(path.join(dir, 'fdevids', 'engineers.csv'));
   const engineers = new Map(engineerRows.map((e) => [Number(e.id), e.name]));
@@ -281,6 +297,7 @@ function buildReference(dir) {
           restriction: obj?.name || null, // Military, Cargo, PlanetaryApproachSuite…
           eligible: obj?.eligible ? Object.keys(obj.eligible) : null,
           label: obj?.name === 'Military' ? 'Compartiment militaire' : obj?.name === 'Cargo' ? 'Soute uniquement'
+            : obj?.name === 'Passenger' ? 'Cabine passagers uniquement' : obj?.name === 'Fighter' ? 'Hangar uniquement'
             : obj?.name === 'PlanetaryApproachSuite' ? "Suite d'approche planétaire" : 'Interne',
         });
       });
