@@ -1,0 +1,364 @@
+{
+ "note": "Séquences de montée de rang lues dans les journaux de référence (scripts/regles/deduire-rangs.mjs) : ingénieurs, rangs, relevés et grades seulement. G3d : à distance ; G5x : effet expérimental ; G2? : lieu inconnu. journal : par jour (UTC), EngineerProgress complets (full) et unitaires (single, dont avec RankProgress), EngineerCraft (crafts).",
+ "sequences": [
+  {
+   "engineer": "Broo Tarquin",
+   "rank": 1,
+   "start": {
+    "kind": "déblocage",
+    "at": "2026-11-02T19:42:39Z",
+    "progress": 0
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-02T19:55:56Z",
+    "toRank": 2
+   },
+   "applications": "G1 G1 G1"
+  },
+  {
+   "engineer": "Broo Tarquin",
+   "rank": 2,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-02T19:55:56Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-02T19:56:24Z",
+    "toRank": 3
+   },
+   "applications": "G1 G1 G1 G2 G2 G2"
+  },
+  {
+   "engineer": "Broo Tarquin",
+   "rank": 3,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-02T19:56:24Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "relevé",
+    "at": "2026-11-02T20:16:36Z",
+    "progress": 24
+   },
+   "applications": "G2 G2"
+  },
+  {
+   "engineer": "Broo Tarquin",
+   "rank": 3,
+   "start": {
+    "kind": "relevé",
+    "at": "2026-11-05T12:15:49Z",
+    "progress": 24
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-05T12:35:29Z",
+    "toRank": 4
+   },
+   "applications": "G3d G3d G3d G3d G3d G1 G1 G1 G1 G2 G2 G2 G2 G1 G1 G1 G1 G1 G1 G1 G1 G1 G1 G1 G1 G2"
+  },
+  {
+   "engineer": "Broo Tarquin",
+   "rank": 4,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-05T12:35:29Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-05T12:35:56Z",
+    "toRank": 5
+   },
+   "applications": "G2 G2 G2 G4 G4 G4"
+  },
+  {
+   "engineer": "Lei Cheung",
+   "rank": 1,
+   "start": {
+    "kind": "déblocage",
+    "at": "2026-11-01T22:38:22Z",
+    "progress": 0
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T22:38:59Z",
+    "toRank": 2
+   },
+   "applications": "G1 G1 G1"
+  },
+  {
+   "engineer": "Lei Cheung",
+   "rank": 2,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-01T22:38:59Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T22:40:43Z",
+    "toRank": 3
+   },
+   "applications": "G1 G1 G1 G1 G1 G1 G1 G1 G1 G1 G1 G1"
+  },
+  {
+   "engineer": "Lei Cheung",
+   "rank": 3,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-01T22:40:43Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "relevé",
+    "at": "2026-11-01T22:41:59Z",
+    "progress": 4
+   },
+   "applications": "G1 G1"
+  },
+  {
+   "engineer": "Lei Cheung",
+   "rank": 3,
+   "start": {
+    "kind": "relevé",
+    "at": "2026-11-01T22:41:59Z",
+    "progress": 4
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T22:42:49Z",
+    "toRank": 4
+   },
+   "applications": "G1 G1 G2 G2 G2 G2 G3 G3"
+  },
+  {
+   "engineer": "Lei Cheung",
+   "rank": 4,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-01T22:42:49Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T22:43:08Z",
+    "toRank": 5
+   },
+   "applications": "G3 G3 G3 G4 G4 G4"
+  },
+  {
+   "engineer": "Selene Jean",
+   "rank": 4,
+   "start": {
+    "kind": "relevé",
+    "at": "2026-11-01T22:41:59Z",
+    "progress": 0
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T23:38:14Z",
+    "toRank": 5
+   },
+   "applications": "G1 G1 G2 G2 G2 G3 G3 G3 G3 G4 G4"
+  },
+  {
+   "engineer": "The Dweller",
+   "rank": 3,
+   "start": {
+    "kind": "relevé",
+    "at": "2026-11-01T22:41:59Z",
+    "progress": 40
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T23:25:31Z",
+    "toRank": 4
+   },
+   "applications": "G1 G1 G1 G2 G2 G2 G2 G3"
+  },
+  {
+   "engineer": "The Dweller",
+   "rank": 4,
+   "start": {
+    "kind": "montée",
+    "at": "2026-11-01T23:25:31Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-11-01T23:26:24Z",
+    "toRank": 5
+   },
+   "applications": "G3 G3 G3 G3 G4 G4 G4"
+  },
+  {
+   "engineer": "Tiana Fortune",
+   "rank": 1,
+   "start": {
+    "kind": "déblocage",
+    "at": "2026-10-28T03:26:58Z",
+    "progress": 0
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-10-28T03:28:03Z",
+    "toRank": 2
+   },
+   "applications": "G1 G1 G1"
+  },
+  {
+   "engineer": "Tiana Fortune",
+   "rank": 2,
+   "start": {
+    "kind": "montée",
+    "at": "2026-10-28T03:28:03Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-10-28T03:28:20Z",
+    "toRank": 3
+   },
+   "applications": "G1 G1 G2 G2 G2"
+  },
+  {
+   "engineer": "Tiana Fortune",
+   "rank": 3,
+   "start": {
+    "kind": "montée",
+    "at": "2026-10-28T03:28:20Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-10-28T03:29:23Z",
+    "toRank": 4
+   },
+   "applications": "G2 G2 G3 G3 G3"
+  },
+  {
+   "engineer": "Tiana Fortune",
+   "rank": 4,
+   "start": {
+    "kind": "montée",
+    "at": "2026-10-28T03:29:23Z",
+    "progress": null
+   },
+   "end": {
+    "kind": "montée",
+    "at": "2026-10-28T03:29:39Z",
+    "toRank": 5
+   },
+   "applications": "G3 G3 G4 G4 G4"
+  }
+ ],
+ "journal": {
+  "2026-10-23": {
+   "full": 2,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-10-24": {
+   "full": 3,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 23
+  },
+  "2026-10-25": {
+   "full": 10,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 21
+  },
+  "2026-10-26": {
+   "full": 2,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 68
+  },
+  "2026-10-27": {
+   "full": 1,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 6
+  },
+  "2026-10-28": {
+   "full": 4,
+   "single": 5,
+   "singleWithProgress": 0,
+   "crafts": 38
+  },
+  "2026-10-29": {
+   "full": 6,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-10-30": {
+   "full": 11,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-10-31": {
+   "full": 1,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-11-01": {
+   "full": 4,
+   "single": 9,
+   "singleWithProgress": 0,
+   "crafts": 466
+  },
+  "2026-11-02": {
+   "full": 4,
+   "single": 3,
+   "singleWithProgress": 0,
+   "crafts": 11
+  },
+  "2026-11-03": {
+   "full": 2,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 57
+  },
+  "2026-11-04": {
+   "full": 2,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 29
+  },
+  "2026-11-05": {
+   "full": 2,
+   "single": 2,
+   "singleWithProgress": 0,
+   "crafts": 89
+  },
+  "2026-11-06": {
+   "full": 3,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-11-07": {
+   "full": 3,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 0
+  },
+  "2026-11-08": {
+   "full": 2,
+   "single": 0,
+   "singleWithProgress": 0,
+   "crafts": 55
+  }
+ }
+}

@@ -1,0 +1,790 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-08",
+  "about": "Référentiel des règles du jeu en français. Chaque règle a un identifiant stable (lien /regles#identifiant), un statut (mesuree, publiee, a-verifier), une date de vérification et ses sources. Les valeurs (values) sont les constantes que la vigie des règles comparera à ce que le jeu fait ; journal liste les événements et champs qui permettent de le faire.",
+  "sheets": [
+    {
+      "id": "powerplay",
+      "title": "Powerplay 2.0",
+      "summary": "Comment un système change de niveau : prise, renforcement, sape, paliers, portée et passage de semaine. Les chiffres mesurés viennent des journaux de l'escadron, pour Aisling Duval."
+    },
+    {
+      "id": "merites-vente",
+      "title": "Minage et commerce pour les mérites",
+      "summary": "Où miner, où acheter et où vendre pour qu'une vente rapporte des mérites. Le lieu compte plus que la quantité : c'est lui qui explique les ventes à 0 mérite."
+    },
+    {
+      "id": "colonisation",
+      "title": "Colonisation",
+      "summary": "Seulement ce qui est vérifié. Les journaux de l'escadron (23 oct.–7 nov. 2026) ne contiennent aucun événement de colonisation : rien n'a encore été mesuré. Faute de preuve, ces affirmations courantes ne sont pas reprises comme règles : l'échéance de 4 semaines d'un chantier, la fenêtre de revendication (30 min, puis 23 h 30) et les besoins des chantiers dans l'API de Frontier."
+    },
+    {
+      "id": "escadrons",
+      "title": "Escadrons",
+      "summary": "Ce que le jeu écrit sur ton escadron, et ce qu'il n'écrit pas."
+    }
+  ],
+  "rules": [
+    {
+      "id": "pp-etats",
+      "sheet": "powerplay",
+      "title": "Les quatre niveaux d'un système",
+      "statement": "À chaque arrivée dans un système, le jeu écrit son niveau Powerplay. Une prise fait passer un système d'Inoccupé à Exploité, puis le renforcement le fait monter à Consolidé et à Forteresse.",
+      "terms": [
+        { "fr": "Inoccupé", "en": "Unoccupied", "note": "terme de l'app ; libellé du jeu en français à vérifier" },
+        { "fr": "Exploité", "en": "Exploited" },
+        { "fr": "Consolidé", "en": "Fortified" },
+        { "fr": "Forteresse", "en": "Stronghold" }
+      ],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "49 journaux du 23 oct. au 7 nov. 2026" }],
+      "evidence": [
+        "289 relevés Unoccupied, 233 Exploited, 69 Fortified et 224 Stronghold, aucun autre niveau.",
+        "Le journal écrit bien le niveau Unoccupied, avec la progression de chaque puissance en prise (PowerplayConflictProgress)."
+      ],
+      "caveats": ["Le journal écrit les niveaux en anglais, même quand le jeu est en français."],
+      "journal": ["FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState", "FSDJump.PowerplayConflictProgress", "Location.PowerplayConflictProgress", "CarrierJump.PowerplayConflictProgress"]
+    },
+    {
+      "id": "pp-merites-points",
+      "sheet": "powerplay",
+      "title": "4 mérites pour 1 point de contrôle",
+      "statement": "4 mérites donnent 1 point de contrôle, en prise comme en renforcement.",
+      "terms": [
+        { "fr": "Mérites", "en": "Merits" },
+        { "fr": "Points de contrôle", "en": "Control points", "note": "terme de l'app ; libellé du jeu en français à vérifier" }
+      ],
+      "values": [{ "key": "merites-par-point", "label": "Mérites pour 1 point", "value": 4, "unit": "mérites" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-06",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "relevés du 1er et du 6 nov. 2026" }],
+      "evidence": [
+        "Synuefe GA-I b57-6 (prise), 30 oct. 2026 : 2 322 mérites, progression +0,004833, soit 580 points.",
+        "Col 285 Sector AN-G b25-1 (prise) : même rapport (mesure du 1er nov. 2026).",
+        "Synuefe OU-E c28-2 (renforcement), 6 nov. 2026 : rapport compatible avec le relevé, une fois comptés les autres joueurs."
+      ],
+      "caveats": ["Exception : 6 mérites par point pour l'exploration et l'exobiologie."],
+      "related": ["pp-merites-points-exploration", "pp-prise-seuil", "pp-renforcement", "pp-releve-tous"],
+      "journal": ["PowerplayMerits.MeritsGained", "FSDJump.PowerplayConflictProgress", "Location.PowerplayConflictProgress", "CarrierJump.PowerplayConflictProgress", "FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement"]
+    },
+    {
+      "id": "pp-merites-points-exploration",
+      "sheet": "powerplay",
+      "title": "Exploration et exobiologie : 6 mérites par point",
+      "statement": "Les mérites gagnés en vendant des données d'exploration ou d'exobiologie comptent moins : 6 mérites pour 1 point de contrôle.",
+      "terms": [],
+      "values": [{ "key": "merites-par-point", "label": "Mérites pour 1 point", "value": 6, "unit": "mérites" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-01",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "règle de l'escadron, confirmée sur les relevés de référence" }],
+      "evidence": ["Règle de l'escadron, confirmée sur les relevés de référence (1er nov. 2026)."],
+      "related": ["pp-merites-points"],
+      "journal": ["SellExplorationData", "MultiSellExplorationData", "SellOrganicData", "PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "pp-prise-seuil",
+      "sheet": "powerplay",
+      "title": "Prise : 120 000 points pour un système",
+      "statement": "En prise, la progression va de 0 à 1,0, et 1,0 vaut 120 000 points de contrôle, soit 480 000 mérites. Au passage de semaine, un système qui a atteint 1,0 devient Exploité pour ta puissance.",
+      "terms": [{ "fr": "Prise", "en": "Acquisition", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [
+        { "key": "points", "label": "Points pour 1,0 de progression", "value": 120000, "unit": "points de contrôle" },
+        { "key": "merites", "label": "En mérites (4 par point)", "value": 480000, "unit": "mérites" }
+      ],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "Col 285 Sector AN-G b25-1 et Synuefe GA-I b57-6, mesure du 1er nov. 2026" }],
+      "evidence": [
+        "Synuefe GA-I b57-6, 30 oct. 2026 : 580 points pour +0,004833, soit 120 000 points pour 1,0.",
+        "Kuwemaki : prise à 2,33 le 26 oct. 2026, Exploité pour Aisling Duval au relevé du 1er nov."
+      ],
+      "caveats": ["Quand plusieurs puissances prennent le même système, le départage n'a pas été mesuré."],
+      "related": ["pp-prise-conflit", "pp-surplus-perdu", "mv-acquisition-lieu"],
+      "journal": ["FSDJump.PowerplayConflictProgress", "Location.PowerplayConflictProgress", "CarrierJump.PowerplayConflictProgress", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState", "FSDJump.ControllingPower", "Location.ControllingPower", "CarrierJump.ControllingPower"]
+    },
+    {
+      "id": "pp-prise-conflit",
+      "sheet": "powerplay",
+      "title": "Prise : le conflit s'ouvre à 36 000 points",
+      "statement": "Une prise passe en conflit à 36 000 points de contrôle, soit 0,30 de progression.",
+      "terms": [],
+      "values": [
+        { "key": "points", "label": "Seuil du conflit", "value": 36000, "unit": "points de contrôle" },
+        { "key": "progression", "label": "Soit, en progression", "value": 0.3, "unit": "de la jauge de prise" }
+      ],
+      "status": "mesuree",
+      "checkedAt": "2026-11-01",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "relevés de référence, 1er nov. 2026" }],
+      "evidence": ["Relevés de référence (1er nov. 2026)."],
+      "caveats": ["Ce que change le conflit (qui l'emporte, et quand) n'a pas été mesuré."],
+      "related": ["pp-prise-seuil"],
+      "journal": ["FSDJump.PowerplayConflictProgress", "Location.PowerplayConflictProgress", "CarrierJump.PowerplayConflictProgress"]
+    },
+    {
+      "id": "pp-renforcement",
+      "sheet": "powerplay",
+      "title": "Renforcement : le total de la semaine",
+      "statement": "Dans un système déjà tenu, tes points s'ajoutent au renforcement de la semaine. Ce total fait monter la jauge du niveau, puis repart de zéro au passage de semaine. La jauge, elle, garde ce qu'elle a gagné tant que le système reste au même niveau.",
+      "terms": [{ "fr": "Renforcement", "en": "Reinforcement" }],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 29 oct. au 7 nov. 2026" }],
+      "evidence": [
+        "Mombaluma (Forteresse), 29-30 oct. 2026 : renforcement 166 → 149 915, jauge 0,360628 → 0,510377, soit +149 749 points pour +0,149749.",
+        "Synuefe OU-E c28-2 (Exploité), 6 nov. 2026 : 60 779 mérites de vente, relevé 16 079 → 35 547 avec les autres joueurs.",
+        "Jauge gardée d'une semaine à l'autre : Synuefe OU-E c28-2 à 0,420081 le mercredi 4 nov. 2026 (renforcement 80 629), puis 0,41317 le jeudi 5 nov. (renforcement 185, sape 5 175) ; Talta (Forteresse) à 0,44306 le mercredi 28 oct. 2026, puis 0,412327 le jeudi 29 oct. (renforcement 1 460, sape 42 333 déjà déduite)."
+      ],
+      "related": ["pp-merites-points", "pp-releve-tous", "pp-passage-semaine"],
+      "journal": ["FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement", "FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress"]
+    },
+    {
+      "id": "pp-palier-consolide",
+      "sheet": "powerplay",
+      "title": "Exploité → Consolidé : 350 000 points",
+      "statement": "La jauge d'un système Exploité vaut 350 000 points. Pleine au passage de semaine, elle fait passer le système à Consolidé.",
+      "terms": [
+        { "fr": "Exploité", "en": "Exploited" },
+        { "fr": "Consolidé", "en": "Fortified" }
+      ],
+      "values": [{ "key": "points", "label": "Jauge d'un système Exploité", "value": 350000, "unit": "points de contrôle" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "mesure de référence du 1er nov. 2026, relevés du 1er au 7 nov. 2026" }],
+      "evidence": [
+        "Mesure de référence (1er nov. 2026).",
+        "Kuwemaki (Exploité), 1er nov. 2026 : 297 678 points de renforcement pour une jauge de 0,851, soit environ 350 000 points pour 1,0.",
+        "14 paires de relevés successifs de Synuefe OU-E c28-2 et de Kuwemaki (2-7 nov. 2026) : de 349 978 à 350 095 points pour 1,0 de jauge."
+      ],
+      "caveats": ["Le passage d'Exploité à Consolidé lui-même n'a pas encore été relevé dans les journaux de l'escadron."],
+      "related": ["pp-palier-forteresse", "pp-surplus-renforcement"],
+      "journal": ["FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress", "FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-palier-forteresse",
+      "sheet": "powerplay",
+      "title": "Consolidé → Forteresse : 650 000 points",
+      "statement": "La jauge d'un système Consolidé vaut 650 000 points. D'Inoccupé à Forteresse, il faut donc 1 120 000 points en tout : 120 000 de prise, puis 350 000, puis 650 000.",
+      "terms": [
+        { "fr": "Consolidé", "en": "Fortified" },
+        { "fr": "Forteresse", "en": "Stronghold" }
+      ],
+      "values": [
+        { "key": "points", "label": "Jauge d'un système Consolidé", "value": 650000, "unit": "points de contrôle" },
+        { "key": "total", "label": "D'Inoccupé à Forteresse", "value": 1120000, "unit": "points de contrôle" }
+      ],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "deux mesures de référence du 1er nov. 2026, relevés du 24 oct. au 3 nov. 2026" }],
+      "evidence": [
+        "Deux mesures de référence (1er nov. 2026).",
+        "4 paires de relevés successifs de systèmes Consolidés (Synuefe MP-U b49-3, Wepawegana, Arque, 26 oct.-3 nov. 2026) : de 649 974 à 650 009 points pour 1,0 de jauge."
+      ],
+      "caveats": ["Le passage de Consolidé à Forteresse lui-même n'a pas encore été relevé dans les journaux de l'escadron, ni ce que devient le surplus d'un palier de renforcement."],
+      "related": ["pp-palier-consolide", "pp-jauge-forteresse", "pp-surplus-renforcement"],
+      "journal": ["FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-jauge-forteresse",
+      "sheet": "powerplay",
+      "title": "Forteresse : une jauge de 1 000 000 points",
+      "statement": "La jauge d'une Forteresse vaut 1 000 000 points de renforcement.",
+      "terms": [{ "fr": "Forteresse", "en": "Stronghold" }],
+      "values": [{ "key": "points", "label": "Jauge d'une Forteresse", "value": 1000000, "unit": "points de contrôle" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "relevés de Forteresses du 24 oct. au 4 nov. 2026" }],
+      "evidence": [
+        "Mombaluma, 29-30 oct. 2026 : +149 749 points de renforcement pour +0,149749 de jauge.",
+        "44 paires de relevés successifs de 7 Forteresses (Ngurii, Talta, Cemiess, ICZ KC-U b3-4, Mombaluma, Deciat, Laksak, 24 oct.-4 nov. 2026) : exactement 1 000 000 points pour 1,0 de jauge."
+      ],
+      "related": ["pp-renforcement", "pp-palier-forteresse"],
+      "journal": ["FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress", "FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement"]
+    },
+    {
+      "id": "pp-surplus-perdu",
+      "sheet": "powerplay",
+      "title": "Prise : le surplus est perdu au passage de semaine",
+      "statement": "En prise, ce qui dépasse 1,0 ne passe pas au niveau suivant : au passage de semaine, le système devient Exploité avec une jauge presque vide, quel que soit le dépassement. Une fois 1,0 atteint en prise, mieux vaut s'arrêter jusqu'au jeudi.",
+      "terms": [{ "fr": "Prise", "en": "Acquisition", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "Col 285 Sector AN-G b25-1 et Kuwemaki, oct.-nov. 2026" }],
+      "evidence": [
+        "Col 285 Sector AN-G b25-1 : prise montée à 2,77 (26 oct. 2026), puis Exploité à 0,0006 après le passage de semaine (mesure de référence).",
+        "Kuwemaki : prise à 2,33 le 26 oct. 2026, puis Exploité le 1er nov. avec une jauge de 0,851 qui ne vient que du renforcement de la semaine (297 678 points) : la jauge était repartie d'environ 0,0006."
+      ],
+      "caveats": ["Mesuré seulement en prise. Pour les paliers de renforcement (Exploité → Consolidé → Forteresse), voir la règle à vérifier sur le surplus en renforcement."],
+      "related": ["pp-prise-seuil", "pp-surplus-renforcement", "pp-passage-semaine"],
+      "journal": ["FSDJump.PowerplayConflictProgress", "Location.PowerplayConflictProgress", "CarrierJump.PowerplayConflictProgress", "FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-surplus-renforcement",
+      "sheet": "powerplay",
+      "title": "Renforcement : le surplus d'un palier est-il perdu ?",
+      "statement": "On ne sait pas encore si ce qui dépasse 1,0 sur la jauge d'un système Exploité ou Consolidé compte au niveau suivant. Ne t'arrête pas pile à 1,0 : jusqu'au passage de semaine, la sape ennemie continue de faire baisser la jauge.",
+      "terms": [
+        { "fr": "Renforcement", "en": "Reinforcement" },
+        { "fr": "Sape", "en": "Undermining" }
+      ],
+      "values": [],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "49 journaux du 23 oct. au 7 nov. 2026" }],
+      "evidence": [
+        "Les journaux de l'escadron ne contiennent qu'un changement de niveau : Kuwemaki, d'Inoccupé à Exploité, par une prise (1er nov. 2026). Aucun passage d'Exploité à Consolidé ni de Consolidé à Forteresse.",
+        "Synuefe OU-E c28-2 (Exploité) a reçu 5 175 points de sape dès le jeudi 5 nov. 2026 : chaque point retire un point à la jauge."
+      ],
+      "caveats": ["Pour trancher : relever la jauge d'un système juste avant et juste après son passage à Consolidé ou à Forteresse."],
+      "related": ["pp-surplus-perdu", "pp-sape", "pp-palier-consolide", "pp-palier-forteresse"],
+      "journal": ["FSDJump.PowerplayStateControlProgress", "Location.PowerplayStateControlProgress", "CarrierJump.PowerplayStateControlProgress", "FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement", "FSDJump.PowerplayStateUndermining", "Location.PowerplayStateUndermining", "CarrierJump.PowerplayStateUndermining", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-passage-semaine",
+      "sheet": "powerplay",
+      "title": "Passage de semaine : le jeudi",
+      "statement": "Chaque jeudi, le jeu fait le passage de semaine : le renforcement de chaque système repart de zéro et les systèmes changent de niveau.",
+      "terms": [{ "fr": "Passage de semaine", "en": "Weekly tick", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 28 oct. au 5 nov. 2026" }],
+      "evidence": [
+        "Talta : renforcement 233 830 le mercredi 28 oct. 2026 à 20 h 35 UTC, puis 1 460 le jeudi 29 oct. à 10 h 15 UTC.",
+        "Synuefe OU-E c28-2 : 80 629 le mercredi 4 nov. 2026 à 21 h 55 UTC, puis 185 le jeudi 5 nov. à 13 h 02 UTC.",
+        "Achenar : 19 092 le 4 nov. 2026, puis 0 le 5 nov."
+      ],
+      "caveats": ["La sape semble aussi repartir de zéro (Muang : 11 695 le 2 nov. 2026, puis 1 195 le 5 nov.) : une seule mesure."],
+      "related": ["pp-passage-heure", "pp-renforcement", "pp-surplus-perdu"],
+      "journal": ["FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement", "FSDJump.PowerplayStateUndermining", "Location.PowerplayStateUndermining", "CarrierJump.PowerplayStateUndermining", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-passage-heure",
+      "sheet": "powerplay",
+      "title": "Heure du passage de semaine : 7 h UTC ?",
+      "statement": "L'app compte la semaine Powerplay du jeudi 7 h UTC (8 h à Paris en hiver) au jeudi suivant. Les journaux de l'escadron ne confirment pas encore cette heure.",
+      "terms": [],
+      "values": [{ "key": "heure-utc", "label": "Heure du passage, le jeudi", "value": 7, "unit": "h UTC" }],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 28 oct. au 5 nov. 2026" }],
+      "evidence": ["Les journaux placent le passage entre le mercredi 22 h 35 UTC et le jeudi 10 h 15 UTC (28-29 oct. et 4-5 nov. 2026)."],
+      "caveats": ["Pour trancher : relever un même système juste avant et juste après 7 h UTC un jeudi."],
+      "related": ["pp-passage-semaine"],
+      "journal": ["FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement"]
+    },
+    {
+      "id": "pp-sape",
+      "sheet": "powerplay",
+      "title": "Sape : comptée à part",
+      "statement": "La sape des puissances ennemies n'entre pas dans le renforcement : à chaque arrivée dans un système tenu, le jeu écrit à part la sape de la semaine. Chaque point de sape retire un point à la jauge, jusqu'au passage de semaine : la jauge monte de (renforcement − sape) ÷ sa taille en points.",
+      "terms": [{ "fr": "Sape", "en": "Undermining" }],
+      "values": [{ "key": "points-retires", "label": "Points de jauge retirés par point de sape", "value": 1, "unit": "point de contrôle" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "49 journaux du 23 oct. au 7 nov. 2026" }],
+      "evidence": [
+        "Col 285 Sector HR-A b15-1 (Exploité, Felicia Winters), 23 oct. 2026 : renforcement 10, sape 7 041.",
+        "Talta (Forteresse), 24-26 oct. 2026 : renforcement +17 669, sape +4 098, jauge +0,013571, soit exactement 13 571 points sur 1 000 000.",
+        "Arque (Consolidé, Edmund Mahon), 1er-3 nov. 2026 : renforcement +758, sape +3 289, jauge −0,003894, soit −2 531 points sur 650 000.",
+        "Sur 39 paires de relevés successifs avec de la sape (35 en Forteresse, 3 en Consolidé, 1 en Exploité, 24 oct.-4 nov. 2026), l'écart à cette formule ne dépasse jamais 1 point."
+      ],
+      "related": ["pp-surplus-renforcement", "pp-systemes-marques", "pp-passage-semaine"],
+      "journal": ["FSDJump.PowerplayStateUndermining", "Location.PowerplayStateUndermining", "CarrierJump.PowerplayStateUndermining", "FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement"]
+    },
+    {
+      "id": "pp-systemes-marques",
+      "sheet": "powerplay",
+      "title": "Systèmes marqués : mérites majorés",
+      "statement": "Les marqueurs de la carte de la galaxie majorent les mérites : +25 % pour la sape dans un système marqué pour la sape, +35 % pour le renforcement dans un système marqué pour le renforcement.",
+      "terms": [{ "fr": "Sape", "en": "Undermining" }, { "fr": "Renforcement", "en": "Reinforcement" }],
+      "values": [
+        { "key": "sape", "label": "Bonus en sape (système marqué pour la sape)", "value": 25, "unit": "%" },
+        { "key": "renforcement", "label": "Bonus en renforcement (système marqué pour le renforcement)", "value": 35, "unit": "%" }
+      ],
+      "status": "publiee",
+      "checkedAt": "2026-11-08",
+      "sources": [
+        {
+          "type": "web",
+          "label": "Notes de la mise à jour Caspian Explorer (Steam, anglais)",
+          "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1817483467047918",
+          "date": "2025-12-02"
+        }
+      ],
+      "evidence": [],
+      "caveats": [
+        "Ce sont deux marqueurs différents : celui de sape va sur les systèmes que les joueurs d'une puissance sapent le plus, celui de renforcement sur les systèmes les plus attaqués. Au plus 3 marqueurs par puissance, placés une fois par jour.",
+        "Au départ, les marqueurs n'étaient actifs qu'autour de HIP 87621.",
+        "Le journal n'écrit pas ces bonus : l'app ne peut que les constater après coup.",
+        "Les modificateurs changent avec les mises à jour : à revérifier après chaque patch."
+      ],
+      "related": ["pp-sape", "pp-renforcement"],
+      "journal": ["PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "pp-portee",
+      "sheet": "powerplay",
+      "title": "Portée : 20 al d'un Consolidé, 30 al d'une Forteresse",
+      "statement": "Ta puissance ne peut prendre un système qu'à portée d'un système qu'elle tient : 20 années-lumière d'un système Consolidé, 30 d'une Forteresse.",
+      "terms": [
+        { "fr": "Année-lumière (al)", "en": "Light year (ly)" },
+        { "fr": "Consolidé", "en": "Fortified" },
+        { "fr": "Forteresse", "en": "Stronghold" }
+      ],
+      "values": [
+        { "key": "consolide", "label": "Depuis un Consolidé", "value": 20, "unit": "al" },
+        { "key": "forteresse", "label": "Depuis une Forteresse", "value": 30, "unit": "al" }
+      ],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "web", "label": "Guide Powerplay de herzbube (anglais)", "url": "https://wiki.herzbube.ch/wiki/EDPowerPlay", "date": "2026-10-25" }],
+      "evidence": [],
+      "caveats": ["Le Projet extension de l'app refuse déjà une route qui dépasse cette portée."],
+      "related": ["mv-acquisition-lieu"],
+      "journal": ["FSDJump.StarPos", "Location.StarPos", "CarrierJump.StarPos", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "pp-releve-tous",
+      "sheet": "powerplay",
+      "title": "Le relevé compte tous les joueurs de la puissance",
+      "statement": "Les points écrits par le jeu (progression, renforcement) additionnent tous les joueurs de ta puissance dans le système : toi, tes coéquipiers et des inconnus. Ils ne disent jamais quelle part est la tienne. Seul un relevé plus bas que tes propres points prouve qu'il t'en manque.",
+      "terms": [],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-06",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "relevés de référence, oct.-nov. 2026" }],
+      "evidence": [
+        "Une semaine à 83 238 mérites pour 80 629 points relevés faisait croire à 1 mérite pour 1 point : d'autres joueurs comblaient l'écart.",
+        "Synuefe OU-E c28-2, 6 nov. 2026 : +19 468 points relevés, pour environ 15 195 points du joueur de référence (60 779 mérites)."
+      ],
+      "related": ["pp-merites-points", "pp-renforcement"],
+      "journal": ["FSDJump.PowerplayStateReinforcement", "Location.PowerplayStateReinforcement", "CarrierJump.PowerplayStateReinforcement", "PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "pp-origine-gain",
+      "sheet": "powerplay",
+      "title": "Le journal ne dit pas d'où vient un gain",
+      "statement": "L'événement PowerplayMerits ne donne que la puissance, les mérites gagnés et le nouveau total. Pour savoir ce qui a rapporté, il faut regarder ce qui le précède : une vente, un kill, une livraison.",
+      "terms": [],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "49 journaux du 23 oct. au 7 nov. 2026" }],
+      "evidence": ["24 oct. 2026 : { Power: Aisling Duval, MeritsGained: 23803, TotalMerits: 23803 }, sans autre champ."],
+      "related": ["mv-delai", "pp-total-merites"],
+      "journal": ["PowerplayMerits"]
+    },
+    {
+      "id": "pp-total-merites",
+      "sheet": "powerplay",
+      "title": "Compter avec le total, pas avec les gains",
+      "statement": "Pour compter tes mérites, suis le total (TotalMerits) au lieu d'additionner les gains (MeritsGained) : le jeu écrit des gains qu'il ne compte pas, et la somme des gains dépasse le total.",
+      "terms": [],
+      "values": [{ "key": "surestimation", "label": "Surestimation de la somme des gains, mesurée par l'escadron", "value": 0.52, "unit": "%" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [
+        { "type": "escadron", "label": "Mesure de l'escadron", "detail": "1 154 PowerplayMerits du 24 oct. au 7 nov. 2026" },
+        { "type": "web", "label": "EliteMeritTracker (anglais)", "url": "https://github.com/Fumlop/EliteMeritTracker" }
+      ],
+      "evidence": [
+        "24 oct.-7 nov. 2026 : 1 154 gains pour 1 302 730 mérites, mais un total final de 1 296 017 (premier gain et premier total : 23 803), soit 0,52 % de trop.",
+        "53 fois, le total ne vaut pas l'ancien total plus le gain, et il est toujours plus bas : 6 713 mérites en tout.",
+        "7 nov. 2026 à 13 h 50 UTC : deux gains de 2 015 dans la même seconde (total 1 296 259), puis un gain de 1 773 avec un total de 1 296 017, plus bas que le précédent."
+      ],
+      "caveats": [
+        "EliteMeritTracker annonce une surestimation d'environ 5,6 %, dix fois plus que la mesure de l'escadron : on ne sait pas d'où vient l'écart.",
+        "Le jeu écrit parfois un gain puis le retire : l'Historique des mérites de l'app rattache ces doublons au gain d'origine."
+      ],
+      "related": ["pp-origine-gain"],
+      "journal": ["PowerplayMerits.TotalMerits", "PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "pp-manuel",
+      "sheet": "powerplay",
+      "title": "PowerplayMerits absent du manuel officiel",
+      "statement": "Le dernier manuel du journal publié par Frontier (v38, avril 2026) ne documente pas l'événement PowerplayMerits. Tout ce qu'on en sait vient des joueurs.",
+      "terms": [],
+      "values": [],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        {
+          "type": "web",
+          "label": "Manuel du journal v38 (Frontier, anglais)",
+          "url": "https://hosting.zaonce.net/community/journal/v38/Journal_Manual_v38.pdf",
+          "date": "2026-04"
+        }
+      ],
+      "evidence": [],
+      "related": ["colo-manuel"],
+      "journal": ["PowerplayMerits"]
+    },
+    {
+      "id": "mv-acquisition-lieu",
+      "sheet": "merites-vente",
+      "title": "Prise : miner chez toi, vendre dans le système visé",
+      "statement": "Pour une prise, le minerai doit être miné dans un système Consolidé ou Forteresse de ta puissance, puis vendu dans le système à prendre : à 20 al au plus d'un Consolidé, 30 al d'une Forteresse.",
+      "terms": [
+        { "fr": "Prise", "en": "Acquisition", "note": "terme de l'app ; libellé du jeu en français à vérifier" },
+        { "fr": "Consolidé", "en": "Fortified" },
+        { "fr": "Forteresse", "en": "Stronghold" }
+      ],
+      "values": [
+        { "key": "consolide", "label": "Depuis un Consolidé", "value": 20, "unit": "al" },
+        { "key": "forteresse", "label": "Depuis une Forteresse", "value": 30, "unit": "al" }
+      ],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "web", "label": "Guide Powerplay de herzbube (anglais)", "url": "https://wiki.herzbube.ch/wiki/EDPowerPlay", "date": "2026-10-25" }],
+      "evidence": ["Cas mesuré qui va dans le même sens : du minerai miné sur place dans le système à prendre n'a rien rapporté."],
+      "caveats": ["L'escadron n'a pas encore mesuré de vente réussie en prise avec du minerai venu d'un Consolidé ou d'une Forteresse : à faire pendant la prise de Synuefe GA-I b57-6."],
+      "related": ["mv-acquisition-sur-place", "mv-palladium", "pp-portee", "pp-prise-seuil"],
+      "journal": ["MiningRefined", "MarketSell", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState", "FSDJump.StarPos", "Location.StarPos", "CarrierJump.StarPos"]
+    },
+    {
+      "id": "mv-acquisition-sur-place",
+      "sheet": "merites-vente",
+      "title": "Prise : minerai miné sur place, 0 mérite",
+      "statement": "Du minerai miné dans le système à prendre (Inoccupé) et vendu sur place ne rapporte aucun mérite.",
+      "terms": [{ "fr": "Inoccupé", "en": "Unoccupied", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [{ "key": "merites", "label": "Mérites", "value": 0, "unit": "mérites" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journal du 31 oct. 2026" }],
+      "evidence": ["Synuefe GA-I b57-6, 31 oct. 2026 : 1 184 t d'iridium minées sur place, vendues à Rorschach Terminal pour 303,9 M cr, 0 mérite."],
+      "related": ["mv-acquisition-lieu"],
+      "journal": ["MiningRefined", "MarketSell", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "mv-renfort-sur-place",
+      "sheet": "merites-vente",
+      "title": "Minerai miné et vendu chez toi : environ 390 mérites par million",
+      "statement": "Du minerai miné et vendu dans un même système tenu par ta puissance rapporte environ 390 mérites par million de crédits de vente.",
+      "terms": [],
+      "values": [{ "key": "merites-par-million", "label": "Mérites par million de crédits", "value": 390, "unit": "mérites / M cr" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        { "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 30 oct. au 7 nov. 2026" },
+        {
+          "type": "web",
+          "label": "Notes de la mise à jour Dodec (Steam, anglais)",
+          "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1815580768427455",
+          "date": "2025-11-11"
+        }
+      ],
+      "evidence": [
+        "Mombaluma (Forteresse), 30 oct. 2026 : platine 389 et iridium 390 par million (785 t, 444,5 M cr, 173 355 mérites).",
+        "Synuefe OU-E c28-2 (Exploité), 3-7 nov. 2026 : iridium 390 à 391 et or 387 par million.",
+        "Synuefe OU-E c28-2 (Exploité), 7 nov. 2026 : 268 t d'iridium vendues 174 729 cr la tonne à Rivers Depot, 18 311 mérites ; 90 t vendues 194 385 cr la tonne à Flinders City, 6 841 mérites. 391,0 par million dans les deux stations, mais 68 puis 76 mérites par tonne : les mérites suivent les crédits de la vente, pas les tonnes."
+      ],
+      "caveats": [
+        "Pas encore mesuré dans un système Consolidé.",
+        "Miné ailleurs, hors des systèmes de ta puissance, le même minerai n'a rien rapporté : voir la règle sur le minerai miné ailleurs.",
+        "Les ratios mesurés avant la mise à jour Dodec (11 nov. 2025) ne sont pas comparables."
+      ],
+      "related": ["mv-renfort-mine-ailleurs", "mv-commerce", "mv-ennemi", "pp-renforcement"],
+      "journal": ["MiningRefined", "MarketSell.TotalSale", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "mv-renfort-mine-ailleurs",
+      "sheet": "merites-vente",
+      "title": "Renforcement : minerai miné hors de ta puissance, 0 mérite",
+      "statement": "Du minerai miné dans un système d'une autre puissance ou sans puissance, puis vendu dans un système tenu par ta puissance, n'a rapporté aucun mérite. Le seul cas mesuré qui rapporte : miné et vendu dans le même système de ta puissance.",
+      "terms": [],
+      "values": [{ "key": "merites", "label": "Mérites", "value": 0, "unit": "mérites" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 29 oct. et du 6 nov. 2026" }],
+      "evidence": [
+        "Talta (Forteresse d'Aisling Duval), 29 oct. 2026 : 12 t d'iridium minées à Gungnir (Exploité, Yuri Grom, à 96 al), vendues 6 818 808 cr, 0 mérite. À 390 par million, on en attendait environ 2 660.",
+        "Rivers Depot, Synuefe OU-E c28-2 (Exploité, Aisling Duval), 6 nov. 2026 : 2 ventes d'1 t d'iridium minées à HIP 73834 (sans puissance, à 17 al), 194 678 cr chacune, 0 mérite. Dans la même minute, 1 t de titane minée sur place a rapporté 2 mérites."
+      ],
+      "caveats": [
+        "Deux mesures, dont deux petites ventes d'1 t : la mise à jour Dodec a changé les mérites des ventes à l'unité, même si le titane vendu à l'unité a rapporté.",
+        "Pas encore mesuré : minerai miné dans un autre système de ta puissance que celui de la vente."
+      ],
+      "related": ["mv-renfort-sur-place", "mv-ennemi", "mv-acquisition-lieu"],
+      "journal": ["MiningRefined", "MarketSell.TotalSale", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState", "FSDJump.ControllingPower", "Location.ControllingPower", "CarrierJump.ControllingPower"]
+    },
+    {
+      "id": "mv-commerce",
+      "sheet": "merites-vente",
+      "title": "Commerce : 65 à 72 mérites par million",
+      "statement": "Une marchandise achetée ailleurs, même dans un système ennemi, puis vendue dans une Forteresse de ta puissance rapporte des mérites, mais bien moins que du minerai miné : 65 à 72 mérites par million de crédits de vente.",
+      "terms": [],
+      "values": [
+        { "key": "min", "label": "Plus bas mesuré", "value": 65, "unit": "mérites / M cr" },
+        { "key": "max", "label": "Plus haut mesuré", "value": 72, "unit": "mérites / M cr" }
+      ],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 27 et du 28 oct. 2026" }],
+      "evidence": ["Indium et tantale achetés à Cemiess (Forteresse d'A. Lavigny-Duval), vendus à Port Draught (ICZ KC-U b3-4, Forteresse d'Aisling Duval), 27-28 oct. 2026 : indium 70 à 72 par million, tantale 65."],
+      "caveats": ["Les ratios mesurés avant la mise à jour Dodec (11 nov. 2025) ne sont pas comparables."],
+      "related": ["mv-renfort-sur-place", "mv-palladium"],
+      "journal": ["MarketBuy", "MarketSell.TotalSale", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "mv-rares",
+      "sheet": "merites-vente",
+      "title": "Rares vendues en prise : environ 1 500 mérites par million",
+      "statement": "Des marchandises rares vendues dans un système en prise ont rapporté 1 500 mérites par million de crédits, alors qu'elles venaient d'une Forteresse ennemie à plus de 100 al. Vendues dans un système déjà tenu par ta puissance, elles n'en ont rapporté qu'environ 520.",
+      "terms": [{ "fr": "Prise", "en": "Acquisition", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [
+        { "key": "merites-par-million", "label": "Vendues en prise", "value": 1500, "unit": "mérites / M cr" },
+        { "key": "renforcement", "label": "Vendues en renforcement (une seule mesure)", "value": 520, "unit": "mérites / M cr" }
+      ],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 24 oct. au 1er nov. 2026" }],
+      "evidence": [
+        "Reliques de Soontill achetées à Ngurii (Forteresse d'A. Lavigny-Duval), vendues à Col 285 Sector AN-G b25-1 (Inoccupé, en prise, à environ 214 al), 24-26 oct. 2026 : 33 ventes de 400 t, 15,9 M cr et 23 803 mérites chacune.",
+        "Les mêmes, vendues à Rorschach Terminal, Synuefe GA-I b57-6 (Inoccupé, en prise, à environ 102 al), 30 oct. 2026 : 80 t, 1 548 240 cr, 2 322 mérites, soit 1 499,8 par million.",
+        "Les mêmes, vendues à Rivers Depot, Synuefe OU-E c28-2 (Exploité, Aisling Duval, à environ 92 al), 1er nov. 2026 : 80 t, 1 460 880 cr, 759 mérites, soit 519,5 par million."
+      ],
+      "caveats": [
+        "Un seul type de marchandise rare mesuré, et une seule vente en renforcement.",
+        "La règle de lieu du minerai (Consolidé ou Forteresse à 20 ou 30 al) ne s'applique visiblement pas aux rares.",
+        "Les ratios mesurés avant la mise à jour Dodec (11 nov. 2025) ne sont pas comparables."
+      ],
+      "related": ["mv-acquisition-lieu", "mv-commerce"],
+      "journal": ["MarketBuy", "MarketSell.TotalSale", "PowerplayMerits.MeritsGained", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "mv-ennemi",
+      "sheet": "merites-vente",
+      "title": "Système d'une puissance ennemie : 0 mérite",
+      "statement": "Vendre dans un système tenu par une autre puissance ne rapporte aucun mérite, même du minerai miné chez toi.",
+      "terms": [],
+      "values": [{ "key": "merites", "label": "Mérites", "value": 0, "unit": "mérites" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journaux du 27 au 30 oct. 2026" }],
+      "evidence": [
+        "Vequess (Forteresse d'A. Lavigny-Duval), 30 oct. 2026 : 1 184 t d'iridium minées à Mombaluma (Forteresse d'Aisling Duval), 988,8 M cr, 0 mérite.",
+        "Cemiess (Forteresse d'A. Lavigny-Duval), 27-28 oct. 2026 : 41 ventes de bauxite, 0 mérite."
+      ],
+      "related": ["mv-renfort-sur-place", "mv-sans-puissance"],
+      "journal": ["MarketSell", "PowerplayMerits.MeritsGained", "FSDJump.ControllingPower", "Location.ControllingPower", "CarrierJump.ControllingPower", "FSDJump.PowerplayState", "Location.PowerplayState", "CarrierJump.PowerplayState"]
+    },
+    {
+      "id": "mv-sans-puissance",
+      "sheet": "merites-vente",
+      "title": "Système sans puissance : 0 mérite ?",
+      "statement": "Une vente dans un système sans aucune puissance n'a rapporté aucun mérite. La seule mesure ne permet pas de dire si le 0 vient de l'absence de puissance ou de l'origine du minerai.",
+      "terms": [],
+      "values": [{ "key": "merites", "label": "Mérites", "value": 0, "unit": "mérites" }],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journal du 31 oct. 2026" }],
+      "evidence": ["HIP 8060, 31 oct. 2026 : 1 184 t de rhodplumsite, 939,5 M cr, 0 mérite. Ce minerai venait de Synuefe GA-I b57-6 (Inoccupé), miné dans la journée."],
+      "caveats": ["Pour trancher : vendre dans un système sans puissance du minerai miné dans un système tenu par ta puissance."],
+      "related": ["mv-ennemi", "mv-acquisition-sur-place"],
+      "journal": ["MarketSell", "PowerplayMerits.MeritsGained", "FSDJump.Powers", "Location.Powers", "CarrierJump.Powers", "MiningRefined"]
+    },
+    {
+      "id": "mv-demande",
+      "sheet": "merites-vente",
+      "title": "Ne vends pas plus du quart de la demande",
+      "statement": "Si la demande de la station est inférieure à 4 fois la quantité que tu vends, la vente subit une taxe de vente en gros. Garde chaque vente sous 25 % de la demande.",
+      "terms": [],
+      "values": [
+        { "key": "ratio", "label": "Demande minimale", "value": 4, "unit": "× la quantité vendue" },
+        { "key": "part", "label": "Part maximale de la demande", "value": 25, "unit": "%" }
+      ],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        { "type": "web", "label": "Guide Powerplay de herzbube (anglais)", "url": "https://wiki.herzbube.ch/wiki/EDPowerPlay", "date": "2026-10-25" },
+        { "type": "web", "label": "Discussion Steam « Do not have more than 25 percent of the demand »", "url": "https://steamcommunity.com/app/359320/discussions/0/4700162167909920915", "date": "2024-10-28" }
+      ],
+      "evidence": [],
+      "caveats": ["L'effet exact de cette taxe sur les mérites n'a pas été mesuré par l'escadron."],
+      "related": ["mv-renfort-sur-place"],
+      "journal": ["MarketSell.Count", "Market.json Demand"]
+    },
+    {
+      "id": "mv-delai",
+      "sheet": "merites-vente",
+      "title": "Les mérites d'une vente arrivent en quelques secondes",
+      "statement": "Après une vente, le gain de mérites s'écrit quelques secondes plus tard, dans un événement à part.",
+      "terms": [],
+      "values": [{ "key": "delai-max", "label": "Plus long délai mesuré", "value": 13, "unit": "s" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "journal du 30 oct. 2026" }],
+      "evidence": ["Mombaluma, 30 oct. 2026 : 399 t de platine créditées 2 s après la vente, 785 t d'iridium 13 s après."],
+      "caveats": ["L'app rattache à une vente les mérites reçus dans les 30 s qui suivent."],
+      "related": ["pp-origine-gain"],
+      "journal": ["MarketSell", "PowerplayMerits"]
+    },
+    {
+      "id": "mv-palladium",
+      "sheet": "merites-vente",
+      "title": "Commerce vendu en prise, acheté hors de ta puissance : 0 mérite ?",
+      "statement": "Du palladium acheté dans un système sans puissance, puis revendu à 10,8 al dans un système en prise avec 12,7 % de marge, n'a rapporté aucun mérite. Deux causes possibles : la règle de lieu de la prise (marchandise achetée hors d'un système Consolidé ou Forteresse de ta puissance), la plus probable, ou la faible marge.",
+      "terms": [{ "fr": "Prise", "en": "Acquisition", "note": "terme de l'app ; libellé du jeu en français à vérifier" }],
+      "values": [
+        { "key": "marge", "label": "Marge de la vente", "value": 12.7, "unit": "%" },
+        { "key": "distance", "label": "Distance entre achat et vente", "value": 10.8, "unit": "al" }
+      ],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "mesure de référence du 1er nov. 2026, journal du 31 oct. 2026" }],
+      "evidence": [
+        "31 oct. 2026 : 10 t de palladium achetées à Burgess Gateway, HIP 71601 (sans puissance), pour 477 450 cr, revendues à Rorschach Terminal, Synuefe GA-I b57-6 (Inoccupé, en prise par Aisling Duval), pour 538 140 cr : 0 mérite."
+      ],
+      "caveats": ["Pour trancher : revendre en prise une marchandise ordinaire achetée dans un système Consolidé ou Forteresse de ta puissance, puis la même marchandise achetée ailleurs."],
+      "related": ["mv-acquisition-lieu", "mv-acquisition-sur-place", "mv-commerce"],
+      "journal": ["MarketBuy", "MarketSell", "PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "mv-porteur",
+      "sheet": "merites-vente",
+      "title": "Marchandise passée par un porteur : effet inconnu",
+      "statement": "On ne sait pas si une marchandise transférée par un porteur de vaisseaux garde son lieu de minage ou d'achat pour les mérites. Aucune source ne le documente : c'est à mesurer.",
+      "terms": [{ "fr": "Porteur de vaisseaux", "en": "Fleet Carrier" }],
+      "values": [],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-07",
+      "sources": [],
+      "evidence": [],
+      "related": ["mv-acquisition-lieu"],
+      "journal": ["CargoTransfer", "MarketSell", "PowerplayMerits.MeritsGained"]
+    },
+    {
+      "id": "colo-depot-journal",
+      "sheet": "colonisation",
+      "title": "Le dépôt de construction s'écrit dans le journal",
+      "statement": "À quai au dépôt d'un chantier, le jeu écrit ColonisationConstructionDepot toutes les 15 secondes : l'avancement, si le chantier est terminé ou a échoué, et pour chaque marchandise la quantité requise et la quantité déjà livrée.",
+      "terms": [{ "fr": "Dépôt de construction", "en": "Construction depot" }],
+      "values": [{ "key": "intervalle", "label": "Intervalle d'écriture", "value": 15, "unit": "s" }],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        { "type": "web", "label": "Schéma de l'événement (schemas.edomh.nl, anglais)", "url": "http://schemas.edomh.nl/ColonisationConstructionDepot.html" },
+        { "type": "web", "label": "Discussion Steam : RequiredAmount 2046, ProvidedAmount 412", "url": "https://steamcommunity.com/app/359320/discussions/0/595146546178195290/", "date": "2025-04-17" }
+      ],
+      "evidence": [],
+      "caveats": ["Jamais vu dans les journaux de l'escadron : à confirmer au premier chantier d'un membre."],
+      "related": ["colo-manuel"],
+      "journal": [
+        "ColonisationConstructionDepot.ConstructionProgress",
+        "ColonisationConstructionDepot.ConstructionComplete",
+        "ColonisationConstructionDepot.ConstructionFailed",
+        "ColonisationConstructionDepot.ResourcesRequired"
+      ]
+    },
+    {
+      "id": "colo-manuel",
+      "sheet": "colonisation",
+      "title": "Colonisation absente du manuel officiel",
+      "statement": "Le dernier manuel du journal publié par Frontier (v38, avril 2026) ne documente aucun événement de colonisation : les outils s'appuient sur ce que les joueurs ont relevé.",
+      "terms": [],
+      "values": [],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        {
+          "type": "web",
+          "label": "Manuel du journal v38 (Frontier, anglais)",
+          "url": "https://hosting.zaonce.net/community/journal/v38/Journal_Manual_v38.pdf",
+          "date": "2026-04"
+        }
+      ],
+      "evidence": [],
+      "related": ["colo-depot-journal", "pp-manuel"],
+      "journal": ["ColonisationConstructionDepot"]
+    },
+    {
+      "id": "esc-startup",
+      "sheet": "escadrons",
+      "title": "Ton escadron, écrit à chaque lancement",
+      "statement": "À chaque lancement, le jeu écrit SquadronStartup : le nom de ton escadron et ton rang, dont le nom est écrit en français (« RECRUE », « PILOTE »).",
+      "terms": [{ "fr": "Escadron", "en": "Squadron" }],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "62 SquadronStartup du 24 oct. au 7 nov. 2026" }],
+      "evidence": ["Rang 5 « RECRUE » du 24 oct. au 2 nov. 2026, puis rang 10 « PILOTE » à partir du 2 nov. à 17 h 43 UTC (dernier relevé : 7 nov. 2026)."],
+      "related": ["esc-classements"],
+      "journal": ["SquadronStartup.SquadronName", "SquadronStartup.CurrentRank", "SquadronStartup.CurrentRankName"]
+    },
+    {
+      "id": "esc-classements",
+      "sheet": "escadrons",
+      "title": "12 classements d'escadron dans Statistics",
+      "statement": "L'événement Statistics, écrit au lancement, donne ta contribution à 12 classements d'escadron : minage, primes, commerce, commerce illicite, exploration, combat, Powerplay, AEGIS, BGS, CQC, colonisation et opérations, plus ton nombre de podiums.",
+      "terms": [{ "fr": "Classement", "en": "Leaderboard" }],
+      "values": [{ "key": "classements", "label": "Classements", "value": 12, "unit": "classements" }],
+      "status": "mesuree",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "Statistics du 7 nov. 2026" }],
+      "evidence": ["Champs Squadron_Leaderboard_<classement>_highestcontribution : mining, bounty, trade, trade_illicit, exploration, combat, powerplay, aegis, bgs, cqc, colonisation_contribution, operationscore ; et Squadron_Leaderboard_podiums."],
+      "related": ["esc-classements-valeurs", "esc-classements-periode"],
+      "journal": ["Statistics.Squadron"]
+    },
+    {
+      "id": "esc-classements-valeurs",
+      "sheet": "escadrons",
+      "title": "Ce que comptent les classements Powerplay et minage",
+      "statement": "Le classement Powerplay vaut ton total de mérites. Le classement minage additionne la valeur de tes ventes de minerai miné, y compris les ventes qui ne rapportent aucun mérite.",
+      "terms": [{ "fr": "Classement", "en": "Leaderboard" }],
+      "values": [],
+      "status": "mesuree",
+      "checkedAt": "2026-11-08",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "Statistics du 28 oct. au 7 nov. 2026" }],
+      "evidence": [
+        "Powerplay : 1 296 017 au 7 nov. 2026, égal au dernier TotalMerits ; +203 302 le 30 oct., soit exactement les mérites gagnés entre deux relevés.",
+        "Minage : +521 421 579 le 30 oct. 2026, la valeur exacte des ventes de platine et d'iridium à Mombaluma ; +988 821 152 pour la vente à Vequess, qui n'a rapporté aucun mérite.",
+        "Les ventes d'indium et de tantale achetés (27-28 oct. 2026) n'y sont pas entrées : le classement minage valait encore 0 le 28 oct. à 19 h 04 UTC."
+      ],
+      "caveats": [
+        "Une exception : le 3 nov. 2026 à 13 h 10 UTC, le classement Powerplay (1 103 165) était 56 mérites sous le dernier total écrit (1 103 221, à 10 h 12 UTC).",
+        "Le sens du mot « highestcontribution » et la période couverte restent à vérifier."
+      ],
+      "related": ["esc-classements", "esc-classements-periode", "pp-total-merites"],
+      "journal": ["Statistics.Squadron", "PowerplayMerits.TotalMerits", "MarketSell.TotalSale"]
+    },
+    {
+      "id": "esc-classements-periode",
+      "sheet": "escadrons",
+      "title": "Période des classements : inconnue",
+      "statement": "On ne sait pas sur quelle période portent les classements d'escadron, ni quand ils repartent de zéro. À recouper avec le menu d'escadron du jeu.",
+      "terms": [{ "fr": "Classement", "en": "Leaderboard" }],
+      "values": [],
+      "status": "a-verifier",
+      "checkedAt": "2026-11-07",
+      "sources": [{ "type": "escadron", "label": "Mesure de l'escadron", "detail": "Statistics du 4 et du 5 nov. 2026" }],
+      "evidence": ["Aucune remise à zéro au passage de semaine du 5 nov. 2026 : minage à 2 935 144 440 avant et après."],
+      "related": ["esc-classements-valeurs"],
+      "journal": ["Statistics.Squadron"]
+    },
+    {
+      "id": "esc-banque-porteurs",
+      "sheet": "escadrons",
+      "title": "Banque et porteurs d'escadron : hors du journal",
+      "statement": "Ni le journal ni l'API de Frontier ne donnent le contenu de la banque d'escadron, ni ce qui se trouve sur les porteurs d'escadron. Le journal ne donne que tes propres dépôts et retraits.",
+      "terms": [
+        { "fr": "Banque d'escadron", "en": "Squadron bank" },
+        { "fr": "Porteur d'escadron", "en": "Squadron carrier" }
+      ],
+      "values": [],
+      "status": "publiee",
+      "checkedAt": "2026-11-07",
+      "sources": [
+        { "type": "web", "label": "Discussion EDMarketConnector n° 2518 (anglais)", "url": "https://github.com/EDCD/EDMarketConnector/discussions/2518" },
+        { "type": "escadron", "label": "Mesure de l'escadron", "detail": "Statistics du 7 nov. 2026" }
+      ],
+      "evidence": ["Statistics : Squadron_Bank_Credits_Deposited et Withdrawn, puis les mêmes compteurs pour les marchandises, les biens personnels et les vaisseaux. Ce sont tes totaux, pas le contenu de la banque."],
+      "related": ["esc-classements"],
+      "journal": ["Statistics.Squadron"]
+    }
+  ]
+}

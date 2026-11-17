@@ -1,0 +1,1830 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 3900000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 2640000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "total": 76,
+          "byCategory": {
+            "Raw": 76,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            45,
+            19,
+            0,
+            12,
+            0
+          ],
+          "materials": [
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 5
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 3
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 2
+            },
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 2
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 19
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 23
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 22
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-11-07T11:22:53Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:22:45Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:22:44Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:39Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:36Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:35Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:13Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:09Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:12:00Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:56Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:34Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:33Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:49Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:39Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:37Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:10Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:05Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:04Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            }
+          ],
+          "pausedMs": 14772000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "total": 76,
+          "byCategory": {
+            "Raw": 76,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            45,
+            19,
+            0,
+            12,
+            0
+          ],
+          "materials": [
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 5
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 3
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 2
+            },
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 2
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 19
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 23
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 22
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-11-07T11:22:53Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:22:45Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:22:44Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:39Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:36Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:35Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:13Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:17:09Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:12:00Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:56Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:34Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:11:33Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:49Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T11:05:39Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:37Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:10Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:05Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-07T10:26:04Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            }
+          ],
+          "pausedMs": 9151000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 1832000,
+          "pausedSince": "2026-10-29T14:38:40.000Z",
+          "pauseReason": "idle",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 36000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 36795000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 35525000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 1003000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 349000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 12590000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "total": 0,
+          "byCategory": {
+            "Raw": 0,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "materials": [],
+          "recent": [],
+          "pausedMs": 10563000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "total": 190,
+          "byCategory": {
+            "Raw": 190,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            10,
+            47,
+            95,
+            38,
+            0
+          ],
+          "materials": [
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 14
+            },
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 9
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 9
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 6
+            },
+            {
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 38
+            },
+            {
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 29
+            },
+            {
+              "label": "niobium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 28
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 47
+            },
+            {
+              "label": "Fer",
+              "category": "Raw",
+              "grade": 1,
+              "count": 5
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 3
+            },
+            {
+              "label": "Phosphore",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-10-31T22:56:44Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:42Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:39Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:38Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:54:09Z",
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:54:02Z",
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:52:58Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:52:34Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:54Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:49Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:46Z",
+              "label": "niobium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:52Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:40Z",
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:39Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:31Z",
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:30Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:14Z",
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:07Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:41:41Z",
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:40:33Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            }
+          ],
+          "pausedMs": 19263000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "total": 190,
+          "byCategory": {
+            "Raw": 190,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            10,
+            47,
+            95,
+            38,
+            0
+          ],
+          "materials": [
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 14
+            },
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 9
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 9
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 6
+            },
+            {
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 38
+            },
+            {
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 29
+            },
+            {
+              "label": "niobium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 28
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 47
+            },
+            {
+              "label": "Fer",
+              "category": "Raw",
+              "grade": 1,
+              "count": 5
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 3
+            },
+            {
+              "label": "Phosphore",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-10-31T22:56:44Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:42Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:39Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:56:38Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:54:09Z",
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:54:02Z",
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:52:58Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:52:34Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:54Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:49Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:46:46Z",
+              "label": "niobium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:52Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:40Z",
+              "label": "Molybdène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:39Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:31Z",
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:30Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:14Z",
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:45:07Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:41:41Z",
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-10-31T22:40:33Z",
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            }
+          ],
+          "pausedMs": 13655000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "total": 323,
+          "byCategory": {
+            "Raw": 323,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            224,
+            46,
+            21,
+            32,
+            0
+          ],
+          "materials": [
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 10
+            },
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 8
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 7
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 7
+            },
+            {
+              "label": "cadmium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 17
+            },
+            {
+              "label": "Tungstène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 3
+            },
+            {
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 33
+            },
+            {
+              "label": "Manganèse",
+              "category": "Raw",
+              "grade": 2,
+              "count": 10
+            },
+            {
+              "label": "vanadium",
+              "category": "Raw",
+              "grade": 2,
+              "count": 3
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 68
+            },
+            {
+              "label": "Fer",
+              "category": "Raw",
+              "grade": 1,
+              "count": 65
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 63
+            },
+            {
+              "label": "Phosphore",
+              "category": "Raw",
+              "grade": 1,
+              "count": 28
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-11-06T23:06:34Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:31Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:30Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:27Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:25Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:00Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:08Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:06Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:04Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:03Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:58:54Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:17Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:14Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:10Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:09Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:07Z",
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:41Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:37Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:20Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            }
+          ],
+          "pausedMs": 20002000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "total": 323,
+          "byCategory": {
+            "Raw": 323,
+            "Manufactured": 0,
+            "Encoded": 0
+          },
+          "byGrade": [
+            224,
+            46,
+            21,
+            32,
+            0
+          ],
+          "materials": [
+            {
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 10
+            },
+            {
+              "label": "Sélénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 8
+            },
+            {
+              "label": "Tellure",
+              "category": "Raw",
+              "grade": 4,
+              "count": 7
+            },
+            {
+              "label": "Ruthénium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 7
+            },
+            {
+              "label": "cadmium",
+              "category": "Raw",
+              "grade": 3,
+              "count": 17
+            },
+            {
+              "label": "Tungstène",
+              "category": "Raw",
+              "grade": 3,
+              "count": 3
+            },
+            {
+              "label": "Étain",
+              "category": "Raw",
+              "grade": 3,
+              "count": 1
+            },
+            {
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 33
+            },
+            {
+              "label": "Manganèse",
+              "category": "Raw",
+              "grade": 2,
+              "count": 10
+            },
+            {
+              "label": "vanadium",
+              "category": "Raw",
+              "grade": 2,
+              "count": 3
+            },
+            {
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 68
+            },
+            {
+              "label": "Fer",
+              "category": "Raw",
+              "grade": 1,
+              "count": 65
+            },
+            {
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 63
+            },
+            {
+              "label": "Phosphore",
+              "category": "Raw",
+              "grade": 1,
+              "count": 28
+            }
+          ],
+          "recent": [
+            {
+              "at": "2026-11-06T23:06:34Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:31Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:30Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:27Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:25Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T23:06:00Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:08Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:06Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:04Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:59:03Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:58:54Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:17Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:14Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:10Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:09Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:30:07Z",
+              "label": "yttrium",
+              "category": "Raw",
+              "grade": 4,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:41Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:40Z",
+              "label": "Soufre",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:37Z",
+              "label": "nickel",
+              "category": "Raw",
+              "grade": 1,
+              "count": 1
+            },
+            {
+              "at": "2026-11-06T22:29:20Z",
+              "label": "Chrome",
+              "category": "Raw",
+              "grade": 2,
+              "count": 1
+            }
+          ],
+          "pausedMs": 14509000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  }
+}

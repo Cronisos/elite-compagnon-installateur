@@ -1,0 +1,1800 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 3900000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 2640000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "collected": 40,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 20,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 5,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 15,
+              "hold": 0
+            }
+          ],
+          "delivered": 40,
+          "lost": 0,
+          "credits": 2471718,
+          "merits": 3788,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": "2026-11-07T13:50:31Z",
+          "recent": [
+            {
+              "at": "2026-11-07T13:50:31Z",
+              "kind": "Livré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 7,
+              "reward": 365568,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:50:25Z",
+              "kind": "Livré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 13,
+              "reward": 1208805,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:50:20Z",
+              "kind": "Livré",
+              "label": "Débris d'épave",
+              "count": 15,
+              "reward": 420075,
+              "merits": -242
+            },
+            {
+              "at": "2026-11-07T13:50:13Z",
+              "kind": "Livré",
+              "label": "Boîte noire",
+              "count": 5,
+              "reward": 477270,
+              "merits": 4030
+            },
+            {
+              "at": "2026-11-07T13:44:57Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:45Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:37Z",
+              "kind": "Récupéré",
+              "label": "Boîte noire",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:25Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:19Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:05Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:01Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:43:42Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:30:31Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:30:12Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:54Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:36Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:19Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:02Z",
+              "kind": "Récupéré",
+              "label": "Boîte noire",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:28:46Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:28:30Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            }
+          ],
+          "materials": {
+            "total": 76,
+            "byGrade": [
+              45,
+              19,
+              0,
+              12,
+              0
+            ],
+            "items": [
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 5
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 3
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 2
+              },
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 2
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 19
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 23
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 22
+              }
+            ]
+          },
+          "pausedMs": 13525000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "collected": 40,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 20,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 5,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 15,
+              "hold": 0
+            }
+          ],
+          "delivered": 40,
+          "lost": 0,
+          "credits": 2471718,
+          "merits": 3788,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": "2026-11-07T13:50:31Z",
+          "recent": [
+            {
+              "at": "2026-11-07T13:50:31Z",
+              "kind": "Livré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 7,
+              "reward": 365568,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:50:25Z",
+              "kind": "Livré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 13,
+              "reward": 1208805,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:50:20Z",
+              "kind": "Livré",
+              "label": "Débris d'épave",
+              "count": 15,
+              "reward": 420075,
+              "merits": -242
+            },
+            {
+              "at": "2026-11-07T13:50:13Z",
+              "kind": "Livré",
+              "label": "Boîte noire",
+              "count": 5,
+              "reward": 477270,
+              "merits": 4030
+            },
+            {
+              "at": "2026-11-07T13:44:57Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:45Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:37Z",
+              "kind": "Récupéré",
+              "label": "Boîte noire",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:25Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:19Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:05Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:44:01Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:43:42Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:30:31Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:30:12Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:54Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:36Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:19Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation endommagée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:29:02Z",
+              "kind": "Récupéré",
+              "label": "Boîte noire",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:28:46Z",
+              "kind": "Récupéré",
+              "label": "Débris d'épave",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            },
+            {
+              "at": "2026-11-07T13:28:30Z",
+              "kind": "Récupéré",
+              "label": "Nacelle d'évacuation occupée",
+              "count": 1,
+              "reward": 0,
+              "merits": 0
+            }
+          ],
+          "materials": {
+            "total": 76,
+            "byGrade": [
+              45,
+              19,
+              0,
+              12,
+              0
+            ],
+            "items": [
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 5
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 3
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 2
+              },
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 2
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 19
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 23
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 22
+              }
+            ]
+          },
+          "pausedMs": 9151000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 1,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 1769000,
+          "pausedSince": "2026-10-29T14:38:40.000Z",
+          "pauseReason": "idle",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 1,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 36000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 36329000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 35525000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 1003000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 349000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 12590000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 0,
+            "byGrade": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "items": []
+          },
+          "pausedMs": 10563000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 190,
+            "byGrade": [
+              10,
+              47,
+              95,
+              38,
+              0
+            ],
+            "items": [
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 14
+              },
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 9
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 9
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 6
+              },
+              {
+                "label": "Étain",
+                "grade": 3,
+                "count": 38
+              },
+              {
+                "label": "Molybdène",
+                "grade": 3,
+                "count": 29
+              },
+              {
+                "label": "Niobium",
+                "grade": 3,
+                "count": 28
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 47
+              },
+              {
+                "label": "Fer",
+                "grade": 1,
+                "count": 5
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 3
+              },
+              {
+                "label": "Phosphore",
+                "grade": 1,
+                "count": 1
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 1
+              }
+            ]
+          },
+          "pausedMs": 18742000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 190,
+            "byGrade": [
+              10,
+              47,
+              95,
+              38,
+              0
+            ],
+            "items": [
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 14
+              },
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 9
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 9
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 6
+              },
+              {
+                "label": "Étain",
+                "grade": 3,
+                "count": 38
+              },
+              {
+                "label": "Molybdène",
+                "grade": 3,
+                "count": 29
+              },
+              {
+                "label": "Niobium",
+                "grade": 3,
+                "count": 28
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 47
+              },
+              {
+                "label": "Fer",
+                "grade": 1,
+                "count": 5
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 3
+              },
+              {
+                "label": "Phosphore",
+                "grade": 1,
+                "count": 1
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 1
+              }
+            ]
+          },
+          "pausedMs": 13655000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 323,
+            "byGrade": [
+              224,
+              46,
+              21,
+              32,
+              0
+            ],
+            "items": [
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 10
+              },
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 8
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 7
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 7
+              },
+              {
+                "label": "Cadmium",
+                "grade": 3,
+                "count": 17
+              },
+              {
+                "label": "Tungstène",
+                "grade": 3,
+                "count": 3
+              },
+              {
+                "label": "Étain",
+                "grade": 3,
+                "count": 1
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 33
+              },
+              {
+                "label": "Manganèse",
+                "grade": 2,
+                "count": 10
+              },
+              {
+                "label": "Vanadium",
+                "grade": 2,
+                "count": 3
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 68
+              },
+              {
+                "label": "Fer",
+                "grade": 1,
+                "count": 65
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 63
+              },
+              {
+                "label": "Phosphore",
+                "grade": 1,
+                "count": 28
+              }
+            ]
+          },
+          "pausedMs": 19348000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "collected": 0,
+          "types": [
+            {
+              "key": "pods",
+              "label": "Nacelles",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "blackBoxes",
+              "label": "Boîtes noires",
+              "collected": 0,
+              "hold": 0
+            },
+            {
+              "key": "wreckage",
+              "label": "Débris d'épave",
+              "collected": 0,
+              "hold": 0
+            }
+          ],
+          "delivered": 0,
+          "lost": 0,
+          "credits": 0,
+          "merits": 0,
+          "deaths": 0,
+          "hold": {
+            "count": 0,
+            "items": []
+          },
+          "lastActionAt": null,
+          "recent": [],
+          "materials": {
+            "total": 323,
+            "byGrade": [
+              224,
+              46,
+              21,
+              32,
+              0
+            ],
+            "items": [
+              {
+                "label": "Yttrium",
+                "grade": 4,
+                "count": 10
+              },
+              {
+                "label": "Sélénium",
+                "grade": 4,
+                "count": 8
+              },
+              {
+                "label": "Ruthénium",
+                "grade": 4,
+                "count": 7
+              },
+              {
+                "label": "Tellure",
+                "grade": 4,
+                "count": 7
+              },
+              {
+                "label": "Cadmium",
+                "grade": 3,
+                "count": 17
+              },
+              {
+                "label": "Tungstène",
+                "grade": 3,
+                "count": 3
+              },
+              {
+                "label": "Étain",
+                "grade": 3,
+                "count": 1
+              },
+              {
+                "label": "Chrome",
+                "grade": 2,
+                "count": 33
+              },
+              {
+                "label": "Manganèse",
+                "grade": 2,
+                "count": 10
+              },
+              {
+                "label": "Vanadium",
+                "grade": 2,
+                "count": 3
+              },
+              {
+                "label": "Soufre",
+                "grade": 1,
+                "count": 68
+              },
+              {
+                "label": "Fer",
+                "grade": 1,
+                "count": 65
+              },
+              {
+                "label": "Nickel",
+                "grade": 1,
+                "count": 63
+              },
+              {
+                "label": "Phosphore",
+                "grade": 1,
+                "count": 28
+              }
+            ]
+          },
+          "pausedMs": 14509000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  }
+}

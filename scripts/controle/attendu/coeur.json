@@ -1,0 +1,5171 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1482406575,
+            "balanceAt": "2026-10-27T17:14:22Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1232,
+              "unladenMass": 1498,
+              "maxJumpRange": 33.134552,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4050,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "ICZ KC-U b3-4",
+            "systemAddress": 9468120933817,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 1232,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-27T181355.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-27T17:13:52Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /modules": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": "routes",
+            "name": "Mes routes commerciales"
+          },
+          {
+            "id": "engineering",
+            "name": "Mon ingénierie"
+          },
+          {
+            "id": "builder",
+            "name": "Constructeur de builds"
+          },
+          {
+            "id": "planner",
+            "name": "Calculateur de routes"
+          },
+          {
+            "id": "waypoints",
+            "name": "Mes repères"
+          },
+          {
+            "id": "systems",
+            "name": "Systèmes importants"
+          },
+          {
+            "id": "expansion",
+            "name": "Projet extension"
+          },
+          {
+            "id": "whereto",
+            "name": "Où agir cette semaine"
+          },
+          {
+            "id": "regles",
+            "name": "Règles du jeu"
+          },
+          {
+            "id": "escadron",
+            "name": "Escadron"
+          },
+          {
+            "id": "shipmining",
+            "name": "Minage vaisseau"
+          },
+          {
+            "id": "combat",
+            "name": "Combat"
+          },
+          {
+            "id": "groundcombat",
+            "name": "Combat au sol"
+          },
+          {
+            "id": "rescue",
+            "name": "Sauvetage"
+          },
+          {
+            "id": "materials",
+            "name": "Matériaux"
+          },
+          {
+            "id": "colonisation",
+            "name": "Colonisation"
+          },
+          {
+            "id": "carrier",
+            "name": "Saut du porteur"
+          },
+          {
+            "id": "signals",
+            "name": "Signaux"
+          },
+          {
+            "id": "navroute",
+            "name": "Itinéraire"
+          },
+          {
+            "id": "fsdcool",
+            "name": "Refroidissement FSD"
+          },
+          {
+            "id": "bindings",
+            "name": "Garde des commandes"
+          },
+          {
+            "id": "links",
+            "name": "Applications externes"
+          },
+          {
+            "id": "glance",
+            "name": "Coup d'œil"
+          },
+          {
+            "id": "hudcolours",
+            "name": "Couleurs du HUD"
+          },
+          {
+            "id": "compagnon",
+            "name": "Compagnon"
+          },
+          {
+            "id": "bilan",
+            "name": "Bilans de session"
+          },
+          {
+            "id": "systeme",
+            "name": "Moniteur PC"
+          },
+          {
+            "id": "ia",
+            "name": "IA de bord"
+          }
+        ]
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper MkII",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper MkII",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1482406575,
+            "balanceAt": "2026-10-27T17:14:22Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1232,
+              "unladenMass": 1498,
+              "maxJumpRange": 33.134552,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4050,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "ICZ KC-U b3-4",
+            "systemAddress": 9468120933817,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 1232,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-27T181355.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-10-28T00:07:17.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Music",
+            "timestamp": "2026-10-28T00:02:17Z"
+          },
+          {
+            "event": "Undocked",
+            "timestamp": "2026-10-28T00:02:17Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-28T00:01:52Z"
+          },
+          {
+            "event": "MarketBuy",
+            "timestamp": "2026-10-28T00:01:50Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-28T00:01:41Z"
+          },
+          {
+            "event": "PowerplayMerits",
+            "timestamp": "2026-10-28T00:01:39Z"
+          },
+          {
+            "event": "MarketSell",
+            "timestamp": "2026-10-28T00:01:38Z"
+          },
+          {
+            "event": "Market",
+            "timestamp": "2026-10-28T00:01:30Z"
+          },
+          {
+            "event": "RepairAll",
+            "timestamp": "2026-10-28T00:01:21Z"
+          },
+          {
+            "event": "RefuelAll",
+            "timestamp": "2026-10-28T00:01:21Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-28T00:01:14Z"
+          },
+          {
+            "event": "Docked",
+            "timestamp": "2026-10-28T00:01:14Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-28T00:00:55Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-28T00:00:52Z"
+          },
+          {
+            "event": "DockingGranted",
+            "timestamp": "2026-10-28T00:00:04Z"
+          },
+          {
+            "event": "DockingRequested",
+            "timestamp": "2026-10-28T00:00:04Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-27T23:59:45Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-27T23:59:45Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "SupercruiseExit",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:59:40Z"
+          },
+          {
+            "event": "SupercruiseDestinationDrop",
+            "timestamp": "2026-10-27T23:59:39Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-27T23:58:32Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSDJump",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-27T23:58:27Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-27T17:13:52Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper MkII",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper MkII",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 250000000,
+            "balanceAt": "2026-11-01T19:55:21Z",
+            "ship": "Type-9 Heavy",
+            "loadout": null,
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-01T195500.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-01T19:55:00Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 1,
+          "type": "type9",
+          "model": "Type-9 Heavy",
+          "name": "Vaisseau 1",
+          "nickname": null,
+          "title": "Vaisseau 1",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 250000000,
+            "balanceAt": "2026-11-01T19:55:21Z",
+            "ship": "Type-9 Heavy",
+            "loadout": null,
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-01T195500.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-01T21:10:00.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Shutdown",
+            "timestamp": "2026-11-01T21:05:00Z"
+          },
+          {
+            "event": "ColonisationSystemClaimRelease",
+            "timestamp": "2026-11-01T21:00:00Z"
+          },
+          {
+            "event": "ColonisationBeaconDeployed",
+            "timestamp": "2026-11-01T20:36:00Z"
+          },
+          {
+            "event": "ColonisationSystemClaim",
+            "timestamp": "2026-11-01T20:30:00Z"
+          },
+          {
+            "event": "ApproachSettlement",
+            "timestamp": "2026-11-01T20:20:00Z"
+          },
+          {
+            "event": "Undocked",
+            "timestamp": "2026-11-01T20:05:00Z"
+          },
+          {
+            "event": "ColonisationConstructionDepot",
+            "timestamp": "2026-11-01T20:01:00Z"
+          },
+          {
+            "event": "ColonisationContribution",
+            "timestamp": "2026-11-01T20:01:00Z"
+          },
+          {
+            "event": "ColonisationConstructionDepot",
+            "timestamp": "2026-11-01T20:00:05Z"
+          },
+          {
+            "event": "Docked",
+            "timestamp": "2026-11-01T20:00:00Z"
+          },
+          {
+            "event": "Location",
+            "timestamp": "2026-11-01T19:55:30Z"
+          },
+          {
+            "event": "LoadGame",
+            "timestamp": "2026-11-01T19:55:21Z"
+          },
+          {
+            "event": "Commander",
+            "timestamp": "2026-11-01T19:55:20Z"
+          },
+          {
+            "event": "Fileheader",
+            "timestamp": "2026-11-01T19:55:00Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-01T19:55:00Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": {
+          "mode": "colonisation",
+          "reason": "à quai à un chantier de construction",
+          "at": 1793567400000
+        }
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 1,
+          "type": "type9",
+          "model": "Type-9 Heavy",
+          "name": "Vaisseau 1",
+          "nickname": null,
+          "title": "Vaisseau 1",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1091804863,
+            "balanceAt": "2026-11-02T18:57:15Z",
+            "ship": "Caspian Explorer",
+            "loadout": {
+              "ship": "explorer_nx",
+              "cargoCapacity": 336,
+              "unladenMass": 1209,
+              "maxJumpRange": 77.645729,
+              "fuelCapacity": 56,
+              "fuelMain": 56,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size8_class5_overchargebooster_mkii",
+                "size": 8,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 7238.5,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-02T184317.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-02T17:43:14Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 36,
+          "type": "explorer_nx",
+          "model": "Caspian Explorer",
+          "name": null,
+          "nickname": null,
+          "title": "Caspian Explorer",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1091804863,
+            "balanceAt": "2026-11-02T18:57:15Z",
+            "ship": "Caspian Explorer",
+            "loadout": {
+              "ship": "explorer_nx",
+              "cargoCapacity": 336,
+              "unladenMass": 1209,
+              "maxJumpRange": 77.645729,
+              "fuelCapacity": 56,
+              "fuelMain": 56,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size8_class5_overchargebooster_mkii",
+                "size": 8,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 7238.5,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-02T184317.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-02T19:49:24.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "ReservoirReplenished",
+            "timestamp": "2026-11-02T19:44:24Z"
+          },
+          {
+            "event": "LeaveBody",
+            "timestamp": "2026-11-02T19:44:14Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:44:00Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-02T19:44:00Z"
+          },
+          {
+            "event": "SupercruiseEntry",
+            "timestamp": "2026-11-02T19:44:00Z"
+          },
+          {
+            "event": "StartJump",
+            "timestamp": "2026-11-02T19:43:55Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:24Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:22Z"
+          },
+          {
+            "event": "Undocked",
+            "timestamp": "2026-11-02T19:43:22Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:15Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:09Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:07Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:43:04Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-02T19:42:55Z"
+          },
+          {
+            "event": "MarketSell",
+            "timestamp": "2026-11-02T19:42:53Z"
+          },
+          {
+            "event": "Market",
+            "timestamp": "2026-11-02T19:42:48Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-02T19:42:41Z"
+          },
+          {
+            "event": "EngineerProgress",
+            "timestamp": "2026-11-02T19:42:39Z"
+          },
+          {
+            "event": "EngineerContribution",
+            "timestamp": "2026-11-02T19:42:39Z"
+          },
+          {
+            "event": "RefuelAll",
+            "timestamp": "2026-11-02T19:42:28Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:42:26Z"
+          },
+          {
+            "event": "Docked",
+            "timestamp": "2026-11-02T19:42:26Z"
+          },
+          {
+            "event": "ReservoirReplenished",
+            "timestamp": "2026-11-02T19:41:40Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:41:36Z"
+          },
+          {
+            "event": "DockingGranted",
+            "timestamp": "2026-11-02T19:41:34Z"
+          },
+          {
+            "event": "DockingRequested",
+            "timestamp": "2026-11-02T19:41:34Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:41:29Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "ApproachSettlement",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "SupercruiseExit",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-02T19:41:00Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-02T17:43:14Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 36,
+          "type": "explorer_nx",
+          "model": "Caspian Explorer",
+          "name": null,
+          "nickname": null,
+          "title": "Caspian Explorer",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 710436236,
+            "balanceAt": "2026-11-07T08:15:50Z",
+            "ship": "Type-11 Prospector",
+            "loadout": {
+              "ship": "lakonminer",
+              "cargoCapacity": 268,
+              "unladenMass": 535.5,
+              "maxJumpRange": 25.069561,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": "TST-001",
+            "marketId": 3700000001,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-07T091533.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-07T08:15:30Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 43,
+          "type": "lakonminer",
+          "model": "Type-11 Prospector",
+          "name": null,
+          "nickname": null,
+          "title": "Type-11 Prospector",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 710436236,
+            "balanceAt": "2026-11-07T08:15:50Z",
+            "ship": "Type-11 Prospector",
+            "loadout": {
+              "ship": "lakonminer",
+              "cargoCapacity": 268,
+              "unladenMass": 535.5,
+              "maxJumpRange": 25.069561,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": "TST-001",
+            "marketId": 3700000001,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-07T091533.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-07T14:23:13.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Shutdown",
+            "timestamp": "2026-11-07T14:18:13Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-11-07T14:15:40Z"
+          },
+          {
+            "event": "Shipyard",
+            "timestamp": "2026-11-07T14:15:40Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:15:36Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:15:29Z"
+          },
+          {
+            "event": "Docked",
+            "timestamp": "2026-11-07T14:15:29Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:14:59Z"
+          },
+          {
+            "event": "DockingGranted",
+            "timestamp": "2026-11-07T14:14:57Z"
+          },
+          {
+            "event": "DockingRequested",
+            "timestamp": "2026-11-07T14:14:57Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:14:47Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "SupercruiseExit",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:14:42Z"
+          },
+          {
+            "event": "SupercruiseDestinationDrop",
+            "timestamp": "2026-11-07T14:14:40Z"
+          },
+          {
+            "event": "SAASignalsFound",
+            "timestamp": "2026-11-07T14:11:33Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:09:36Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:09:32Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSDJump",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-11-07T14:09:19Z"
+          },
+          {
+            "event": "NavRouteClear",
+            "timestamp": "2026-11-07T14:09:06Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-07T14:09:06Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-07T14:09:06Z"
+          },
+          {
+            "event": "StartJump",
+            "timestamp": "2026-11-07T14:09:01Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-07T08:15:30Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": {
+          "mode": "rescue",
+          "reason": "capsule de survie ramassée",
+          "at": 1794061393000
+        }
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 43,
+          "type": "lakonminer",
+          "model": "Type-11 Prospector",
+          "name": null,
+          "nickname": null,
+          "title": "Type-11 Prospector",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 4657623341,
+            "balanceAt": "2026-10-29T14:07:50Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1184,
+              "unladenMass": 1434.87207,
+              "maxJumpRange": 39.701969,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4650,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Gungnir",
+            "systemAddress": 766391617907,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": "2026-10-29T14:37:01Z"
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-29T150723.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-29T14:07:20Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper Mk II",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper Mk II",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 4657623341,
+            "balanceAt": "2026-10-29T14:07:50Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1184,
+              "unladenMass": 1434.87207,
+              "maxJumpRange": 39.701969,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4650,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Gungnir",
+            "systemAddress": 766391617907,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": "2026-10-29T14:37:01Z"
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-29T150723.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-10-29T14:49:32.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:44:32Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:44:18Z"
+          },
+          {
+            "event": "SAASignalsFound",
+            "timestamp": "2026-10-29T14:44:18Z"
+          },
+          {
+            "event": "SAAScanComplete",
+            "timestamp": "2026-10-29T14:44:18Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:43:43Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:43:38Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:43:14Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:42:29Z"
+          },
+          {
+            "event": "FuelScoop",
+            "timestamp": "2026-10-29T14:42:14Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:42:11Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:42:03Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:56Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:55Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:55Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:55Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:55Z"
+          },
+          {
+            "event": "Scan",
+            "timestamp": "2026-10-29T14:41:55Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:41:50Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-29T14:41:50Z"
+          },
+          {
+            "event": "FSDJump",
+            "timestamp": "2026-10-29T14:41:50Z"
+          },
+          {
+            "event": "NavRouteClear",
+            "timestamp": "2026-10-29T14:41:37Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:41:37Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-29T14:41:37Z"
+          },
+          {
+            "event": "StartJump",
+            "timestamp": "2026-10-29T14:41:32Z"
+          },
+          {
+            "event": "FuelScoop",
+            "timestamp": "2026-10-29T14:41:17Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:41:16Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:41:13Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSDJump",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSSSignalDiscovered",
+            "timestamp": "2026-10-29T14:40:56Z"
+          },
+          {
+            "event": "FSDTarget",
+            "timestamp": "2026-10-29T14:40:44Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-29T14:40:43Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-29T14:40:43Z"
+          },
+          {
+            "event": "StartJump",
+            "timestamp": "2026-10-29T14:40:38Z"
+          },
+          {
+            "event": "FuelScoop",
+            "timestamp": "2026-10-29T14:40:17Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-29T14:07:20Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": {
+          "mode": "waypoints",
+          "reason": "vaisseau avec hangar à Rhino",
+          "shipId": 31,
+          "canRemember": true,
+          "at": 1793285372000
+        }
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper Mk II",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper Mk II",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1437731057,
+            "balanceAt": "2026-10-26T09:37:40Z",
+            "ship": "Asp Explorer",
+            "loadout": {
+              "ship": "asp",
+              "cargoCapacity": 28,
+              "unladenMass": 405,
+              "maxJumpRange": 30.040483,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": false,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Talta",
+            "systemAddress": 29258256754089,
+            "station": "MiesvanderRohe Gateway",
+            "marketId": 4225986051,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-26T103715.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-26T09:37:12Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 6,
+          "type": "asp",
+          "model": "Asp Explorer",
+          "name": null,
+          "nickname": null,
+          "title": "Asp Explorer",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1437731057,
+            "balanceAt": "2026-10-26T09:37:40Z",
+            "ship": "Asp Explorer",
+            "loadout": {
+              "ship": "asp",
+              "cargoCapacity": 28,
+              "unladenMass": 405,
+              "maxJumpRange": 30.040483,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": false,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Talta",
+            "systemAddress": 29258256754089,
+            "station": "MiesvanderRohe Gateway",
+            "marketId": 4225986051,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-26T103715.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-10-26T20:46:08.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Shutdown",
+            "timestamp": "2026-10-26T20:41:08Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:41:03Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:40:59Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-10-26T20:40:18Z"
+          },
+          {
+            "event": "ShipyardSell",
+            "timestamp": "2026-10-26T20:40:17Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-10-26T20:40:09Z"
+          },
+          {
+            "event": "Shipyard",
+            "timestamp": "2026-10-26T20:40:09Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:40:02Z"
+          },
+          {
+            "event": "Loadout",
+            "timestamp": "2026-10-26T20:40:02Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-26T20:40:02Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:40:02Z"
+          },
+          {
+            "event": "ShipyardSwap",
+            "timestamp": "2026-10-26T20:40:00Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-26T20:39:41Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-10-26T20:39:37Z"
+          },
+          {
+            "event": "Shipyard",
+            "timestamp": "2026-10-26T20:39:37Z"
+          },
+          {
+            "event": "StoredModules",
+            "timestamp": "2026-10-26T20:39:26Z"
+          },
+          {
+            "event": "Outfitting",
+            "timestamp": "2026-10-26T20:39:26Z"
+          },
+          {
+            "event": "NpcCrewPaidWage",
+            "timestamp": "2026-10-26T20:39:21Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:39:21Z"
+          },
+          {
+            "event": "Loadout",
+            "timestamp": "2026-10-26T20:39:21Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-26T20:39:21Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:39:21Z"
+          },
+          {
+            "event": "ShipyardSwap",
+            "timestamp": "2026-10-26T20:39:20Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:39:02Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-10-26T20:38:39Z"
+          },
+          {
+            "event": "Shipyard",
+            "timestamp": "2026-10-26T20:38:39Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-26T20:29:41Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-26T20:19:41Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-26T20:09:41Z"
+          },
+          {
+            "event": "Market",
+            "timestamp": "2026-10-26T20:06:22Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:06:05Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:05:52Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:05:03Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:59Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:54Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:49Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:44Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:35Z"
+          },
+          {
+            "event": "ShipyardTransfer",
+            "timestamp": "2026-10-26T20:04:17Z"
+          },
+          {
+            "event": "StoredShips",
+            "timestamp": "2026-10-26T20:03:54Z"
+          },
+          {
+            "event": "Shipyard",
+            "timestamp": "2026-10-26T20:03:54Z"
+          },
+          {
+            "event": "CommunityGoal",
+            "timestamp": "2026-10-26T20:03:48Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:03:45Z"
+          },
+          {
+            "event": "FSDTarget",
+            "timestamp": "2026-10-26T20:03:37Z"
+          },
+          {
+            "event": "NavRoute",
+            "timestamp": "2026-10-26T20:03:37Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:03:30Z"
+          },
+          {
+            "event": "CommunityGoalJoin",
+            "timestamp": "2026-10-26T20:03:06Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:02:38Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:02:37Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-26T20:02:02Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-26T09:37:12Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 6,
+          "type": "asp",
+          "model": "Asp Explorer",
+          "name": null,
+          "nickname": null,
+          "title": "Asp Explorer",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1297113684,
+            "balanceAt": "2026-11-05T12:15:49Z",
+            "ship": "Federal Corvette",
+            "loadout": {
+              "ship": "federation_corvette",
+              "cargoCapacity": 0,
+              "unladenMass": 1892.000122,
+              "maxJumpRange": 20.345615,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size6_class5",
+                "size": 6,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 3224,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": "Broo's Legacy",
+            "marketId": 128674695,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-05T131516.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-05T12:15:12Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 26,
+          "type": "federation_corvette",
+          "model": "Federal Corvette",
+          "name": null,
+          "nickname": null,
+          "title": "Federal Corvette",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1297113684,
+            "balanceAt": "2026-11-05T12:15:49Z",
+            "ship": "Federal Corvette",
+            "loadout": {
+              "ship": "federation_corvette",
+              "cargoCapacity": 0,
+              "unladenMass": 1892.000122,
+              "maxJumpRange": 20.345615,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size6_class5",
+                "size": 6,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 3224,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": "Broo's Legacy",
+            "marketId": 128674695,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-05T131516.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-05T12:41:17.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:17Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:17Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:15Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:14Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:12Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:12Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:09Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:09Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:07Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:07Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:36:01Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:36:01Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:59Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:58Z"
+          },
+          {
+            "event": "EngineerProgress",
+            "timestamp": "2026-11-05T12:35:56Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:56Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:56Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:53Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:53Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:50Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:50Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:38Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:37Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:35Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:34Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:32Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:32Z"
+          },
+          {
+            "event": "EngineerProgress",
+            "timestamp": "2026-11-05T12:35:29Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:29Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:29Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:25Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:25Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:22Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:22Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:20Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:19Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:14Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:14Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:12Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:12Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:09Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:09Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:04Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:03Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:35:01Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:35:01Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:34:58Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:34:58Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-05T12:34:53Z"
+          },
+          {
+            "event": "EngineerCraft",
+            "timestamp": "2026-11-05T12:34:52Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-05T12:15:12Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 26,
+          "type": "federation_corvette",
+          "model": "Federal Corvette",
+          "name": null,
+          "nickname": null,
+          "title": "Federal Corvette",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1441305056,
+            "balanceAt": "2026-11-01T09:33:08Z",
+            "ship": "Federal Corvette",
+            "loadout": {
+              "ship": "federation_corvette",
+              "cargoCapacity": 0,
+              "unladenMass": 1969.800049,
+              "maxJumpRange": 18.793663,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size6_class5",
+                "size": 6,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 3100,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Xinca",
+            "systemAddress": 4408557439331,
+            "station": "TST-001",
+            "marketId": 3700000001,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-01T103230.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-01T09:32:27Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 26,
+          "type": "federation_corvette",
+          "model": "Federal Corvette",
+          "name": null,
+          "nickname": null,
+          "title": "Federal Corvette",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 1441305056,
+            "balanceAt": "2026-11-01T09:33:08Z",
+            "ship": "Federal Corvette",
+            "loadout": {
+              "ship": "federation_corvette",
+              "cargoCapacity": 0,
+              "unladenMass": 1969.800049,
+              "maxJumpRange": 18.793663,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size6_class5",
+                "size": 6,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 3100,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Xinca",
+            "systemAddress": 4408557439331,
+            "station": "TST-001",
+            "marketId": 3700000001,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-01T103230.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-01T14:02:56.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Shutdown",
+            "timestamp": "2026-11-01T13:57:56Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:57:54Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:52:10Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:52:10Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:52:10Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-01T13:52:10Z"
+          },
+          {
+            "event": "CarrierJump",
+            "timestamp": "2026-11-01T13:52:10Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:51:11Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-01T13:51:11Z"
+          },
+          {
+            "event": "CarrierLocation",
+            "timestamp": "2026-11-01T13:51:10Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:48:26Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-01T13:37:33Z"
+          },
+          {
+            "event": "Loadout",
+            "timestamp": "2026-11-01T13:37:31Z"
+          },
+          {
+            "event": "Embark",
+            "timestamp": "2026-11-01T13:37:31Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-01T13:37:25Z"
+          },
+          {
+            "event": "Backpack",
+            "timestamp": "2026-11-01T13:37:25Z"
+          },
+          {
+            "event": "SuitLoadout",
+            "timestamp": "2026-11-01T13:37:25Z"
+          },
+          {
+            "event": "Disembark",
+            "timestamp": "2026-11-01T13:37:23Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:36:29Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:56Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:35:48Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:45Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:45Z"
+          },
+          {
+            "event": "CarrierJumpRequest",
+            "timestamp": "2026-11-01T13:35:45Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:31Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:31Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:35:21Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:18Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:18Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:02Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:35:01Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:34:57Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:54Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:54Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:48Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:48Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:34:44Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:41Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:41Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:28Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:24Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:23Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:34:20Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:17Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:17Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:05Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:01Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:34:00Z"
+          },
+          {
+            "event": "CarrierStats",
+            "timestamp": "2026-11-01T13:33:55Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-11-01T13:33:53Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-01T09:32:27Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 26,
+          "type": "federation_corvette",
+          "model": "Federal Corvette",
+          "name": null,
+          "nickname": null,
+          "title": "Federal Corvette",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 198005296,
+            "balanceAt": "2026-10-31T14:59:57Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1184,
+              "unladenMass": 1434.87207,
+              "maxJumpRange": 39.701969,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4650,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe GA-I b57-6",
+            "systemAddress": 13868046558697,
+            "station": "Rorschach Terminal",
+            "marketId": 4330329347,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-31T155928.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-31T14:59:25Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper MkII",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper MkII",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 198005296,
+            "balanceAt": "2026-10-31T14:59:57Z",
+            "ship": "Panther Clipper Mk II",
+            "loadout": {
+              "ship": "panthermkii",
+              "cargoCapacity": 1184,
+              "unladenMass": 1434.87207,
+              "maxJumpRange": 39.701969,
+              "fuelCapacity": 64,
+              "fuelMain": 64,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size7_class5",
+                "size": 7,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": 4650,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe GA-I b57-6",
+            "systemAddress": 13868046558697,
+            "station": "Rorschach Terminal",
+            "marketId": 4330329347,
+            "docked": true,
+            "cargo": [],
+            "cargoCount": 0,
+            "legalState": null,
+            "shieldsUp": true,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-10-31T155928.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-10-31T23:16:57.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Shutdown",
+            "timestamp": "2026-10-31T23:11:57Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:11:54Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:11:51Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:11:44Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:11:21Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T23:09:06Z"
+          },
+          {
+            "event": "MarketSell",
+            "timestamp": "2026-10-31T23:09:03Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:08:29Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:04:27Z"
+          },
+          {
+            "event": "Market",
+            "timestamp": "2026-10-31T23:02:06Z"
+          },
+          {
+            "event": "PayFines",
+            "timestamp": "2026-10-31T23:01:59Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:01:45Z"
+          },
+          {
+            "event": "Docked",
+            "timestamp": "2026-10-31T23:01:45Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:00:57Z"
+          },
+          {
+            "event": "DockingGranted",
+            "timestamp": "2026-10-31T23:00:51Z"
+          },
+          {
+            "event": "DockingRequested",
+            "timestamp": "2026-10-31T23:00:50Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:00:42Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T23:00:37Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-31T23:00:37Z"
+          },
+          {
+            "event": "SupercruiseExit",
+            "timestamp": "2026-10-31T23:00:37Z"
+          },
+          {
+            "event": "SupercruiseDestinationDrop",
+            "timestamp": "2026-10-31T23:00:36Z"
+          },
+          {
+            "event": "ReservoirReplenished",
+            "timestamp": "2026-10-31T22:58:57Z"
+          },
+          {
+            "event": "LeaveBody",
+            "timestamp": "2026-10-31T22:58:55Z"
+          },
+          {
+            "event": "ReservoirReplenished",
+            "timestamp": "2026-10-31T22:58:53Z"
+          },
+          {
+            "event": "Music",
+            "timestamp": "2026-10-31T22:58:47Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-31T22:58:47Z"
+          },
+          {
+            "event": "SupercruiseEntry",
+            "timestamp": "2026-10-31T22:58:47Z"
+          },
+          {
+            "event": "StartJump",
+            "timestamp": "2026-10-31T22:58:42Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T22:57:54Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-31T22:57:51Z"
+          },
+          {
+            "event": "Loadout",
+            "timestamp": "2026-10-31T22:57:50Z"
+          },
+          {
+            "event": "DockSRV",
+            "timestamp": "2026-10-31T22:57:50Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T22:57:35Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:32Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:31Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:31Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:30Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:29Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:29Z"
+          },
+          {
+            "event": "EjectCargo",
+            "timestamp": "2026-10-31T22:57:28Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T22:57:20Z"
+          },
+          {
+            "event": "CargoTransfer",
+            "timestamp": "2026-10-31T22:57:17Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T22:56:52Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-10-31T22:56:49Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-10-31T22:56:49Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-10-31T22:56:48Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-10-31T22:56:47Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-10-31T22:56:45Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-10-31T22:56:44Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-10-31T22:56:44Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-10-31T14:59:25Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": {
+          "mode": "waypoints",
+          "reason": "vaisseau avec hangar à Rhino",
+          "shipId": 31,
+          "canRemember": true,
+          "at": 1793488617000
+        }
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 31,
+          "type": "panthermkii",
+          "model": "Panther Clipper MkII",
+          "name": null,
+          "nickname": null,
+          "title": "Panther Clipper MkII",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 554813934,
+            "balanceAt": "2026-11-06T14:30:09Z",
+            "ship": "Type-11 Prospector",
+            "loadout": {
+              "ship": "lakonminer",
+              "cargoCapacity": 268,
+              "unladenMass": 535.5,
+              "maxJumpRange": 25.069561,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [
+              {
+                "name": "iridium",
+                "label": "Iridium",
+                "count": 198
+              }
+            ],
+            "cargoCount": 198,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-06T095700.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": null,
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-06T08:56:57Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 43,
+          "type": "lakonminer",
+          "model": "Type-11 Prospector",
+          "name": null,
+          "nickname": null,
+          "title": "Type-11 Prospector",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /state": {
+        "statut": 200,
+        "corps": {
+          "game": {
+            "commander": "Testeur",
+            "balance": 554813934,
+            "balanceAt": "2026-11-06T14:30:09Z",
+            "ship": "Type-11 Prospector",
+            "loadout": {
+              "ship": "lakonminer",
+              "cargoCapacity": 268,
+              "unladenMass": 535.5,
+              "maxJumpRange": 25.069561,
+              "fuelCapacity": 32,
+              "fuelMain": 32,
+              "fsd": {
+                "item": "int_hyperdrive_overcharge_size5_class5",
+                "size": 5,
+                "cls": 5,
+                "overcharge": true,
+                "optimalMass": null,
+                "maxFuelPerJump": null
+              }
+            },
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": null,
+            "marketId": null,
+            "docked": false,
+            "cargo": [
+              {
+                "name": "iridium",
+                "label": "Iridium",
+                "count": 198
+              }
+            ],
+            "cargoCount": 198,
+            "legalState": null,
+            "shieldsUp": false,
+            "destination": null,
+            "lastDiedAt": null
+          },
+          "journal": {
+            "dir": "<banc>\\journaux",
+            "file": "Journal.2026-11-06T095700.01.log",
+            "ready": true,
+            "error": null,
+            "lastEventAt": "2026-11-06T23:11:36.000Z",
+            "galaxy": "live",
+            "skipped": []
+          }
+        }
+      },
+      "GET /journal/recent": {
+        "statut": 200,
+        "corps": [
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:36Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:34Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:34Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:34Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:34Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:32Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:31Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:31Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:31Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:30Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:30Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:30Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:29Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:27Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:27Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:27Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:27Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:26Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:25Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:25Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:25Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:24Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:22Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:22Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:21Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:20Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:09Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:07Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:05Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:04Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:03Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:03Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T23:06:00Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:06:00Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T23:06:00Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:06:00Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:59Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:58Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:57Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:55Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T23:05:55Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:54Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T23:05:53Z"
+          },
+          {
+            "event": "SAASignalsFound",
+            "timestamp": "2026-11-06T22:59:57Z"
+          },
+          {
+            "event": "SAASignalsFound",
+            "timestamp": "2026-11-06T22:59:57Z"
+          },
+          {
+            "event": "Cargo",
+            "timestamp": "2026-11-06T22:59:10Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T22:59:08Z"
+          },
+          {
+            "event": "MiningRefined",
+            "timestamp": "2026-11-06T22:59:08Z"
+          },
+          {
+            "event": "MaterialCollected",
+            "timestamp": "2026-11-06T22:59:08Z"
+          },
+          {
+            "event": "ShipLocker",
+            "timestamp": "2026-11-06T22:59:06Z"
+          }
+        ]
+      },
+      "GET /journal/language": {
+        "statut": 200,
+        "corps": {
+          "language": "French/FR",
+          "french": true,
+          "warning": null,
+          "at": "2026-11-06T08:56:57Z"
+        }
+      },
+      "GET /settings": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "journalPath": "<banc>\\journaux",
+          "hoursPerEvening": 3
+        }
+      },
+      "GET /overlay": {
+        "statut": 200,
+        "corps": {
+          "mode": null,
+          "glance": false,
+          "pages": [],
+          "installed": false,
+          "disabled": true
+        }
+      },
+      "GET /overlay/suggest": {
+        "statut": 200,
+        "corps": {
+          "mode": "shipmining",
+          "reason": "raffinage en vaisseau",
+          "at": 1794006696000
+        }
+      },
+      "GET /ships/nicknames": {
+        "statut": 200,
+        "corps": {}
+      },
+      "GET /ships/roles": {
+        "statut": 200,
+        "corps": {
+          "roles": [
+            {
+              "id": "routes",
+              "label": "Commerce",
+              "icon": "⇄"
+            },
+            {
+              "id": "waypoints",
+              "label": "Minage Rhino",
+              "icon": "⛏"
+            },
+            {
+              "id": "shipmining",
+              "label": "Minage vaisseau",
+              "icon": "☄"
+            },
+            {
+              "id": "combat",
+              "label": "Combat",
+              "icon": "⚔"
+            },
+            {
+              "id": "groundcombat",
+              "label": "Combat au sol",
+              "icon": "🪖"
+            },
+            {
+              "id": "rescue",
+              "label": "Sauvetage",
+              "icon": "✚"
+            },
+            {
+              "id": "materials",
+              "label": "Matériaux",
+              "icon": "◈"
+            },
+            {
+              "id": "colonisation",
+              "label": "Colonisation",
+              "icon": "🏗"
+            },
+            {
+              "id": "polyvalent",
+              "label": "Polyvalent",
+              "icon": "✦"
+            }
+          ],
+          "maxSecondary": 3,
+          "ships": {}
+        }
+      },
+      "GET /ships/current": {
+        "statut": 200,
+        "corps": {
+          "shipId": 43,
+          "type": "lakonminer",
+          "model": "Type-11 Prospector",
+          "name": null,
+          "nickname": null,
+          "title": "Type-11 Prospector",
+          "role": null
+        }
+      },
+      "GET /overlay/switch": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  }
+}

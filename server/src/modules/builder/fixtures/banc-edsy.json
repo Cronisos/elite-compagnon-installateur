@@ -1,0 +1,2223 @@
+{
+ "about": "Banc EDSY du 15 nov. 2026 : builds de l'app ouverts dans edsy.org (v4.24.2.3, eddb 424029903), valeurs exactes de ses cases. wpn_max_sus : soutenabilité WEP à 4 pips (fraction) ; wpn_amm_dur : autonomie des munitions la plus courte (s) ; mod_armour_protect : absorption des renforts de modules (fraction) ; mod_armour_integ : leur intégrité ; max_pitch/roll/yaw : rotation (°/s). slef : export SLEF d'EDSY (Loadout), pour l'import.",
+ "builds": [
+  {
+   "id": "1-2",
+   "label": "Combat cinétique/explosif : multicanons, canons, rails, frag, missiles/torpilles/mines, prismatique, G3-G4",
+   "build": {
+    "shipId": 1,
+    "name": "Sidewinder cinetique-explosif",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 72144,
+       "bpid": "wpn_eff",
+       "grade": 3,
+       "expid": "wpnx_aulo"
+      },
+      {
+       "modid": 70162,
+       "bpid": "wpn_eff",
+       "grade": 4,
+       "expid": "wpnx_aulo"
+      }
+     ],
+     "utility": [
+      {
+       "modid": 57010,
+       "bpid": "scan_fs",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 53090,
+       "bpid": "upd_ammo",
+       "grade": 1,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40113,
+       "bpid": "cbh_hd",
+       "grade": 3,
+       "expid": "cbhx_ap"
+      },
+      {
+       "modid": 41210,
+       "bpid": "cpp_arm",
+       "grade": 4,
+       "expid": "cppx_db"
+      },
+      {
+       "modid": 42210,
+       "bpid": "ct_ct",
+       "grade": 3,
+       "expid": "ctx_db"
+      },
+      {
+       "modid": 43210,
+       "bpid": "cfsd_fb",
+       "grade": 4,
+       "expid": "cfsdx_dc"
+      },
+      {
+       "modid": 44140,
+       "bpid": "misc_lw",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 45110,
+       "bpid": "cpd_wf",
+       "grade": 4,
+       "expid": "cpdx_cc"
+      },
+      {
+       "modid": 46140,
+       "bpid": "cs_wa",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 47130,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 30211,
+       "bpid": "isg_rf",
+       "grade": 4,
+       "expid": "isgx_db"
+      },
+      {
+       "modid": 31210,
+       "bpid": "iscb_sp",
+       "grade": 3,
+       "expid": "iscbx_bc"
+      },
+      {
+       "modid": 25110,
+       "bpid": "ifsdi_eca",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 26110,
+       "bpid": "misc_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 8140,
+       "bpid": "imrp_hd",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 4140,
+       "bpid": "ihrp_hd",
+       "grade": 4,
+       "expid": "ihrpx_ap"
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1,
+    "wpn_amm_dur": 262.26666666666665,
+    "mod_armour_protect": 0.675,
+    "mod_armour_integ": 78.75,
+    "max_pitch": 52.19161214299636,
+    "max_roll": 133.51342641231628,
+    "max_yaw": 20.633893172812517
+   }
+  },
+  {
+   "id": "2-2",
+   "label": "Combat cinétique/explosif : multicanons, canons, rails, frag, missiles/torpilles/mines, prismatique, G3-G4",
+   "build": {
+    "shipId": 2,
+    "name": "Cobra Mk III cinetique-explosif",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 84220,
+       "bpid": "wpn_hc",
+       "grade": 3,
+       "expid": "wpnx_db"
+      },
+      {
+       "modid": 71241,
+       "bpid": "wpn_ds",
+       "grade": 4,
+       "expid": "wpnx_cosh"
+      },
+      {
+       "modid": 82120,
+       "bpid": "wpn_hc",
+       "grade": 3,
+       "expid": "wpnx_db"
+      },
+      {
+       "modid": 85193,
+       "bpid": "wpn_lw",
+       "grade": 4,
+       "expid": "wpnx_db"
+      }
+     ],
+     "utility": [
+      {
+       "modid": 57010,
+       "bpid": "misc_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 53090,
+       "bpid": "misc_lw",
+       "grade": 3,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40113,
+       "bpid": "cbh_kr",
+       "grade": 3,
+       "expid": "cbhx_dp"
+      },
+      {
+       "modid": 41410,
+       "bpid": "cpp_oc",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 42410,
+       "bpid": "ct_str",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 43410,
+       "bpid": "cfsd_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 44340,
+       "bpid": "misc_rf",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 45310,
+       "bpid": "cpd_ce",
+       "grade": 4,
+       "expid": "cpdx_db"
+      },
+      {
+       "modid": 46340,
+       "bpid": "cs_lw",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 47430,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 30411,
+       "bpid": "isg_kr",
+       "grade": 4,
+       "expid": "isgx_fc"
+      },
+      {
+       "modid": 31410,
+       "bpid": "iscb_rc",
+       "grade": 3,
+       "expid": "iscbx_db"
+      },
+      {
+       "modid": 4440,
+       "bpid": "ihrp_kr",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 8240,
+       "bpid": "imrp_hd",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 4240,
+       "bpid": "ihrp_br",
+       "grade": 3,
+       "expid": "ihrpx_dp"
+      },
+      {
+       "modid": 4240,
+       "bpid": "ihrp_hd",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 25110,
+       "bpid": "ifsdi_lr",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 26110,
+       "bpid": "misc_rf",
+       "grade": 4,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1,
+    "wpn_amm_dur": 5,
+    "mod_armour_protect": 0.675,
+    "mod_armour_integ": 118.125,
+    "max_pitch": 42.21026486101022,
+    "max_roll": 105.52566215252554,
+    "max_yaw": 10.552566215252554
+   }
+  },
+  {
+   "id": "3-4",
+   "label": "Survie : plus gros bouclier + cellules multiples + renforts, générateur surcadencé, distributeur ingé, dirty drive, grades 1 à 5",
+   "build": {
+    "shipId": 3,
+    "name": "Imperial Clipper survie",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 83320,
+       "bpid": "wpn_eff",
+       "grade": 3,
+       "expid": "wpnx_dash"
+      },
+      {
+       "modid": 84220,
+       "bpid": "wpn_hc",
+       "grade": 4,
+       "expid": "wpnx_db"
+      },
+      {
+       "modid": 82220,
+       "bpid": "wpn_hc",
+       "grade": 5,
+       "expid": "wpnx_db"
+      },
+      {
+       "modid": 87256,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "utility": [
+      {
+       "modid": 54010,
+       "bpid": "usb_br",
+       "grade": 2,
+       "expid": "usbx_fc"
+      },
+      {
+       "modid": 52090,
+       "bpid": "misc_rf",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 54030,
+       "bpid": "usb_br",
+       "grade": 3,
+       "expid": "usbx_fb"
+      },
+      {
+       "modid": 54010,
+       "bpid": "usb_hd",
+       "grade": 4,
+       "expid": "usbx_sc"
+      }
+     ],
+     "component": [
+      {
+       "modid": 40114,
+       "bpid": "cbh_br",
+       "grade": 1,
+       "expid": "cbhx_lp"
+      },
+      {
+       "modid": 41610,
+       "bpid": "cpp_oc",
+       "grade": 2,
+       "expid": "cppx_sd"
+      },
+      {
+       "modid": 42610,
+       "bpid": "ct_dt",
+       "grade": 5,
+       "expid": "ctx_ddi"
+      },
+      {
+       "modid": 43510,
+       "bpid": "cfsd_fb",
+       "grade": 3,
+       "expid": "cfsdx_mm"
+      },
+      {
+       "modid": 44510,
+       "bpid": "misc_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 45610,
+       "bpid": "cpd_hc",
+       "grade": 5,
+       "expid": "cpdx_fc"
+      },
+      {
+       "modid": 46520,
+       "bpid": "cs_wa",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 47530,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 30710,
+       "bpid": "isg_tr",
+       "grade": 5,
+       "expid": "isgx_fb"
+      },
+      {
+       "modid": 31710,
+       "bpid": "iscb_sp",
+       "grade": 1,
+       "expid": "iscbx_db"
+      },
+      {
+       "modid": 31610,
+       "bpid": "iscb_rc",
+       "grade": 2,
+       "expid": "iscbx_fc"
+      },
+      {
+       "modid": 31410,
+       "bpid": "iscb_sp",
+       "grade": 3,
+       "expid": "iscbx_rc"
+      },
+      {
+       "modid": 4440,
+       "bpid": "ihrp_kr",
+       "grade": 1,
+       "expid": "ihrpx_dp"
+      },
+      {
+       "modid": 4340,
+       "bpid": "ihrp_br",
+       "grade": 2,
+       "expid": "ihrpx_lp"
+      },
+      {
+       "modid": 4340,
+       "bpid": "ihrp_tr",
+       "grade": 3,
+       "expid": "ihrpx_rp"
+      },
+      {
+       "modid": 27110,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      },
+      {
+       "modid": 8240,
+       "bpid": "imrp_hd",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 1110,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 0.6951125373353548,
+    "wpn_amm_dur": 317.1893408088936,
+    "mod_armour_protect": 0.75,
+    "mod_armour_integ": 131.25,
+    "max_pitch": 61.87030017210255,
+    "max_roll": 123.7406003442051,
+    "max_yaw": 27.84163507744615
+   },
+   "slef": {
+    "event": "Loadout",
+    "Ship": "empire_trader",
+    "ShipName": "Imperial Clipper survi",
+    "ShipIdent": "",
+    "HullValue": 21035250,
+    "ModulesValue": 158829920,
+    "UnladenMass": 840.14,
+    "CargoCapacity": 0,
+    "MaxJumpRange": 16.520455,
+    "FuelCapacity": {
+     "Main": 32,
+     "Reserve": 0.74
+    },
+    "Rebuy": 8993258,
+    "Modules": [
+     {
+      "Slot": "CargoHatch",
+      "Item": "modularcargobaydoor",
+      "On": true,
+      "Priority": 0
+     },
+     {
+      "Slot": "LargeHardpoint1",
+      "Item": "hpt_plasmaaccelerator_fixed_large",
+      "On": true,
+      "Priority": 0,
+      "Value": 3051200,
+      "Engineering": {
+       "BlueprintName": "Weapon_Efficient",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_blinding_shell"
+      }
+     },
+     {
+      "Slot": "LargeHardpoint2",
+      "Item": "hpt_railgun_fixed_medium",
+      "On": true,
+      "Priority": 0,
+      "Value": 412800,
+      "Engineering": {
+       "BlueprintName": "Weapon_HighCapacity",
+       "Level": 4,
+       "Quality": 1,
+       "ExperimentalEffect": "special_weapon_toughened"
+      }
+     },
+     {
+      "Slot": "MediumHardpoint1",
+      "Item": "hpt_dumbfiremissilerack_fixed_medium",
+      "On": true,
+      "Priority": 0,
+      "Value": 240400,
+      "Engineering": {
+       "BlueprintName": "Weapon_HighCapacity",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_weapon_toughened"
+      }
+     },
+     {
+      "Slot": "MediumHardpoint2",
+      "Item": "hpt_plasmashockcannon_turret_medium",
+      "On": true,
+      "Priority": 0,
+      "Value": 1359200
+     },
+     {
+      "Slot": "TinyHardpoint1",
+      "Item": "hpt_shieldbooster_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 281000,
+      "Engineering": {
+       "BlueprintName": "ShieldBooster_Explosive",
+       "Level": 2,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldbooster_efficient"
+      }
+     },
+     {
+      "Slot": "TinyHardpoint2",
+      "Item": "hpt_heatsinklauncher_turret_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 3500,
+      "Engineering": {
+       "BlueprintName": "Misc_Reinforced",
+       "Level": 1,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint3",
+      "Item": "hpt_shieldbooster_size0_class3",
+      "On": true,
+      "Priority": 0,
+      "Value": 53000,
+      "Engineering": {
+       "BlueprintName": "ShieldBooster_Explosive",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldbooster_kinetic"
+      }
+     },
+     {
+      "Slot": "TinyHardpoint4",
+      "Item": "hpt_shieldbooster_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 281000,
+      "Engineering": {
+       "BlueprintName": "ShieldBooster_HeavyDuty",
+       "Level": 4,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldbooster_chunky"
+      }
+     },
+     {
+      "Slot": "Armour",
+      "Item": "empire_trader_armour_mirrored",
+      "On": true,
+      "Priority": 0,
+      "Value": 47423290,
+      "Engineering": {
+       "BlueprintName": "Armour_Explosive",
+       "Level": 1,
+       "Quality": 1,
+       "ExperimentalEffect": "special_armour_explosive"
+      }
+     },
+     {
+      "Slot": "PowerPlant",
+      "Item": "int_powerplant_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 12971100,
+      "Engineering": {
+       "BlueprintName": "PowerPlant_Boosted",
+       "Level": 2,
+       "Quality": 1,
+       "ExperimentalEffect": "special_powerplant_lightweight"
+      }
+     },
+     {
+      "Slot": "MainEngines",
+      "Item": "int_engine_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 16179530,
+      "Engineering": {
+       "BlueprintName": "Engine_Dirty",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_engine_haulage"
+      }
+     },
+     {
+      "Slot": "FrameShiftDrive",
+      "Item": "int_hyperdrive_size5_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 5103950,
+      "Engineering": {
+       "BlueprintName": "FSD_FastBoot",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_fsd_heavy"
+      }
+     },
+     {
+      "Slot": "LifeSupport",
+      "Item": "int_lifesupport_size5_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 1241320,
+      "Engineering": {
+       "BlueprintName": "Misc_LightWeight",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "PowerDistributor",
+      "Item": "int_powerdistributor_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 3475690,
+      "Engineering": {
+       "BlueprintName": "PowerDistributor_HighCapacity",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_powerdistributor_efficient"
+      }
+     },
+     {
+      "Slot": "Radar",
+      "Item": "int_sensors_size5_class4",
+      "On": true,
+      "Priority": 0,
+      "Value": 496530,
+      "Engineering": {
+       "BlueprintName": "Sensor_WideAngle",
+       "Level": 1,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "FuelTank",
+      "Item": "int_fueltank_size5_class3",
+      "On": true,
+      "Priority": 0,
+      "Value": 97750
+     },
+     {
+      "Slot": "Slot00_Size7",
+      "Item": "int_shieldgenerator_size7_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 51289110,
+      "Engineering": {
+       "BlueprintName": "ShieldGenerator_Thermic",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shield_kinetic"
+      }
+     },
+     {
+      "Slot": "Slot01_Size7",
+      "Item": "int_shieldcellbank_size7_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 9731930,
+      "Engineering": {
+       "BlueprintName": "ShieldCellBank_Specialised",
+       "Level": 1,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldcell_toughened"
+      }
+     },
+     {
+      "Slot": "Slot02_Size6",
+      "Item": "int_shieldcellbank_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 3475690,
+      "Engineering": {
+       "BlueprintName": "ShieldCellBank_Rapid",
+       "Level": 2,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldcell_efficient"
+      }
+     },
+     {
+      "Slot": "Slot03_Size4",
+      "Item": "int_shieldcellbank_size4_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 443330,
+      "Engineering": {
+       "BlueprintName": "ShieldCellBank_Specialised",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldcell_gradual"
+      }
+     },
+     {
+      "Slot": "Slot04_Size4",
+      "Item": "int_hullreinforcement_size4_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 195000,
+      "Engineering": {
+       "BlueprintName": "HullReinforcement_Kinetic",
+       "Level": 1,
+       "Quality": 1,
+       "ExperimentalEffect": "special_hullreinforcement_chunky"
+      }
+     },
+     {
+      "Slot": "Slot05_Size3",
+      "Item": "int_hullreinforcement_size3_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 84000,
+      "Engineering": {
+       "BlueprintName": "HullReinforcement_Explosive",
+       "Level": 2,
+       "Quality": 1,
+       "ExperimentalEffect": "special_hullreinforcement_explosive"
+      }
+     },
+     {
+      "Slot": "Slot06_Size3",
+      "Item": "int_hullreinforcement_size3_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 84000,
+      "Engineering": {
+       "BlueprintName": "HullReinforcement_Thermic",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_hullreinforcement_thermic"
+      }
+     },
+     {
+      "Slot": "Slot07_Size2",
+      "Item": "int_dronecontrol_repair_size1_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 9600
+     },
+     {
+      "Slot": "Slot08_Size2",
+      "Item": "int_modulereinforcement_size2_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 36000,
+      "Engineering": {
+       "BlueprintName": "MRP_HeavyDuty",
+       "Level": 5,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot09_Size1",
+      "Item": "int_repairer_size1_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 810000,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 4,
+       "Quality": 1
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "9-5",
+   "label": "Exploration : FSD portée augmentée G5 + Mass Manager, booster FSD Guardian, réservoirs, scanner, armure et bouclier légers, 2 armes légères",
+   "build": {
+    "shipId": 9,
+    "name": "Alliance Chieftain exploration",
+    "slots": {
+     "hardpoint": [
+      null,
+      null,
+      null,
+      {
+       "modid": 72171,
+       "bpid": "wpn_eff",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 81140,
+       "bpid": "wpn_lr",
+       "grade": 2,
+       "expid": null
+      },
+      null
+     ],
+     "utility": [
+      {
+       "modid": 52090,
+       "bpid": "uhsl_ammo",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 56010,
+       "bpid": "scan_wa",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 59010,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      },
+      {
+       "modid": 55010,
+       "bpid": "scan_wa",
+       "grade": 2,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40131,
+       "bpid": "cbh_lw",
+       "grade": 5,
+       "expid": "cbhx_ap"
+      },
+      {
+       "modid": 41610,
+       "bpid": "cpp_arm",
+       "grade": 1,
+       "expid": "cppx_db"
+      },
+      {
+       "modid": 42640,
+       "bpid": "ct_ct",
+       "grade": 5,
+       "expid": "ctx_ts"
+      },
+      {
+       "modid": 43510,
+       "bpid": "cfsd_ir",
+       "grade": 5,
+       "expid": "cfsdx_mm"
+      },
+      {
+       "modid": 44540,
+       "bpid": "misc_lw",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 45640,
+       "bpid": "cpd_sh",
+       "grade": 4,
+       "expid": "cpdx_sc"
+      },
+      {
+       "modid": 46440,
+       "bpid": "cs_lw",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 47430,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [
+      {
+       "modid": 8440,
+       "bpid": "imrp_hd",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 8440,
+       "bpid": "imrp_hd",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 8440,
+       "bpid": "imrp_hd",
+       "grade": 4,
+       "expid": null
+      }
+     ],
+     "internal": [
+      {
+       "modid": 20610,
+       "bpid": "ifs_sre",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 12580,
+       "bpid": "misc_agzr",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 30440,
+       "bpid": "isg_elp",
+       "grade": 2,
+       "expid": "isgx_ld"
+      },
+      {
+       "modid": 47230,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      },
+      {
+       "modid": 1210,
+       "bpid": "misc_sh",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 11130,
+       "bpid": "iss_er",
+       "grade": 1,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1,
+    "wpn_amm_dur": 381.5466666666666,
+    "mod_armour_protect": 0.9723570000000001,
+    "mod_armour_integ": 813.8050000000001,
+    "max_pitch": 51.168022795486536,
+    "max_roll": 121.18742241036284,
+    "max_yaw": 21.544430650731172
+   }
+  },
+  {
+   "id": "15-2",
+   "label": "Combat cinétique/explosif : multicanons, canons, rails, frag, missiles/torpilles/mines, prismatique, G3-G4",
+   "build": {
+    "shipId": 15,
+    "name": "Python Mk II cinetique-explosif",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 80290,
+       "bpid": "wpn_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 72352,
+       "bpid": "wpn_hc",
+       "grade": 3,
+       "expid": "wpnx_inro"
+      },
+      {
+       "modid": 70331,
+       "bpid": "wpn_hc",
+       "grade": 4,
+       "expid": "wpnx_hys"
+      },
+      {
+       "modid": 84220,
+       "bpid": "wpn_stu",
+       "grade": 3,
+       "expid": "hrgx_plsl"
+      },
+      {
+       "modid": 71242,
+       "bpid": "wpn_hc",
+       "grade": 4,
+       "expid": "wpnx_inro"
+      },
+      {
+       "modid": 82220,
+       "bpid": "wpn_rf",
+       "grade": 3,
+       "expid": "wpnx_ovmu"
+      }
+     ],
+     "utility": [
+      {
+       "modid": 57010,
+       "bpid": "scan_lr",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 53090,
+       "bpid": "misc_rf",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 50090,
+       "bpid": "misc_sh",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 51060,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 54010,
+       "bpid": "usb_hd",
+       "grade": 3,
+       "expid": "usbx_fb"
+      },
+      {
+       "modid": 54010,
+       "bpid": "usb_kr",
+       "grade": 4,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40113,
+       "bpid": "cbh_br",
+       "grade": 4,
+       "expid": "cbhx_lp"
+      },
+      {
+       "modid": 41610,
+       "bpid": "cpp_arm",
+       "grade": 3,
+       "expid": "cppx_ts"
+      },
+      {
+       "modid": 42610,
+       "bpid": "ct_ct",
+       "grade": 4,
+       "expid": "ctx_ddi"
+      },
+      {
+       "modid": 43510,
+       "bpid": "cfsd_fb",
+       "grade": 3,
+       "expid": "cfsdx_mm"
+      },
+      {
+       "modid": 44440,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 45610,
+       "bpid": "cpd_b",
+       "grade": 3,
+       "expid": "cpdx_sc"
+      },
+      {
+       "modid": 46540,
+       "bpid": "cs_wa",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 47430,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 30611,
+       "bpid": "isg_tr",
+       "grade": 3,
+       "expid": "isgx_sd"
+      },
+      {
+       "modid": 31410,
+       "bpid": "iscb_sp",
+       "grade": 3,
+       "expid": "iscbx_sd"
+      },
+      {
+       "modid": 4340,
+       "bpid": "ihrp_br",
+       "grade": 3,
+       "expid": "ihrpx_rp"
+      },
+      {
+       "modid": 8240,
+       "bpid": "imrp_hd",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 25110,
+       "bpid": "ifsdi_eca",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 26110,
+       "bpid": "misc_sh",
+       "grade": 3,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1.0000000000000002,
+    "wpn_amm_dur": 2.03,
+    "mod_armour_protect": 0.7128,
+    "mod_armour_integ": 124.74,
+    "max_pitch": 51.696228665990944,
+    "max_roll": 127.1447786109507,
+    "max_yaw": 17.46494211688883
+   }
+  },
+  {
+   "id": "28-2",
+   "label": "Combat cinétique/explosif : multicanons, canons, rails, frag, missiles/torpilles/mines, prismatique, G3-G4",
+   "build": {
+    "shipId": 28,
+    "name": "Viper Mk IV cinetique-explosif",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 84220,
+       "bpid": "wpn_ef",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 71210,
+       "bpid": "wpn_eff",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 82120,
+       "bpid": "wpn_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 85193,
+       "bpid": "wpn_stu",
+       "grade": 3,
+       "expid": null
+      }
+     ],
+     "utility": [
+      {
+       "modid": 57010,
+       "bpid": "misc_lw",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 53090,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40113,
+       "bpid": "cbh_kr",
+       "grade": 4,
+       "expid": "cbhx_dp"
+      },
+      {
+       "modid": 41410,
+       "bpid": "cpp_oc",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 42410,
+       "bpid": "ct_str",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 43410,
+       "bpid": "cfsd_sh",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 44240,
+       "bpid": "misc_rf",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 45310,
+       "bpid": "cpd_ce",
+       "grade": 3,
+       "expid": "cpdx_cc"
+      },
+      {
+       "modid": 46340,
+       "bpid": "cs_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 47430,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [
+      {
+       "modid": 31310,
+       "bpid": "iscb_rc",
+       "grade": 3,
+       "expid": "iscbx_fc"
+      }
+     ],
+     "internal": [
+      {
+       "modid": 30411,
+       "bpid": "isg_kr",
+       "grade": 3,
+       "expid": "isgx_fc"
+      },
+      {
+       "modid": 31410,
+       "bpid": "iscb_rc",
+       "grade": 3,
+       "expid": "iscbx_rc"
+      },
+      {
+       "modid": 4340,
+       "bpid": "ihrp_hd",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 4240,
+       "bpid": "ihrp_kr",
+       "grade": 4,
+       "expid": "ihrpx_lp"
+      },
+      {
+       "modid": 4240,
+       "bpid": "ihrp_br",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 25110,
+       "bpid": "ifsdi_lr",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 26110,
+       "bpid": "misc_rf",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 8140,
+       "bpid": "imrp_hd",
+       "grade": 4,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 0.9344232911979483,
+    "wpn_amm_dur": 5,
+    "mod_armour_protect": 0.7128,
+    "mod_armour_integ": 83.16,
+    "max_pitch": 35.0211171912713,
+    "max_roll": 95.51213779437627,
+    "max_yaw": 13.796197681409906
+   }
+  },
+  {
+   "id": "12-2",
+   "label": "Combat cinétique/explosif : multicanons, canons, rails, frag, missiles/torpilles/mines, prismatique, G3-G4",
+   "build": {
+    "shipId": 12,
+    "name": "Mamba cinetique-explosif",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 71331,
+       "bpid": "wpn_dscr",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 82310,
+       "bpid": "wpn_exp",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 85393,
+       "bpid": "wpn_stu",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 80190,
+       "bpid": "wpn_stu",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 72144,
+       "bpid": "wpn_rp",
+       "grade": 3,
+       "expid": "wpnx_fc"
+      }
+     ],
+     "utility": [
+      {
+       "modid": 57010,
+       "bpid": "scan_wa",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 53090,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 50090,
+       "bpid": "ucl_ammo",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 51060,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 54010,
+       "bpid": "usb_kr",
+       "grade": 3,
+       "expid": "usbx_fc"
+      },
+      {
+       "modid": 54010,
+       "bpid": "usb_br",
+       "grade": 4,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40113,
+       "bpid": "cbh_br",
+       "grade": 4,
+       "expid": "cbhx_rp"
+      },
+      {
+       "modid": 41610,
+       "bpid": "cpp_oc",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 42510,
+       "bpid": "ct_str",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 43410,
+       "bpid": "cfsd_sh",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 44440,
+       "bpid": "misc_sh",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 45610,
+       "bpid": "cpd_b",
+       "grade": 3,
+       "expid": "cpdx_db"
+      },
+      {
+       "modid": 46440,
+       "bpid": "cs_lw",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 47330,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 30511,
+       "bpid": "isg_tr",
+       "grade": 3,
+       "expid": "isgx_hc"
+      },
+      {
+       "modid": 31410,
+       "bpid": "iscb_rc",
+       "grade": 3,
+       "expid": "iscbx_bc"
+      },
+      {
+       "modid": 4340,
+       "bpid": "ihrp_kr",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 26110,
+       "bpid": "misc_sh",
+       "grade": 3,
+       "expid": null
+      },
+      {
+       "modid": 8240,
+       "bpid": "imrp_hd",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 25110,
+       "bpid": "ifsdi_lr",
+       "grade": 4,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1,
+    "wpn_amm_dur": 8,
+    "mod_armour_protect": 0.7128,
+    "mod_armour_integ": 124.74,
+    "max_pitch": 33.41452830330748,
+    "max_roll": 83.5363207582687,
+    "max_yaw": 11.138176101102493
+   },
+   "slef": {
+    "event": "Loadout",
+    "Ship": "mamba",
+    "ShipName": "Mamba cinetique-explos",
+    "ShipIdent": "",
+    "HullValue": 55434290,
+    "ModulesValue": 83503480,
+    "UnladenMass": 501.309,
+    "CargoCapacity": 0,
+    "MaxJumpRange": 12.516177,
+    "FuelCapacity": {
+     "Main": 8,
+     "Reserve": 0.5
+    },
+    "Rebuy": 6946888,
+    "Modules": [
+     {
+      "Slot": "CargoHatch",
+      "Item": "modularcargobaydoor",
+      "On": true,
+      "Priority": 0
+     },
+     {
+      "Slot": "HugeHardpoint1",
+      "Item": "hpt_slugshot_gimbal_large",
+      "On": true,
+      "Priority": 0,
+      "Value": 1751040,
+      "Engineering": {
+       "BlueprintName": "Weapon_DoubleScreaming",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "LargeHardpoint1",
+      "Item": "hpt_dumbfiremissilerack_fixed_large",
+      "On": true,
+      "Priority": 0,
+      "Value": 1021500,
+      "Engineering": {
+       "BlueprintName": null,
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "LargeHardpoint2",
+      "Item": "hpt_advancedtorppylon_fixed_large",
+      "On": true,
+      "Priority": 0,
+      "Value": 157960,
+      "Engineering": {
+       "BlueprintName": "Weapon_Sturdy",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "SmallHardpoint1",
+      "Item": "hpt_minelauncher_fixed_small",
+      "On": true,
+      "Priority": 0,
+      "Value": 24260,
+      "Engineering": {
+       "BlueprintName": "Weapon_Sturdy",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "SmallHardpoint2",
+      "Item": "hpt_multicannon_fixed_small_strong",
+      "On": true,
+      "Priority": 0,
+      "Value": 14250,
+      "Engineering": {
+       "BlueprintName": "Weapon_RapidPhase",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_weapon_efficient"
+      }
+     },
+     {
+      "Slot": "TinyHardpoint1",
+      "Item": "hpt_crimescanner_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 1097100,
+      "Engineering": {
+       "BlueprintName": "Sensor_WideAngle",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint2",
+      "Item": "hpt_plasmapointdefence_turret_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 18550,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint3",
+      "Item": "hpt_chafflauncher_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 8500,
+      "Engineering": {
+       "BlueprintName": "Misc_ChaffCapacity",
+       "Level": 1,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint4",
+      "Item": "hpt_electroniccountermeasure_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 12500,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint5",
+      "Item": "hpt_shieldbooster_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 281000,
+      "Engineering": {
+       "BlueprintName": "ShieldBooster_Kinetic",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldbooster_efficient"
+      }
+     },
+     {
+      "Slot": "TinyHardpoint6",
+      "Item": "hpt_shieldbooster_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 281000,
+      "Engineering": {
+       "BlueprintName": "ShieldBooster_Explosive",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Armour",
+      "Item": "mamba_armour_grade3",
+      "On": true,
+      "Priority": 0,
+      "Value": 46410340,
+      "Engineering": {
+       "BlueprintName": "Armour_Explosive",
+       "Level": 4,
+       "Quality": 1,
+       "ExperimentalEffect": "special_armour_thermic"
+      }
+     },
+     {
+      "Slot": "PowerPlant",
+      "Item": "int_powerplant_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 12971100,
+      "Engineering": {
+       "BlueprintName": "PowerPlant_Boosted",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "MainEngines",
+      "Item": "int_engine_size5_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 5103950,
+      "Engineering": {
+       "BlueprintName": "Engine_Reinforced",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "FrameShiftDrive",
+      "Item": "int_hyperdrive_size4_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 1610080,
+      "Engineering": {
+       "BlueprintName": "FSD_Shielded",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "LifeSupport",
+      "Item": "int_lifesupport_size4_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 28370,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "PowerDistributor",
+      "Item": "int_powerdistributor_size6_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 3475690,
+      "Engineering": {
+       "BlueprintName": "PowerDistributor_Balanced",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_powerdistributor_toughened"
+      }
+     },
+     {
+      "Slot": "Radar",
+      "Item": "int_sensors_size4_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 28370,
+      "Engineering": {
+       "BlueprintName": "Sensor_LightWeight",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "FuelTank",
+      "Item": "int_fueltank_size3_class3",
+      "On": true,
+      "Priority": 0,
+      "Value": 7060
+     },
+     {
+      "Slot": "Slot01_Size5",
+      "Item": "int_shieldgenerator_size5_class5_strong",
+      "On": true,
+      "Priority": 0,
+      "Value": 7655930,
+      "Engineering": {
+       "BlueprintName": "ShieldGenerator_Thermic",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shield_health"
+      }
+     },
+     {
+      "Slot": "Slot02_Size4",
+      "Item": "int_shieldcellbank_size4_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 443330,
+      "Engineering": {
+       "BlueprintName": "ShieldCellBank_Rapid",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shieldcell_oversized"
+      }
+     },
+     {
+      "Slot": "Slot03_Size3",
+      "Item": "int_hullreinforcement_size3_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 84000,
+      "Engineering": {
+       "BlueprintName": "HullReinforcement_Kinetic",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot04_Size2",
+      "Item": "int_dronecontrol_resourcesiphon_size1_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 9600,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 3,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot05_Size2",
+      "Item": "int_modulereinforcement_size2_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 36000,
+      "Engineering": {
+       "BlueprintName": "MRP_HeavyDuty",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot06_Size1",
+      "Item": "int_fsdinterdictor_size1_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 972000,
+      "Engineering": {
+       "BlueprintName": "FSDinterdictor_LongRange",
+       "Level": 4,
+       "Quality": 1
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "1-5",
+   "label": "Exploration : FSD portée augmentée G5 + Mass Manager, booster FSD Guardian, réservoirs, scanner, armure et bouclier légers, 2 armes légères",
+   "build": {
+    "shipId": 1,
+    "name": "Sidewinder exploration",
+    "slots": {
+     "hardpoint": [
+      {
+       "modid": 62172,
+       "bpid": "wpn_eff",
+       "grade": 5,
+       "expid": "wpnx_cose"
+      },
+      {
+       "modid": 72144,
+       "bpid": "wpn_lw",
+       "grade": 4,
+       "expid": "wpnx_aulo"
+      }
+     ],
+     "utility": [
+      {
+       "modid": 52090,
+       "bpid": "uhsl_ammo",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 56010,
+       "bpid": "scan_lr",
+       "grade": 5,
+       "expid": null
+      }
+     ],
+     "component": [
+      {
+       "modid": 40131,
+       "bpid": "cbh_lw",
+       "grade": 5,
+       "expid": "cbhx_ap"
+      },
+      {
+       "modid": 41210,
+       "bpid": "cpp_le",
+       "grade": 3,
+       "expid": "cppx_db"
+      },
+      {
+       "modid": 42240,
+       "bpid": "ct_ct",
+       "grade": 2,
+       "expid": "ctx_db"
+      },
+      {
+       "modid": 43210,
+       "bpid": "cfsd_ir",
+       "grade": 5,
+       "expid": "cfsdx_mm"
+      },
+      {
+       "modid": 44140,
+       "bpid": "misc_lw",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 45140,
+       "bpid": "cpd_ef",
+       "grade": 1,
+       "expid": "cpdx_cc"
+      },
+      {
+       "modid": 46140,
+       "bpid": "cs_lw",
+       "grade": 5,
+       "expid": null
+      },
+      {
+       "modid": 47130,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      }
+     ],
+     "military": [],
+     "internal": [
+      {
+       "modid": 12280,
+       "bpid": "misc_agzr",
+       "grade": 1,
+       "expid": null
+      },
+      {
+       "modid": 20210,
+       "bpid": "ifs_sre",
+       "grade": 4,
+       "expid": null
+      },
+      {
+       "modid": 30140,
+       "bpid": "isg_elp",
+       "grade": 3,
+       "expid": "isgx_db"
+      },
+      {
+       "modid": 47130,
+       "bpid": null,
+       "grade": 0,
+       "expid": null
+      },
+      {
+       "modid": 11130,
+       "bpid": "iss_er",
+       "grade": 2,
+       "expid": null
+      },
+      {
+       "modid": 1110,
+       "bpid": "misc_sh",
+       "grade": 1,
+       "expid": null
+      }
+     ]
+    }
+   },
+   "edsy": {
+    "wpn_max_sus": 1,
+    "wpn_amm_dur": 277.381512605042,
+    "mod_armour_protect": null,
+    "mod_armour_integ": null,
+    "max_pitch": 49.6151345809521,
+    "max_roll": 126.92243730011003,
+    "max_yaw": 19.61528576456246
+   },
+   "slef": {
+    "event": "Loadout",
+    "Ship": "sidewinder",
+    "ShipName": "Sidewinder exploration",
+    "ShipIdent": "",
+    "HullValue": 5070,
+    "ModulesValue": 3629610,
+    "UnladenMass": 39.411,
+    "CargoCapacity": 0,
+    "MaxJumpRange": 37.168407,
+    "FuelCapacity": {
+     "Main": 4,
+     "Reserve": 0.3
+    },
+    "Rebuy": 181734,
+    "Modules": [
+     {
+      "Slot": "CargoHatch",
+      "Item": "modularcargobaydoor",
+      "On": true,
+      "Priority": 0
+     },
+     {
+      "Slot": "SmallHardpoint1",
+      "Item": "hpt_pulselaser_turret_small",
+      "On": true,
+      "Priority": 0,
+      "Value": 26000,
+      "Engineering": {
+       "BlueprintName": "Weapon_Efficient",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_concordant_sequence"
+      }
+     },
+     {
+      "Slot": "SmallHardpoint2",
+      "Item": "hpt_multicannon_fixed_small_strong",
+      "On": true,
+      "Priority": 0,
+      "Value": 14250,
+      "Engineering": {
+       "BlueprintName": "Weapon_LightWeight",
+       "Level": 4,
+       "Quality": 1,
+       "ExperimentalEffect": "special_auto_loader"
+      }
+     },
+     {
+      "Slot": "TinyHardpoint1",
+      "Item": "hpt_heatsinklauncher_turret_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 3500,
+      "Engineering": {
+       "BlueprintName": "Misc_HeatSinkCapacity",
+       "Level": 1,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "TinyHardpoint2",
+      "Item": "hpt_cloudscanner_size0_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 1097100,
+      "Engineering": {
+       "BlueprintName": "Sensor_LongRange",
+       "Level": 5,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Armour",
+      "Item": "sidewinder_armour_grade1",
+      "On": true,
+      "Priority": 0,
+      "Value": 0,
+      "Engineering": {
+       "BlueprintName": "Armour_Advanced",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_armour_kinetic"
+      }
+     },
+     {
+      "Slot": "PowerPlant",
+      "Item": "int_powerplant_size2_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 160140,
+      "Engineering": {
+       "BlueprintName": "PowerPlant_Stealth",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_powerplant_toughened"
+      }
+     },
+     {
+      "Slot": "MainEngines",
+      "Item": "int_engine_size2_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 5930,
+      "Engineering": {
+       "BlueprintName": "Engine_Tuned",
+       "Level": 2,
+       "Quality": 1,
+       "ExperimentalEffect": "special_engine_toughened"
+      }
+     },
+     {
+      "Slot": "FrameShiftDrive",
+      "Item": "int_hyperdrive_size2_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 160220,
+      "Engineering": {
+       "BlueprintName": "FSD_LongRange",
+       "Level": 5,
+       "Quality": 1,
+       "ExperimentalEffect": "special_fsd_heavy"
+      }
+     },
+     {
+      "Slot": "LifeSupport",
+      "Item": "int_lifesupport_size1_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 1290,
+      "Engineering": {
+       "BlueprintName": "Misc_LightWeight",
+       "Level": 5,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "PowerDistributor",
+      "Item": "int_powerdistributor_size1_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 1290,
+      "Engineering": {
+       "BlueprintName": "PowerDistributor_PriorityEngines",
+       "Level": 1,
+       "Quality": 1,
+       "ExperimentalEffect": "special_powerdistributor_capacity"
+      }
+     },
+     {
+      "Slot": "Radar",
+      "Item": "int_sensors_size1_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 1290,
+      "Engineering": {
+       "BlueprintName": "Sensor_LightWeight",
+       "Level": 5,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "FuelTank",
+      "Item": "int_fueltank_size1_class3",
+      "On": true,
+      "Priority": 0,
+      "Value": 1000
+     },
+     {
+      "Slot": "Slot01_Size2",
+      "Item": "int_guardianfsdbooster_size2",
+      "On": true,
+      "Priority": 0,
+      "Value": 810520,
+      "Engineering": {
+       "BlueprintName": "GuardianModule_Sturdy",
+       "Level": 1,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot02_Size2",
+      "Item": "int_fuelscoop_size2_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 284840,
+      "Engineering": {
+       "BlueprintName": "FuelScoop_ScoopRateEnhanced",
+       "Level": 4,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot03_Size1",
+      "Item": "int_shieldgenerator_size1_class2",
+      "On": true,
+      "Priority": 0,
+      "Value": 1240,
+      "Engineering": {
+       "BlueprintName": "ShieldGenerator_Optimised",
+       "Level": 3,
+       "Quality": 1,
+       "ExperimentalEffect": "special_shield_toughened"
+      }
+     },
+     {
+      "Slot": "Slot04_Size1",
+      "Item": "int_fueltank_size1_class3",
+      "On": true,
+      "Priority": 0,
+      "Value": 1000
+     },
+     {
+      "Slot": "Slot05_Size1",
+      "Item": "int_detailedsurfacescanner_tiny",
+      "On": true,
+      "Priority": 0,
+      "Value": 250000,
+      "Engineering": {
+       "BlueprintName": "Sensor_Expanded",
+       "Level": 2,
+       "Quality": 1
+      }
+     },
+     {
+      "Slot": "Slot06_Size1",
+      "Item": "int_repairer_size1_class5",
+      "On": true,
+      "Priority": 0,
+      "Value": 810000,
+      "Engineering": {
+       "BlueprintName": "Misc_Shielded",
+       "Level": 1,
+       "Quality": 1
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

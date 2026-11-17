@@ -1,0 +1,154 @@
+/* Page « Règles du jeu » : fiches lisibles, une règle par carte. Couleurs du thème commun (styles.css). */
+
+.regles {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.regles-outils {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.regles-recherche {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+}
+.regles-filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.regles-compte {
+  display: inline-block;
+  min-width: 1.4rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.btn-primary .regles-compte {
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+}
+.regles-fiche-active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.regles-legende {
+  margin: 0;
+  line-height: 1.9;
+}
+.regles-fiche {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.regles-fiche > p {
+  margin: 0;
+}
+
+/* Une règle */
+.regle {
+  scroll-margin-top: 130px; /* barre du haut collante */
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+}
+.regles-fiche,
+#lexique {
+  scroll-margin-top: 130px;
+}
+.regle-cible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.regle.regle-cible {
+  border-left-color: var(--accent);
+}
+.regle-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.regle-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+.regle-enonce {
+  margin: 0.45rem 0 0;
+  color: var(--text-strong);
+}
+.regle-valeurs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin-top: 0.6rem;
+}
+.regle-valeur {
+  display: flex;
+  flex-direction: column;
+}
+.regle-valeur strong {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+.regle-valeur-label {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.regle-termes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: 0.6rem 0 0;
+}
+.regle-terme em {
+  color: var(--info);
+}
+.regle-bloc {
+  margin-top: 0.6rem;
+}
+.regle-bloc h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 500;
+}
+.regle-bloc ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.regle-pied {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.7rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--border);
+}
+.regle-pied code {
+  font-size: 0.78rem;
+  color: var(--text);
+}
+.regle-lien {
+  align-self: flex-start;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Vigie des règles */
+.vigie-filtres { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.6rem; }
+.vigie-domaine h3 { margin: 0.8rem 0 0.3rem; }
+.vigie-table td { vertical-align: top; }
+.vigie-table tr.is-alerte td { background: rgba(255, 154, 60, 0.08); }
+.vigie-alerte { padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+.vigie-proposition { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-top: 0.4rem; }
+.vigie-resume { white-space: pre-wrap; font-size: 0.85rem; background: rgba(255, 255, 255, 0.03); padding: 0.5rem; border-radius: 6px; }

@@ -1,0 +1,89 @@
+// Modèles du module « Mes routes commerciales ».
+
+model Route {
+  id             Int       @id @default(autoincrement())
+  name           String
+  // Station de départ et marchandise qui délimite une boucle
+  startSystem    String
+  startStation   String
+  startMarketId  Float
+  startCommodity String
+  // Structure complète détectée (JSON) : escales, sauts, marchandises
+  structure      String
+  stations       String    // JSON : liste des stations
+  systems        String    // JSON : liste des systèmes
+  commodities    String    // JSON : liste des marchandises
+  goal           Float     @default(0)
+  // Valeurs saisies à la main quand le journal ne suffit pas (JSON)
+  overrides      String    @default("{}")
+  // Les boucles sont recherchées dans les journaux à partir de cette date
+  trackFrom      DateTime
+  active         Boolean   @default(false)
+  createdAt      DateTime  @default(now())
+  lastUsedAt     DateTime  @default(now())
+  loops          Loop[]
+}
+
+model Loop {
+  id            Int      @id @default(autoincrement())
+  routeId       Int
+  route         Route    @relation(fields: [routeId], references: [id], onDelete: Cascade)
+  startAt       DateTime
+  endAt         DateTime
+  durationSec   Int      // durée brute entre les deux achats
+  activeSec     Int      @default(0) // temps réellement joué (pauses retirées)
+  netGain       Float
+  sales         Float
+  purchases     Float
+  fuel          Float
+  repairs       Float
+  wages         Float
+  ammo          Float
+  rebuy         Float
+  merits        Int
+  cargo         Int
+  cargoDetail   String   // JSON : tonnage par marchandise
+  legTimes      String   // JSON : durée de chaque étape (s)
+  tags          String   // JSON : étiquettes (station changée, sans bouclier…)
+  destroyed     Boolean  @default(false)
+  pause         Boolean  @default(false)
+  trades        Trade[]
+
+  @@unique([routeId, startAt])
+  @@index([startAt])
+}
+
+model Trade {
+  id        Int      @id @default(autoincrement())
+  loopId    Int
+  loop      Loop     @relation(fields: [loopId], references: [id], onDelete: Cascade)
+  at        DateTime
+  station   String
+  system    String
+  marketId  Float
+  commodity String
+  name      String
+  count     Int
+  price     Int
+  total     Float
+  side      String   // "buy" ou "sell"
+}
+
+model MarketSnapshot {
+  id        Int      @id @default(autoincrement())
+  marketId  Float
+  station   String
+  system    String
+  commodity String
+  name      String
+  buyPrice  Int
+  sellPrice Int
+  stock     Int
+  demand    Int
+  at        DateTime
+
+  @@unique([marketId, commodity, at])
+  @@index([marketId, commodity, at])
+  // Relevés d'un système (GET /markets?system=, dernier marché connu d'un système) : sans lui, toute la table était lue
+  @@index([system, marketId, at])
+}

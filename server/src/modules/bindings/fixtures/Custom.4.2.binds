@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Root PresetName="Custom" MajorVersion="4" MinorVersion="2">
+	<KeyboardLayout>fr-FR</KeyboardLayout>
+	<MouseXMode Value="" />
+	<MouseXDecay Value="0" />
+	<MouseYMode Value="" />
+	<MouseYDecay Value="0" />
+	<MouseReset>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</MouseReset>
+	<MouseSensitivity Value="1.00000000" />
+	<MouseDecayRate Value="4.00000000" />
+	<MouseDeadzone Value="0.05000000" />
+	<MouseLinearity Value="1.00000000" />
+	<MouseGUI Value="0" />
+	<BlockMouseDecay>
+		<Primary Device="Keyboard" Key="Key_LeftAlt" />
+		<Secondary Device="{NoDevice}" Key="" />
+		<ToggleOn Value="1" />
+	</BlockMouseDecay>
+	<YawAxisRaw>
+		<Binding Device="SaitekX52" Key="Joy_RZAxis" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
+	</YawAxisRaw>
+	<YawLeftButton>
+		<Primary Device="Keyboard" Key="Key_Q" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</YawLeftButton>
+	<YawRightButton>
+		<Primary Device="Keyboard" Key="Key_D" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</YawRightButton>
+	<YawToRollMode Value="Bindings_YawIntoRollNone" />
+	<YawToRollSensitivity Value="0.40000001" />
+	<YawToRollMode_FAOff Value="" />
+	<YawToRollButton>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+		<ToggleOn Value="0" />
+	</YawToRollButton>
+	<RollAxisRaw>
+		<Binding Device="SaitekX52" Key="Joy_XAxis" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
+	</RollAxisRaw>
+	<RollLeftButton>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</RollLeftButton>
+	<RollRightButton>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</RollRightButton>
+	<PitchAxisRaw>
+		<Binding Device="SaitekX52" Key="Joy_YAxis" />
+		<Inverted Value="1" />
+		<Deadzone Value="0.00000000" />
+	</PitchAxisRaw>
+	<PitchUpButton>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</PitchUpButton>
+	<PitchDownButton>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</PitchDownButton>
+	<LateralThrustRaw>
+		<Binding Device="{NoDevice}" Key="" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
+	</LateralThrustRaw>
+	<LeftThrustButton>
+		<Primary Device="Keyboard" Key="Key_A" />
+		<Secondary Device="SaitekX52" Key="Joy_23" />
+	</LeftThrustButton>
+	<RightThrustButton>
+		<Primary Device="Keyboard" Key="Key_E" />
+		<Secondary Device="SaitekX52" Key="Joy_21" />
+	</RightThrustButton>
+	<VerticalThrustRaw>
+		<Binding Device="{NoDevice}" Key="" />
+		<Inverted Value="0" />
+		<Deadzone Value="0.00000000" />
+	</VerticalThrustRaw>
+	<UpThrustButton>
+		<Primary Device="Keyboard" Key="Key_R" />
+		<Secondary Device="SaitekX52" Key="Joy_20" />
+	</UpThrustButton>
+	<ChargeECM>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</ChargeECM>
+	<EnableRumbleTrigger Value="1" />
+	<EnableMenuGroups Value="0" />
+	<MouseGUI Value="0" />
+	<WeaponColourToggle>
+		<Primary Device="{NoDevice}" Key="" />
+		<Secondary Device="{NoDevice}" Key="" />
+	</WeaponColourToggle>
+</Root>

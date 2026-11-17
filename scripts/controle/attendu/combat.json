@@ -1,0 +1,2928 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 15046
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-28T00:01:21Z",
+            "coqueDirect": false,
+            "boucliers": false,
+            "bouclierAt": "2026-10-27T23:31:44Z",
+            "releveAt": "2026-10-27T23:29:57Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Assistant de supercroisière",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 15046
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-28T00:01:21Z",
+            "coqueDirect": false,
+            "boucliers": false,
+            "bouclierAt": "2026-10-27T23:31:44Z",
+            "releveAt": "2026-10-27T23:29:57Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Assistant de supercroisière",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": null,
+            "coqueAt": null,
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": null,
+            "modules": [],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 3900000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": null,
+            "coqueAt": null,
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": null,
+            "modules": [],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 2640000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-02T19:34:08Z",
+            "coqueDirect": false,
+            "boucliers": true,
+            "bouclierAt": "2026-11-02T18:55:45Z",
+            "releveAt": "2026-11-02T18:57:20Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Assistant de supercroisière",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Slot09_Size4",
+                "sante": 100
+              },
+              {
+                "nom": "Slot10_Size3",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-02T19:34:08Z",
+            "coqueDirect": false,
+            "boucliers": true,
+            "bouclierAt": "2026-11-02T18:55:45Z",
+            "releveAt": "2026-11-02T18:57:20Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Assistant de supercroisière",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Slot09_Size4",
+                "sante": 100
+              },
+              {
+                "nom": "Slot10_Size3",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 47251
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-07T13:07:57Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-11-07T13:07:57Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Contrôleur de drones",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 19202000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 47251
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-07T13:07:57Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-11-07T13:07:57Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Contrôleur de drones",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 9151000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 1,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-29T14:38:04Z",
+            "coqueDirect": false,
+            "boucliers": false,
+            "bouclierAt": "2026-10-29T14:38:04Z",
+            "releveAt": "2026-10-29T14:38:04Z",
+            "modules": [
+              {
+                "nom": "Analyseur de sillage · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 1586000,
+          "pausedSince": "2026-10-29T14:38:40.000Z",
+          "pauseReason": "idle",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 1,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-29T14:38:04Z",
+            "coqueDirect": false,
+            "boucliers": false,
+            "bouclierAt": "2026-10-29T14:38:04Z",
+            "releveAt": "2026-10-29T14:38:04Z",
+            "modules": [
+              {
+                "nom": "Analyseur de sillage · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 36000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "kills": 5,
+          "credits": 1683375,
+          "bounties": {
+            "total": 1683375,
+            "count": 5
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 342530,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": "2026-10-26T19:37:42Z",
+          "recent": [
+            {
+              "at": "2026-10-26T19:37:42Z",
+              "kind": "Prime",
+              "reward": 763378,
+              "ship": "Type-10 Defender",
+              "pilot": "Lewis Burrell",
+              "faction": "Walla Walla Family",
+              "merits": 101
+            },
+            {
+              "at": "2026-10-26T19:34:54Z",
+              "kind": "Prime",
+              "reward": 13600,
+              "ship": "sidewinder",
+              "pilot": "Kate 'Curly' Dibble",
+              "faction": "Dominion of Walla Walla",
+              "merits": 7
+            },
+            {
+              "at": "2026-10-26T19:34:37Z",
+              "kind": "Prime",
+              "reward": 15264,
+              "ship": "hauler",
+              "pilot": "Jim Moores",
+              "faction": "Dominion of Walla Walla",
+              "merits": 7
+            },
+            {
+              "at": "2026-10-26T19:33:36Z",
+              "kind": "Prime",
+              "reward": 593543,
+              "ship": "anaconda",
+              "pilot": "Happyhero",
+              "faction": "Pilots of Metropolis",
+              "merits": 79
+            },
+            {
+              "at": "2026-10-26T19:30:46Z",
+              "kind": "Prime",
+              "reward": 297590,
+              "ship": "Alliance Crusader",
+              "pilot": "Barja Bardagi",
+              "faction": "Walla Walla Gold Bridge Dev",
+              "merits": 39
+            }
+          ],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-26T20:40:02Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-10-26T20:40:02Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 36276000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "kills": 5,
+          "credits": 1683375,
+          "bounties": {
+            "total": 1683375,
+            "count": 5
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 342530,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": "2026-10-26T19:37:42Z",
+          "recent": [
+            {
+              "at": "2026-10-26T19:37:42Z",
+              "kind": "Prime",
+              "reward": 763378,
+              "ship": "Type-10 Defender",
+              "pilot": "Lewis Burrell",
+              "faction": "Walla Walla Family",
+              "merits": 101
+            },
+            {
+              "at": "2026-10-26T19:34:54Z",
+              "kind": "Prime",
+              "reward": 13600,
+              "ship": "sidewinder",
+              "pilot": "Kate 'Curly' Dibble",
+              "faction": "Dominion of Walla Walla",
+              "merits": 7
+            },
+            {
+              "at": "2026-10-26T19:34:37Z",
+              "kind": "Prime",
+              "reward": 15264,
+              "ship": "hauler",
+              "pilot": "Jim Moores",
+              "faction": "Dominion of Walla Walla",
+              "merits": 7
+            },
+            {
+              "at": "2026-10-26T19:33:36Z",
+              "kind": "Prime",
+              "reward": 593543,
+              "ship": "anaconda",
+              "pilot": "Happyhero",
+              "faction": "Pilots of Metropolis",
+              "merits": 79
+            },
+            {
+              "at": "2026-10-26T19:30:46Z",
+              "kind": "Prime",
+              "reward": 297590,
+              "ship": "Alliance Crusader",
+              "pilot": "Barja Bardagi",
+              "faction": "Walla Walla Gold Bridge Dev",
+              "merits": 39
+            }
+          ],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-10-26T20:40:02Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-10-26T20:40:02Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 35525000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-05T12:16:06Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-11-05T12:16:06Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · grand 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 2",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de primes · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 2",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 5",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 6",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 7",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 8",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 1003000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-05T12:16:06Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-11-05T12:16:06Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · grand 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 2",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de primes · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 2",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 5",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 6",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 7",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 8",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 349000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 759
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-01T13:37:31Z",
+            "coqueDirect": false,
+            "boucliers": true,
+            "bouclierAt": "2026-11-01T13:22:22Z",
+            "releveAt": "2026-11-01T13:37:31Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · grand 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 2",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de primes · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 2",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 5",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 6",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 7",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 8",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 12590000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 759
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 100,
+            "coqueAt": "2026-11-01T13:37:31Z",
+            "coqueDirect": false,
+            "boucliers": true,
+            "bouclierAt": "2026-11-01T13:22:22Z",
+            "releveAt": "2026-11-01T13:37:31Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Cellules de bouclier",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · grand 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 1",
+                "sante": 100
+              },
+              {
+                "nom": "Laser à rayon · petit 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · énorme 2",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 1",
+                "sante": 100
+              },
+              {
+                "nom": "Multicanon · moyen 2",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de coque",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Renfort de modules",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de primes · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 2",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 3",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 4",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 5",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 6",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 7",
+                "sante": 100
+              },
+              {
+                "nom": "Survolteur de bouclier · utilitaire 8",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 10563000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 91,
+            "coqueAt": "2026-10-31T22:57:50Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-10-31T22:57:50Z",
+            "modules": [
+              {
+                "nom": "Analyseur de sillage · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 26047000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 0
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 91,
+            "coqueAt": "2026-10-31T22:57:50Z",
+            "coqueDirect": false,
+            "boucliers": null,
+            "bouclierAt": null,
+            "releveAt": "2026-10-31T22:57:50Z",
+            "modules": [
+              {
+                "nom": "Analyseur de sillage · utilitaire 1",
+                "sante": 100
+              },
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Récupérateur de carburant",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 13655000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 60779
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 79,
+            "coqueAt": "2026-11-06T22:45:17Z",
+            "coqueDirect": true,
+            "boucliers": false,
+            "bouclierAt": "2026-11-06T16:05:03Z",
+            "releveAt": "2026-11-06T19:45:21Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Contrôleur de drones",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 26251000,
+          "pausedSince": "2026-11-06T22:45:17.000Z",
+          "pauseReason": "idle",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "kills": 0,
+          "credits": 0,
+          "bounties": {
+            "total": 0,
+            "count": 0
+          },
+          "bonds": {
+            "total": 0,
+            "count": 0
+          },
+          "capShip": {
+            "total": 0,
+            "count": 0
+          },
+          "pvp": 0,
+          "merits": {
+            "combat": 0,
+            "other": 60779
+          },
+          "deaths": 0,
+          "lastKillAt": null,
+          "recent": [],
+          "vaisseau": {
+            "seuil": 40,
+            "nom": null,
+            "coque": 79,
+            "coqueAt": "2026-11-06T22:45:17Z",
+            "coqueDirect": true,
+            "boucliers": false,
+            "bouclierAt": "2026-11-06T16:05:03Z",
+            "releveAt": "2026-11-06T19:45:21Z",
+            "modules": [
+              {
+                "nom": "Approche planétaire",
+                "sante": 100
+              },
+              {
+                "nom": "Capteurs",
+                "sante": 100
+              },
+              {
+                "nom": "Contrôleur de drones",
+                "sante": 100
+              },
+              {
+                "nom": "Distributeur",
+                "sante": 100
+              },
+              {
+                "nom": "Écoutille de soute",
+                "sante": 100
+              },
+              {
+                "nom": "FSD",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur",
+                "sante": 100
+              },
+              {
+                "nom": "Générateur de boucliers",
+                "sante": 100
+              },
+              {
+                "nom": "Hangar SRV",
+                "sante": 100
+              },
+              {
+                "nom": "Ordinateur d’appontage",
+                "sante": 100
+              },
+              {
+                "nom": "Propulseurs",
+                "sante": 100
+              },
+              {
+                "nom": "Réservoir",
+                "sante": 100
+              },
+              {
+                "nom": "Scanner de surface",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Soute",
+                "sante": 100
+              },
+              {
+                "nom": "Support vital",
+                "sante": 100
+              },
+              {
+                "nom": "Verrière",
+                "sante": 100
+              }
+            ],
+            "sousSeuil": [],
+            "coqueBasse": false,
+            "alerte": false
+          },
+          "pausedMs": 14509000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  }
+}

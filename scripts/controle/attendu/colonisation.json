@@ -1,0 +1,4366 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1232,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1232,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [
+            {
+              "marketId": 3963439106,
+              "label": "Vaisseau de colonisation · Judson Depot",
+              "stationLabel": "Vaisseau de colonisation · Judson Depot",
+              "kind": "ship",
+              "system": "Bleae Thua ED-D c12-5",
+              "progress": 0.055956,
+              "complete": false,
+              "failed": false,
+              "provisional": false,
+              "known": true,
+              "remaining": 20583,
+              "toBuy": 20583,
+              "holdCounted": true,
+              "trips": null,
+              "mine": 500,
+              "deadline": null,
+              "pinned": false,
+              "docked": false,
+              "lastSeen": "2026-11-01T20:05:00Z",
+              "updatedAt": "2026-11-01T20:01:00Z"
+            }
+          ],
+          "claims": [
+            {
+              "system": "Bleae Thua ED-D c12-5",
+              "systemAddress": 1458040738922,
+              "claimedAt": null,
+              "releasedAt": null,
+              "beaconAt": "2026-11-01T20:36:00Z"
+            },
+            {
+              "system": "North America Sector PI-T c3-4",
+              "systemAddress": 1180210008826,
+              "claimedAt": "2026-11-01T20:30:00Z",
+              "releasedAt": null,
+              "beaconAt": null
+            },
+            {
+              "system": "Col 285 Sector HM-I b11-2",
+              "systemAddress": 5070075078009,
+              "claimedAt": null,
+              "releasedAt": "2026-11-01T21:00:00Z",
+              "beaconAt": null
+            }
+          ],
+          "active": {
+            "reason": "recent",
+            "site": {
+              "marketId": 3963439106,
+              "station": "$EXT_PANEL_ColonisationShip; Judson Depot",
+              "stationLabel": "Vaisseau de colonisation · Judson Depot",
+              "kind": "ship",
+              "stationType": "SurfaceStation",
+              "system": "Bleae Thua ED-D c12-5",
+              "systemAddress": 1458040738922,
+              "body": null,
+              "progress": 0.055956,
+              "complete": false,
+              "failed": false,
+              "completedAt": null,
+              "completedBy": null,
+              "successorMarketId": null,
+              "failedAt": null,
+              "resources": [
+                {
+                  "symbol": "aluminium",
+                  "name": "Aluminium",
+                  "required": 480,
+                  "provided": 0,
+                  "payment": 3239,
+                  "remaining": 480
+                },
+                {
+                  "symbol": "ceramiccomposites",
+                  "name": "Ceramic Composites",
+                  "required": 498,
+                  "provided": 0,
+                  "payment": 724,
+                  "remaining": 498
+                },
+                {
+                  "symbol": "cmmcomposite",
+                  "name": "CMM Composite",
+                  "required": 4518,
+                  "provided": 0,
+                  "payment": 6788,
+                  "remaining": 4518
+                },
+                {
+                  "symbol": "computercomponents",
+                  "name": "Computer Components",
+                  "required": 61,
+                  "provided": 0,
+                  "payment": 1112,
+                  "remaining": 61
+                },
+                {
+                  "symbol": "copper",
+                  "name": "Copper",
+                  "required": 240,
+                  "provided": 0,
+                  "payment": 1050,
+                  "remaining": 240
+                },
+                {
+                  "symbol": "foodcartridges",
+                  "name": "Food Cartridges",
+                  "required": 91,
+                  "provided": 0,
+                  "payment": 673,
+                  "remaining": 91
+                },
+                {
+                  "symbol": "fruitandvegetables",
+                  "name": "Fruit and Vegetables",
+                  "required": 51,
+                  "provided": 0,
+                  "payment": 865,
+                  "remaining": 51
+                },
+                {
+                  "symbol": "insulatingmembrane",
+                  "name": "Insulating Membrane",
+                  "required": 341,
+                  "provided": 0,
+                  "payment": 11788,
+                  "remaining": 341
+                },
+                {
+                  "symbol": "liquidoxygen",
+                  "name": "Liquid oxygen",
+                  "required": 1865,
+                  "provided": 0,
+                  "payment": 2260,
+                  "remaining": 1865
+                },
+                {
+                  "symbol": "medicaldiagnosticequipment",
+                  "name": "Medical Diagnostic Equipment",
+                  "required": 13,
+                  "provided": 0,
+                  "payment": 3609,
+                  "remaining": 13
+                },
+                {
+                  "symbol": "nonlethalweapons",
+                  "name": "Non-Lethal Weapons",
+                  "required": 13,
+                  "provided": 0,
+                  "payment": 2503,
+                  "remaining": 13
+                },
+                {
+                  "symbol": "polymers",
+                  "name": "Polymers",
+                  "required": 521,
+                  "provided": 0,
+                  "payment": 682,
+                  "remaining": 521
+                },
+                {
+                  "symbol": "powergenerators",
+                  "name": "Power Generators",
+                  "required": 19,
+                  "provided": 0,
+                  "payment": 3072,
+                  "remaining": 19
+                },
+                {
+                  "symbol": "semiconductors",
+                  "name": "Semiconductors",
+                  "required": 69,
+                  "provided": 0,
+                  "payment": 1526,
+                  "remaining": 69
+                },
+                {
+                  "symbol": "steel",
+                  "name": "Steel",
+                  "required": 6680,
+                  "provided": 1220,
+                  "payment": 5057,
+                  "remaining": 5460
+                },
+                {
+                  "symbol": "superconductors",
+                  "name": "Superconductors",
+                  "required": 116,
+                  "provided": 0,
+                  "payment": 7657,
+                  "remaining": 116
+                },
+                {
+                  "symbol": "titanium",
+                  "name": "Titanium",
+                  "required": 5471,
+                  "provided": 0,
+                  "payment": 5360,
+                  "remaining": 5471
+                },
+                {
+                  "symbol": "water",
+                  "name": "Water",
+                  "required": 717,
+                  "provided": 0,
+                  "payment": 662,
+                  "remaining": 717
+                },
+                {
+                  "symbol": "waterpurifiers",
+                  "name": "Water Purifiers",
+                  "required": 39,
+                  "provided": 0,
+                  "payment": 849,
+                  "remaining": 39
+                }
+              ],
+              "provisional": false,
+              "readings": 2,
+              "firstSeen": "2026-11-01T20:00:00Z",
+              "lastSeen": "2026-11-01T20:05:00Z",
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "lastDockedAt": "2026-11-01T20:00:00Z",
+              "user": {
+                "name": null,
+                "deadline": null,
+                "notes": null,
+                "loopMinutes": null,
+                "pinned": false
+              },
+              "label": "Vaisseau de colonisation · Judson Depot",
+              "docked": false,
+              "mine": {
+                "total": 500,
+                "count": 1,
+                "recent": [
+                  {
+                    "at": "2026-11-01T20:01:00Z",
+                    "items": [
+                      {
+                        "symbol": "steel",
+                        "name": "Steel",
+                        "amount": 500
+                      }
+                    ],
+                    "total": 500,
+                    "visit": "2026-11-01T20:00:00Z"
+                  }
+                ]
+              },
+              "ship": {
+                "capacity": null,
+                "pad": null
+              },
+              "plan": {
+                "known": true,
+                "items": [
+                  {
+                    "symbol": "titanium",
+                    "name": "Titanium",
+                    "required": 5471,
+                    "provided": 0,
+                    "remaining": 5471,
+                    "inHold": 0,
+                    "toBuy": 5471,
+                    "done": false
+                  },
+                  {
+                    "symbol": "steel",
+                    "name": "Steel",
+                    "required": 6680,
+                    "provided": 1220,
+                    "remaining": 5460,
+                    "inHold": 0,
+                    "toBuy": 5460,
+                    "done": false
+                  },
+                  {
+                    "symbol": "cmmcomposite",
+                    "name": "CMM Composite",
+                    "required": 4518,
+                    "provided": 0,
+                    "remaining": 4518,
+                    "inHold": 0,
+                    "toBuy": 4518,
+                    "done": false
+                  },
+                  {
+                    "symbol": "liquidoxygen",
+                    "name": "Liquid oxygen",
+                    "required": 1865,
+                    "provided": 0,
+                    "remaining": 1865,
+                    "inHold": 0,
+                    "toBuy": 1865,
+                    "done": false
+                  },
+                  {
+                    "symbol": "water",
+                    "name": "Water",
+                    "required": 717,
+                    "provided": 0,
+                    "remaining": 717,
+                    "inHold": 0,
+                    "toBuy": 717,
+                    "done": false
+                  },
+                  {
+                    "symbol": "polymers",
+                    "name": "Polymers",
+                    "required": 521,
+                    "provided": 0,
+                    "remaining": 521,
+                    "inHold": 0,
+                    "toBuy": 521,
+                    "done": false
+                  },
+                  {
+                    "symbol": "ceramiccomposites",
+                    "name": "Ceramic Composites",
+                    "required": 498,
+                    "provided": 0,
+                    "remaining": 498,
+                    "inHold": 0,
+                    "toBuy": 498,
+                    "done": false
+                  },
+                  {
+                    "symbol": "aluminium",
+                    "name": "Aluminium",
+                    "required": 480,
+                    "provided": 0,
+                    "remaining": 480,
+                    "inHold": 0,
+                    "toBuy": 480,
+                    "done": false
+                  },
+                  {
+                    "symbol": "insulatingmembrane",
+                    "name": "Insulating Membrane",
+                    "required": 341,
+                    "provided": 0,
+                    "remaining": 341,
+                    "inHold": 0,
+                    "toBuy": 341,
+                    "done": false
+                  },
+                  {
+                    "symbol": "copper",
+                    "name": "Copper",
+                    "required": 240,
+                    "provided": 0,
+                    "remaining": 240,
+                    "inHold": 0,
+                    "toBuy": 240,
+                    "done": false
+                  },
+                  {
+                    "symbol": "superconductors",
+                    "name": "Superconductors",
+                    "required": 116,
+                    "provided": 0,
+                    "remaining": 116,
+                    "inHold": 0,
+                    "toBuy": 116,
+                    "done": false
+                  },
+                  {
+                    "symbol": "foodcartridges",
+                    "name": "Food Cartridges",
+                    "required": 91,
+                    "provided": 0,
+                    "remaining": 91,
+                    "inHold": 0,
+                    "toBuy": 91,
+                    "done": false
+                  },
+                  {
+                    "symbol": "semiconductors",
+                    "name": "Semiconductors",
+                    "required": 69,
+                    "provided": 0,
+                    "remaining": 69,
+                    "inHold": 0,
+                    "toBuy": 69,
+                    "done": false
+                  },
+                  {
+                    "symbol": "computercomponents",
+                    "name": "Computer Components",
+                    "required": 61,
+                    "provided": 0,
+                    "remaining": 61,
+                    "inHold": 0,
+                    "toBuy": 61,
+                    "done": false
+                  },
+                  {
+                    "symbol": "fruitandvegetables",
+                    "name": "Fruit and Vegetables",
+                    "required": 51,
+                    "provided": 0,
+                    "remaining": 51,
+                    "inHold": 0,
+                    "toBuy": 51,
+                    "done": false
+                  },
+                  {
+                    "symbol": "waterpurifiers",
+                    "name": "Water Purifiers",
+                    "required": 39,
+                    "provided": 0,
+                    "remaining": 39,
+                    "inHold": 0,
+                    "toBuy": 39,
+                    "done": false
+                  },
+                  {
+                    "symbol": "powergenerators",
+                    "name": "Power Generators",
+                    "required": 19,
+                    "provided": 0,
+                    "remaining": 19,
+                    "inHold": 0,
+                    "toBuy": 19,
+                    "done": false
+                  },
+                  {
+                    "symbol": "medicaldiagnosticequipment",
+                    "name": "Medical Diagnostic Equipment",
+                    "required": 13,
+                    "provided": 0,
+                    "remaining": 13,
+                    "inHold": 0,
+                    "toBuy": 13,
+                    "done": false
+                  },
+                  {
+                    "symbol": "nonlethalweapons",
+                    "name": "Non-Lethal Weapons",
+                    "required": 13,
+                    "provided": 0,
+                    "remaining": 13,
+                    "inHold": 0,
+                    "toBuy": 13,
+                    "done": false
+                  }
+                ],
+                "totals": {
+                  "required": 21803,
+                  "provided": 1220,
+                  "remaining": 20583,
+                  "inHold": 0,
+                  "toBuy": 20583
+                },
+                "capacity": null,
+                "trips": null,
+                "tripsToBuy": null,
+                "loop": {
+                  "minutes": null,
+                  "source": null,
+                  "measured": null
+                },
+                "eta": null,
+                "deadline": null,
+                "holdCounted": true
+              }
+            }
+          },
+          "ship": {
+            "capacity": null,
+            "pad": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": {
+          "reason": "recent",
+          "site": {
+            "marketId": 3963439106,
+            "station": "$EXT_PANEL_ColonisationShip; Judson Depot",
+            "stationLabel": "Vaisseau de colonisation · Judson Depot",
+            "kind": "ship",
+            "stationType": "SurfaceStation",
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "body": null,
+            "progress": 0.055956,
+            "complete": false,
+            "failed": false,
+            "completedAt": null,
+            "completedBy": null,
+            "successorMarketId": null,
+            "failedAt": null,
+            "resources": [
+              {
+                "symbol": "aluminium",
+                "name": "Aluminium",
+                "required": 480,
+                "provided": 0,
+                "payment": 3239,
+                "remaining": 480
+              },
+              {
+                "symbol": "ceramiccomposites",
+                "name": "Ceramic Composites",
+                "required": 498,
+                "provided": 0,
+                "payment": 724,
+                "remaining": 498
+              },
+              {
+                "symbol": "cmmcomposite",
+                "name": "CMM Composite",
+                "required": 4518,
+                "provided": 0,
+                "payment": 6788,
+                "remaining": 4518
+              },
+              {
+                "symbol": "computercomponents",
+                "name": "Computer Components",
+                "required": 61,
+                "provided": 0,
+                "payment": 1112,
+                "remaining": 61
+              },
+              {
+                "symbol": "copper",
+                "name": "Copper",
+                "required": 240,
+                "provided": 0,
+                "payment": 1050,
+                "remaining": 240
+              },
+              {
+                "symbol": "foodcartridges",
+                "name": "Food Cartridges",
+                "required": 91,
+                "provided": 0,
+                "payment": 673,
+                "remaining": 91
+              },
+              {
+                "symbol": "fruitandvegetables",
+                "name": "Fruit and Vegetables",
+                "required": 51,
+                "provided": 0,
+                "payment": 865,
+                "remaining": 51
+              },
+              {
+                "symbol": "insulatingmembrane",
+                "name": "Insulating Membrane",
+                "required": 341,
+                "provided": 0,
+                "payment": 11788,
+                "remaining": 341
+              },
+              {
+                "symbol": "liquidoxygen",
+                "name": "Liquid oxygen",
+                "required": 1865,
+                "provided": 0,
+                "payment": 2260,
+                "remaining": 1865
+              },
+              {
+                "symbol": "medicaldiagnosticequipment",
+                "name": "Medical Diagnostic Equipment",
+                "required": 13,
+                "provided": 0,
+                "payment": 3609,
+                "remaining": 13
+              },
+              {
+                "symbol": "nonlethalweapons",
+                "name": "Non-Lethal Weapons",
+                "required": 13,
+                "provided": 0,
+                "payment": 2503,
+                "remaining": 13
+              },
+              {
+                "symbol": "polymers",
+                "name": "Polymers",
+                "required": 521,
+                "provided": 0,
+                "payment": 682,
+                "remaining": 521
+              },
+              {
+                "symbol": "powergenerators",
+                "name": "Power Generators",
+                "required": 19,
+                "provided": 0,
+                "payment": 3072,
+                "remaining": 19
+              },
+              {
+                "symbol": "semiconductors",
+                "name": "Semiconductors",
+                "required": 69,
+                "provided": 0,
+                "payment": 1526,
+                "remaining": 69
+              },
+              {
+                "symbol": "steel",
+                "name": "Steel",
+                "required": 6680,
+                "provided": 1220,
+                "payment": 5057,
+                "remaining": 5460
+              },
+              {
+                "symbol": "superconductors",
+                "name": "Superconductors",
+                "required": 116,
+                "provided": 0,
+                "payment": 7657,
+                "remaining": 116
+              },
+              {
+                "symbol": "titanium",
+                "name": "Titanium",
+                "required": 5471,
+                "provided": 0,
+                "payment": 5360,
+                "remaining": 5471
+              },
+              {
+                "symbol": "water",
+                "name": "Water",
+                "required": 717,
+                "provided": 0,
+                "payment": 662,
+                "remaining": 717
+              },
+              {
+                "symbol": "waterpurifiers",
+                "name": "Water Purifiers",
+                "required": 39,
+                "provided": 0,
+                "payment": 849,
+                "remaining": 39
+              }
+            ],
+            "provisional": false,
+            "readings": 2,
+            "firstSeen": "2026-11-01T20:00:00Z",
+            "lastSeen": "2026-11-01T20:05:00Z",
+            "updatedAt": "2026-11-01T20:01:00Z",
+            "lastDockedAt": "2026-11-01T20:00:00Z",
+            "user": {
+              "name": null,
+              "deadline": null,
+              "notes": null,
+              "loopMinutes": null,
+              "pinned": false
+            },
+            "label": "Vaisseau de colonisation · Judson Depot",
+            "docked": false,
+            "mine": {
+              "total": 500,
+              "count": 1,
+              "recent": [
+                {
+                  "at": "2026-11-01T20:01:00Z",
+                  "items": [
+                    {
+                      "symbol": "steel",
+                      "name": "Steel",
+                      "amount": 500
+                    }
+                  ],
+                  "total": 500,
+                  "visit": "2026-11-01T20:00:00Z"
+                }
+              ]
+            },
+            "ship": {
+              "capacity": null,
+              "pad": null
+            },
+            "plan": {
+              "known": true,
+              "items": [
+                {
+                  "symbol": "titanium",
+                  "name": "Titanium",
+                  "required": 5471,
+                  "provided": 0,
+                  "remaining": 5471,
+                  "inHold": 0,
+                  "toBuy": 5471,
+                  "done": false
+                },
+                {
+                  "symbol": "steel",
+                  "name": "Steel",
+                  "required": 6680,
+                  "provided": 1220,
+                  "remaining": 5460,
+                  "inHold": 0,
+                  "toBuy": 5460,
+                  "done": false
+                },
+                {
+                  "symbol": "cmmcomposite",
+                  "name": "CMM Composite",
+                  "required": 4518,
+                  "provided": 0,
+                  "remaining": 4518,
+                  "inHold": 0,
+                  "toBuy": 4518,
+                  "done": false
+                },
+                {
+                  "symbol": "liquidoxygen",
+                  "name": "Liquid oxygen",
+                  "required": 1865,
+                  "provided": 0,
+                  "remaining": 1865,
+                  "inHold": 0,
+                  "toBuy": 1865,
+                  "done": false
+                },
+                {
+                  "symbol": "water",
+                  "name": "Water",
+                  "required": 717,
+                  "provided": 0,
+                  "remaining": 717,
+                  "inHold": 0,
+                  "toBuy": 717,
+                  "done": false
+                },
+                {
+                  "symbol": "polymers",
+                  "name": "Polymers",
+                  "required": 521,
+                  "provided": 0,
+                  "remaining": 521,
+                  "inHold": 0,
+                  "toBuy": 521,
+                  "done": false
+                },
+                {
+                  "symbol": "ceramiccomposites",
+                  "name": "Ceramic Composites",
+                  "required": 498,
+                  "provided": 0,
+                  "remaining": 498,
+                  "inHold": 0,
+                  "toBuy": 498,
+                  "done": false
+                },
+                {
+                  "symbol": "aluminium",
+                  "name": "Aluminium",
+                  "required": 480,
+                  "provided": 0,
+                  "remaining": 480,
+                  "inHold": 0,
+                  "toBuy": 480,
+                  "done": false
+                },
+                {
+                  "symbol": "insulatingmembrane",
+                  "name": "Insulating Membrane",
+                  "required": 341,
+                  "provided": 0,
+                  "remaining": 341,
+                  "inHold": 0,
+                  "toBuy": 341,
+                  "done": false
+                },
+                {
+                  "symbol": "copper",
+                  "name": "Copper",
+                  "required": 240,
+                  "provided": 0,
+                  "remaining": 240,
+                  "inHold": 0,
+                  "toBuy": 240,
+                  "done": false
+                },
+                {
+                  "symbol": "superconductors",
+                  "name": "Superconductors",
+                  "required": 116,
+                  "provided": 0,
+                  "remaining": 116,
+                  "inHold": 0,
+                  "toBuy": 116,
+                  "done": false
+                },
+                {
+                  "symbol": "foodcartridges",
+                  "name": "Food Cartridges",
+                  "required": 91,
+                  "provided": 0,
+                  "remaining": 91,
+                  "inHold": 0,
+                  "toBuy": 91,
+                  "done": false
+                },
+                {
+                  "symbol": "semiconductors",
+                  "name": "Semiconductors",
+                  "required": 69,
+                  "provided": 0,
+                  "remaining": 69,
+                  "inHold": 0,
+                  "toBuy": 69,
+                  "done": false
+                },
+                {
+                  "symbol": "computercomponents",
+                  "name": "Computer Components",
+                  "required": 61,
+                  "provided": 0,
+                  "remaining": 61,
+                  "inHold": 0,
+                  "toBuy": 61,
+                  "done": false
+                },
+                {
+                  "symbol": "fruitandvegetables",
+                  "name": "Fruit and Vegetables",
+                  "required": 51,
+                  "provided": 0,
+                  "remaining": 51,
+                  "inHold": 0,
+                  "toBuy": 51,
+                  "done": false
+                },
+                {
+                  "symbol": "waterpurifiers",
+                  "name": "Water Purifiers",
+                  "required": 39,
+                  "provided": 0,
+                  "remaining": 39,
+                  "inHold": 0,
+                  "toBuy": 39,
+                  "done": false
+                },
+                {
+                  "symbol": "powergenerators",
+                  "name": "Power Generators",
+                  "required": 19,
+                  "provided": 0,
+                  "remaining": 19,
+                  "inHold": 0,
+                  "toBuy": 19,
+                  "done": false
+                },
+                {
+                  "symbol": "medicaldiagnosticequipment",
+                  "name": "Medical Diagnostic Equipment",
+                  "required": 13,
+                  "provided": 0,
+                  "remaining": 13,
+                  "inHold": 0,
+                  "toBuy": 13,
+                  "done": false
+                },
+                {
+                  "symbol": "nonlethalweapons",
+                  "name": "Non-Lethal Weapons",
+                  "required": 13,
+                  "provided": 0,
+                  "remaining": 13,
+                  "inHold": 0,
+                  "toBuy": 13,
+                  "done": false
+                }
+              ],
+              "totals": {
+                "required": 21803,
+                "provided": 1220,
+                "remaining": 20583,
+                "inHold": 0,
+                "toBuy": 20583
+              },
+              "capacity": null,
+              "trips": null,
+              "tripsToBuy": null,
+              "loop": {
+                "minutes": null,
+                "source": null,
+                "measured": null
+              },
+              "eta": null,
+              "deadline": null,
+              "holdCounted": true
+            }
+          }
+        }
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {
+            "ColonisationBeaconDeployed": 1,
+            "ColonisationConstructionDepot": 2,
+            "ColonisationContribution": 1,
+            "ColonisationSystemClaim": 1,
+            "ColonisationSystemClaimRelease": 1
+          },
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [
+            {
+              "timestamp": "2026-11-01T21:00:00Z",
+              "event": "ColonisationSystemClaimRelease",
+              "StarSystem": "Col 285 Sector HM-I b11-2",
+              "SystemAddress": 5070075078009
+            },
+            {
+              "timestamp": "2026-11-01T20:36:00Z",
+              "event": "ColonisationBeaconDeployed"
+            },
+            {
+              "timestamp": "2026-11-01T20:30:00Z",
+              "event": "ColonisationSystemClaim",
+              "StarSystem": "North America Sector PI-T c3-4",
+              "SystemAddress": 1180210008826
+            },
+            {
+              "timestamp": "2026-11-01T20:01:00Z",
+              "event": "ColonisationConstructionDepot",
+              "MarketID": 3963439106,
+              "ConstructionProgress": 0.055956,
+              "ConstructionComplete": false,
+              "ConstructionFailed": false,
+              "ResourcesRequired": [
+                {
+                  "Name": "$aluminium_name;",
+                  "Name_Localised": "Aluminium",
+                  "RequiredAmount": 480,
+                  "ProvidedAmount": 0,
+                  "Payment": 3239
+                },
+                {
+                  "Name": "$ceramiccomposites_name;",
+                  "Name_Localised": "Ceramic Composites",
+                  "RequiredAmount": 498,
+                  "ProvidedAmount": 0,
+                  "Payment": 724
+                },
+                {
+                  "Name": "$cmmcomposite_name;",
+                  "Name_Localised": "CMM Composite",
+                  "RequiredAmount": 4518,
+                  "ProvidedAmount": 0,
+                  "Payment": 6788
+                },
+                {
+                  "Name": "$computercomponents_name;",
+                  "Name_Localised": "Computer Components",
+                  "RequiredAmount": 61,
+                  "ProvidedAmount": 0,
+                  "Payment": 1112
+                },
+                {
+                  "Name": "$copper_name;",
+                  "Name_Localised": "Copper",
+                  "RequiredAmount": 240,
+                  "ProvidedAmount": 0,
+                  "Payment": 1050
+                },
+                {
+                  "Name": "$foodcartridges_name;",
+                  "Name_Localised": "Food Cartridges",
+                  "RequiredAmount": 91,
+                  "ProvidedAmount": 0,
+                  "Payment": 673
+                },
+                {
+                  "Name": "$fruitandvegetables_name;",
+                  "Name_Localised": "Fruit and Vegetables",
+                  "RequiredAmount": 51,
+                  "ProvidedAmount": 0,
+                  "Payment": 865
+                },
+                {
+                  "Name": "$insulatingmembrane_name;",
+                  "Name_Localised": "Insulating Membrane",
+                  "RequiredAmount": 341,
+                  "ProvidedAmount": 0,
+                  "Payment": 11788
+                },
+                {
+                  "Name": "$liquidoxygen_name;",
+                  "Name_Localised": "Liquid oxygen",
+                  "RequiredAmount": 1865,
+                  "ProvidedAmount": 0,
+                  "Payment": 2260
+                },
+                {
+                  "Name": "$medicaldiagnosticequipment_name;",
+                  "Name_Localised": "Medical Diagnostic Equipment",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 3609
+                },
+                {
+                  "Name": "$nonlethalweapons_name;",
+                  "Name_Localised": "Non-Lethal Weapons",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 2503
+                },
+                {
+                  "Name": "$polymers_name;",
+                  "Name_Localised": "Polymers",
+                  "RequiredAmount": 521,
+                  "ProvidedAmount": 0,
+                  "Payment": 682
+                },
+                {
+                  "Name": "$powergenerators_name;",
+                  "Name_Localised": "Power Generators",
+                  "RequiredAmount": 19,
+                  "ProvidedAmount": 0,
+                  "Payment": 3072
+                },
+                {
+                  "Name": "$semiconductors_name;",
+                  "Name_Localised": "Semiconductors",
+                  "RequiredAmount": 69,
+                  "ProvidedAmount": 0,
+                  "Payment": 1526
+                },
+                {
+                  "Name": "$steel_name;",
+                  "Name_Localised": "Steel",
+                  "RequiredAmount": 6680,
+                  "ProvidedAmount": 1220,
+                  "Payment": 5057
+                },
+                {
+                  "Name": "$superconductors_name;",
+                  "Name_Localised": "Superconductors",
+                  "RequiredAmount": 116,
+                  "ProvidedAmount": 0,
+                  "Payment": 7657
+                },
+                {
+                  "Name": "$titanium_name;",
+                  "Name_Localised": "Titanium",
+                  "RequiredAmount": 5471,
+                  "ProvidedAmount": 0,
+                  "Payment": 5360
+                },
+                {
+                  "Name": "$water_name;",
+                  "Name_Localised": "Water",
+                  "RequiredAmount": 717,
+                  "ProvidedAmount": 0,
+                  "Payment": 662
+                },
+                {
+                  "Name": "$waterpurifiers_name;",
+                  "Name_Localised": "Water Purifiers",
+                  "RequiredAmount": 39,
+                  "ProvidedAmount": 0,
+                  "Payment": 849
+                }
+              ]
+            },
+            {
+              "timestamp": "2026-11-01T20:01:00Z",
+              "event": "ColonisationContribution",
+              "MarketID": 3963439106,
+              "Contributions": [
+                {
+                  "Name": "$Steel_name;",
+                  "Name_Localised": "Steel",
+                  "Amount": 500
+                }
+              ]
+            },
+            {
+              "timestamp": "2026-11-01T20:00:05Z",
+              "event": "ColonisationConstructionDepot",
+              "MarketID": 3963439106,
+              "ConstructionProgress": 0.033023,
+              "ConstructionComplete": false,
+              "ConstructionFailed": false,
+              "ResourcesRequired": [
+                {
+                  "Name": "$aluminium_name;",
+                  "Name_Localised": "Aluminium",
+                  "RequiredAmount": 480,
+                  "ProvidedAmount": 0,
+                  "Payment": 3239
+                },
+                {
+                  "Name": "$ceramiccomposites_name;",
+                  "Name_Localised": "Ceramic Composites",
+                  "RequiredAmount": 498,
+                  "ProvidedAmount": 0,
+                  "Payment": 724
+                },
+                {
+                  "Name": "$cmmcomposite_name;",
+                  "Name_Localised": "CMM Composite",
+                  "RequiredAmount": 4518,
+                  "ProvidedAmount": 0,
+                  "Payment": 6788
+                },
+                {
+                  "Name": "$computercomponents_name;",
+                  "Name_Localised": "Computer Components",
+                  "RequiredAmount": 61,
+                  "ProvidedAmount": 0,
+                  "Payment": 1112
+                },
+                {
+                  "Name": "$copper_name;",
+                  "Name_Localised": "Copper",
+                  "RequiredAmount": 240,
+                  "ProvidedAmount": 0,
+                  "Payment": 1050
+                },
+                {
+                  "Name": "$foodcartridges_name;",
+                  "Name_Localised": "Food Cartridges",
+                  "RequiredAmount": 91,
+                  "ProvidedAmount": 0,
+                  "Payment": 673
+                },
+                {
+                  "Name": "$fruitandvegetables_name;",
+                  "Name_Localised": "Fruit and Vegetables",
+                  "RequiredAmount": 51,
+                  "ProvidedAmount": 0,
+                  "Payment": 865
+                },
+                {
+                  "Name": "$insulatingmembrane_name;",
+                  "Name_Localised": "Insulating Membrane",
+                  "RequiredAmount": 341,
+                  "ProvidedAmount": 0,
+                  "Payment": 11788
+                },
+                {
+                  "Name": "$liquidoxygen_name;",
+                  "Name_Localised": "Liquid oxygen",
+                  "RequiredAmount": 1865,
+                  "ProvidedAmount": 0,
+                  "Payment": 2260
+                },
+                {
+                  "Name": "$medicaldiagnosticequipment_name;",
+                  "Name_Localised": "Medical Diagnostic Equipment",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 3609
+                },
+                {
+                  "Name": "$nonlethalweapons_name;",
+                  "Name_Localised": "Non-Lethal Weapons",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 2503
+                },
+                {
+                  "Name": "$polymers_name;",
+                  "Name_Localised": "Polymers",
+                  "RequiredAmount": 521,
+                  "ProvidedAmount": 0,
+                  "Payment": 682
+                },
+                {
+                  "Name": "$powergenerators_name;",
+                  "Name_Localised": "Power Generators",
+                  "RequiredAmount": 19,
+                  "ProvidedAmount": 0,
+                  "Payment": 3072
+                },
+                {
+                  "Name": "$semiconductors_name;",
+                  "Name_Localised": "Semiconductors",
+                  "RequiredAmount": 69,
+                  "ProvidedAmount": 0,
+                  "Payment": 1526
+                },
+                {
+                  "Name": "$steel_name;",
+                  "Name_Localised": "Steel",
+                  "RequiredAmount": 6680,
+                  "ProvidedAmount": 720,
+                  "Payment": 5057
+                },
+                {
+                  "Name": "$superconductors_name;",
+                  "Name_Localised": "Superconductors",
+                  "RequiredAmount": 116,
+                  "ProvidedAmount": 0,
+                  "Payment": 7657
+                },
+                {
+                  "Name": "$titanium_name;",
+                  "Name_Localised": "Titanium",
+                  "RequiredAmount": 5471,
+                  "ProvidedAmount": 0,
+                  "Payment": 5360
+                },
+                {
+                  "Name": "$water_name;",
+                  "Name_Localised": "Water",
+                  "RequiredAmount": 717,
+                  "ProvidedAmount": 0,
+                  "Payment": 662
+                },
+                {
+                  "Name": "$waterpurifiers_name;",
+                  "Name_Localised": "Water Purifiers",
+                  "RequiredAmount": 39,
+                  "ProvidedAmount": 0,
+                  "Payment": 849
+                }
+              ]
+            }
+          ],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [
+            {
+              "marketId": 3963439106,
+              "label": "Vaisseau de colonisation · Judson Depot",
+              "stationLabel": "Vaisseau de colonisation · Judson Depot",
+              "kind": "ship",
+              "system": "Bleae Thua ED-D c12-5",
+              "progress": 0.055956,
+              "complete": false,
+              "failed": false,
+              "provisional": false,
+              "known": true,
+              "remaining": 20583,
+              "toBuy": 20583,
+              "holdCounted": true,
+              "trips": null,
+              "mine": 500,
+              "deadline": null,
+              "pinned": false,
+              "docked": false,
+              "lastSeen": "2026-11-01T20:05:00Z",
+              "updatedAt": "2026-11-01T20:01:00Z"
+            }
+          ],
+          "claims": [
+            {
+              "system": "Bleae Thua ED-D c12-5",
+              "systemAddress": 1458040738922,
+              "claimedAt": null,
+              "releasedAt": null,
+              "beaconAt": "2026-11-01T20:36:00Z"
+            },
+            {
+              "system": "North America Sector PI-T c3-4",
+              "systemAddress": 1180210008826,
+              "claimedAt": "2026-11-01T20:30:00Z",
+              "releasedAt": null,
+              "beaconAt": null
+            },
+            {
+              "system": "Col 285 Sector HM-I b11-2",
+              "systemAddress": 5070075078009,
+              "claimedAt": null,
+              "releasedAt": "2026-11-01T21:00:00Z",
+              "beaconAt": null
+            }
+          ],
+          "active": {
+            "reason": "recent",
+            "site": {
+              "marketId": 3963439106,
+              "station": "$EXT_PANEL_ColonisationShip; Judson Depot",
+              "stationLabel": "Vaisseau de colonisation · Judson Depot",
+              "kind": "ship",
+              "stationType": "SurfaceStation",
+              "system": "Bleae Thua ED-D c12-5",
+              "systemAddress": 1458040738922,
+              "body": null,
+              "progress": 0.055956,
+              "complete": false,
+              "failed": false,
+              "completedAt": null,
+              "completedBy": null,
+              "successorMarketId": null,
+              "failedAt": null,
+              "resources": [
+                {
+                  "symbol": "aluminium",
+                  "name": "Aluminium",
+                  "required": 480,
+                  "provided": 0,
+                  "payment": 3239,
+                  "remaining": 480
+                },
+                {
+                  "symbol": "ceramiccomposites",
+                  "name": "Ceramic Composites",
+                  "required": 498,
+                  "provided": 0,
+                  "payment": 724,
+                  "remaining": 498
+                },
+                {
+                  "symbol": "cmmcomposite",
+                  "name": "CMM Composite",
+                  "required": 4518,
+                  "provided": 0,
+                  "payment": 6788,
+                  "remaining": 4518
+                },
+                {
+                  "symbol": "computercomponents",
+                  "name": "Computer Components",
+                  "required": 61,
+                  "provided": 0,
+                  "payment": 1112,
+                  "remaining": 61
+                },
+                {
+                  "symbol": "copper",
+                  "name": "Copper",
+                  "required": 240,
+                  "provided": 0,
+                  "payment": 1050,
+                  "remaining": 240
+                },
+                {
+                  "symbol": "foodcartridges",
+                  "name": "Food Cartridges",
+                  "required": 91,
+                  "provided": 0,
+                  "payment": 673,
+                  "remaining": 91
+                },
+                {
+                  "symbol": "fruitandvegetables",
+                  "name": "Fruit and Vegetables",
+                  "required": 51,
+                  "provided": 0,
+                  "payment": 865,
+                  "remaining": 51
+                },
+                {
+                  "symbol": "insulatingmembrane",
+                  "name": "Insulating Membrane",
+                  "required": 341,
+                  "provided": 0,
+                  "payment": 11788,
+                  "remaining": 341
+                },
+                {
+                  "symbol": "liquidoxygen",
+                  "name": "Liquid oxygen",
+                  "required": 1865,
+                  "provided": 0,
+                  "payment": 2260,
+                  "remaining": 1865
+                },
+                {
+                  "symbol": "medicaldiagnosticequipment",
+                  "name": "Medical Diagnostic Equipment",
+                  "required": 13,
+                  "provided": 0,
+                  "payment": 3609,
+                  "remaining": 13
+                },
+                {
+                  "symbol": "nonlethalweapons",
+                  "name": "Non-Lethal Weapons",
+                  "required": 13,
+                  "provided": 0,
+                  "payment": 2503,
+                  "remaining": 13
+                },
+                {
+                  "symbol": "polymers",
+                  "name": "Polymers",
+                  "required": 521,
+                  "provided": 0,
+                  "payment": 682,
+                  "remaining": 521
+                },
+                {
+                  "symbol": "powergenerators",
+                  "name": "Power Generators",
+                  "required": 19,
+                  "provided": 0,
+                  "payment": 3072,
+                  "remaining": 19
+                },
+                {
+                  "symbol": "semiconductors",
+                  "name": "Semiconductors",
+                  "required": 69,
+                  "provided": 0,
+                  "payment": 1526,
+                  "remaining": 69
+                },
+                {
+                  "symbol": "steel",
+                  "name": "Steel",
+                  "required": 6680,
+                  "provided": 1220,
+                  "payment": 5057,
+                  "remaining": 5460
+                },
+                {
+                  "symbol": "superconductors",
+                  "name": "Superconductors",
+                  "required": 116,
+                  "provided": 0,
+                  "payment": 7657,
+                  "remaining": 116
+                },
+                {
+                  "symbol": "titanium",
+                  "name": "Titanium",
+                  "required": 5471,
+                  "provided": 0,
+                  "payment": 5360,
+                  "remaining": 5471
+                },
+                {
+                  "symbol": "water",
+                  "name": "Water",
+                  "required": 717,
+                  "provided": 0,
+                  "payment": 662,
+                  "remaining": 717
+                },
+                {
+                  "symbol": "waterpurifiers",
+                  "name": "Water Purifiers",
+                  "required": 39,
+                  "provided": 0,
+                  "payment": 849,
+                  "remaining": 39
+                }
+              ],
+              "provisional": false,
+              "readings": 2,
+              "firstSeen": "2026-11-01T20:00:00Z",
+              "lastSeen": "2026-11-01T20:05:00Z",
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "lastDockedAt": "2026-11-01T20:00:00Z",
+              "user": {
+                "name": null,
+                "deadline": null,
+                "notes": null,
+                "loopMinutes": null,
+                "pinned": false
+              },
+              "label": "Vaisseau de colonisation · Judson Depot",
+              "docked": false,
+              "mine": {
+                "total": 500,
+                "count": 1,
+                "recent": [
+                  {
+                    "at": "2026-11-01T20:01:00Z",
+                    "items": [
+                      {
+                        "symbol": "steel",
+                        "name": "Steel",
+                        "amount": 500
+                      }
+                    ],
+                    "total": 500,
+                    "visit": "2026-11-01T20:00:00Z"
+                  }
+                ]
+              },
+              "ship": {
+                "capacity": null,
+                "pad": null
+              },
+              "plan": {
+                "known": true,
+                "items": [
+                  {
+                    "symbol": "titanium",
+                    "name": "Titanium",
+                    "required": 5471,
+                    "provided": 0,
+                    "remaining": 5471,
+                    "inHold": 0,
+                    "toBuy": 5471,
+                    "done": false
+                  },
+                  {
+                    "symbol": "steel",
+                    "name": "Steel",
+                    "required": 6680,
+                    "provided": 1220,
+                    "remaining": 5460,
+                    "inHold": 0,
+                    "toBuy": 5460,
+                    "done": false
+                  },
+                  {
+                    "symbol": "cmmcomposite",
+                    "name": "CMM Composite",
+                    "required": 4518,
+                    "provided": 0,
+                    "remaining": 4518,
+                    "inHold": 0,
+                    "toBuy": 4518,
+                    "done": false
+                  },
+                  {
+                    "symbol": "liquidoxygen",
+                    "name": "Liquid oxygen",
+                    "required": 1865,
+                    "provided": 0,
+                    "remaining": 1865,
+                    "inHold": 0,
+                    "toBuy": 1865,
+                    "done": false
+                  },
+                  {
+                    "symbol": "water",
+                    "name": "Water",
+                    "required": 717,
+                    "provided": 0,
+                    "remaining": 717,
+                    "inHold": 0,
+                    "toBuy": 717,
+                    "done": false
+                  },
+                  {
+                    "symbol": "polymers",
+                    "name": "Polymers",
+                    "required": 521,
+                    "provided": 0,
+                    "remaining": 521,
+                    "inHold": 0,
+                    "toBuy": 521,
+                    "done": false
+                  },
+                  {
+                    "symbol": "ceramiccomposites",
+                    "name": "Ceramic Composites",
+                    "required": 498,
+                    "provided": 0,
+                    "remaining": 498,
+                    "inHold": 0,
+                    "toBuy": 498,
+                    "done": false
+                  },
+                  {
+                    "symbol": "aluminium",
+                    "name": "Aluminium",
+                    "required": 480,
+                    "provided": 0,
+                    "remaining": 480,
+                    "inHold": 0,
+                    "toBuy": 480,
+                    "done": false
+                  },
+                  {
+                    "symbol": "insulatingmembrane",
+                    "name": "Insulating Membrane",
+                    "required": 341,
+                    "provided": 0,
+                    "remaining": 341,
+                    "inHold": 0,
+                    "toBuy": 341,
+                    "done": false
+                  },
+                  {
+                    "symbol": "copper",
+                    "name": "Copper",
+                    "required": 240,
+                    "provided": 0,
+                    "remaining": 240,
+                    "inHold": 0,
+                    "toBuy": 240,
+                    "done": false
+                  },
+                  {
+                    "symbol": "superconductors",
+                    "name": "Superconductors",
+                    "required": 116,
+                    "provided": 0,
+                    "remaining": 116,
+                    "inHold": 0,
+                    "toBuy": 116,
+                    "done": false
+                  },
+                  {
+                    "symbol": "foodcartridges",
+                    "name": "Food Cartridges",
+                    "required": 91,
+                    "provided": 0,
+                    "remaining": 91,
+                    "inHold": 0,
+                    "toBuy": 91,
+                    "done": false
+                  },
+                  {
+                    "symbol": "semiconductors",
+                    "name": "Semiconductors",
+                    "required": 69,
+                    "provided": 0,
+                    "remaining": 69,
+                    "inHold": 0,
+                    "toBuy": 69,
+                    "done": false
+                  },
+                  {
+                    "symbol": "computercomponents",
+                    "name": "Computer Components",
+                    "required": 61,
+                    "provided": 0,
+                    "remaining": 61,
+                    "inHold": 0,
+                    "toBuy": 61,
+                    "done": false
+                  },
+                  {
+                    "symbol": "fruitandvegetables",
+                    "name": "Fruit and Vegetables",
+                    "required": 51,
+                    "provided": 0,
+                    "remaining": 51,
+                    "inHold": 0,
+                    "toBuy": 51,
+                    "done": false
+                  },
+                  {
+                    "symbol": "waterpurifiers",
+                    "name": "Water Purifiers",
+                    "required": 39,
+                    "provided": 0,
+                    "remaining": 39,
+                    "inHold": 0,
+                    "toBuy": 39,
+                    "done": false
+                  },
+                  {
+                    "symbol": "powergenerators",
+                    "name": "Power Generators",
+                    "required": 19,
+                    "provided": 0,
+                    "remaining": 19,
+                    "inHold": 0,
+                    "toBuy": 19,
+                    "done": false
+                  },
+                  {
+                    "symbol": "medicaldiagnosticequipment",
+                    "name": "Medical Diagnostic Equipment",
+                    "required": 13,
+                    "provided": 0,
+                    "remaining": 13,
+                    "inHold": 0,
+                    "toBuy": 13,
+                    "done": false
+                  },
+                  {
+                    "symbol": "nonlethalweapons",
+                    "name": "Non-Lethal Weapons",
+                    "required": 13,
+                    "provided": 0,
+                    "remaining": 13,
+                    "inHold": 0,
+                    "toBuy": 13,
+                    "done": false
+                  }
+                ],
+                "totals": {
+                  "required": 21803,
+                  "provided": 1220,
+                  "remaining": 20583,
+                  "inHold": 0,
+                  "toBuy": 20583
+                },
+                "capacity": null,
+                "trips": null,
+                "tripsToBuy": null,
+                "loop": {
+                  "minutes": null,
+                  "source": null,
+                  "measured": null
+                },
+                "eta": null,
+                "deadline": null,
+                "holdCounted": true
+              }
+            }
+          },
+          "ship": {
+            "capacity": null,
+            "pad": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": {
+          "reason": "recent",
+          "site": {
+            "marketId": 3963439106,
+            "station": "$EXT_PANEL_ColonisationShip; Judson Depot",
+            "stationLabel": "Vaisseau de colonisation · Judson Depot",
+            "kind": "ship",
+            "stationType": "SurfaceStation",
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "body": null,
+            "progress": 0.055956,
+            "complete": false,
+            "failed": false,
+            "completedAt": null,
+            "completedBy": null,
+            "successorMarketId": null,
+            "failedAt": null,
+            "resources": [
+              {
+                "symbol": "aluminium",
+                "name": "Aluminium",
+                "required": 480,
+                "provided": 0,
+                "payment": 3239,
+                "remaining": 480
+              },
+              {
+                "symbol": "ceramiccomposites",
+                "name": "Ceramic Composites",
+                "required": 498,
+                "provided": 0,
+                "payment": 724,
+                "remaining": 498
+              },
+              {
+                "symbol": "cmmcomposite",
+                "name": "CMM Composite",
+                "required": 4518,
+                "provided": 0,
+                "payment": 6788,
+                "remaining": 4518
+              },
+              {
+                "symbol": "computercomponents",
+                "name": "Computer Components",
+                "required": 61,
+                "provided": 0,
+                "payment": 1112,
+                "remaining": 61
+              },
+              {
+                "symbol": "copper",
+                "name": "Copper",
+                "required": 240,
+                "provided": 0,
+                "payment": 1050,
+                "remaining": 240
+              },
+              {
+                "symbol": "foodcartridges",
+                "name": "Food Cartridges",
+                "required": 91,
+                "provided": 0,
+                "payment": 673,
+                "remaining": 91
+              },
+              {
+                "symbol": "fruitandvegetables",
+                "name": "Fruit and Vegetables",
+                "required": 51,
+                "provided": 0,
+                "payment": 865,
+                "remaining": 51
+              },
+              {
+                "symbol": "insulatingmembrane",
+                "name": "Insulating Membrane",
+                "required": 341,
+                "provided": 0,
+                "payment": 11788,
+                "remaining": 341
+              },
+              {
+                "symbol": "liquidoxygen",
+                "name": "Liquid oxygen",
+                "required": 1865,
+                "provided": 0,
+                "payment": 2260,
+                "remaining": 1865
+              },
+              {
+                "symbol": "medicaldiagnosticequipment",
+                "name": "Medical Diagnostic Equipment",
+                "required": 13,
+                "provided": 0,
+                "payment": 3609,
+                "remaining": 13
+              },
+              {
+                "symbol": "nonlethalweapons",
+                "name": "Non-Lethal Weapons",
+                "required": 13,
+                "provided": 0,
+                "payment": 2503,
+                "remaining": 13
+              },
+              {
+                "symbol": "polymers",
+                "name": "Polymers",
+                "required": 521,
+                "provided": 0,
+                "payment": 682,
+                "remaining": 521
+              },
+              {
+                "symbol": "powergenerators",
+                "name": "Power Generators",
+                "required": 19,
+                "provided": 0,
+                "payment": 3072,
+                "remaining": 19
+              },
+              {
+                "symbol": "semiconductors",
+                "name": "Semiconductors",
+                "required": 69,
+                "provided": 0,
+                "payment": 1526,
+                "remaining": 69
+              },
+              {
+                "symbol": "steel",
+                "name": "Steel",
+                "required": 6680,
+                "provided": 1220,
+                "payment": 5057,
+                "remaining": 5460
+              },
+              {
+                "symbol": "superconductors",
+                "name": "Superconductors",
+                "required": 116,
+                "provided": 0,
+                "payment": 7657,
+                "remaining": 116
+              },
+              {
+                "symbol": "titanium",
+                "name": "Titanium",
+                "required": 5471,
+                "provided": 0,
+                "payment": 5360,
+                "remaining": 5471
+              },
+              {
+                "symbol": "water",
+                "name": "Water",
+                "required": 717,
+                "provided": 0,
+                "payment": 662,
+                "remaining": 717
+              },
+              {
+                "symbol": "waterpurifiers",
+                "name": "Water Purifiers",
+                "required": 39,
+                "provided": 0,
+                "payment": 849,
+                "remaining": 39
+              }
+            ],
+            "provisional": false,
+            "readings": 2,
+            "firstSeen": "2026-11-01T20:00:00Z",
+            "lastSeen": "2026-11-01T20:05:00Z",
+            "updatedAt": "2026-11-01T20:01:00Z",
+            "lastDockedAt": "2026-11-01T20:00:00Z",
+            "user": {
+              "name": null,
+              "deadline": null,
+              "notes": null,
+              "loopMinutes": null,
+              "pinned": false
+            },
+            "label": "Vaisseau de colonisation · Judson Depot",
+            "docked": false,
+            "mine": {
+              "total": 500,
+              "count": 1,
+              "recent": [
+                {
+                  "at": "2026-11-01T20:01:00Z",
+                  "items": [
+                    {
+                      "symbol": "steel",
+                      "name": "Steel",
+                      "amount": 500
+                    }
+                  ],
+                  "total": 500,
+                  "visit": "2026-11-01T20:00:00Z"
+                }
+              ]
+            },
+            "ship": {
+              "capacity": null,
+              "pad": null
+            },
+            "plan": {
+              "known": true,
+              "items": [
+                {
+                  "symbol": "titanium",
+                  "name": "Titanium",
+                  "required": 5471,
+                  "provided": 0,
+                  "remaining": 5471,
+                  "inHold": 0,
+                  "toBuy": 5471,
+                  "done": false
+                },
+                {
+                  "symbol": "steel",
+                  "name": "Steel",
+                  "required": 6680,
+                  "provided": 1220,
+                  "remaining": 5460,
+                  "inHold": 0,
+                  "toBuy": 5460,
+                  "done": false
+                },
+                {
+                  "symbol": "cmmcomposite",
+                  "name": "CMM Composite",
+                  "required": 4518,
+                  "provided": 0,
+                  "remaining": 4518,
+                  "inHold": 0,
+                  "toBuy": 4518,
+                  "done": false
+                },
+                {
+                  "symbol": "liquidoxygen",
+                  "name": "Liquid oxygen",
+                  "required": 1865,
+                  "provided": 0,
+                  "remaining": 1865,
+                  "inHold": 0,
+                  "toBuy": 1865,
+                  "done": false
+                },
+                {
+                  "symbol": "water",
+                  "name": "Water",
+                  "required": 717,
+                  "provided": 0,
+                  "remaining": 717,
+                  "inHold": 0,
+                  "toBuy": 717,
+                  "done": false
+                },
+                {
+                  "symbol": "polymers",
+                  "name": "Polymers",
+                  "required": 521,
+                  "provided": 0,
+                  "remaining": 521,
+                  "inHold": 0,
+                  "toBuy": 521,
+                  "done": false
+                },
+                {
+                  "symbol": "ceramiccomposites",
+                  "name": "Ceramic Composites",
+                  "required": 498,
+                  "provided": 0,
+                  "remaining": 498,
+                  "inHold": 0,
+                  "toBuy": 498,
+                  "done": false
+                },
+                {
+                  "symbol": "aluminium",
+                  "name": "Aluminium",
+                  "required": 480,
+                  "provided": 0,
+                  "remaining": 480,
+                  "inHold": 0,
+                  "toBuy": 480,
+                  "done": false
+                },
+                {
+                  "symbol": "insulatingmembrane",
+                  "name": "Insulating Membrane",
+                  "required": 341,
+                  "provided": 0,
+                  "remaining": 341,
+                  "inHold": 0,
+                  "toBuy": 341,
+                  "done": false
+                },
+                {
+                  "symbol": "copper",
+                  "name": "Copper",
+                  "required": 240,
+                  "provided": 0,
+                  "remaining": 240,
+                  "inHold": 0,
+                  "toBuy": 240,
+                  "done": false
+                },
+                {
+                  "symbol": "superconductors",
+                  "name": "Superconductors",
+                  "required": 116,
+                  "provided": 0,
+                  "remaining": 116,
+                  "inHold": 0,
+                  "toBuy": 116,
+                  "done": false
+                },
+                {
+                  "symbol": "foodcartridges",
+                  "name": "Food Cartridges",
+                  "required": 91,
+                  "provided": 0,
+                  "remaining": 91,
+                  "inHold": 0,
+                  "toBuy": 91,
+                  "done": false
+                },
+                {
+                  "symbol": "semiconductors",
+                  "name": "Semiconductors",
+                  "required": 69,
+                  "provided": 0,
+                  "remaining": 69,
+                  "inHold": 0,
+                  "toBuy": 69,
+                  "done": false
+                },
+                {
+                  "symbol": "computercomponents",
+                  "name": "Computer Components",
+                  "required": 61,
+                  "provided": 0,
+                  "remaining": 61,
+                  "inHold": 0,
+                  "toBuy": 61,
+                  "done": false
+                },
+                {
+                  "symbol": "fruitandvegetables",
+                  "name": "Fruit and Vegetables",
+                  "required": 51,
+                  "provided": 0,
+                  "remaining": 51,
+                  "inHold": 0,
+                  "toBuy": 51,
+                  "done": false
+                },
+                {
+                  "symbol": "waterpurifiers",
+                  "name": "Water Purifiers",
+                  "required": 39,
+                  "provided": 0,
+                  "remaining": 39,
+                  "inHold": 0,
+                  "toBuy": 39,
+                  "done": false
+                },
+                {
+                  "symbol": "powergenerators",
+                  "name": "Power Generators",
+                  "required": 19,
+                  "provided": 0,
+                  "remaining": 19,
+                  "inHold": 0,
+                  "toBuy": 19,
+                  "done": false
+                },
+                {
+                  "symbol": "medicaldiagnosticequipment",
+                  "name": "Medical Diagnostic Equipment",
+                  "required": 13,
+                  "provided": 0,
+                  "remaining": 13,
+                  "inHold": 0,
+                  "toBuy": 13,
+                  "done": false
+                },
+                {
+                  "symbol": "nonlethalweapons",
+                  "name": "Non-Lethal Weapons",
+                  "required": 13,
+                  "provided": 0,
+                  "remaining": 13,
+                  "inHold": 0,
+                  "toBuy": 13,
+                  "done": false
+                }
+              ],
+              "totals": {
+                "required": 21803,
+                "provided": 1220,
+                "remaining": 20583,
+                "inHold": 0,
+                "toBuy": 20583
+              },
+              "capacity": null,
+              "trips": null,
+              "tripsToBuy": null,
+              "loop": {
+                "minutes": null,
+                "source": null,
+                "measured": null
+              },
+              "eta": null,
+              "deadline": null,
+              "holdCounted": true
+            }
+          }
+        }
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {
+            "ColonisationBeaconDeployed": 1,
+            "ColonisationConstructionDepot": 2,
+            "ColonisationContribution": 1,
+            "ColonisationSystemClaim": 1,
+            "ColonisationSystemClaimRelease": 1
+          },
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [
+            {
+              "timestamp": "2026-11-01T21:00:00Z",
+              "event": "ColonisationSystemClaimRelease",
+              "StarSystem": "Col 285 Sector HM-I b11-2",
+              "SystemAddress": 5070075078009
+            },
+            {
+              "timestamp": "2026-11-01T20:36:00Z",
+              "event": "ColonisationBeaconDeployed"
+            },
+            {
+              "timestamp": "2026-11-01T20:30:00Z",
+              "event": "ColonisationSystemClaim",
+              "StarSystem": "North America Sector PI-T c3-4",
+              "SystemAddress": 1180210008826
+            },
+            {
+              "timestamp": "2026-11-01T20:01:00Z",
+              "event": "ColonisationConstructionDepot",
+              "MarketID": 3963439106,
+              "ConstructionProgress": 0.055956,
+              "ConstructionComplete": false,
+              "ConstructionFailed": false,
+              "ResourcesRequired": [
+                {
+                  "Name": "$aluminium_name;",
+                  "Name_Localised": "Aluminium",
+                  "RequiredAmount": 480,
+                  "ProvidedAmount": 0,
+                  "Payment": 3239
+                },
+                {
+                  "Name": "$ceramiccomposites_name;",
+                  "Name_Localised": "Ceramic Composites",
+                  "RequiredAmount": 498,
+                  "ProvidedAmount": 0,
+                  "Payment": 724
+                },
+                {
+                  "Name": "$cmmcomposite_name;",
+                  "Name_Localised": "CMM Composite",
+                  "RequiredAmount": 4518,
+                  "ProvidedAmount": 0,
+                  "Payment": 6788
+                },
+                {
+                  "Name": "$computercomponents_name;",
+                  "Name_Localised": "Computer Components",
+                  "RequiredAmount": 61,
+                  "ProvidedAmount": 0,
+                  "Payment": 1112
+                },
+                {
+                  "Name": "$copper_name;",
+                  "Name_Localised": "Copper",
+                  "RequiredAmount": 240,
+                  "ProvidedAmount": 0,
+                  "Payment": 1050
+                },
+                {
+                  "Name": "$foodcartridges_name;",
+                  "Name_Localised": "Food Cartridges",
+                  "RequiredAmount": 91,
+                  "ProvidedAmount": 0,
+                  "Payment": 673
+                },
+                {
+                  "Name": "$fruitandvegetables_name;",
+                  "Name_Localised": "Fruit and Vegetables",
+                  "RequiredAmount": 51,
+                  "ProvidedAmount": 0,
+                  "Payment": 865
+                },
+                {
+                  "Name": "$insulatingmembrane_name;",
+                  "Name_Localised": "Insulating Membrane",
+                  "RequiredAmount": 341,
+                  "ProvidedAmount": 0,
+                  "Payment": 11788
+                },
+                {
+                  "Name": "$liquidoxygen_name;",
+                  "Name_Localised": "Liquid oxygen",
+                  "RequiredAmount": 1865,
+                  "ProvidedAmount": 0,
+                  "Payment": 2260
+                },
+                {
+                  "Name": "$medicaldiagnosticequipment_name;",
+                  "Name_Localised": "Medical Diagnostic Equipment",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 3609
+                },
+                {
+                  "Name": "$nonlethalweapons_name;",
+                  "Name_Localised": "Non-Lethal Weapons",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 2503
+                },
+                {
+                  "Name": "$polymers_name;",
+                  "Name_Localised": "Polymers",
+                  "RequiredAmount": 521,
+                  "ProvidedAmount": 0,
+                  "Payment": 682
+                },
+                {
+                  "Name": "$powergenerators_name;",
+                  "Name_Localised": "Power Generators",
+                  "RequiredAmount": 19,
+                  "ProvidedAmount": 0,
+                  "Payment": 3072
+                },
+                {
+                  "Name": "$semiconductors_name;",
+                  "Name_Localised": "Semiconductors",
+                  "RequiredAmount": 69,
+                  "ProvidedAmount": 0,
+                  "Payment": 1526
+                },
+                {
+                  "Name": "$steel_name;",
+                  "Name_Localised": "Steel",
+                  "RequiredAmount": 6680,
+                  "ProvidedAmount": 1220,
+                  "Payment": 5057
+                },
+                {
+                  "Name": "$superconductors_name;",
+                  "Name_Localised": "Superconductors",
+                  "RequiredAmount": 116,
+                  "ProvidedAmount": 0,
+                  "Payment": 7657
+                },
+                {
+                  "Name": "$titanium_name;",
+                  "Name_Localised": "Titanium",
+                  "RequiredAmount": 5471,
+                  "ProvidedAmount": 0,
+                  "Payment": 5360
+                },
+                {
+                  "Name": "$water_name;",
+                  "Name_Localised": "Water",
+                  "RequiredAmount": 717,
+                  "ProvidedAmount": 0,
+                  "Payment": 662
+                },
+                {
+                  "Name": "$waterpurifiers_name;",
+                  "Name_Localised": "Water Purifiers",
+                  "RequiredAmount": 39,
+                  "ProvidedAmount": 0,
+                  "Payment": 849
+                }
+              ]
+            },
+            {
+              "timestamp": "2026-11-01T20:01:00Z",
+              "event": "ColonisationContribution",
+              "MarketID": 3963439106,
+              "Contributions": [
+                {
+                  "Name": "$Steel_name;",
+                  "Name_Localised": "Steel",
+                  "Amount": 500
+                }
+              ]
+            },
+            {
+              "timestamp": "2026-11-01T20:00:05Z",
+              "event": "ColonisationConstructionDepot",
+              "MarketID": 3963439106,
+              "ConstructionProgress": 0.033023,
+              "ConstructionComplete": false,
+              "ConstructionFailed": false,
+              "ResourcesRequired": [
+                {
+                  "Name": "$aluminium_name;",
+                  "Name_Localised": "Aluminium",
+                  "RequiredAmount": 480,
+                  "ProvidedAmount": 0,
+                  "Payment": 3239
+                },
+                {
+                  "Name": "$ceramiccomposites_name;",
+                  "Name_Localised": "Ceramic Composites",
+                  "RequiredAmount": 498,
+                  "ProvidedAmount": 0,
+                  "Payment": 724
+                },
+                {
+                  "Name": "$cmmcomposite_name;",
+                  "Name_Localised": "CMM Composite",
+                  "RequiredAmount": 4518,
+                  "ProvidedAmount": 0,
+                  "Payment": 6788
+                },
+                {
+                  "Name": "$computercomponents_name;",
+                  "Name_Localised": "Computer Components",
+                  "RequiredAmount": 61,
+                  "ProvidedAmount": 0,
+                  "Payment": 1112
+                },
+                {
+                  "Name": "$copper_name;",
+                  "Name_Localised": "Copper",
+                  "RequiredAmount": 240,
+                  "ProvidedAmount": 0,
+                  "Payment": 1050
+                },
+                {
+                  "Name": "$foodcartridges_name;",
+                  "Name_Localised": "Food Cartridges",
+                  "RequiredAmount": 91,
+                  "ProvidedAmount": 0,
+                  "Payment": 673
+                },
+                {
+                  "Name": "$fruitandvegetables_name;",
+                  "Name_Localised": "Fruit and Vegetables",
+                  "RequiredAmount": 51,
+                  "ProvidedAmount": 0,
+                  "Payment": 865
+                },
+                {
+                  "Name": "$insulatingmembrane_name;",
+                  "Name_Localised": "Insulating Membrane",
+                  "RequiredAmount": 341,
+                  "ProvidedAmount": 0,
+                  "Payment": 11788
+                },
+                {
+                  "Name": "$liquidoxygen_name;",
+                  "Name_Localised": "Liquid oxygen",
+                  "RequiredAmount": 1865,
+                  "ProvidedAmount": 0,
+                  "Payment": 2260
+                },
+                {
+                  "Name": "$medicaldiagnosticequipment_name;",
+                  "Name_Localised": "Medical Diagnostic Equipment",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 3609
+                },
+                {
+                  "Name": "$nonlethalweapons_name;",
+                  "Name_Localised": "Non-Lethal Weapons",
+                  "RequiredAmount": 13,
+                  "ProvidedAmount": 0,
+                  "Payment": 2503
+                },
+                {
+                  "Name": "$polymers_name;",
+                  "Name_Localised": "Polymers",
+                  "RequiredAmount": 521,
+                  "ProvidedAmount": 0,
+                  "Payment": 682
+                },
+                {
+                  "Name": "$powergenerators_name;",
+                  "Name_Localised": "Power Generators",
+                  "RequiredAmount": 19,
+                  "ProvidedAmount": 0,
+                  "Payment": 3072
+                },
+                {
+                  "Name": "$semiconductors_name;",
+                  "Name_Localised": "Semiconductors",
+                  "RequiredAmount": 69,
+                  "ProvidedAmount": 0,
+                  "Payment": 1526
+                },
+                {
+                  "Name": "$steel_name;",
+                  "Name_Localised": "Steel",
+                  "RequiredAmount": 6680,
+                  "ProvidedAmount": 720,
+                  "Payment": 5057
+                },
+                {
+                  "Name": "$superconductors_name;",
+                  "Name_Localised": "Superconductors",
+                  "RequiredAmount": 116,
+                  "ProvidedAmount": 0,
+                  "Payment": 7657
+                },
+                {
+                  "Name": "$titanium_name;",
+                  "Name_Localised": "Titanium",
+                  "RequiredAmount": 5471,
+                  "ProvidedAmount": 0,
+                  "Payment": 5360
+                },
+                {
+                  "Name": "$water_name;",
+                  "Name_Localised": "Water",
+                  "RequiredAmount": 717,
+                  "ProvidedAmount": 0,
+                  "Payment": 662
+                },
+                {
+                  "Name": "$waterpurifiers_name;",
+                  "Name_Localised": "Water Purifiers",
+                  "RequiredAmount": 39,
+                  "ProvidedAmount": 0,
+                  "Payment": 849
+                }
+              ]
+            }
+          ],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 336,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 336,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 268,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 3700000001,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 268,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 3700000001,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1184,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1184,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 28,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 4225986051,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 28,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 4225986051,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 0,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 128674695,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 0,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 128674695,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 0,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 3700000001,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 0,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 3700000001,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1184,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 4330329347,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 1184,
+            "pad": "L"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": true,
+          "marketId": 4330329347,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 268,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    },
+    "direct": {
+      "GET /sites": {
+        "statut": 200,
+        "corps": {
+          "sites": [],
+          "claims": [],
+          "active": null,
+          "ship": {
+            "capacity": 268,
+            "pad": "M"
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "docked": false,
+          "marketId": null,
+          "site": null
+        }
+      },
+      "GET /active": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /diagnostics": {
+        "statut": 200,
+        "corps": {
+          "counts": {},
+          "issues": [],
+          "rules": [
+            {
+              "id": "progress-formula",
+              "label": "ConstructionProgress = Σ livré ÷ Σ demandé, en tonnes (tolérance 1e-6)",
+              "source": "vérifié sur EDDI, SrvSurvey et BGS-Tally"
+            },
+            {
+              "id": "complete-progress",
+              "label": "ConstructionComplete vaut true exactement quand l'avancement atteint 1",
+              "source": "fixture BGS-Tally"
+            },
+            {
+              "id": "payment-constant",
+              "label": "Payment constant pour une même marchandise, sur tous les chantiers",
+              "source": "valeurs identiques d'avril 2025 à 2026 (EDAPITool)"
+            },
+            {
+              "id": "required-stable",
+              "label": "RequiredAmount ne change pas pour un même chantier",
+              "source": "jamais vu changer en cours de chantier"
+            },
+            {
+              "id": "provided-monotonic",
+              "label": "ProvidedAmount ne baisse jamais",
+              "source": "cumul de toutes les livraisons"
+            },
+            {
+              "id": "contribution-counted",
+              "label": "Entre deux lectures, Δ livré ≥ tes livraisons (ColonisationContribution)",
+              "source": "EDAPITool : Δ livré − tes livraisons = livré par d'autres"
+            },
+            {
+              "id": "contribution-known",
+              "label": "Ce que tu livres fait partie des besoins du chantier (même symbole)",
+              "source": "normalisation des noms (EDCT, SrvSurvey)"
+            },
+            {
+              "id": "name-case-depot",
+              "label": "Name du dépôt en minuscules (« $steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "name-case-contribution",
+              "label": "Name de la livraison en PascalCase (« $Steel_name; »)",
+              "source": "EDCT, log du 31 juil. 2026"
+            },
+            {
+              "id": "complete-event",
+              "label": "CompleteConstruction : événement rare, à comparer avec ConstructionComplete du dépôt",
+              "source": "EDDiscovery : « only seen briefly »"
+            },
+            {
+              "id": "complete-read",
+              "label": "La fin d'un chantier est lue au dépôt (ConstructionComplete: true) avant que la station change",
+              "source": "fixture BGS-Tally ; nom et MarketID changent à la fin (port primaire)"
+            }
+          ],
+          "checks": [],
+          "raw": [],
+          "sources": {
+            "requests": 0,
+            "cached": 0
+          }
+        }
+      }
+    }
+  }
+}

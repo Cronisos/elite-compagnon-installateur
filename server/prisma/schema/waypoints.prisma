@@ -1,0 +1,66 @@
+// Modèles du module « Mes repères ».
+
+// Position enregistrée d'un clic : système, planète, coordonnées, et ce que c'est
+model Waypoint {
+  id            Int      @id @default(autoincrement())
+  label         String
+  category      String   @default("autre")
+  notes         String   @default("")
+  siteNumber    Int?     // numéro de l'emplacement d'extraction planétaire (EEP), saisi à la main
+  drills        Int?     // nombre de foreuses qu'on peut poser sur l'emplacement
+  unprofitable  Boolean  @default(false) // zone jugée pas rentable : rangée dans son onglet jusqu'à annulation
+  depletedAt    DateTime? // veine vidée ce jour-là : le repère passe dans l'onglet Taris pendant 2 mois
+  system        String?
+  systemAddress String?  // texte : dépasse la taille d'un entier Prisma
+  body          String?
+  station       String?
+  latitude      Float?
+  longitude     Float?
+  altitude      Float?
+  heading       Int?
+  planetRadius  Float?
+  vehicle       String?  // ship, srv, onfoot, fighter
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// Session de minage lancée depuis un repère. Le nom du repère est copié : l'historique survit à sa suppression
+model MiningSession {
+  id         Int       @id @default(autoincrement())
+  waypointId Int?
+  label      String
+  siteNumber Int?
+  body       String?
+  system     String?
+  startedAt  DateTime  @default(now())
+  endedAt    DateTime? // vide tant que la session tourne
+  segments   String    @default("[]") // JSON [{ start, end }] : périodes actives, une de plus à chaque reprise
+  summary    String    @default("") // JSON du bilan, écrit à la fin
+}
+
+// Prospection du minage planétaire : ce qu'on a vu d'un emplacement (EEP), même sans y poser de repère
+model MiningSite {
+  id            Int      @id @default(autoincrement())
+  system        String
+  systemAddress String?
+  body          String
+  number        Int      // numéro de l'EEP dans le jeu
+  bad           Boolean  @default(false) // « rien d'intéressant » : ne pas y revenir
+  rating        Int?     // note du joueur, de 1 à 10, pour l'EEP entier : rentable à partir de 6
+  deposits      String   @default("[]") // JSON [{ ore }] : minerais vus (capture ou saisie)
+  notes         String   @default("")
+  updatedAt     DateTime @updatedAt
+
+  @@unique([body, number])
+}
+
+// Planète écartée d'un coup (« planète out ») ou annotée, quel que soit le nombre d'EEP vus
+model MiningBody {
+  id            Int      @id @default(autoincrement())
+  system        String
+  systemAddress String?
+  body          String   @unique
+  out           Boolean  @default(false)
+  notes         String   @default("")
+  updatedAt     DateTime @updatedAt
+}

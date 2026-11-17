@@ -1,0 +1,43 @@
+{
+  "name": "elite-companion",
+  "private": true,
+  "author": "Cronisos Lysiris",
+  "description": "Application compagnon locale pour Elite Dangerous",
+  "workspaces": [
+    "client",
+    "server",
+    "overlay"
+  ],
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11.19.0"
+  },
+  "scripts": {
+    "installer": "node scripts/installer.mjs",
+    "dev": "concurrently -k -n serveur,client -c yellow,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "bureau": "node desktop/start.js",
+    "paquet": "node scripts/paquet.mjs",
+    "release": "node scripts/release.mjs",
+    "raccourcis": "node scripts/raccourcis.mjs",
+    "test": "npm test -w server && npm test -w client && npm test -w overlay && npm test --prefix desktop",
+    "build": "npm run build -w client",
+    "overlay": "npm start -w overlay",
+    "overlay:sauvetage": "npm start -w overlay -- --page=rescue",
+    "controle": "node scripts/controle/lancer.mjs",
+    "controle:serveur": "node scripts/controle/banc/serveur.mjs",
+    "controle:seances": "node scripts/controle/seances/extraire.mjs",
+    "controle:reference": "node scripts/controle/banc/reference.mjs",
+    "controle:historique": "node scripts/controle/historique.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  },
+  "allowScripts": {
+    "electron@45.2.3": true,
+    "prisma@7.10.1": true,
+    "@prisma/engines@7.10.1": true,
+    "better-sqlite3@12.11.1": true,
+    "tesseract.js@7.0.0": false,
+    "fsevents@2.3.3": false
+  }
+}

@@ -1,0 +1,1661 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-27T17:14:22Z",
+              "fin": "2026-10-28T00:02:17Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 24475000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 15046,
+              "meritesHeure": 2213,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 30,
+              "distance": 482.8,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Asp Explorer"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 0,
+            "gainHeure": null,
+            "meritesHeure": null,
+            "recordGainHeure": null,
+            "recordMeritesHeure": null
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-27T17:14:22Z",
+              "fin": "2026-10-28T00:02:17Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 24475000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 15046,
+              "meritesHeure": 2213,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 30,
+              "distance": 482.8,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Asp Explorer"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 0,
+            "gainHeure": null,
+            "meritesHeure": null,
+            "recordGainHeure": null,
+            "recordMeritesHeure": null
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-01T19:55:21Z",
+              "fin": "2026-11-01T21:05:00Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 4179000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Type-9 Heavy"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-01T19:55:21Z",
+              "fin": "2026-11-01T21:05:00Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 4179000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Type-9 Heavy"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-11-01T19:55:21Z",
+            "fin": "2026-11-01T21:05:00Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 4179000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 0,
+            "meritesHeure": 0,
+            "materiaux": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "materiauxTotal": 0,
+            "morts": 0,
+            "sauts": 0,
+            "distance": 0,
+            "primes": 0,
+            "obligations": 0,
+            "vaisseaux": [
+              "Type-9 Heavy"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-02T18:57:15Z",
+              "fin": "2026-11-02T19:44:14Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 2819000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 18,
+              "distance": 937,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Caspian Explorer"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-02T18:28:55Z",
+              "fin": "2026-11-02T18:57:14Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 1699000,
+              "gain": 10000000,
+              "gainHeure": 21188935,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-02T17:43:40Z",
+              "fin": "2026-11-02T18:28:55Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 2715000,
+              "gain": -37268,
+              "gainHeure": -49416,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 3,
+              "distance": 157.1,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": 10569760,
+            "meritesHeure": 0,
+            "recordGainHeure": 21188935,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-02T18:57:15Z",
+              "fin": "2026-11-02T19:44:24Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 2829000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 18,
+              "distance": 937,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Caspian Explorer"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-02T18:28:55Z",
+              "fin": "2026-11-02T18:57:14Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 1699000,
+              "gain": 10000000,
+              "gainHeure": 21188935,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-02T17:43:40Z",
+              "fin": "2026-11-02T18:28:55Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 2715000,
+              "gain": -37268,
+              "gainHeure": -49416,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 3,
+              "distance": 157.1,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": 10569760,
+            "meritesHeure": 0,
+            "recordGainHeure": 21188935,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-07T08:15:50Z",
+              "fin": "2026-11-07T14:18:13Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 21743000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 47251,
+              "meritesHeure": 7823,
+              "materiaux": [
+                45,
+                19,
+                0,
+                12,
+                0
+              ],
+              "materiauxTotal": 76,
+              "morts": 0,
+              "sauts": 2,
+              "distance": 19.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 7823,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 7823
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-07T08:15:50Z",
+              "fin": "2026-11-07T14:18:13Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 21743000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 47251,
+              "meritesHeure": 7823,
+              "materiaux": [
+                45,
+                19,
+                0,
+                12,
+                0
+              ],
+              "materiauxTotal": 76,
+              "morts": 0,
+              "sauts": 2,
+              "distance": 19.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 7823,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 7823
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-11-07T08:15:50Z",
+            "fin": "2026-11-07T14:18:13Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 21743000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 47251,
+            "meritesHeure": 7823,
+            "materiaux": [
+              45,
+              19,
+              0,
+              12,
+              0
+            ],
+            "materiauxTotal": 76,
+            "morts": 0,
+            "sauts": 2,
+            "distance": 19.4,
+            "primes": 0,
+            "obligations": 0,
+            "vaisseaux": [
+              "VRS Rhino"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 7823,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 7823
+          }
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-29T14:07:50Z",
+              "fin": "2026-10-29T14:44:32Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 2202000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 1,
+              "sauts": 6,
+              "distance": 188.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-10-29T12:26:44Z",
+              "fin": "2026-10-29T14:07:09Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 6025000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                4,
+                2,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 6,
+              "morts": 2,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Panther Clipper Mk II"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-10-29T10:14:58Z",
+              "fin": "2026-10-29T12:26:44Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 7906000,
+              "gain": -10017442,
+              "gainHeure": -4561446,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Anaconda"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": -2280723,
+            "meritesHeure": 0,
+            "recordGainHeure": 0,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-29T14:07:50Z",
+              "fin": "2026-10-29T14:44:32Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 2202000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 1,
+              "sauts": 6,
+              "distance": 188.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-10-29T12:26:44Z",
+              "fin": "2026-10-29T14:07:09Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 6025000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                4,
+                2,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 6,
+              "morts": 2,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Panther Clipper Mk II"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-10-29T10:14:58Z",
+              "fin": "2026-10-29T12:26:44Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 7906000,
+              "gain": -10017442,
+              "gainHeure": -4561446,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Anaconda"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": -2280723,
+            "meritesHeure": 0,
+            "recordGainHeure": 0,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-10-29T12:26:44Z",
+            "fin": "2026-10-29T14:07:09Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 6025000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 0,
+            "meritesHeure": 0,
+            "materiaux": [
+              4,
+              2,
+              0,
+              0,
+              0
+            ],
+            "materiauxTotal": 6,
+            "morts": 2,
+            "sauts": 0,
+            "distance": 0,
+            "primes": 0,
+            "obligations": 0,
+            "vaisseaux": [
+              "Panther Clipper Mk II"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": -4561446,
+            "meritesHeure": 0,
+            "recordGainHeure": -4561446,
+            "recordMeritesHeure": 0
+          }
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-26T09:37:40Z",
+              "fin": "2026-10-26T20:41:08Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 39808000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 342530,
+              "meritesHeure": 30976,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 7,
+              "distance": 117.5,
+              "primes": 2542995,
+              "obligations": 0,
+              "vaisseaux": [
+                "Caspian Explorer",
+                "Asp Explorer"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 30976,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 30976
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-26T09:37:40Z",
+              "fin": "2026-10-26T20:41:08Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 39808000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 342530,
+              "meritesHeure": 30976,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 7,
+              "distance": 117.5,
+              "primes": 2542995,
+              "obligations": 0,
+              "vaisseaux": [
+                "Caspian Explorer",
+                "Asp Explorer"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 30976,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 30976
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-10-26T09:37:40Z",
+            "fin": "2026-10-26T20:41:08Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 39808000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 342530,
+            "meritesHeure": 30976,
+            "materiaux": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "materiauxTotal": 0,
+            "morts": 0,
+            "sauts": 7,
+            "distance": 117.5,
+            "primes": 2542995,
+            "obligations": 0,
+            "vaisseaux": [
+              "Caspian Explorer",
+              "Asp Explorer"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 30976,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 30976
+          }
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-05T12:15:49Z",
+              "fin": "2026-11-05T12:36:17Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 1228000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 5,
+              "distance": 94.6,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T23:57:23Z",
+              "fin": "2026-11-01T23:57:31Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 8000,
+              "gain": 215271553,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": null,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T22:41:59Z",
+              "fin": "2026-11-01T23:57:23Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 4524000,
+              "gain": -1364307,
+              "gainHeure": -1085655,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 4,
+              "distance": 62.7,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T14:05:12Z",
+              "fin": "2026-11-01T22:41:59Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 31007000,
+              "gain": -10260338,
+              "gainHeure": -1191254,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": -1138454,
+            "meritesHeure": 0,
+            "recordGainHeure": -1085655,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-05T12:15:49Z",
+              "fin": "2026-11-05T12:36:17Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 1228000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 5,
+              "distance": 94.6,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T23:57:23Z",
+              "fin": "2026-11-01T23:57:36Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 13000,
+              "gain": 0,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": null,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T22:41:59Z",
+              "fin": "2026-11-01T23:57:23Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 4524000,
+              "gain": -1364307,
+              "gainHeure": -1085655,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 4,
+              "distance": 62.7,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-01T14:05:12Z",
+              "fin": "2026-11-01T22:41:59Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 31007000,
+              "gain": -10260338,
+              "gainHeure": -1191254,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 0,
+              "distance": 0,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 2,
+            "gainHeure": -1138454,
+            "meritesHeure": 0,
+            "recordGainHeure": -1085655,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-01T09:33:08Z",
+              "fin": "2026-11-01T13:57:56Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 15888000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 759,
+              "meritesHeure": 172,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 14,
+              "distance": 444.7,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Panther Clipper Mk II",
+                "Caspian Explorer",
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 172,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 172
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-01T09:33:08Z",
+              "fin": "2026-11-01T13:57:56Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 15888000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 759,
+              "meritesHeure": 172,
+              "materiaux": [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "materiauxTotal": 0,
+              "morts": 0,
+              "sauts": 14,
+              "distance": 444.7,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Panther Clipper Mk II",
+                "Caspian Explorer",
+                "Federal Corvette"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 172,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 172
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-11-01T09:33:08Z",
+            "fin": "2026-11-01T13:57:56Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 15888000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 759,
+            "meritesHeure": 172,
+            "materiaux": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "materiauxTotal": 0,
+            "morts": 0,
+            "sauts": 14,
+            "distance": 444.7,
+            "primes": 0,
+            "obligations": 0,
+            "vaisseaux": [
+              "Panther Clipper Mk II",
+              "Caspian Explorer",
+              "Federal Corvette"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 172,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 172
+          }
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-31T14:59:57Z",
+              "fin": "2026-10-31T23:11:57Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 29520000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                10,
+                47,
+                95,
+                38,
+                0
+              ],
+              "materiauxTotal": 190,
+              "morts": 0,
+              "sauts": 30,
+              "distance": 736,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-10-31T14:59:57Z",
+              "fin": "2026-10-31T23:11:57Z",
+              "enCours": false,
+              "termine": true,
+              "duree": 29520000,
+              "gain": null,
+              "gainHeure": null,
+              "merites": 0,
+              "meritesHeure": 0,
+              "materiaux": [
+                10,
+                47,
+                95,
+                38,
+                0
+              ],
+              "materiauxTotal": 190,
+              "morts": 0,
+              "sauts": 30,
+              "distance": 736,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": {
+          "genre": "session",
+          "bilan": {
+            "debut": "2026-10-31T14:59:57Z",
+            "fin": "2026-10-31T23:11:57Z",
+            "enCours": false,
+            "termine": true,
+            "duree": 29520000,
+            "gain": null,
+            "gainHeure": null,
+            "merites": 0,
+            "meritesHeure": 0,
+            "materiaux": [
+              10,
+              47,
+              95,
+              38,
+              0
+            ],
+            "materiauxTotal": 190,
+            "morts": 0,
+            "sauts": 30,
+            "distance": 736,
+            "primes": 0,
+            "obligations": 0,
+            "vaisseaux": [
+              "VRS Rhino"
+            ],
+            "modes": []
+          },
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": null,
+            "meritesHeure": 0,
+            "recordGainHeure": null,
+            "recordMeritesHeure": 0
+          }
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-06T14:30:09Z",
+              "fin": "2026-11-06T23:06:36Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 30987000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 60779,
+              "meritesHeure": 7061,
+              "materiaux": [
+                224,
+                46,
+                21,
+                32,
+                0
+              ],
+              "materiauxTotal": 323,
+              "morts": 0,
+              "sauts": 2,
+              "distance": 19.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Type-11 Prospector"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-06T08:58:16Z",
+              "fin": "2026-11-06T14:30:09Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 19913000,
+              "gain": 373422,
+              "gainHeure": 67510,
+              "merites": 2,
+              "meritesHeure": 0,
+              "materiaux": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ],
+              "materiauxTotal": 3,
+              "morts": 0,
+              "sauts": 3,
+              "distance": 37,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": 67510,
+            "meritesHeure": 0,
+            "recordGainHeure": 67510,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    },
+    "direct": {
+      "GET /sessions": {
+        "statut": 200,
+        "corps": {
+          "sessions": [
+            {
+              "debut": "2026-11-06T14:30:09Z",
+              "fin": "2026-11-06T23:06:36Z",
+              "enCours": true,
+              "termine": false,
+              "duree": 30987000,
+              "gain": 0,
+              "gainHeure": 0,
+              "merites": 60779,
+              "meritesHeure": 7061,
+              "materiaux": [
+                224,
+                46,
+                21,
+                32,
+                0
+              ],
+              "materiauxTotal": 323,
+              "morts": 0,
+              "sauts": 2,
+              "distance": 19.4,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "Type-11 Prospector"
+              ],
+              "modes": []
+            },
+            {
+              "debut": "2026-11-06T08:58:16Z",
+              "fin": "2026-11-06T14:30:09Z",
+              "enCours": false,
+              "termine": false,
+              "duree": 19913000,
+              "gain": 373422,
+              "gainHeure": 67510,
+              "merites": 2,
+              "meritesHeure": 0,
+              "materiaux": [
+                2,
+                0,
+                1,
+                0,
+                0
+              ],
+              "materiauxTotal": 3,
+              "morts": 0,
+              "sauts": 3,
+              "distance": 37,
+              "primes": 0,
+              "obligations": 0,
+              "vaisseaux": [
+                "VRS Rhino"
+              ],
+              "modes": []
+            }
+          ],
+          "comparaison": {
+            "sessions": 1,
+            "gainHeure": 67510,
+            "meritesHeure": 0,
+            "recordGainHeure": 67510,
+            "recordMeritesHeure": 0
+          }
+        }
+      },
+      "GET /fenetre": {
+        "statut": 200,
+        "corps": null
+      }
+    }
+  }
+}

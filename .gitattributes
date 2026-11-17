@@ -1,0 +1,4 @@
+# Banc de contrôle : journaux, options du jeu et résultats attendus gardés octet pour octet (fins de ligne du jeu comprises)
+scripts/controle/seances/** -text
+scripts/controle/options/** -text
+scripts/controle/attendu/** -text

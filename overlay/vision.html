@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; media-src mediastream: blob:; img-src blob: data:">
+<title>Vue du jeu</title>
+</head>
+<body>
+<script>
+// Page cachée de capture (overlay/vision.js) : ouvre le flux vidéo de LA source donnée (la fenêtre du jeu, choisie et
+// vérifiée par le processus principal), en tire une image à la demande. Aucun réseau, aucun autre droit que ce flux.
+'use strict';
+let flux = null;
+const video = document.createElement('video');
+video.muted = true;
+const toile = document.createElement('canvas');
+const ctx = toile.getContext('2d', { willReadFrequently: true });
+
+async function ouvrir({ id }) {
+  if (flux) for (const piste of flux.getTracks()) piste.stop();
+  flux = await navigator.mediaDevices.getUserMedia({
+    audio: false,
+    video: { mandatory: { chromeMediaSource: 'desktop', chromeMediaSourceId: id, maxFrameRate: 2 } },
+  });
+  video.srcObject = flux;
+  await video.play();
+  // Première image réelle : la taille de la vidéo est connue
+  for (let i = 0; i < 50 && !video.videoWidth; i += 1) await new Promise((r) => setTimeout(r, 40));
+  if (!video.videoWidth) throw new Error('Aucune image reçue de la fenêtre du jeu.');
+  return { largeur: video.videoWidth, hauteur: video.videoHeight };
+}
+
+async function image({ zone, largeur, brut }) {
+  // Piste finie (fenêtre du jeu fermée) : le processus principal cherche de nouveau la fenêtre du jeu (fluxFerme)
+  const piste = flux?.getVideoTracks?.()[0];
+  if (!flux || !piste || piste.readyState !== 'live' || !video.videoWidth) throw Object.assign(new Error('Flux du jeu fermé.'), { fluxFerme: true });
+  const W = video.videoWidth;
+  const H = video.videoHeight;
+  const z = zone ? {
+    x: Math.round(Math.max(0, Math.min(1, zone.x)) * W), y: Math.round(Math.max(0, Math.min(1, zone.y)) * H),
+    l: Math.round(Math.max(0, Math.min(1, zone.l)) * W), h: Math.round(Math.max(0, Math.min(1, zone.h)) * H),
+  } : { x: 0, y: 0, l: W, h: H };
+  z.l = Math.max(1, Math.min(z.l, W - z.x));
+  z.h = Math.max(1, Math.min(z.h, H - z.y));
+  const k = Math.min(1, (largeur || z.l) / z.l);
+  toile.width = Math.max(1, Math.round(z.l * k));
+  toile.height = Math.max(1, Math.round(z.h * k));
+  ctx.drawImage(video, z.x, z.y, z.l, z.h, 0, 0, toile.width, toile.height);
+  const px = ctx.getImageData(0, 0, toile.width, toile.height).data;
+  // Fenêtre réduite ou cachée : image toute noire, pas une image du jeu
+  let somme = 0;
+  for (let i = 0; i < px.length; i += 400) somme += px[i] + px[i + 1] + px[i + 2];
+  if (somme === 0) throw new Error('Image noire : le jeu est réduit ou caché.');
+  if (brut) return { largeur: toile.width, hauteur: toile.height, px };
+  const blob = await new Promise((r) => toile.toBlob(r, 'image/jpeg', 0.85));
+  const octets = new Uint8Array(await blob.arrayBuffer());
+  let bin = '';
+  for (let i = 0; i < octets.length; i += 0x8000) bin += String.fromCharCode(...octets.subarray(i, i + 0x8000));
+  return { largeur: toile.width, hauteur: toile.height, jpeg: btoa(bin) };
+}
+
+window.visionJeu.surOrdre(async (n, ordre, donnees) => {
+  try {
+    const r = ordre === 'ouvrir' ? await ouvrir(donnees) : ordre === 'image' ? await image(donnees) : { erreur: 'Ordre inconnu.' };
+    window.visionJeu.repondre(n, r);
+  } catch (err) {
+    window.visionJeu.repondre(n, { erreur: String(err?.message || err), ...(err?.fluxFerme ? { fluxFerme: true } : {}) });
+  }
+});
+</script>
+</body>
+</html>

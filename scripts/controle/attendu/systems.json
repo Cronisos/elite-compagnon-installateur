@@ -1,0 +1,154 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /options": {
+        "statut": 200,
+        "corps": {
+          "subtypes": {
+            "Metal-rich body": "Riche en métaux",
+            "High metal content world": "Haute teneur en métaux",
+            "Rocky body": "Rocheuse",
+            "Rocky Ice world": "Roche et glace",
+            "Icy body": "Glacée"
+          }
+        }
+      },
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /systems": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  }
+}

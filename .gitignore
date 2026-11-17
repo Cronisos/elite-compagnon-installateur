@@ -1,0 +1,38 @@
+node_modules/
+dist/
+.env
+
+# Paquets de l'app pour l'escadron (npm run paquet) : fabriqués ici, jamais versionnés
+/paquet/
+/release/
+
+# Données du joueur : base, copies de sécurité, état, captures, données de référence téléchargées.
+# Rien de tout ça ne se versionne, seul le dossier existe.
+server/data/*
+!server/data/.gitkeep
+
+# Pack « Vector Ships » de Qohen Leth tel que téléchargé (PDF, PNG géants) : seuls les SVG utiles sont copiés dans
+# server/src/core/reference/vaisseaux/
+Vector Ships by Qohen Leth*/
+
+# Page Inara enregistrée pour étude (scripts tiers)
+Équipement le plus proche _ Elite_Dangerous _ INARA.html
+Équipement le plus proche _ Elite_Dangerous _ INARA_files/
+
+# Réglages locaux de l'assistant
+.claude/
+
+# Journaux et fichiers temporaires
+*.log
+*.tmp*
+
+# Banc de contrôle : journaux anonymisés des séances de référence et options du jeu de test (versionnés)
+!scripts/controle/seances/**/*.log
+!scripts/controle/options/**/*.log
+!server/src/modules/routes/tests/fixtures/*.log
+
+# Image de travail (source de l'icône), pas distribuée
+/Vaisseau spatial futuriste*.png
+
+# Essais locaux (modèle Live2D) : jamais versionnés ni distribués
+/live2D/

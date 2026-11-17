@@ -1,0 +1,2394 @@
+{
+  "meta": {
+    "version": 1,
+    "genere": "2026-11-09",
+    "contenu": "Ingénieurs de vaisseau (25) : position, base, accès, sources publiques. Textes en français ; termes anglais du jeu entre « ». Aucune donnée tirée des journaux d'un joueur.",
+    "regions": {
+      "Bulle": {
+        "centre": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rayonAl": 1000
+      },
+      "Colonia": {
+        "centre": {
+          "x": -9530.5,
+          "y": -910.28125,
+          "z": 19808.125
+        },
+        "rayonAl": 1000
+      }
+    },
+    "regionRule": "« Colonia » si le système est à 1 000 al ou moins du système Colonia (-9530.5, -910.28125, 19808.125, EDSM) ; sinon « Bulle » s'il est à 1 000 al ou moins de Sol ; sinon « autre » (meta.regions). Chloe Sedesi (877 al de Sol) tombe dans « Bulle » mais se trouve en périphérie (voir note).",
+    "padRule": "padSize = plus grande plateforme présente (Spansh : large_pads > 0 → L). Les 25 bases ont des plateformes L.",
+    "referralRule": "discovery = comment l'ingénieur devient connu (referral.by : l'id de l'ingénieur dont la référence le fait connaître, null s'il est connu du public) ; invitation = condition pour être invité (« Meeting Requirements » du wiki) ; unlock = ce qu'il faut lui apporter (« Unlock Requirements »), chaque objet avec son type (marchandise, materiau, credits, primes, obligations) et, pour une marchandise ou un matériau, son symbole du jeu (EDCD).",
+    "changements1808": "La mise à jour 18.08 (Type-8, 6-7 août 2024) n'a changé les conditions de déblocage que pour quatre ingénieurs Odyssey (Hero Ferrari, Yarden Bond, Wellington Beck, Kit Fowler) ; aucune condition d'ingénieur de vaisseau n'y figure (https://updatecrazy.com/elite-dangerous-update-18-08-patch-notes/, copie des notes officielles lue le 8 nov. 2026 ; la page officielle https://www.elitedangerous.com/update-notes/4-0-18-08 a renvoyé 403).",
+    "sourcesCommunes": {
+      "csv": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+      "spansh": "https://spansh.co.uk/api/system/<systemAddress> (lu le 8 nov. 2026 ; champ updated_at du système en 2026)",
+      "edsm": "https://www.edsm.net/api-v1/system?systemName=<nom>&showCoordinates=1&showId=1&showPermit=1 (lu le 8 nov. 2026)",
+      "fandomEngineers": "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)",
+      "eddiscovery": "https://raw.githubusercontent.com/EDDiscovery/EliteDangerousCore/master/EliteDangerous/FrontierData/Items/Engineers.cs (dernier commit du fichier : 13 juil. 2026 ; ses conditions d'ingénieurs Odyssey ne sont pas à jour de 18.08, donc il sert seulement de recoupement)",
+      "fandomAcces": "Le site fandom.com renvoie 402/403 aux pages web ; les pages ont été lues par l'API MediaWiki du même wiki (URL citées), qui donne aussi la date de la dernière révision."
+    },
+    "remarquesDonneesProjet": [
+      "Les données Coriolis du projet (coriolis/modifications/modules.json) écrivent « Felicty Farseer » (faute) pour les propulseurs Engine_Dirty, Engine_Reinforced, Engine_Tuned G1-G3 : une jointure par nom perd ces grades chez Felicity Farseer.",
+      "Coriolis écrit « Tod \"The Blaster\" McQuinn » ; le CSV FDevIDs écrit « Tod 'The Blaster' McQuinn » : joindre par l'id ou normaliser les guillemets (engineerKey de refdata.js)."
+    ]
+  },
+  "engineers": [
+    {
+      "id": 300000,
+      "name": "Didi Vatermann",
+      "system": "Leesti",
+      "systemAddress": 3932277478114,
+      "marketId": 128673927,
+      "coords": {
+        "x": 72.75,
+        "y": 48.75,
+        "z": 68.25
+      },
+      "base": "Vatermann LLC",
+      "baseType": "Planetary Outpost",
+      "body": "Leesti 1 a",
+      "distanceToArrivalLs": 17,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 111,
+        "distanceColoniaAl": 21973,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Selene Jean (rang 3 et au moins 1/3 de la barre vers le rang 4, chez elle).",
+      "referral": {
+        "by": 300210
+      },
+      "invitation": "Rang de commerce « Merchant » ou plus.",
+      "unlock": {
+        "text": "Fournir 50 unités de Brandy lavien (« Lavian Brandy », marchandise rare).",
+        "items": [
+          {
+            "en": "Lavian Brandy",
+            "fr": "Brandy lavien",
+            "type": "marchandise",
+            "symbol": "LavianBrandy",
+            "qty": 50,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications (crafts). La fiche wiki ajoute : vente de marchandises à Vatermann LLC ; le tableau récapitulatif du wiki ne cite que les fabrications. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Merchant",
+          "fr": "Marchand",
+          "quoi": "rang de commerce"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "reputationNotes",
+          "reason": "vente de marchandises citée par la fiche wiki et EDDiscovery, absente du tableau récapitulatif du wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Leesti&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/3932277478114"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/3932277478114 (station dont le market_id = 128673927)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Leesti",
+          "https://spansh.co.uk/api/station/128673927"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Didi_Vatermann (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300010,
+      "name": "Bill Turner",
+      "system": "Alioth",
+      "systemAddress": 1109989017963,
+      "marketId": 128674183,
+      "coords": {
+        "x": -33.65625,
+        "y": 72.46875,
+        "z": -20.65625
+      },
+      "base": "Turner Metallics Inc",
+      "baseType": "Planetary Outpost",
+      "body": "Alioth 4 a",
+      "distanceToArrivalLs": 2343,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 83,
+        "distanceColoniaAl": 22008,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Selene Jean (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300210
+      },
+      "invitation": "Réputation « Friendly » (amical) ou mieux avec l'Alliance.",
+      "unlock": {
+        "text": "Fournir 50 unités de Bromellite.",
+        "items": [
+          {
+            "en": "Bromellite",
+            "fr": "Bromellite",
+            "type": "marchandise",
+            "symbol": "Bromellite",
+            "qty": 50,
+            "kind": "marchandise (minerai)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications seulement selon le wiki. EDDiscovery ajoute la vente de marchandises à Turner Metallics Inc. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": true,
+        "name": "Alioth",
+        "condition": "Fiche wiki de Bill Turner : permis délivré après une réputation « Allied » avec la faction mineure Alioth Independents. Page wiki Permits/Alliance : mission de permis proposée à Meredith's Dream (Alcor) et là où opèrent des agents des Alioth Independents."
+      },
+      "uncertain": [
+        {
+          "field": "permit.condition",
+          "reason": "deux formulations du wiki (réputation Allied / mission de permis à Alcor), pas forcément contradictoires"
+        },
+        {
+          "field": "reputationNotes",
+          "reason": "EDDiscovery cite la vente de marchandises, pas le wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        },
+        {
+          "field": "discovery",
+          "reason": "EDDiscovery écrit « Common knowledge » (connu du public) ; la fiche et le tableau du wiki Fandom et le wiki Alioth disent « référence de Selene Jean ». Majorité : Selene Jean."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Alioth&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/1109989017963"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/1109989017963 (station dont le market_id = 128674183)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Alioth",
+          "https://spansh.co.uk/api/station/128674183"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Bill_Turner (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "permit": [
+          "https://www.edsm.net/api-v1/system?systemName=Alioth&showCoordinates=1&showId=1&showPermit=1 (requirePermit, permitName)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Bill_Turner (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Permits/Alliance (révision du 2025-10-29)"
+        ],
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300030,
+      "name": "Broo Tarquin",
+      "system": "Muang",
+      "systemAddress": 4481966019282,
+      "marketId": 128674695,
+      "coords": {
+        "x": 17.03125,
+        "y": -172.78125,
+        "z": -3.46875
+      },
+      "base": "Broo's Legacy",
+      "baseType": "Planetary Outpost",
+      "body": "Muang 5 a",
+      "distanceToArrivalLs": 176,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 174,
+        "distanceColoniaAl": 22005,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Hera Tani (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300090
+      },
+      "invitation": "Rang de combat « Competent » ou plus.",
+      "unlock": {
+        "text": "Fournir 50 unités de Thé de Fujin (« Fujin Tea », marchandise rare).",
+        "items": [
+          {
+            "en": "Fujin Tea",
+            "fr": "Thé de Fujin",
+            "type": "marchandise",
+            "symbol": "FujinTea",
+            "qty": 50,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou remise de primes (« Bounty Vouchers ») à Broo's Legacy. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Competent",
+          "fr": "Compétent",
+          "quoi": "rang de combat"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Muang&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/4481966019282"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/4481966019282 (station dont le market_id = 128674695)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Muang",
+          "https://spansh.co.uk/api/station/128674695"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Broo_Tarquin (révision du 2026-05-22)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300040,
+      "name": "The Sarge",
+      "system": "Beta-3 Tucani",
+      "systemAddress": 2827992680811,
+      "marketId": 128674951,
+      "coords": {
+        "x": 32.25,
+        "y": -55.1875,
+        "z": 23.875
+      },
+      "base": "The Beach",
+      "baseType": "Planetary Outpost",
+      "body": "Beta-3 Tucani 2 b a",
+      "distanceToArrivalLs": 3351,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 68,
+        "distanceColoniaAl": 21991,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Juri Ishmaak (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300250
+      },
+      "invitation": "Rang « Midshipman » ou plus dans la Marine fédérale.",
+      "unlock": {
+        "text": "Fournir 50 Analyses de modèle de bouclier aberrante (« Aberrant Shield Pattern Analysis », donnée encodée).",
+        "items": [
+          {
+            "en": "Aberrant Shield Pattern Analysis",
+            "fr": "Analyse de modèle de bouclier aberrante",
+            "type": "materiau",
+            "symbol": "ShieldPatternAnalysis",
+            "qty": 50,
+            "kind": "matériau encodé"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à The Beach. EDDiscovery ajoute la remise de primes. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Midshipman",
+          "fr": "Matelot",
+          "quoi": "Marine fédérale"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "reputationNotes",
+          "reason": "remise de primes citée par EDDiscovery seulement"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Beta-3%20Tucani&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/2827992680811"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/2827992680811 (station dont le market_id = 128674951)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Beta-3%20Tucani",
+          "https://spansh.co.uk/api/station/128674951"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=The_Sarge (révision du 2024-11-19)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300050,
+      "name": "Zacariah Nemo",
+      "system": "Yoru",
+      "systemAddress": 6131367744226,
+      "marketId": 128675207,
+      "coords": {
+        "x": 97.875,
+        "y": -86.90625,
+        "z": 64.125
+      },
+      "base": "Nemo Cyber Party Base",
+      "baseType": "Planetary Outpost",
+      "body": "Yoru 4",
+      "distanceToArrivalLs": 89,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 146,
+        "distanceColoniaAl": 21982,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence d'Elvira Martuuk (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300160
+      },
+      "invitation": "Relation « Friendly » avec la faction mineure Party of Yoru, qui propose alors une mission d'invitation.",
+      "unlock": {
+        "text": "Fournir 25 Compagnons biomorphiques de Xihe (« Xihe Biomorphic Companions », marchandise rare).",
+        "items": [
+          {
+            "en": "Xihe Biomorphic Companions",
+            "fr": "Compagnons biomorphiques de Xihe",
+            "type": "marchandise",
+            "symbol": "XiheCompanions",
+            "qty": 25,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à Nemo Cyber Party Base. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [
+        {
+          "field": "invitation",
+          "reason": "le wiki Fandom a changé deux fois : « Allied » après une modification du 24 nov. 2024 (« Updated reputation requirements »), puis « Friendly » le 29 juil. 2025 (« Changed meeting requirement from Allied to Friendly »), sans source de jeu citée. Le wiki Alioth et EDDiscovery disent seulement « invitation de Party of Yoru ». Viser « Allied » couvre les deux lectures."
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Yoru&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/6131367744226"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/6131367744226 (station dont le market_id = 128675207)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Yoru",
+          "https://spansh.co.uk/api/station/128675207"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Zacariah_Nemo (révision du 2025-07-29)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "historiqueWiki": "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&titles=Zacariah_Nemo&rvprop=timestamp|comment|size&rvlimit=8&format=json (lu le 8 nov. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300080,
+      "name": "Liz Ryder",
+      "system": "Eurybia",
+      "systemAddress": 1458309141194,
+      "marketId": 128675975,
+      "coords": {
+        "x": 51.40625,
+        "y": -54.40625,
+        "z": -30.5
+      },
+      "base": "Demolition Unlimited",
+      "baseType": "Planetary Outpost",
+      "body": "Makalu",
+      "distanceToArrivalLs": 315,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 81,
+        "distanceColoniaAl": 22048,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Connue du public.",
+      "referral": {
+        "by": null
+      },
+      "invitation": "Relation « Cordial » ou mieux avec la faction mineure Eurybia Blue Mafia, qui propose une mission d'invitation.",
+      "unlock": {
+        "text": "Fournir 200 unités de mines terrestres (« Landmines », marchandise ; nom français non vérifié).",
+        "items": [
+          {
+            "en": "Landmines",
+            "fr": null,
+            "type": "marchandise",
+            "symbol": "Landmines",
+            "qty": 200,
+            "kind": "marchandise (armes)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à Demolition Unlimited. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [
+        {
+          "field": "invitation",
+          "reason": "lieu de la mission : « Awyra Flirble » (fiche wiki) ou « Chris & Silva's Paradise Hideout » (tableau du wiki)"
+        },
+        {
+          "field": "unlock.items[0].fr",
+          "reason": "nom français de « Landmines » non relevé"
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        },
+        {
+          "field": "invitation (niveau de réputation)",
+          "reason": "« Cordial » sur la fiche et le tableau du wiki Fandom, « Cordial or Friendly » chez EDDiscovery, « Friendly » sur le wiki Alioth (22 avr. 2021). Viser « Friendly » couvre les deux lectures."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Eurybia&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/1458309141194"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/1458309141194 (station dont le market_id = 128675975)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Eurybia",
+          "https://spansh.co.uk/api/station/128675975"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Liz_Ryder (révision du 2025-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300090,
+      "name": "Hera Tani",
+      "system": "Kuwemaki",
+      "systemAddress": 1733321102034,
+      "marketId": 128676231,
+      "coords": {
+        "x": 134.65625,
+        "y": -226.90625,
+        "z": -7.8125
+      },
+      "base": "The Jet's Hole",
+      "baseType": "Planetary Outpost",
+      "body": "Kuwemaki A 3 a",
+      "distanceToArrivalLs": 54,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 264,
+        "distanceColoniaAl": 22058,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Liz Ryder (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300080
+      },
+      "invitation": "Rang « Outsider » ou plus dans la Marine impériale.",
+      "unlock": {
+        "text": "Fournir 50 Cigares de Kamitra (« Kamitra Cigars », marchandise rare).",
+        "items": [
+          {
+            "en": "Kamitra Cigars",
+            "fr": "Cigares de Kamitra",
+            "type": "marchandise",
+            "symbol": "KamitraCigars",
+            "qty": 50,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à The Jet's Hole. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Outsider",
+          "fr": "Étranger",
+          "quoi": "Marine impériale"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Kuwemaki&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/1733321102034"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/1733321102034 (station dont le market_id = 128676231)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Kuwemaki",
+          "https://spansh.co.uk/api/station/128676231"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Hera_Tani (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300100,
+      "name": "Felicity Farseer",
+      "system": "Deciat",
+      "systemAddress": 6681123623626,
+      "marketId": 128676487,
+      "coords": {
+        "x": 122.625,
+        "y": -0.8125,
+        "z": -47.28125
+      },
+      "base": "Farseer Inc",
+      "baseType": "Planetary Outpost",
+      "body": "Deciat 6 a",
+      "distanceToArrivalLs": 2040,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 131,
+        "distanceColoniaAl": 22096,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Connue du public.",
+      "referral": {
+        "by": null
+      },
+      "invitation": "Rang d'exploration « Scout » ou plus.",
+      "unlock": {
+        "text": "Fournir 1 unité de Méta-alliages (« Meta-Alloys »).",
+        "items": [
+          {
+            "en": "Meta-Alloys",
+            "fr": "Méta-alliages",
+            "type": "marchandise",
+            "symbol": "MetaAlloys",
+            "qty": 1,
+            "kind": "marchandise"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Farseer Inc. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Scout",
+          "fr": "Voyageur",
+          "quoi": "rang d'exploration"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Deciat&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/6681123623626"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/6681123623626 (station dont le market_id = 128676487)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Deciat",
+          "https://spansh.co.uk/api/station/128676487"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Felicity_Farseer (révision du 2025-11-28)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300110,
+      "name": "Ram Tah",
+      "system": "Meene",
+      "systemAddress": 3790082132323,
+      "marketId": 128676743,
+      "coords": {
+        "x": 118.78125,
+        "y": -56.4375,
+        "z": -97.1875
+      },
+      "base": "Phoenix Base",
+      "baseType": "Planetary Outpost",
+      "body": "Meene AB 5 d",
+      "distanceToArrivalLs": 2269,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 164,
+        "distanceColoniaAl": 22137,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Lei Cheung (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300120
+      },
+      "invitation": "Rang d'exploration « Surveyor » ou plus.",
+      "unlock": {
+        "text": "Fournir 50 Banques de données d'analyse classifiées (« Classified Scan Databanks », donnée encodée).",
+        "items": [
+          {
+            "en": "Classified Scan Databanks",
+            "fr": "Banques de données d'analyse classifiées",
+            "type": "materiau",
+            "symbol": "ScanDatabanks",
+            "qty": 50,
+            "kind": "matériau encodé"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Phoenix Base. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Surveyor",
+          "fr": "Éclaireur",
+          "quoi": "rang d'exploration"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Meene&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/3790082132323"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/3790082132323 (station dont le market_id = 128676743)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Meene",
+          "https://spansh.co.uk/api/station/128676743"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Ram_Tah (révision du 2026-08-08)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300120,
+      "name": "Lei Cheung",
+      "system": "Laksak",
+      "systemAddress": 4305444669811,
+      "marketId": 128676999,
+      "coords": {
+        "x": -21.53125,
+        "y": -6.3125,
+        "z": 116.03125
+      },
+      "base": "Trader's Rest",
+      "baseType": "Planetary Outpost",
+      "body": "Laksak A 1",
+      "distanceToArrivalLs": 200,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 118,
+        "distanceColoniaAl": 21886,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de The Dweller (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300180
+      },
+      "invitation": "Vendre des marchandises sur au moins 50 marchés différents.",
+      "unlock": {
+        "text": "Fournir 200 unités d'Or (« Gold »).",
+        "items": [
+          {
+            "en": "Gold",
+            "fr": "Or",
+            "type": "marchandise",
+            "symbol": "Gold",
+            "qty": 200,
+            "kind": "marchandise (métal)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications. La fiche wiki ajoute : remise de primes locales ou vente de marchandises à Trader's Rest ; le tableau récapitulatif ne cite que les fabrications. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [
+        {
+          "field": "reputationNotes",
+          "reason": "fiche et tableau du wiki ne disent pas la même chose"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Laksak&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/4305444669811"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/4305444669811 (station dont le market_id = 128676999)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Laksak",
+          "https://spansh.co.uk/api/station/128676999"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Lei_Cheung (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300130,
+      "name": "Petra Olmanova",
+      "system": "Asura",
+      "systemAddress": 12274907287851,
+      "marketId": 128677255,
+      "coords": {
+        "x": -9550.28125,
+        "y": -916.65625,
+        "z": 19816.1875
+      },
+      "base": "Sanctuary",
+      "baseType": "Planetary Port",
+      "body": "Asura 1 d",
+      "distanceToArrivalLs": 3207,
+      "padSize": "L",
+      "pads": {
+        "L": 8,
+        "M": 8,
+        "S": 4
+      },
+      "region": "Colonia",
+      "regionDetail": {
+        "distanceSolAl": 22017,
+        "distanceColoniaAl": 22,
+        "regionGalactique": "Inner Scutum-Centaurus Arm"
+      },
+      "discovery": "Référence de Tod « The Blaster » McQuinn (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300260
+      },
+      "invitation": "Rang de combat « Expert » ou plus.",
+      "unlock": {
+        "text": "Fournir 200 Cellules souches (« Progenitor Cells », marchandise).",
+        "items": [
+          {
+            "en": "Progenitor Cells",
+            "fr": "Cellules souches",
+            "type": "marchandise",
+            "symbol": "ProgenitorCells",
+            "qty": 200,
+            "kind": "marchandise (médicaments)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications seulement. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Expert",
+          "fr": "Expert",
+          "quoi": "rang de combat"
+        }
+      ],
+      "note": "Le wiki garde une note ancienne : la qualité offerte par les ingénieurs de Colonia augmentait avec les achats de tous les joueurs (G1 à G5). Les données Coriolis du projet la donnent aujourd'hui en G5.",
+      "uncertain": [
+        {
+          "field": "note",
+          "reason": "note historique du wiki, non datée"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Asura&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/12274907287851"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/12274907287851 (station dont le market_id = 128677255)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Asura",
+          "https://spansh.co.uk/api/station/128677255"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Petra_Olmanova (révision du 2026-08-16)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300140,
+      "name": "Colonel Bris Dekker",
+      "system": "Sol",
+      "systemAddress": 10477373803,
+      "marketId": 128677511,
+      "coords": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "base": "Dekker's Yard",
+      "baseType": "Planetary Outpost",
+      "body": "Iapetus",
+      "distanceToArrivalLs": 4721,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 0,
+        "distanceColoniaAl": 22000,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Juri Ishmaak (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300250
+      },
+      "invitation": "Réputation « Friendly » ou mieux avec la Fédération.",
+      "unlock": {
+        "text": "Fournir des obligations de combat fédérales (« Federal Combat Bonds ») pour 1 000 000 Cr (tableau du wiki) ; la fiche wiki dit « de 1 000 000 à 10 000 000 Cr, selon des conditions inconnues ».",
+        "items": [
+          {
+            "en": "Federal Combat Bonds",
+            "fr": null,
+            "type": "obligations",
+            "qty": null,
+            "credits": [
+              1000000,
+              10000000
+            ],
+            "kind": "obligations de combat (crédits)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications selon le wiki. EDDiscovery ajoute la remise de primes à Dekker's Yard. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": true,
+        "name": "Sol",
+        "condition": "Rang « Petty Officer » dans la Marine fédérale (wiki : fiche Bris Dekker et page Permits/Federation)."
+      },
+      "rangsFr": [
+        {
+          "en": "Petty Officer",
+          "fr": "Second Maître",
+          "quoi": "Marine fédérale, permis de Sol"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "unlock",
+          "reason": "montant : 1 M ou jusqu'à 10 M Cr, conditions inconnues même pour le wiki"
+        },
+        {
+          "field": "reputationNotes",
+          "reason": "EDDiscovery seul cite les primes"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Sol&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/10477373803"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/10477373803 (station dont le market_id = 128677511)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Sol",
+          "https://spansh.co.uk/api/station/128677511"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Bris_Dekker (révision du 2023-06-02)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "permit": [
+          "https://www.edsm.net/api-v1/system?systemName=Sol&showCoordinates=1&showId=1&showPermit=1 (requirePermit, permitName)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Bris_Dekker (révision du 2023-06-02)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Permits/Federation (révision du 2025-05-10)"
+        ],
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300150,
+      "name": "Marsha Hicks",
+      "system": "Tir",
+      "systemAddress": 48996147307082,
+      "marketId": 128677767,
+      "coords": {
+        "x": -9532.9375,
+        "y": -923.4375,
+        "z": 19799.125
+      },
+      "base": "The Watchtower",
+      "baseType": "Planetary Port",
+      "body": "Tir A 2",
+      "distanceToArrivalLs": 109,
+      "padSize": "L",
+      "pads": {
+        "L": 12,
+        "M": 8,
+        "S": 4
+      },
+      "region": "Colonia",
+      "regionDetail": {
+        "distanceSolAl": 21994,
+        "distanceColoniaAl": 16,
+        "regionGalactique": "Inner Scutum-Centaurus Arm"
+      },
+      "discovery": "Référence de The Dweller (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300180
+      },
+      "invitation": "Rang d'exploration « Surveyor » ou plus.",
+      "unlock": {
+        "text": "Fournir 10 unités d'Osmium extrait par minage (« mined Osmium »).",
+        "items": [
+          {
+            "en": "Osmium",
+            "fr": "Osmium",
+            "type": "marchandise",
+            "symbol": "Osmium",
+            "qty": 10,
+            "kind": "marchandise (métal, minage)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications seulement. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Surveyor",
+          "fr": "Éclaireur",
+          "quoi": "rang d'exploration"
+        }
+      ],
+      "note": "Même note historique que les autres ingénieurs de Colonia (qualité montée de G1 à G5 avec les achats des joueurs).",
+      "uncertain": [
+        {
+          "field": "unlock",
+          "reason": "le wiki précise « mined » (extrait) ; on ne sait pas si de l'osmium acheté est refusé"
+        },
+        {
+          "field": "note",
+          "reason": "note historique du wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Tir&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/48996147307082"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/48996147307082 (station dont le market_id = 128677767)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Tir",
+          "https://spansh.co.uk/api/station/128677767"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Marsha_Hicks (révision du 2026-08-16)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300160,
+      "name": "Elvira Martuuk",
+      "system": "Khun",
+      "systemAddress": 3107241104074,
+      "marketId": 128678023,
+      "coords": {
+        "x": -171.59375,
+        "y": 19.96875,
+        "z": -56.96875
+      },
+      "base": "Long Sight Base",
+      "baseType": "Planetary Outpost",
+      "body": "Khun 5",
+      "distanceToArrivalLs": 61,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 182,
+        "distanceColoniaAl": 21979,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Connue du public.",
+      "referral": {
+        "by": null
+      },
+      "invitation": "S'être éloigné d'au moins 300 al de son système de départ de carrière.",
+      "unlock": {
+        "text": "Fournir 3 Reliques de Soontill (« Soontill Relics », marchandise rare).",
+        "items": [
+          {
+            "en": "Soontill Relics",
+            "fr": "Reliques de Soontill",
+            "type": "marchandise",
+            "symbol": "SoontillRelics",
+            "qty": 3,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Long Sight Base. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Khun&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/3107241104074"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/3107241104074 (station dont le market_id = 128678023)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Khun",
+          "https://spansh.co.uk/api/station/128678023"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Elvira_Martuuk (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300180,
+      "name": "The Dweller",
+      "system": "Wyrd",
+      "systemAddress": 5031654888146,
+      "marketId": 128678535,
+      "coords": {
+        "x": -11.625,
+        "y": 31.53125,
+        "z": -3.9375
+      },
+      "base": "Black Hide",
+      "baseType": "Planetary Outpost",
+      "body": "Wyrd A 2",
+      "distanceToArrivalLs": 9,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 34,
+        "distanceColoniaAl": 22000,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Connu du public.",
+      "referral": {
+        "by": null
+      },
+      "invitation": "Vendre des marchandises sur au moins 5 marchés noirs différents.",
+      "unlock": {
+        "text": "Payer 500 000 Cr.",
+        "items": [
+          {
+            "en": "Credits",
+            "fr": "Crédits",
+            "type": "credits",
+            "qty": null,
+            "credits": [
+              500000
+            ],
+            "kind": "crédits"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à Black Hide. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [
+        {
+          "field": "invitation",
+          "reason": "le tableau du wiki dit « marchandises volées ou illicites » sur 5 marchés noirs, la fiche dit « des marchandises »"
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Wyrd&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/5031654888146"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/5031654888146 (station dont le market_id = 128678535)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Wyrd",
+          "https://spansh.co.uk/api/station/128678535"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=The_Dweller (révision du 2026-05-22)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300200,
+      "name": "Marco Qwent",
+      "system": "Sirius",
+      "systemAddress": 121569805492,
+      "marketId": 128679047,
+      "coords": {
+        "x": 6.25,
+        "y": -1.28125,
+        "z": -5.75
+      },
+      "base": "Qwent Research Base",
+      "baseType": "Planetary Outpost",
+      "body": "Lucifer",
+      "distanceToArrivalLs": 4477,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 9,
+        "distanceColoniaAl": 22008,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence d'Elvira Martuuk (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300160
+      },
+      "invitation": "Relation « Allied » avec la Sirius Corporation (qui donne le permis de Sirius), puis mission d'invitation de la Sirius Corporation dans une station de Sirius.",
+      "unlock": {
+        "text": "Fournir 25 Terminaux modulaires (« Modular Terminals », marchandise).",
+        "items": [
+          {
+            "en": "Modular Terminals",
+            "fr": "Terminaux modulaires",
+            "type": "marchandise",
+            "symbol": "ModularTerminals",
+            "qty": 25,
+            "kind": "marchandise (machines)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à Qwent Research Base. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": true,
+        "name": "Sirius",
+        "condition": "Fiche wiki de Marco Qwent : relation « Allied » avec la Sirius Corporation. Page wiki Permits/Independent : mission de permis proposée à Spirit of Laelaps (Luyten's Star)."
+      },
+      "uncertain": [
+        {
+          "field": "permit.condition",
+          "reason": "deux voies décrites par deux pages du wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Sirius&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/121569805492"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/121569805492 (station dont le market_id = 128679047)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Sirius",
+          "https://spansh.co.uk/api/station/128679047"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Marco_Qwent (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "permit": [
+          "https://www.edsm.net/api-v1/system?systemName=Sirius&showCoordinates=1&showId=1&showPermit=1 (requirePermit, permitName)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Marco_Qwent (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Permits/Independent (révision du 2026-11-05)"
+        ],
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300210,
+      "name": "Selene Jean",
+      "system": "Kuk",
+      "systemAddress": 24859942069665,
+      "marketId": 128679303,
+      "coords": {
+        "x": -21.28125,
+        "y": 69.09375,
+        "z": -16.3125
+      },
+      "base": "Prospector's Rest",
+      "baseType": "Planetary Outpost",
+      "body": "Kuk B 3",
+      "distanceToArrivalLs": 12353,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 74,
+        "distanceColoniaAl": 22009,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Tod « The Blaster » McQuinn (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300260
+      },
+      "invitation": "Extraire et raffiner au moins 500 t de minerai.",
+      "unlock": {
+        "text": "Fournir 10 unités de Painite extraite par minage.",
+        "items": [
+          {
+            "en": "Painite",
+            "fr": "Painite",
+            "type": "marchandise",
+            "symbol": "Painite",
+            "qty": 10,
+            "kind": "marchandise (minerai, minage)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises et de données d'exploration à Prospector's Rest. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "note": "Base à environ 12 350 s-l de l'étoile d'arrivée (Spansh) : long trajet en supercroisière.",
+      "uncertain": [
+        {
+          "field": "unlock",
+          "reason": "le wiki précise « mined » ; on ne sait pas si de la painite achetée est refusée"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Kuk&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/24859942069665"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/24859942069665 (station dont le market_id = 128679303)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Kuk",
+          "https://spansh.co.uk/api/station/128679303"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Selene_Jean (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300220,
+      "name": "Professor Palin",
+      "system": "Arque",
+      "systemAddress": 113573366131,
+      "marketId": 128679559,
+      "coords": {
+        "x": 66.5,
+        "y": 38.0625,
+        "z": 61.125
+      },
+      "base": "Abel Laboratory",
+      "baseType": "Planetary Port",
+      "body": "Arque 4 e",
+      "distanceToArrivalLs": 2372,
+      "padSize": "L",
+      "pads": {
+        "L": 8,
+        "M": 4,
+        "S": 4
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 98,
+        "distanceColoniaAl": 21976,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Marco Qwent (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300200
+      },
+      "invitation": "S'être éloigné d'au moins 5 000 al de son système de départ de carrière.",
+      "unlock": {
+        "text": "Fournir 25 Fragments de capteur (« Sensor Fragment », matériau manufacturé de grade 5).",
+        "items": [
+          {
+            "en": "Sensor Fragment",
+            "fr": "Fragment de capteur",
+            "type": "materiau",
+            "symbol": "UnknownEnergySource",
+            "qty": 25,
+            "kind": "matériau manufacturé (G5)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Abel Laboratory. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "note": "A déménagé de Maia (Palin Research Centre) à Arque en juillet 3305 (wiki) ; les sources anciennes qui le placent à Maia sont périmées. Le wiki Alioth (dernière modification le 22 avr. 2021) le place encore à Maia avec « 25 Unknown Fragments » : c'est l'ancienne version ; le wiki Fandom et EDDiscovery (2026) donnent Arque et 25 Fragments de capteur.",
+      "uncertain": [
+        {
+          "field": "invitation",
+          "reason": "une copie du wiki de juin 2025 citait aussi une autre voie (« Unclassified Relic » en soute près de la base) ; la version actuelle (29 juin 2025) ne la cite plus"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Arque&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/113573366131"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/113573366131 (station dont le market_id = 128679559)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Arque",
+          "https://spansh.co.uk/api/station/128679559"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Ishmael_Palin (révision du 2025-06-29)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300230,
+      "name": "Lori Jameson",
+      "system": "Shinrarta Dezhra",
+      "systemAddress": 3932277478106,
+      "marketId": 128679815,
+      "coords": {
+        "x": 55.71875,
+        "y": 17.59375,
+        "z": 27.15625
+      },
+      "base": "Jameson Base",
+      "baseType": "Planetary Outpost",
+      "body": "Shinrarta Dezhra A 1",
+      "distanceToArrivalLs": 40,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 64,
+        "distanceColoniaAl": 22001,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Marco Qwent (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300200
+      },
+      "invitation": "Rang de combat « Dangerous » ou plus.",
+      "unlock": {
+        "text": "Fournir 25 Bières de Kongga (« Kongga Ale », marchandise rare).",
+        "items": [
+          {
+            "en": "Kongga Ale",
+            "fr": "Bière de Kongga",
+            "type": "marchandise",
+            "symbol": "KonggaAle",
+            "qty": 25,
+            "kind": "marchandise (rare)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Jameson Base. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": true,
+        "name": "Founders World",
+        "condition": "Atteindre le rang Elite en combat, commerce, exploration, mercenaire ou exobiologie (page wiki Permits/Independent, révisée le 5 nov. 2026 ; la fiche Lori Jameson ne cite que combat, commerce ou exploration)."
+      },
+      "rangsFr": [
+        {
+          "en": "Dangerous",
+          "fr": "Vétéran",
+          "quoi": "rang de combat"
+        },
+        {
+          "en": "Elite",
+          "fr": "Élite",
+          "quoi": "permis Founders World"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Shinrarta%20Dezhra&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/3932277478106"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/3932277478106 (station dont le market_id = 128679815)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Shinrarta%20Dezhra",
+          "https://spansh.co.uk/api/station/128679815"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Lori_Jameson (révision du 2023-06-01)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "permit": [
+          "https://www.edsm.net/api-v1/system?systemName=Shinrarta%20Dezhra&showCoordinates=1&showId=1&showPermit=1 (requirePermit, permitName)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Permits/Independent (révision du 2026-11-05)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Lori_Jameson (révision du 2023-06-01)"
+        ],
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300250,
+      "name": "Juri Ishmaak",
+      "system": "Giryak",
+      "systemAddress": 4481899074282,
+      "marketId": 128680327,
+      "coords": {
+        "x": 14.6875,
+        "y": 27.65625,
+        "z": 108.65625
+      },
+      "base": "Pater's Memorial",
+      "baseType": "Planetary Outpost",
+      "body": "Giryak 2 a",
+      "distanceToArrivalLs": 444,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 113,
+        "distanceColoniaAl": 21910,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Felicity Farseer (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300100
+      },
+      "invitation": "Avoir remis au moins 50 obligations de combat (« Combat Bonds ») ; c'est le nombre d'obligations qui compte, pas leur valeur.",
+      "unlock": {
+        "text": "Fournir des obligations de combat pour 100 000 Cr (tableau du wiki) ; la fiche dit « de 100 000 à 1 000 000 Cr selon que l'invitation a été obtenue avec des obligations fédérales ou non ».",
+        "items": [
+          {
+            "en": "Combat Bonds",
+            "fr": null,
+            "type": "obligations",
+            "qty": null,
+            "credits": [
+              100000,
+              1000000
+            ],
+            "kind": "obligations de combat (crédits)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou remise d'obligations de combat à Pater's Memorial. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "note": "Note du wiki : les obligations se remettent dans le système où elles ont été gagnées, pas à Pater's Memorial ; il faudrait combattre pour des factions fédérales en zone de conflit.",
+      "uncertain": [
+        {
+          "field": "unlock",
+          "reason": "montant (100 000 ou 1 000 000 Cr) selon une condition mal établie"
+        },
+        {
+          "field": "invitation",
+          "reason": "la note « factions fédérales » contredit en partie la fiche, qui parle d'obligations fédérales « ou non »"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Giryak&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/4481899074282"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/4481899074282 (station dont le market_id = 128680327)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Giryak",
+          "https://spansh.co.uk/api/station/128680327"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Juri_Ishmaak (révision du 2023-06-02)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300260,
+      "name": "Tod 'The Blaster' McQuinn",
+      "system": "Wolf 397",
+      "systemAddress": 3107576681170,
+      "marketId": 128680583,
+      "coords": {
+        "x": 40,
+        "y": 79.21875,
+        "z": -10.40625
+      },
+      "base": "Trophy Camp",
+      "baseType": "Planetary Outpost",
+      "body": "Trus Madi",
+      "distanceToArrivalLs": 137,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 89,
+        "distanceColoniaAl": 22031,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Connu du public.",
+      "referral": {
+        "by": null
+      },
+      "invitation": "Avoir gagné au moins 15 primes (« Bounty Vouchers »).",
+      "unlock": {
+        "text": "Fournir des primes pour 100 000 Cr.",
+        "items": [
+          {
+            "en": "Bounty Vouchers",
+            "fr": null,
+            "type": "primes",
+            "qty": null,
+            "credits": [
+              100000
+            ],
+            "kind": "primes (crédits)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou remise de primes de l'Alliance à Trophy Camp. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "uncertain": [],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Wolf%20397&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/3107576681170"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/3107576681170 (station dont le market_id = 128680583)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Wolf%20397",
+          "https://spansh.co.uk/api/station/128680583"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Tod_%22The_Blaster%22_McQuinn (révision du 2024-06-16)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300270,
+      "name": "Tiana Fortune",
+      "system": "Achenar",
+      "systemAddress": 164098653,
+      "marketId": 128680839,
+      "coords": {
+        "x": 67.5,
+        "y": -119.46875,
+        "z": 24.84375
+      },
+      "base": "Fortune's Loss",
+      "baseType": "Planetary Outpost",
+      "body": "Achenar 4a",
+      "distanceToArrivalLs": 5830,
+      "padSize": "L",
+      "pads": {
+        "L": 3,
+        "M": 3,
+        "S": 2
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 139,
+        "distanceColoniaAl": 22003,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Hera Tani (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300090
+      },
+      "invitation": "Réputation « Friendly » ou mieux avec l'Empire.",
+      "unlock": {
+        "text": "Fournir 50 Données d'émissions décodées (« Decoded Emission Data », donnée encodée).",
+        "items": [
+          {
+            "en": "Decoded Emission Data",
+            "fr": "Données d'émissions décodées",
+            "type": "materiau",
+            "symbol": "DecodedEmissionData",
+            "qty": 50,
+            "kind": "matériau encodé"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de marchandises à Fortune's Loss. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": true,
+        "name": "Achenar",
+        "condition": "Rang « Squire » dans la Marine impériale (wiki : fiche Tiana Fortune et page Permits/Empire)."
+      },
+      "rangsFr": [
+        {
+          "en": "Squire",
+          "fr": "Écuyer",
+          "quoi": "Marine impériale, permis d'Achenar"
+        }
+      ],
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Achenar&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/164098653"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/164098653 (station dont le market_id = 128680839)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Achenar",
+          "https://spansh.co.uk/api/station/128680839"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Tiana_Fortune (révision du 2023-06-02)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "permit": [
+          "https://www.edsm.net/api-v1/system?systemName=Achenar&showCoordinates=1&showId=1&showPermit=1 (requirePermit, permitName)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Tiana_Fortune (révision du 2023-06-02)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Permits/Empire (révision du 2022-03-13)"
+        ],
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300280,
+      "name": "Mel Brandon",
+      "system": "Luchtaine",
+      "systemAddress": 66038577537618,
+      "marketId": 128681095,
+      "coords": {
+        "x": -9523.3125,
+        "y": -914.46875,
+        "z": 19825.90625
+      },
+      "base": "The Brig",
+      "baseType": "Planetary Port",
+      "body": "Luchtaine A 1 c",
+      "distanceToArrivalLs": 1460,
+      "padSize": "L",
+      "pads": {
+        "L": 8,
+        "M": 4,
+        "S": 4
+      },
+      "region": "Colonia",
+      "regionDetail": {
+        "distanceSolAl": 22014,
+        "distanceColoniaAl": 20,
+        "regionGalactique": "Inner Scutum-Centaurus Arm"
+      },
+      "discovery": "Référence d'Elvira Martuuk (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300160
+      },
+      "invitation": "Relation « Friendly » ou mieux avec la faction mineure Colonia Council, qui propose une mission d'invitation.",
+      "unlock": {
+        "text": "Fournir des primes pour 100 000 Cr.",
+        "items": [
+          {
+            "en": "Bounty Vouchers",
+            "fr": null,
+            "type": "primes",
+            "qty": null,
+            "credits": [
+              100000
+            ],
+            "kind": "primes (crédits)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications seulement. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "note": "Même note historique que les autres ingénieurs de Colonia.",
+      "uncertain": [
+        {
+          "field": "note",
+          "reason": "note historique du wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "invitation (nom français du niveau de réputation)",
+          "reason": "aucune source lue ne donne le nom français de « Friendly », « Cordial » ou « Allied » ; termes anglais gardés."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Luchtaine&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/66038577537618"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/66038577537618 (station dont le market_id = 128681095)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Luchtaine",
+          "https://spansh.co.uk/api/station/128681095"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Mel_Brandon (révision du 2026-08-16)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300290,
+      "name": "Etienne Dorn",
+      "system": "Los",
+      "systemAddress": 11887629902418,
+      "marketId": 128681351,
+      "coords": {
+        "x": -9509.34375,
+        "y": -886.3125,
+        "z": 19820.125
+      },
+      "base": "Kraken's Retreat",
+      "baseType": "Planetary Port",
+      "body": "Los A 2 b",
+      "distanceToArrivalLs": 1220,
+      "padSize": "L",
+      "pads": {
+        "L": 8,
+        "M": 8,
+        "S": 4
+      },
+      "region": "Colonia",
+      "regionDetail": {
+        "distanceSolAl": 22001,
+        "distanceColoniaAl": 34,
+        "regionGalactique": "Inner Scutum-Centaurus Arm"
+      },
+      "discovery": "Référence de Liz Ryder (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300080
+      },
+      "invitation": "Rang de commerce « Dealer » ou plus.",
+      "unlock": {
+        "text": "Fournir 25 Nacelles d'évacuation occupées (« Occupied Escape Pods », marchandise de récupération).",
+        "items": [
+          {
+            "en": "Occupied Escape Pod",
+            "fr": "Nacelle d'évacuation occupée",
+            "type": "marchandise",
+            "symbol": "OccupiedCryoPod",
+            "qty": 25,
+            "kind": "marchandise (récupération)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications seulement. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "rangsFr": [
+        {
+          "en": "Dealer",
+          "fr": "Revendeur",
+          "quoi": "rang de commerce"
+        }
+      ],
+      "note": "Même note historique que les autres ingénieurs de Colonia.",
+      "uncertain": [
+        {
+          "field": "note",
+          "reason": "note historique du wiki"
+        },
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "rangsFr",
+          "reason": "noms français tirés de la traduction d'EDMC (EDCD), pas lus à l'écran du jeu ; à confirmer à l'écran."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Los&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/11887629902418"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/11887629902418 (station dont le market_id = 128681351)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Los",
+          "https://spansh.co.uk/api/station/128681351"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Etienne_Dorn (révision du 2026-08-16)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "rangsFr": "https://api.github.com/repos/EDCD/EDMarketConnector/contents/L10n/fr.strings (EDMarketConnector, EDCD, fichier L10n/fr.strings, dernier commit du 18 janv. 2026)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    },
+    {
+      "id": 300300,
+      "name": "Chloe Sedesi",
+      "system": "Shenve",
+      "systemAddress": 594676730147,
+      "marketId": 128954244,
+      "coords": {
+        "x": 351.96875,
+        "y": -373.46875,
+        "z": -711.09375
+      },
+      "base": "Cinder Dock",
+      "baseType": "Planetary Port",
+      "body": "Shenve A 6",
+      "distanceToArrivalLs": 172,
+      "padSize": "L",
+      "pads": {
+        "L": 8,
+        "M": 8,
+        "S": 4
+      },
+      "region": "Bulle",
+      "regionDetail": {
+        "distanceSolAl": 877,
+        "distanceColoniaAl": 22781,
+        "regionGalactique": "Inner Orion Spur"
+      },
+      "discovery": "Référence de Marco Qwent (rang 3 et au moins 1/3 de la barre vers le rang 4).",
+      "referral": {
+        "by": 300200
+      },
+      "invitation": "S'être éloigné d'au moins 5 000 al de son système de départ de carrière.",
+      "unlock": {
+        "text": "Fournir 25 Fragments de capteur (« Sensor Fragment », matériau manufacturé de grade 5).",
+        "items": [
+          {
+            "en": "Sensor Fragment",
+            "fr": "Fragment de capteur",
+            "type": "materiau",
+            "symbol": "UnknownEnergySource",
+            "qty": 25,
+            "kind": "matériau manufacturé (G5)"
+          }
+        ]
+      },
+      "reputationNotes": "Fabrications, ou vente de données d'exploration à Cinder Dock. Règle générale (wiki) : une fabrication à l'atelier à distance ne fait pas monter la réputation.",
+      "permit": {
+        "required": false
+      },
+      "note": "Nébuleuse de la Tête de Sorcière (« Witch Head Nebula »), à environ 877 al de Sol : hors du cœur de la Bulle.",
+      "uncertain": [
+        {
+          "field": "discovery",
+          "reason": "les fiches du wiki disent « au moins 1/3 » de la barre vers le rang 4 ; la note du tableau du wiki dit « environ la moitié » et qu'un redémarrage du jeu peut être nécessaire"
+        },
+        {
+          "field": "market_id",
+          "reason": "EDSM donne 128952752 pour Cinder Dock ; le CSV et Spansh donnent 128954244, et Spansh ne connaît pas 128952752 (404). EDSM semble garder un ancien identifiant. Pour reconnaître la base, accepter le MarketID du CSV, ou à défaut StationName « Cinder Dock » + SystemAddress 594676730147."
+        }
+      ],
+      "sources": {
+        "systemAddress, id": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "coords": [
+          "https://www.edsm.net/api-v1/system?systemName=Shenve&showCoordinates=1&showId=1&showPermit=1",
+          "https://spansh.co.uk/api/system/594676730147"
+        ],
+        "base, baseType, padSize, pads, distanceToArrivalLs": "https://spansh.co.uk/api/system/594676730147 (station dont le market_id = 128954244)",
+        "body": [
+          "https://www.edsm.net/api-system-v1/stations?systemName=Shenve",
+          "https://spansh.co.uk/api/station/128954244"
+        ],
+        "discovery, invitation, unlock, reputationNotes": [
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Chloe_Sedesi (révision du 2024-05-11)",
+          "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Ship Engineers »)"
+        ],
+        "unlock.items[].fr": "texte du jeu en français (jeu 4.4.2.1)",
+        "region": "calcul local depuis coords (règle dans meta.regionRule)",
+        "marketId": "EDCD FDevIDs engineers.csv, version figée de server/src/core/reference/download.js",
+        "referral": "déduit du champ discovery (même source)",
+        "unlock.items[].symbol": "EDCD FDevIDs commodity.csv et rare_commodity.csv (https://raw.githubusercontent.com/EDCD/FDevIDs/master/commodity.csv, https://raw.githubusercontent.com/EDCD/FDevIDs/master/rare_commodity.csv), lus le 9 nov. 2026 ; matériaux : material.csv, version figée de server/src/core/reference/download.js"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "id": 400001,
+      "name": "Jude Navarro",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400002,
+      "name": "Domino Green",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400003,
+      "name": "Hero Ferrari",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400004,
+      "name": "Kit Fowler",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400005,
+      "name": "Wellington Beck",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400006,
+      "name": "Terra Velasquez",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400007,
+      "name": "Uma Laszlo",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400008,
+      "name": "Oden Geiger",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400009,
+      "name": "Yarden Bond",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400010,
+      "name": "Baltanos",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400011,
+      "name": "Eleanor Bresa",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400012,
+      "name": "Rosa Dayette",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    },
+    {
+      "id": 400013,
+      "name": "Yi Shen",
+      "raison": "Ingénieur de combinaisons et d'armes de poing (Odyssey) : il figure dans le tableau « Pilot Equipment Engineers » du wiki et ne modifie aucun module de vaisseau (absent des données Coriolis du projet).",
+      "sources": [
+        "https://elite-dangerous.fandom.com/api.php?action=query&prop=revisions&redirects=1&rvprop=content|timestamp&rvslots=main&format=json&titles=Engineers (révision du 2026-10-09, tableau « Pilot Equipment Engineers »)",
+        "coriolis-data modifications/modules.json, version figée de server/src/core/reference/download.js"
+      ]
+    }
+  ]
+}

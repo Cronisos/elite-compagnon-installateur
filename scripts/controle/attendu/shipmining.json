@@ -1,0 +1,612 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "hold": {
+            "count": 1232,
+            "capacity": 1232,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-27T17:14:22Z",
+          "hold": {
+            "count": 1232,
+            "capacity": 1232,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 19786000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "hold": {
+            "count": 0,
+            "capacity": null,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 3900000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T19:55:21Z",
+          "hold": {
+            "count": 0,
+            "capacity": null,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 2640000,
+          "pausedSince": "2026-11-01T21:05:00.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "hold": {
+            "count": 0,
+            "capacity": 336,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-02T18:57:15Z",
+          "hold": {
+            "count": 0,
+            "capacity": 336,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 441000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "hold": {
+            "count": 0,
+            "capacity": 268,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 12
+          },
+          "refined": [
+            {
+              "name": "Iridium",
+              "tons": 26
+            }
+          ],
+          "totalRefined": 26,
+          "perHour": 0,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 10664000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-07T08:15:50Z",
+          "hold": {
+            "count": 0,
+            "capacity": 268,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 12
+          },
+          "refined": [
+            {
+              "name": "Iridium",
+              "tons": 26
+            }
+          ],
+          "totalRefined": 26,
+          "perHour": 0,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 9151000,
+          "pausedSince": "2026-11-07T14:15:29.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "hold": {
+            "count": 0,
+            "capacity": 1184,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 1673000,
+          "pausedSince": "2026-10-29T14:38:40.000Z",
+          "pauseReason": "idle",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-29T14:07:50Z",
+          "hold": {
+            "count": 0,
+            "capacity": 1184,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 36000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "hold": {
+            "count": 0,
+            "capacity": 28,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 36795000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-26T09:37:40Z",
+          "hold": {
+            "count": 0,
+            "capacity": 28,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 35525000,
+          "pausedSince": "2026-10-26T19:51:13.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "hold": {
+            "count": 0,
+            "capacity": 0,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 1003000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-05T12:15:49Z",
+          "hold": {
+            "count": 0,
+            "capacity": 0,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 349000,
+          "pausedSince": "2026-11-05T12:32:49.000Z",
+          "pauseReason": "docked",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "hold": {
+            "count": 0,
+            "capacity": 0,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 12590000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-01T09:33:08Z",
+          "hold": {
+            "count": 0,
+            "capacity": 0,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 10563000,
+          "pausedSince": "2026-11-01T13:33:20.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "hold": {
+            "count": 0,
+            "capacity": 1184,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 17605000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-10-31T14:59:57Z",
+          "hold": {
+            "count": 0,
+            "capacity": 1184,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 13655000,
+          "pausedSince": "2026-10-31T23:01:45.000Z",
+          "pauseReason": "offline",
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "hold": {
+            "count": 198,
+            "capacity": 268,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 16993000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "startedAt": "2026-11-06T14:30:09Z",
+          "hold": {
+            "count": 198,
+            "capacity": 268,
+            "drones": 0
+          },
+          "prospected": 0,
+          "drones": {
+            "prospector": 0,
+            "collection": 0
+          },
+          "refined": [],
+          "totalRefined": 0,
+          "perHour": null,
+          "pricesDate": "2026-11-04",
+          "last": null,
+          "prospects": [],
+          "pausedMs": 14509000,
+          "pausedSince": null,
+          "pauseReason": null,
+          "chronoFrom": null,
+          "chronoPausedMs": 0
+        }
+      }
+    }
+  }
+}

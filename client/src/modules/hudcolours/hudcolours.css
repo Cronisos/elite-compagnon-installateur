@@ -1,0 +1,253 @@
+/* Module « Couleurs du HUD » : styles propres à la page (préfixe hc-). */
+
+.hc-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr);
+  gap: 1.1rem;
+  align-items: start;
+}
+@media (max-width: 1000px) {
+  .hc-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.hc-msg {
+  padding: 0.5rem 0.75rem;
+  border-radius: 7px;
+  background: var(--good-soft);
+}
+
+/* Aperçu */
+.hc-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: #03050b;
+  cursor: ew-resize;
+  touch-action: none;
+  user-select: none;
+}
+.hc-compare {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin: 0.75rem 0 0.4rem;
+}
+.hc-compare input[type='range'] {
+  flex: 1 1 160px;
+  accent-color: var(--accent);
+}
+.hc-compare-buttons {
+  display: flex;
+  gap: 0.3rem;
+}
+.hc-compare-buttons .btn {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.88rem;
+}
+.hc-preview-panel h3 {
+  margin-top: 1rem;
+}
+.hc-space {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.7rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+.hc-space p {
+  margin: 0.35rem 0 0;
+}
+
+.hc-swatch {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  vertical-align: middle;
+  flex: none;
+}
+.hc-swatch-big {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+}
+.hc-tints td:nth-child(n + 2),
+.hc-tints th:nth-child(n + 2) {
+  width: 4.5rem;
+  text-align: center;
+}
+
+/* Réglages */
+.hc-controls h2 {
+  margin-top: 0.2rem;
+}
+.hc-presets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+.hc-preset {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 7px;
+  border: 1px solid var(--border-strong);
+  background: var(--panel-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+.hc-preset:hover {
+  border-color: var(--accent);
+}
+.hc-preset.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.hc-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.hc-sliders > label:not(.check) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+.hc-sliders > label > span {
+  display: flex;
+  justify-content: space-between;
+}
+.hc-dim .hc-range {
+  opacity: 0.55;
+}
+.hc-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 14px;
+  padding: 0;
+  border-radius: 7px;
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+}
+.hc-range:focus {
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.hc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f4f6f8;
+  border: 3px solid #0a0c0f;
+  box-shadow: 0 0 0 1px #f4f6f8;
+}
+.hc-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f4f6f8;
+  border: 3px solid #0a0c0f;
+}
+.hc-exact {
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.hc-exact input[type='color'] {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+
+.hc-result {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.hc-toggle {
+  padding-left: 0;
+  margin-top: 0.4rem;
+}
+.hc-advanced {
+  margin-bottom: 0.6rem;
+}
+.hc-matrix {
+  border-collapse: collapse;
+  width: 100%;
+}
+.hc-matrix th,
+.hc-matrix td {
+  padding: 0.25rem;
+  text-align: center;
+  font-weight: 500;
+}
+.hc-matrix thead th {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.hc-matrix tbody th {
+  text-align: left;
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+.hc-num {
+  width: 100%;
+  min-width: 4.2rem;
+  text-align: right;
+}
+
+.hc-actions {
+  margin-top: 1rem;
+}
+
+/* Sauvegardes */
+.hc-backups {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.hc-backups li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.hc-backup-name {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.hc-backups .btn {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.88rem;
+}
+.hc-path {
+  margin-top: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+/* Teintes que la matrice rend trop proches */
+.hc-close {
+  margin: 0.9rem 0 0;
+}

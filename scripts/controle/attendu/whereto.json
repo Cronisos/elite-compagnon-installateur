@@ -1,0 +1,2170 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "ICZ KC-U b3-4",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 6
+        }
+      },
+      "GET /rules": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": "ACQUISITION_REACH_FORTIFIED_LY",
+            "value": 20,
+            "unit": "al",
+            "status": "mesurée",
+            "date": "2026-11-08",
+            "source": "forum Frontier, fil de joueurs « Powerplay 2.0 Activities » (https://forums.frontier.co.uk/threads/powerplay-2-0-activities.629227/) ; journaux de référence : 56/56 systèmes Inoccupés (Powers ↔ appui Spansh à portée), Consolidé à 21,8 al sans effet ; Spansh : 75/75 autour de Synuefe OU-E c28-2 (2026-11-07)"
+          },
+          {
+            "id": "ACQUISITION_REACH_STRONGHOLD_LY",
+            "value": 30,
+            "unit": "al",
+            "status": "mesurée",
+            "date": "2026-11-08",
+            "source": "forum Frontier, fil de joueurs « Powerplay 2.0 Activities » (https://forums.frontier.co.uk/threads/powerplay-2-0-activities.629227/) ; journaux de référence : 56/56 systèmes Inoccupés (Powers ↔ appui Spansh à portée) ; Spansh : 75/75 autour de Synuefe OU-E c28-2 (2026-11-07)"
+          },
+          {
+            "id": "ACQUISITION_POINTS",
+            "value": 120000,
+            "unit": "points de contrôle pour 1,0 de prise",
+            "status": "mesurée",
+            "date": "2026-11-01",
+            "source": "journaux de référence : Col 285 Sector AN-G et Synuefe GA-I b57-6"
+          },
+          {
+            "id": "WEEK_TICK_DAY_UTC",
+            "value": 4,
+            "unit": "jour UTC (0 = dimanche)",
+            "status": "mesurée",
+            "date": "2026-11-06",
+            "source": "journaux de référence : renforcement remis à zéro le jeudi (Synuefe OU-E c28-2, 6 nov. 2026, et passages d’octobre 2026)"
+          },
+          {
+            "id": "WEEK_TICK_HOUR_UTC",
+            "value": 7,
+            "unit": "h UTC",
+            "status": "à vérifier",
+            "date": "2026-11-07",
+            "source": "reprise du Projet extension (merits.js) ; à vérifier à l’heure près sur un passage de semaine"
+          },
+          {
+            "id": "CONFLICT_ZONE_STATES",
+            "value": [
+              "War",
+              "Civil War"
+            ],
+            "unit": "états de faction",
+            "status": "à vérifier",
+            "date": "2026-11-07",
+            "source": "règle du BGS connue des joueurs ; à vérifier sur un journal (« Conflicts » de FSDJump)"
+          },
+          {
+            "id": "CONFLICT_ZONE_WAR_TYPES",
+            "value": [
+              "war",
+              "civilwar"
+            ],
+            "unit": "FSDJump.Conflicts[].WarType",
+            "status": "à vérifier",
+            "date": "2026-11-07",
+            "source": "format mesuré sur les journaux de référence (oct. 2026 : « civilwar », « election ») ; règle des zones à vérifier"
+          },
+          {
+            "id": "UNDERMINING_NEEDS_REACH",
+            "value": false,
+            "unit": "oui/non",
+            "status": "à vérifier",
+            "date": "2026-11-07",
+            "source": "aucune source trouvée le 7 nov. 2026 : tout système tenu par une autre puissance est proposé"
+          },
+          {
+            "id": "STATES",
+            "value": [
+              "Unoccupied",
+              "Exploited",
+              "Fortified",
+              "Stronghold"
+            ],
+            "unit": "PowerplayState",
+            "status": "mesurée",
+            "date": "2026-11-07",
+            "source": "journaux de référence et réponses Spansh (289 « Unoccupied », 233 « Exploited », 69 « Fortified », 224 « Stronghold »)"
+          }
+        ]
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "ICZ KC-U b3-4",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 6
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": null,
+          "system": "Bleae Thua ED-D c12-5",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 1
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": null,
+          "system": "Bleae Thua ED-D c12-5",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 1
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Muang",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 8
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Muang",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 8
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe OU-E c28-2",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 2
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe OU-E c28-2",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 2
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Gungnir",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 7
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Gungnir",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 7
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Talta",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 8
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Talta",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 8
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Muang",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 13
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Muang",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 13
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Xinca",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 13
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Xinca",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 13
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe GA-I b57-6",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 30
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe GA-I b57-6",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 30
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe OU-E c28-2",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 3
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "power": "Aisling Duval",
+          "system": "Synuefe OU-E c28-2",
+          "powers": [
+            "A. Lavigny-Duval",
+            "Aisling Duval",
+            "Archon Delaine",
+            "Denton Patreus",
+            "Edmund Mahon",
+            "Felicia Winters",
+            "Jerome Archer",
+            "Li Yong-Rui",
+            "Nakato Kaine",
+            "Pranav Antal",
+            "Yuri Grom",
+            "Zemina Torval"
+          ],
+          "activities": [
+            {
+              "id": "acquisition",
+              "name": "Prise (acquisition)",
+              "relation": "acquisition",
+              "states": [
+                "Unoccupied"
+              ]
+            },
+            {
+              "id": "reinforcement",
+              "name": "Renforcement",
+              "relation": "own",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            },
+            {
+              "id": "undermining",
+              "name": "Sape",
+              "relation": "enemy",
+              "states": [
+                "Exploited",
+                "Fortified",
+                "Stronghold"
+              ]
+            }
+          ],
+          "stationGroups": [
+            {
+              "id": "starport",
+              "label": "Grand port"
+            },
+            {
+              "id": "outpost",
+              "label": "Avant-poste"
+            },
+            {
+              "id": "planetary",
+              "label": "Port planétaire"
+            },
+            {
+              "id": "settlement",
+              "label": "Colonie Odyssey"
+            },
+            {
+              "id": "megaship",
+              "label": "Mégavaisseau"
+            },
+            {
+              "id": "carrier",
+              "label": "Porte-vaisseaux"
+            }
+          ],
+          "states": {
+            "Unoccupied": "Inoccupé",
+            "Exploited": "Exploité",
+            "Fortified": "Consolidé",
+            "Stronghold": "Forteresse"
+          },
+          "radius": {
+            "min": 5,
+            "max": 60,
+            "default": 30
+          },
+          "reach": {
+            "fortified": 20,
+            "stronghold": 30
+          },
+          "seen": 3
+        }
+      },
+      "GET /arrival": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /tasks": {
+        "statut": 200,
+        "corps": []
+      }
+    }
+  }
+}

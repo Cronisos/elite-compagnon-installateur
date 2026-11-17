@@ -1,0 +1,269 @@
+{
+ "timestamp": "2026-10-28T10:08:03Z",
+ "event": "Loadout",
+ "Ship": "panthermkii",
+ "ShipID": 1,
+ "HullValue": 279733043,
+ "ModulesValue": 236383557,
+ "HullHealth": 1,
+ "UnladenMass": 1506,
+ "CargoCapacity": 1232,
+ "MaxJumpRange": 37.843025,
+ "FuelCapacity": {
+  "Main": 64,
+  "Reserve": 1.11
+ },
+ "Rebuy": 25805829,
+ "Modules": [
+  {
+   "Slot": "Armour",
+   "Item": "panthermkii_armour_grade1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1
+  },
+  {
+   "Slot": "PowerPlant",
+   "Item": "int_powerplant_size5_class5",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 4215607
+  },
+  {
+   "Slot": "MainEngines",
+   "Item": "int_engine_size8_class5",
+   "On": true,
+   "Priority": 0,
+   "Health": 1,
+   "Value": 158521824
+  },
+  {
+   "Slot": "FrameShiftDrive",
+   "Item": "int_hyperdrive_overcharge_size7_class5",
+   "On": true,
+   "Priority": 0,
+   "Health": 1,
+   "Value": 60008262,
+   "Engineering": {
+    "Engineer": "Felicity Farseer",
+    "EngineerID": 300100,
+    "BlueprintID": 128673694,
+    "BlueprintName": "FSD_LongRange",
+    "Level": 5,
+    "Quality": 1,
+    "Modifiers": [
+     {
+      "Label": "Mass",
+      "Value": 104,
+      "OriginalValue": 80,
+      "LessIsGood": 1
+     },
+     {
+      "Label": "Integrity",
+      "Value": 139.400009,
+      "OriginalValue": 164,
+      "LessIsGood": 0
+     },
+     {
+      "Label": "PowerDraw",
+      "Value": 1.035,
+      "OriginalValue": 0.9,
+      "LessIsGood": 1
+     },
+     {
+      "Label": "FSDOptimalMass",
+      "Value": 4650,
+      "OriginalValue": 3000,
+      "LessIsGood": 0
+     }
+    ]
+   }
+  },
+  {
+   "Slot": "LifeSupport",
+   "Item": "int_lifesupport_size5_class2",
+   "On": true,
+   "Priority": 0,
+   "Health": 1,
+   "Value": 77458
+  },
+  {
+   "Slot": "PowerDistributor",
+   "Item": "int_powerdistributor_size6_class2",
+   "On": true,
+   "Priority": 0,
+   "Health": 1,
+   "Value": 216883
+  },
+  {
+   "Slot": "Radar",
+   "Item": "int_sensors_size5_class2",
+   "On": true,
+   "Priority": 0,
+   "Health": 1,
+   "Value": 77458,
+   "Engineering": {
+    "Engineer": "Tiana Fortune",
+    "EngineerID": 300270,
+    "BlueprintID": 128740140,
+    "BlueprintName": "Sensor_WideAngle",
+    "Level": 4,
+    "Quality": 1,
+    "Modifiers": [
+     {
+      "Label": "PowerDraw",
+      "Value": 0.518,
+      "OriginalValue": 0.37,
+      "LessIsGood": 1
+     },
+     {
+      "Label": "SensorTargetScanAngle",
+      "Value": 78,
+      "OriginalValue": 30,
+      "LessIsGood": 0
+     },
+     {
+      "Label": "Range",
+      "Value": 4384.800293,
+      "OriginalValue": 5220,
+      "LessIsGood": 0
+     }
+    ]
+   }
+  },
+  {
+   "Slot": "FuelTank",
+   "Item": "int_fueltank_size6_class3",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 333038
+  },
+  {
+   "Slot": "Cargo01",
+   "Item": "int_largecargorack_size8_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 4806083
+  },
+  {
+   "Slot": "Slot01_Size8",
+   "Item": "int_cargorack_size8_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 3734120
+  },
+  {
+   "Slot": "Cargo02",
+   "Item": "int_largecargorack_size7_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 1909713
+  },
+  {
+   "Slot": "Slot02_Size7",
+   "Item": "int_cargorack_size7_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 1148960
+  },
+  {
+   "Slot": "Slot03_Size6",
+   "Item": "int_cargorack_size6_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 353527
+  },
+  {
+   "Slot": "Slot04_Size6",
+   "Item": "int_cargorack_size6_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 353527
+  },
+  {
+   "Slot": "Slot05_Size6",
+   "Item": "int_cargorack_size6_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 353527
+  },
+  {
+   "Slot": "Slot06_Size5",
+   "Item": "int_cargorack_size5_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 108776
+  },
+  {
+   "Slot": "Slot07_Size5",
+   "Item": "int_cargorack_size5_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 108776
+  },
+  {
+   "Slot": "Slot08_Size4",
+   "Item": "int_cargorack_size4_class1",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 33470
+  },
+  {
+   "Slot": "Slot09_Size2",
+   "Item": "int_dockingcomputer_advanced",
+   "On": true,
+   "Priority": 2,
+   "Health": 1,
+   "Value": 13169
+  },
+  {
+   "Slot": "Slot10_Size1",
+   "Item": "int_supercruiseassist",
+   "On": true,
+   "Priority": 2,
+   "Health": 1,
+   "Value": 8892
+  },
+  {
+   "Slot": "PlanetaryApproachSuite",
+   "Item": "int_planetapproachsuite_advanced",
+   "On": true,
+   "Priority": 1,
+   "Health": 1,
+   "Value": 487
+  },
+  {
+   "Slot": "VesselVoice",
+   "Item": "voicepack_verity",
+   "On": true,
+   "Priority": 1,
+   "Health": 1
+  },
+  {
+   "Slot": "CargoHatch",
+   "Item": "modularcargobaydoor",
+   "On": true,
+   "Priority": 2,
+   "Health": 1
+  },
+  {
+   "Slot": "ShipCockpit",
+   "Item": "panthermkii_cockpit",
+   "On": true,
+   "Priority": 1,
+   "Health": 1
+  }
+ ]
+}

@@ -1,0 +1,4730 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 7,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "ICZ KC-U b3-4",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-27T17:14:24Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-27T17:14:31Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-27T17:14:31Z",
+            "all": "2026-10-27T17:14:31Z"
+          },
+          "week": {
+            "start": "2026-10-22T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-27T17:14:31Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 804113,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 7,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "ICZ KC-U b3-4",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-27T17:14:24Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-27T17:14:31Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-27T17:14:31Z",
+            "all": "2026-10-27T17:14:31Z"
+          },
+          "week": {
+            "start": "2026-10-22T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-27T17:14:31Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 804113,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Bleae Thua ED-D c12-5",
+          "gameVersion": "4.3.0.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": null,
+          "joinedAt": null,
+          "from": null,
+          "to": null,
+          "presets": {},
+          "week": null,
+          "snapshots": [],
+          "count": 0,
+          "rows": []
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Bleae Thua ED-D c12-5",
+          "gameVersion": "4.3.0.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": null,
+          "joinedAt": null,
+          "from": null,
+          "to": null,
+          "presets": {},
+          "week": null,
+          "snapshots": [],
+          "count": 0,
+          "rows": []
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Muang",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-02T18:57:15Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-02T18:57:17Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-02T18:57:17Z",
+            "all": "2026-11-02T18:57:17Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-02T18:57:17Z"
+          ],
+          "count": 2,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1095073,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 2760424931,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Muang",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-02T18:57:15Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-02T18:57:17Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-02T18:57:17Z",
+            "all": "2026-11-02T18:57:17Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-02T18:57:17Z"
+          ],
+          "count": 2,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1095073,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 2760424931,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 6,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 1,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe OU-E c28-2",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-07T08:15:52Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-07T08:16:05Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-07T08:16:05Z",
+            "all": "2026-11-07T08:16:05Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-07T08:16:05Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1248766,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 3091172155,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 143825544,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 15789,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 6,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 1,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe OU-E c28-2",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-07T08:15:52Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-07T08:16:05Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-07T08:16:05Z",
+            "all": "2026-11-07T08:16:05Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-07T08:16:05Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1248766,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 3091172155,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 143825544,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 15789,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Gungnir",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-29T14:07:52Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-29T14:08:05Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-29T14:08:05Z",
+            "all": "2026-10-29T14:08:05Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-29T14:08:05Z"
+          ],
+          "count": 3,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 888683,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 66662806,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Gungnir",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-29T14:07:52Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-29T14:08:05Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-29T14:08:05Z",
+            "all": "2026-10-29T14:08:05Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-29T14:08:05Z"
+          ],
+          "count": 3,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 888683,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 66662806,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 18,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Talta",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-26T09:37:42Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-26T09:37:53Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-26T09:37:53Z",
+            "all": "2026-10-26T09:37:53Z"
+          },
+          "week": {
+            "start": "2026-10-22T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-26T09:37:53Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 461583,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 19250127,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 85,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 18,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Talta",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-26T09:37:42Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-26T09:37:53Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-26T09:37:53Z",
+            "all": "2026-10-26T09:37:53Z"
+          },
+          "week": {
+            "start": "2026-10-22T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-26T09:37:53Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 461583,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 19250127,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 85,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Muang",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-05T12:15:51Z"
+          },
+          "joinedAt": null,
+          "from": "2026-11-01T22:42:03Z",
+          "to": "2026-11-05T12:16:00Z",
+          "presets": {
+            "last": "2026-11-01T22:42:03Z",
+            "week": "2026-11-05T12:16:00Z",
+            "all": "2026-11-01T22:42:03Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-01T22:42:03Z",
+            "2026-11-05T12:16:00Z"
+          ],
+          "count": 3,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": 1095073,
+              "to": 1177496,
+              "delta": 82423,
+              "journal": {
+                "real": 0,
+                "listed": 0,
+                "doubled": 0,
+                "lines": 0
+              }
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": 2760424931,
+              "to": 2935144440,
+              "delta": 174719509
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": 21793122,
+              "to": 108535987,
+              "delta": 86742865
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 745,
+              "to": 11984,
+              "delta": 11239
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": 69334634,
+              "to": 69334634,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": 1846706,
+              "to": 1846706,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 613288,
+              "to": 613288,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Muang",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-05T12:15:51Z"
+          },
+          "joinedAt": null,
+          "from": "2026-11-01T22:42:03Z",
+          "to": "2026-11-05T12:16:00Z",
+          "presets": {
+            "last": "2026-11-01T22:42:03Z",
+            "week": "2026-11-05T12:16:00Z",
+            "all": "2026-11-01T22:42:03Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-01T22:42:03Z",
+            "2026-11-05T12:16:00Z"
+          ],
+          "count": 3,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": 1095073,
+              "to": 1177496,
+              "delta": 82423,
+              "journal": {
+                "real": 0,
+                "listed": 0,
+                "doubled": 0,
+                "lines": 0
+              }
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": 2760424931,
+              "to": 2935144440,
+              "delta": 174719509
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": 21793122,
+              "to": 108535987,
+              "delta": 86742865
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 745,
+              "to": 11984,
+              "delta": 11239
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": 69334634,
+              "to": 69334634,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": 1846706,
+              "to": 1846706,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 613288,
+              "to": 613288,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 1,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Xinca",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-11-01T09:33:10Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-01T09:33:24Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-01T09:33:24Z",
+            "all": "2026-11-01T09:33:24Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-01T09:33:24Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1094314,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 2760424931,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 1,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Xinca",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-11-01T09:33:10Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-11-01T09:33:24Z",
+          "presets": {
+            "last": null,
+            "week": "2026-11-01T09:33:24Z",
+            "all": "2026-11-01T09:33:24Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-01T09:33:24Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1094314,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 2760424931,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe GA-I b57-6",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-31T14:59:59Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-31T15:00:01Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-31T15:00:01Z",
+            "all": "2026-10-31T15:00:01Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-31T15:00:01Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1094314,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 1517061539,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 0,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe GA-I b57-6",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "RECRUE",
+            "at": "2026-10-31T14:59:59Z"
+          },
+          "joinedAt": null,
+          "from": null,
+          "to": "2026-10-31T15:00:01Z",
+          "presets": {
+            "last": null,
+            "week": "2026-10-31T15:00:01Z",
+            "all": "2026-10-31T15:00:01Z"
+          },
+          "week": {
+            "start": "2026-10-29T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-10-31T15:00:01Z"
+          ],
+          "count": 1,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": null,
+              "to": 1094314,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": null,
+              "to": 1517061539,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": null,
+              "to": 21793122,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 745,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": null,
+              "to": 69334634,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": null,
+              "to": 1846706,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 613288,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": null,
+              "to": 0,
+              "delta": null
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": null,
+              "to": 0,
+              "delta": null
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 4,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe OU-E c28-2",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-06T14:30:10Z"
+          },
+          "joinedAt": null,
+          "from": "2026-11-06T08:58:17Z",
+          "to": "2026-11-06T14:30:12Z",
+          "presets": {
+            "last": "2026-11-06T08:58:17Z",
+            "week": "2026-11-06T08:58:17Z",
+            "all": "2026-11-06T08:58:17Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-06T08:58:17Z",
+            "2026-11-06T14:30:12Z"
+          ],
+          "count": 2,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": 1187985,
+              "to": 1187987,
+              "delta": 2,
+              "journal": {
+                "real": 2,
+                "listed": 2,
+                "doubled": 0,
+                "lines": 1
+              }
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": 2935144440,
+              "to": 2935544287,
+              "delta": 399847
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": 143825544,
+              "to": 143825544,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 15789,
+              "to": 15789,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": 69334634,
+              "to": 69334634,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": 1846706,
+              "to": 1846706,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 613288,
+              "to": 613288,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "enabled": false,
+          "destination": null,
+          "worker": null,
+          "hasToken": false,
+          "token": null,
+          "tokenCmdr": null,
+          "chosenCmdr": null,
+          "sendingFor": "Testeur",
+          "needsChoice": false,
+          "commanders": [
+            "Testeur"
+          ],
+          "since": null,
+          "sinceChoices": [
+            {
+              "id": "now",
+              "label": "à partir de maintenant"
+            },
+            {
+              "id": "week",
+              "label": "depuis le début de la semaine Powerplay"
+            },
+            {
+              "id": "max",
+              "label": "des 30 derniers jours (le plus vieux que le serveur accepte)"
+            }
+          ],
+          "queue": 0,
+          "blocked": 0,
+          "blockedCmdrs": [],
+          "oldestPending": null,
+          "sending": false,
+          "waitingRetry": false,
+          "paused": false,
+          "lastConfirmedAt": null,
+          "lastOkAt": null,
+          "status": {
+            "code": "off",
+            "text": "Aucun envoi pour le moment.",
+            "at": null
+          },
+          "counts": {
+            "sent": 0,
+            "dropped": 0,
+            "expired": 0
+          },
+          "tally": {
+            "seen": 4,
+            "doublon": 0,
+            "galaxie": 0,
+            "invalide": 0,
+            "annule": 0,
+            "annuleApresEnvoi": 0,
+            "autreCommandant": 0
+          },
+          "commander": "Testeur",
+          "system": "Synuefe OU-E c28-2",
+          "gameVersion": "4.4.2.1",
+          "liveGalaxy": true,
+          "workerDeduplicates": true
+        }
+      },
+      "GET /contribution": {
+        "statut": 200,
+        "corps": {
+          "squadron": {
+            "name": "Escadron Test",
+            "rank": "PILOTE",
+            "at": "2026-11-06T14:30:10Z"
+          },
+          "joinedAt": null,
+          "from": "2026-11-06T08:58:17Z",
+          "to": "2026-11-06T14:30:12Z",
+          "presets": {
+            "last": "2026-11-06T08:58:17Z",
+            "week": "2026-11-06T08:58:17Z",
+            "all": "2026-11-06T08:58:17Z"
+          },
+          "week": {
+            "start": "2026-11-05T07:00:00Z",
+            "spill": null
+          },
+          "snapshots": [
+            "2026-11-06T08:58:17Z",
+            "2026-11-06T14:30:12Z"
+          ],
+          "count": 2,
+          "rows": [
+            {
+              "key": "Squadron_Leaderboard_powerplay_highestcontribution",
+              "group": "classement",
+              "id": "powerplay",
+              "label": "Powerplay",
+              "unit": "mérites",
+              "status": "mesurée",
+              "note": "écart = mérites réellement crédités (TotalMerits)",
+              "from": 1187985,
+              "to": 1187987,
+              "delta": 2,
+              "journal": {
+                "real": 2,
+                "listed": 2,
+                "doubled": 0,
+                "lines": 1
+              }
+            },
+            {
+              "key": "Squadron_Leaderboard_mining_highestcontribution",
+              "group": "classement",
+              "id": "mining",
+              "label": "Minage",
+              "unit": "cr",
+              "status": "mesurée",
+              "note": "écart = bénéfices de minage (Mining_Profits)",
+              "from": 2935144440,
+              "to": 2935544287,
+              "delta": 399847
+            },
+            {
+              "key": "Squadron_Leaderboard_bounty_highestcontribution",
+              "group": "classement",
+              "id": "bounty",
+              "label": "Primes",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "proche des primes encaissées",
+              "from": 143825544,
+              "to": 143825544,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_combat_highestcontribution",
+              "group": "classement",
+              "id": "combat",
+              "label": "Combat",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 15789,
+              "to": 15789,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_exploration_highestcontribution",
+              "group": "classement",
+              "id": "exploration",
+              "label": "Exploration",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "ne suit pas toujours les ventes de cartographie",
+              "from": 69334634,
+              "to": 69334634,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_highestcontribution",
+              "group": "classement",
+              "id": "trade",
+              "label": "Commerce",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "bien plus bas que les bénéfices du marché",
+              "from": 1846706,
+              "to": 1846706,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_trade_illicit_highestcontribution",
+              "group": "classement",
+              "id": "trade_illicit",
+              "label": "Contrebande",
+              "unit": "cr",
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_aegis_highestcontribution",
+              "group": "classement",
+              "id": "aegis",
+              "label": "Aegis (Thargoïdes)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 613288,
+              "to": 613288,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_bgs_highestcontribution",
+              "group": "classement",
+              "id": "bgs",
+              "label": "BGS (influence)",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_colonisation_contribution_highestcontribution",
+              "group": "classement",
+              "id": "colonisation_contribution",
+              "label": "Colonisation",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_cqc_highestcontribution",
+              "group": "classement",
+              "id": "cqc",
+              "label": "CQC",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_operationscore_highestcontribution",
+              "group": "classement",
+              "id": "operationscore",
+              "label": "Opérations",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "unité inconnue",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            },
+            {
+              "key": "Squadron_Leaderboard_podiums",
+              "group": "classement",
+              "id": "podiums",
+              "label": "Podiums",
+              "unit": null,
+              "status": "à vérifier",
+              "note": "",
+              "from": 0,
+              "to": 0,
+              "delta": 0
+            }
+          ]
+        }
+      }
+    }
+  }
+}

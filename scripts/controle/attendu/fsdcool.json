@@ -1,0 +1,1102 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": null,
+            "ms": 9000,
+            "source": "unknown",
+            "generation": "unknown",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": null,
+            "ms": 9000,
+            "source": "unknown",
+            "generation": "unknown",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "explorer_nx",
+            "ms": 7000,
+            "source": "default",
+            "generation": "caspian",
+            "base": 7000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "explorer_nx",
+            "ms": 7000,
+            "source": "default",
+            "generation": "caspian",
+            "base": 7000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "lakonminer",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "lakonminer",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "asp",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "asp",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "federation_corvette",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "federation_corvette",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "federation_corvette",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "federation_corvette",
+            "ms": 17000,
+            "source": "default",
+            "generation": "legacy",
+            "base": 17000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "panthermkii",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "lakonminer",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "active": null,
+          "expectedMs": null,
+          "measured": 0,
+          "sco": {
+            "active": null,
+            "supercruise": false,
+            "countdown": null,
+            "signalMs": 4000,
+            "shown": false
+          }
+        }
+      },
+      "GET /sco": {
+        "statut": 200,
+        "corps": {
+          "rules": {
+            "flags2Bit": 20,
+            "cooldownMs": {
+              "legacy": 17000,
+              "newGeneration": 9000,
+              "caspian": 7000,
+              "unknown": 9000
+            },
+            "newGeneration": [
+              "python_nx",
+              "type8",
+              "mandalay",
+              "cobramkv",
+              "corsair",
+              "panthermkii",
+              "lakonminer",
+              "smallcombat01_nx",
+              "mediumtransport01"
+            ],
+            "caspian": "explorer_nx",
+            "source": "d'après SCO-Cooldown 0.1.0 (9 oct. 2026), à mesurer"
+          },
+          "current": {
+            "ship": "lakonminer",
+            "ms": 9000,
+            "source": "default",
+            "generation": "newGeneration",
+            "base": 9000,
+            "shortest": null,
+            "measured": 0
+          },
+          "ships": []
+        }
+      }
+    }
+  }
+}

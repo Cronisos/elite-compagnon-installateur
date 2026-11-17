@@ -1,0 +1,5376 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1482406575,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 200,
+        "corps": {
+          "startSystem": "ICZ KC-U b3-4",
+          "startStation": "Port Draught",
+          "startMarketId": 4362099715,
+          "startCommodity": "bauxite",
+          "startCommodityName": "Bauxite",
+          "start": {
+            "buys": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "total": 869792,
+                "t": 1793144869000,
+                "price": 706
+              }
+            ]
+          },
+          "stops": [
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L",
+              "buys": [
+                {
+                  "commodity": "indium",
+                  "name": "Indium",
+                  "count": 1232,
+                  "total": 2886576,
+                  "t": 1793145350000,
+                  "price": 2343
+                }
+              ],
+              "sells": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232,
+                  "total": 51326352,
+                  "t": 1793145338000,
+                  "price": 41661
+                }
+              ]
+            }
+          ],
+          "arrival": {
+            "sells": [
+              {
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "total": 30967552,
+                "t": 1793145698000,
+                "price": 25136
+              }
+            ]
+          },
+          "legs": [
+            {
+              "from": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught"
+              },
+              "to": {
+                "system": "Cemiess",
+                "station": "Meech Dock"
+              },
+              "jumps": [
+                {
+                  "system": "NLTT 4671",
+                  "dist": 16.1
+                },
+                {
+                  "system": "Cemiess",
+                  "dist": 13.3
+                }
+              ],
+              "distance": 29.4
+            },
+            {
+              "from": {
+                "system": "Cemiess",
+                "station": "Meech Dock"
+              },
+              "to": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught"
+              },
+              "jumps": [
+                {
+                  "system": "LTT 619",
+                  "dist": 16.7
+                },
+                {
+                  "system": "ICZ KC-U b3-4",
+                  "dist": 14.1
+                }
+              ],
+              "distance": 30.8
+            }
+          ],
+          "legCommodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "jumpsPerLoop": 4,
+          "longestJump": 16.7,
+          "stations": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "marketId": 4362099715,
+              "pad": "L"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "ICZ KC-U b3-4",
+            "Cemiess"
+          ],
+          "commodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "anchors": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "loopStart": "2026-10-27T23:47:49.000Z",
+          "loopEnd": "2026-10-28T00:01:50.000Z",
+          "suggestedName": "Port Draught ⇄ Meech Dock",
+          "occurrences": 7,
+          "loop": {
+            "startAt": "2026-10-27T23:47:49.000Z",
+            "endAt": "2026-10-28T00:01:50.000Z",
+            "durationSec": 841,
+            "activeSec": 841,
+            "netGain": 78457707,
+            "sales": 82293904,
+            "purchases": 3756368,
+            "fuel": 1762,
+            "repairs": 78067,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2177,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": [
+              452,
+              389
+            ],
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "trades": [
+              {
+                "at": "2026-10-27T23:47:49.000Z",
+                "station": "Port Draught",
+                "system": "ICZ KC-U b3-4",
+                "marketId": 4362099715,
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "price": 706,
+                "total": 869792,
+                "side": "buy"
+              },
+              {
+                "at": "2026-10-27T23:55:38.000Z",
+                "station": "Meech Dock",
+                "system": "Cemiess",
+                "marketId": 3222823168,
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "price": 41661,
+                "total": 51326352,
+                "side": "sell"
+              },
+              {
+                "at": "2026-10-27T23:55:50.000Z",
+                "station": "Meech Dock",
+                "system": "Cemiess",
+                "marketId": 3222823168,
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "price": 2343,
+                "total": 2886576,
+                "side": "buy"
+              },
+              {
+                "at": "2026-10-28T00:01:38.000Z",
+                "station": "Port Draught",
+                "system": "ICZ KC-U b3-4",
+                "marketId": 4362099715,
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "price": 25136,
+                "total": 30967552,
+                "side": "sell"
+              }
+            ]
+          },
+          "earlierLoops": 6
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 201,
+        "corps": {
+          "id": 1,
+          "name": "Port Draught ⇄ Meech Dock",
+          "startSystem": "ICZ KC-U b3-4",
+          "startStation": "Port Draught",
+          "startCommodity": "bauxite",
+          "stations": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "marketId": 4362099715,
+              "pad": "L"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "ICZ KC-U b3-4",
+            "Cemiess"
+          ],
+          "commodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "goal": 7000000000,
+          "active": true,
+          "createdAt": "2026-10-28T00:07:17.000Z",
+          "lastUsedAt": "2026-10-28T00:07:17.000Z",
+          "trackFrom": "1970-01-01T00:00:00.000Z"
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 7,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:47:49.000Z",
+            "endAt": "2026-10-28T00:01:50.000Z",
+            "durationSec": 841,
+            "activeSec": 841,
+            "netGain": 78457707,
+            "sales": 82293904,
+            "purchases": 3756368,
+            "fuel": 1762,
+            "repairs": 78067,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2177,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": "[452,389]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 6,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:35:09.000Z",
+            "endAt": "2026-10-27T23:47:49.000Z",
+            "durationSec": 760,
+            "activeSec": 760,
+            "netGain": 78548150,
+            "sales": 82303760,
+            "purchases": 3753904,
+            "fuel": 1706,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2176,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": "[388,372]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 5,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:18:52.000Z",
+            "endAt": "2026-10-27T23:35:09.000Z",
+            "durationSec": 977,
+            "activeSec": 977,
+            "netGain": 74428900,
+            "sales": 78050432,
+            "purchases": 3555392,
+            "fuel": 1582,
+            "repairs": 64558,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2061,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[536,441]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 4,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:05:47.000Z",
+            "endAt": "2026-10-27T23:18:52.000Z",
+            "durationSec": 785,
+            "activeSec": 785,
+            "netGain": 74531946,
+            "sales": 78084304,
+            "purchases": 3550720,
+            "fuel": 1638,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2058,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[352,433]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 3,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:53:32.000Z",
+            "endAt": "2026-10-27T23:05:47.000Z",
+            "durationSec": 735,
+            "activeSec": 735,
+            "netGain": 74568156,
+            "sales": 78117008,
+            "purchases": 3547216,
+            "fuel": 1636,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2056,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[319,416]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 2,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:39:33.000Z",
+            "endAt": "2026-10-27T22:53:32.000Z",
+            "durationSec": 839,
+            "activeSec": 839,
+            "netGain": 74591507,
+            "sales": 78136864,
+            "purchases": 3543712,
+            "fuel": 1645,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2053,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[409,430]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 1,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:26:17.000Z",
+            "endAt": "2026-10-27T22:39:33.000Z",
+            "durationSec": 796,
+            "activeSec": 796,
+            "netGain": 72374622,
+            "sales": 78177744,
+            "purchases": 3537872,
+            "fuel": 1594,
+            "repairs": 24461,
+            "wages": 2239195,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2465,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[374,422]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          }
+        ]
+      },
+      "GET /routes/1 après création": {
+        "statut": 200,
+        "corps": {
+          "route": {
+            "id": 1,
+            "name": "Port Draught ⇄ Meech Dock",
+            "startSystem": "ICZ KC-U b3-4",
+            "startStation": "Port Draught",
+            "startCommodity": "bauxite",
+            "stations": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715,
+                "pad": "L"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "ICZ KC-U b3-4",
+              "Cemiess"
+            ],
+            "commodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "goal": 7000000000,
+            "active": true,
+            "createdAt": "2026-10-28T00:07:17.000Z",
+            "lastUsedAt": "2026-10-28T00:07:17.000Z",
+            "trackFrom": "1970-01-01T00:00:00.000Z"
+          },
+          "structure": {
+            "startSystem": "ICZ KC-U b3-4",
+            "startStation": "Port Draught",
+            "startMarketId": 4362099715,
+            "startCommodity": "bauxite",
+            "startCommodityName": "Bauxite",
+            "start": {
+              "buys": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232,
+                  "total": 869792,
+                  "t": 1793144869000,
+                  "price": 706
+                }
+              ]
+            },
+            "stops": [
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L",
+                "buys": [
+                  {
+                    "commodity": "indium",
+                    "name": "Indium",
+                    "count": 1232,
+                    "total": 2886576,
+                    "t": 1793145350000,
+                    "price": 2343
+                  }
+                ],
+                "sells": [
+                  {
+                    "commodity": "bauxite",
+                    "name": "Bauxite",
+                    "count": 1232,
+                    "total": 51326352,
+                    "t": 1793145338000,
+                    "price": 41661
+                  }
+                ]
+              }
+            ],
+            "arrival": {
+              "sells": [
+                {
+                  "commodity": "indium",
+                  "name": "Indium",
+                  "count": 1232,
+                  "total": 30967552,
+                  "t": 1793145698000,
+                  "price": 25136
+                }
+              ]
+            },
+            "legs": [
+              {
+                "from": {
+                  "system": "ICZ KC-U b3-4",
+                  "station": "Port Draught"
+                },
+                "to": {
+                  "system": "Cemiess",
+                  "station": "Meech Dock"
+                },
+                "jumps": [
+                  {
+                    "system": "NLTT 4671",
+                    "dist": 16.1
+                  },
+                  {
+                    "system": "Cemiess",
+                    "dist": 13.3
+                  }
+                ],
+                "distance": 29.4
+              },
+              {
+                "from": {
+                  "system": "Cemiess",
+                  "station": "Meech Dock"
+                },
+                "to": {
+                  "system": "ICZ KC-U b3-4",
+                  "station": "Port Draught"
+                },
+                "jumps": [
+                  {
+                    "system": "LTT 619",
+                    "dist": 16.7
+                  },
+                  {
+                    "system": "ICZ KC-U b3-4",
+                    "dist": 14.1
+                  }
+                ],
+                "distance": 30.8
+              }
+            ],
+            "legCommodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "jumpsPerLoop": 4,
+            "longestJump": 16.7,
+            "stations": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715,
+                "pad": "L"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "ICZ KC-U b3-4",
+              "Cemiess"
+            ],
+            "commodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "anchors": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "loopStart": "2026-10-27T23:47:49.000Z",
+            "loopEnd": "2026-10-28T00:01:50.000Z",
+            "suggestedName": "Port Draught ⇄ Meech Dock",
+            "occurrences": 7,
+            "earlierLoops": 6
+          },
+          "overrides": {},
+          "hoursPerEvening": 3,
+          "stats": {
+            "check": {
+              "measured": 75357284,
+              "projected": 78192129.71428572,
+              "gap": 0.0376187352278476,
+              "ok": true
+            },
+            "loopsCount": 7,
+            "normalCount": 7,
+            "medianMinutes": 13.266666666666667,
+            "avgMinutes": 13.65,
+            "avgNet": 75357284,
+            "costPerLoop": 345406.28571428574,
+            "meritsPerLoop": 2149.4285714285716,
+            "cargo": 1232,
+            "trends": [
+              {
+                "commodity": "bauxite",
+                "lastSell": 41661,
+                "lastBuy": 706,
+                "firstSell": 41661,
+                "erosion": 0,
+                "buyRise": 0,
+                "measured": true,
+                "fixedFor": 7,
+                "series": [
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661
+                ],
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "lastSell": 25136,
+                "lastBuy": 2343,
+                "firstSell": 25272,
+                "erosion": 23.25,
+                "buyRise": 3.32,
+                "measured": true,
+                "fixedFor": 1,
+                "series": [
+                  25272,
+                  25237,
+                  25220,
+                  25192,
+                  25163,
+                  25144,
+                  25136
+                ],
+                "name": "Indium"
+              }
+            ],
+            "goal": 7000000000,
+            "balance": 1482406575,
+            "remaining": 5517593425,
+            "progress": 0.21177236785714285,
+            "projection": {
+              "loops": 72,
+              "reachable": true,
+              "firstGain": 78192129.71428572,
+              "lastGain": 75867998.67428571,
+              "total": 5546164621.988571,
+              "jumps": 288,
+              "hours": 16.380000000000003,
+              "evenings": 6,
+              "perHour": 343701669.0737834,
+              "merits": 154759
+            },
+            "sensitivity": [
+              {
+                "price": 41661,
+                "current": true,
+                "gainPerLoop": 78192129.71428572,
+                "gainPerHour": 343701669.0737834,
+                "low": false,
+                "loops": 72
+              },
+              {
+                "price": 30000,
+                "current": false,
+                "gainPerLoop": 63825777.71428572,
+                "gainPerHour": 280552869.07378334,
+                "low": false,
+                "loops": 89
+              },
+              {
+                "price": 20000,
+                "current": false,
+                "gainPerLoop": 51505777.71428572,
+                "gainPerHour": 226399022.9199372,
+                "low": false,
+                "loops": 112
+              },
+              {
+                "price": 10000,
+                "current": false,
+                "gainPerLoop": 39185777.71428572,
+                "gainPerHour": 172245176.76609105,
+                "low": false,
+                "loops": 151
+              }
+            ],
+            "legAverages": [
+              404.2857142857143,
+              414.7142857142857
+            ],
+            "totals": {
+              "net": 527500988,
+              "merits": 15046,
+              "repairs": 167086,
+              "wages": 2239195,
+              "rebuy": 0,
+              "destroyed": 0,
+              "destructionLoss": 0,
+              "playSec": 5733
+            }
+          },
+          "live": {
+            "state": "running",
+            "text": "Soute vide, en route vers Meech Dock (Cemiess)",
+            "startAt": "2026-10-28T00:01:50.000Z",
+            "legIndex": 0,
+            "legCount": 2,
+            "legStartAt": "2026-10-28T00:01:50.000Z",
+            "activeSec": 27,
+            "legActiveSec": 27,
+            "lastActivityAt": "2026-10-28T00:02:17.000Z",
+            "inMenu": false,
+            "pauseGapSec": 240,
+            "next": {
+              "station": "Meech Dock",
+              "system": "Cemiess"
+            },
+            "avgLoopSec": 819,
+            "avgLegSec": 404.2857142857143,
+            "destroyed": false,
+            "netSoFar": -869792,
+            "meritsSoFar": 0
+          },
+          "laden": {
+            "range": 17.92,
+            "manual": false,
+            "longestJump": 16.7,
+            "margin": 1.22
+          },
+          "market": [
+            {
+              "leg": 0,
+              "from": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715
+              },
+              "to": {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168
+              },
+              "commodity": {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              "stock": null,
+              "topups": []
+            },
+            {
+              "leg": 1,
+              "from": {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168
+              },
+              "to": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715
+              },
+              "commodity": {
+                "commodity": "indium",
+                "name": "Indium"
+              },
+              "stock": null,
+              "topups": []
+            }
+          ],
+          "alerts": {
+            "alerts": [],
+            "notes": [
+              "Prix de vente de bauxite fixe à 41 661 cr/t depuis 7 boucles : il peut décrocher d'un coup.",
+              "Érosion mesurée d'indium : −23,25 cr/t par boucle."
+            ]
+          },
+          "game": {
+            "balance": 1482406575,
+            "legalState": null,
+            "ship": "Panther Clipper Mk II",
+            "system": "ICZ KC-U b3-4",
+            "commander": "Testeur"
+          },
+          "loops": [
+            {
+              "id": 7,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:47:49.000Z",
+              "endAt": "2026-10-28T00:01:50.000Z",
+              "durationSec": 841,
+              "activeSec": 841,
+              "netGain": 78457707,
+              "sales": 82293904,
+              "purchases": 3756368,
+              "fuel": 1762,
+              "repairs": 78067,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2177,
+              "cargo": 1232,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232
+                }
+              ],
+              "legTimes": [
+                452,
+                389
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 6,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:35:09.000Z",
+              "endAt": "2026-10-27T23:47:49.000Z",
+              "durationSec": 760,
+              "activeSec": 760,
+              "netGain": 78548150,
+              "sales": 82303760,
+              "purchases": 3753904,
+              "fuel": 1706,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2176,
+              "cargo": 1232,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232
+                }
+              ],
+              "legTimes": [
+                388,
+                372
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 5,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:18:52.000Z",
+              "endAt": "2026-10-27T23:35:09.000Z",
+              "durationSec": 977,
+              "activeSec": 977,
+              "netGain": 74428900,
+              "sales": 78050432,
+              "purchases": 3555392,
+              "fuel": 1582,
+              "repairs": 64558,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2061,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                536,
+                441
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 4,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:05:47.000Z",
+              "endAt": "2026-10-27T23:18:52.000Z",
+              "durationSec": 785,
+              "activeSec": 785,
+              "netGain": 74531946,
+              "sales": 78084304,
+              "purchases": 3550720,
+              "fuel": 1638,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2058,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                352,
+                433
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 3,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:53:32.000Z",
+              "endAt": "2026-10-27T23:05:47.000Z",
+              "durationSec": 735,
+              "activeSec": 735,
+              "netGain": 74568156,
+              "sales": 78117008,
+              "purchases": 3547216,
+              "fuel": 1636,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2056,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                319,
+                416
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 2,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:39:33.000Z",
+              "endAt": "2026-10-27T22:53:32.000Z",
+              "durationSec": 839,
+              "activeSec": 839,
+              "netGain": 74591507,
+              "sales": 78136864,
+              "purchases": 3543712,
+              "fuel": 1645,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2053,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                409,
+                430
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 1,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:26:17.000Z",
+              "endAt": "2026-10-27T22:39:33.000Z",
+              "durationSec": 796,
+              "activeSec": 796,
+              "netGain": 72374622,
+              "sales": 78177744,
+              "purchases": 3537872,
+              "fuel": 1594,
+              "repairs": 24461,
+              "wages": 2239195,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2465,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                374,
+                422
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            }
+          ]
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1482406575,
+          "commander": "Testeur",
+          "loops": 7,
+          "net": 527500988,
+          "merits": 15046,
+          "repairs": 167086,
+          "wages": 2239195,
+          "rebuy": 0,
+          "playSec": 5733,
+          "destroyed": 0,
+          "routes": [
+            {
+              "id": 1,
+              "name": "Port Draught ⇄ Meech Dock",
+              "active": true,
+              "loops": 7,
+              "net": 527500988,
+              "merits": 15046
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1482406575,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 200,
+        "corps": {
+          "startSystem": "ICZ KC-U b3-4",
+          "startStation": "Port Draught",
+          "startMarketId": 4362099715,
+          "startCommodity": "bauxite",
+          "startCommodityName": "Bauxite",
+          "start": {
+            "buys": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "total": 869792,
+                "t": 1793144869000,
+                "price": 706
+              }
+            ]
+          },
+          "stops": [
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L",
+              "buys": [
+                {
+                  "commodity": "indium",
+                  "name": "Indium",
+                  "count": 1232,
+                  "total": 2886576,
+                  "t": 1793145350000,
+                  "price": 2343
+                }
+              ],
+              "sells": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232,
+                  "total": 51326352,
+                  "t": 1793145338000,
+                  "price": 41661
+                }
+              ]
+            }
+          ],
+          "arrival": {
+            "sells": [
+              {
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "total": 30967552,
+                "t": 1793145698000,
+                "price": 25136
+              }
+            ]
+          },
+          "legs": [
+            {
+              "from": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught"
+              },
+              "to": {
+                "system": "Cemiess",
+                "station": "Meech Dock"
+              },
+              "jumps": [
+                {
+                  "system": "NLTT 4671",
+                  "dist": 16.1
+                },
+                {
+                  "system": "Cemiess",
+                  "dist": 13.3
+                }
+              ],
+              "distance": 29.4
+            },
+            {
+              "from": {
+                "system": "Cemiess",
+                "station": "Meech Dock"
+              },
+              "to": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught"
+              },
+              "jumps": [
+                {
+                  "system": "LTT 619",
+                  "dist": 16.7
+                },
+                {
+                  "system": "ICZ KC-U b3-4",
+                  "dist": 14.1
+                }
+              ],
+              "distance": 30.8
+            }
+          ],
+          "legCommodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "jumpsPerLoop": 4,
+          "longestJump": 16.7,
+          "stations": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "marketId": 4362099715,
+              "pad": "L"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "ICZ KC-U b3-4",
+            "Cemiess"
+          ],
+          "commodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "anchors": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "loopStart": "2026-10-27T23:47:49.000Z",
+          "loopEnd": "2026-10-28T00:01:50.000Z",
+          "suggestedName": "Port Draught ⇄ Meech Dock",
+          "occurrences": 7,
+          "loop": {
+            "startAt": "2026-10-27T23:47:49.000Z",
+            "endAt": "2026-10-28T00:01:50.000Z",
+            "durationSec": 841,
+            "activeSec": 841,
+            "netGain": 78457707,
+            "sales": 82293904,
+            "purchases": 3756368,
+            "fuel": 1762,
+            "repairs": 78067,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2177,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": [
+              452,
+              389
+            ],
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "trades": [
+              {
+                "at": "2026-10-27T23:47:49.000Z",
+                "station": "Port Draught",
+                "system": "ICZ KC-U b3-4",
+                "marketId": 4362099715,
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "price": 706,
+                "total": 869792,
+                "side": "buy"
+              },
+              {
+                "at": "2026-10-27T23:55:38.000Z",
+                "station": "Meech Dock",
+                "system": "Cemiess",
+                "marketId": 3222823168,
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232,
+                "price": 41661,
+                "total": 51326352,
+                "side": "sell"
+              },
+              {
+                "at": "2026-10-27T23:55:50.000Z",
+                "station": "Meech Dock",
+                "system": "Cemiess",
+                "marketId": 3222823168,
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "price": 2343,
+                "total": 2886576,
+                "side": "buy"
+              },
+              {
+                "at": "2026-10-28T00:01:38.000Z",
+                "station": "Port Draught",
+                "system": "ICZ KC-U b3-4",
+                "marketId": 4362099715,
+                "commodity": "indium",
+                "name": "Indium",
+                "count": 1232,
+                "price": 25136,
+                "total": 30967552,
+                "side": "sell"
+              }
+            ]
+          },
+          "earlierLoops": 6
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 201,
+        "corps": {
+          "id": 1,
+          "name": "Port Draught ⇄ Meech Dock",
+          "startSystem": "ICZ KC-U b3-4",
+          "startStation": "Port Draught",
+          "startCommodity": "bauxite",
+          "stations": [
+            {
+              "system": "ICZ KC-U b3-4",
+              "station": "Port Draught",
+              "marketId": 4362099715,
+              "pad": "L"
+            },
+            {
+              "system": "Cemiess",
+              "station": "Meech Dock",
+              "marketId": 3222823168,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "ICZ KC-U b3-4",
+            "Cemiess"
+          ],
+          "commodities": [
+            {
+              "commodity": "bauxite",
+              "name": "Bauxite"
+            },
+            {
+              "commodity": "indium",
+              "name": "Indium"
+            }
+          ],
+          "goal": 7000000000,
+          "active": true,
+          "createdAt": "2026-10-28T00:07:17.000Z",
+          "lastUsedAt": "2026-10-28T00:07:17.000Z",
+          "trackFrom": "1970-01-01T00:00:00.000Z"
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 7,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:47:49.000Z",
+            "endAt": "2026-10-28T00:01:50.000Z",
+            "durationSec": 841,
+            "activeSec": 841,
+            "netGain": 78457707,
+            "sales": 82293904,
+            "purchases": 3756368,
+            "fuel": 1762,
+            "repairs": 78067,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2177,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": "[452,389]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 6,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:35:09.000Z",
+            "endAt": "2026-10-27T23:47:49.000Z",
+            "durationSec": 760,
+            "activeSec": 760,
+            "netGain": 78548150,
+            "sales": 82303760,
+            "purchases": 3753904,
+            "fuel": 1706,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2176,
+            "cargo": 1232,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1232
+              }
+            ],
+            "legTimes": "[388,372]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 5,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:18:52.000Z",
+            "endAt": "2026-10-27T23:35:09.000Z",
+            "durationSec": 977,
+            "activeSec": 977,
+            "netGain": 74428900,
+            "sales": 78050432,
+            "purchases": 3555392,
+            "fuel": 1582,
+            "repairs": 64558,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2061,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[536,441]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 4,
+            "routeId": 1,
+            "startAt": "2026-10-27T23:05:47.000Z",
+            "endAt": "2026-10-27T23:18:52.000Z",
+            "durationSec": 785,
+            "activeSec": 785,
+            "netGain": 74531946,
+            "sales": 78084304,
+            "purchases": 3550720,
+            "fuel": 1638,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2058,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[352,433]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 3,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:53:32.000Z",
+            "endAt": "2026-10-27T23:05:47.000Z",
+            "durationSec": 735,
+            "activeSec": 735,
+            "netGain": 74568156,
+            "sales": 78117008,
+            "purchases": 3547216,
+            "fuel": 1636,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2056,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[319,416]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 2,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:39:33.000Z",
+            "endAt": "2026-10-27T22:53:32.000Z",
+            "durationSec": 839,
+            "activeSec": 839,
+            "netGain": 74591507,
+            "sales": 78136864,
+            "purchases": 3543712,
+            "fuel": 1645,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2053,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[409,430]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          },
+          {
+            "id": 1,
+            "routeId": 1,
+            "startAt": "2026-10-27T22:26:17.000Z",
+            "endAt": "2026-10-27T22:39:33.000Z",
+            "durationSec": 796,
+            "activeSec": 796,
+            "netGain": 72374622,
+            "sales": 78177744,
+            "purchases": 3537872,
+            "fuel": 1594,
+            "repairs": 24461,
+            "wages": 2239195,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 2465,
+            "cargo": 1168,
+            "cargoDetail": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite",
+                "count": 1168
+              }
+            ],
+            "legTimes": "[374,422]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Port Draught ⇄ Meech Dock"
+          }
+        ]
+      },
+      "GET /routes/1 après création": {
+        "statut": 200,
+        "corps": {
+          "route": {
+            "id": 1,
+            "name": "Port Draught ⇄ Meech Dock",
+            "startSystem": "ICZ KC-U b3-4",
+            "startStation": "Port Draught",
+            "startCommodity": "bauxite",
+            "stations": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715,
+                "pad": "L"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "ICZ KC-U b3-4",
+              "Cemiess"
+            ],
+            "commodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "goal": 7000000000,
+            "active": true,
+            "createdAt": "2026-10-28T00:07:17.000Z",
+            "lastUsedAt": "2026-10-28T00:07:17.000Z",
+            "trackFrom": "1970-01-01T00:00:00.000Z"
+          },
+          "structure": {
+            "startSystem": "ICZ KC-U b3-4",
+            "startStation": "Port Draught",
+            "startMarketId": 4362099715,
+            "startCommodity": "bauxite",
+            "startCommodityName": "Bauxite",
+            "start": {
+              "buys": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232,
+                  "total": 869792,
+                  "t": 1793144869000,
+                  "price": 706
+                }
+              ]
+            },
+            "stops": [
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L",
+                "buys": [
+                  {
+                    "commodity": "indium",
+                    "name": "Indium",
+                    "count": 1232,
+                    "total": 2886576,
+                    "t": 1793145350000,
+                    "price": 2343
+                  }
+                ],
+                "sells": [
+                  {
+                    "commodity": "bauxite",
+                    "name": "Bauxite",
+                    "count": 1232,
+                    "total": 51326352,
+                    "t": 1793145338000,
+                    "price": 41661
+                  }
+                ]
+              }
+            ],
+            "arrival": {
+              "sells": [
+                {
+                  "commodity": "indium",
+                  "name": "Indium",
+                  "count": 1232,
+                  "total": 30967552,
+                  "t": 1793145698000,
+                  "price": 25136
+                }
+              ]
+            },
+            "legs": [
+              {
+                "from": {
+                  "system": "ICZ KC-U b3-4",
+                  "station": "Port Draught"
+                },
+                "to": {
+                  "system": "Cemiess",
+                  "station": "Meech Dock"
+                },
+                "jumps": [
+                  {
+                    "system": "NLTT 4671",
+                    "dist": 16.1
+                  },
+                  {
+                    "system": "Cemiess",
+                    "dist": 13.3
+                  }
+                ],
+                "distance": 29.4
+              },
+              {
+                "from": {
+                  "system": "Cemiess",
+                  "station": "Meech Dock"
+                },
+                "to": {
+                  "system": "ICZ KC-U b3-4",
+                  "station": "Port Draught"
+                },
+                "jumps": [
+                  {
+                    "system": "LTT 619",
+                    "dist": 16.7
+                  },
+                  {
+                    "system": "ICZ KC-U b3-4",
+                    "dist": 14.1
+                  }
+                ],
+                "distance": 30.8
+              }
+            ],
+            "legCommodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "jumpsPerLoop": 4,
+            "longestJump": 16.7,
+            "stations": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715,
+                "pad": "L"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "ICZ KC-U b3-4",
+              "Cemiess"
+            ],
+            "commodities": [
+              {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "anchors": [
+              {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "commodity": "indium",
+                "name": "Indium"
+              }
+            ],
+            "loopStart": "2026-10-27T23:47:49.000Z",
+            "loopEnd": "2026-10-28T00:01:50.000Z",
+            "suggestedName": "Port Draught ⇄ Meech Dock",
+            "occurrences": 7,
+            "earlierLoops": 6
+          },
+          "overrides": {},
+          "hoursPerEvening": 3,
+          "stats": {
+            "check": {
+              "measured": 75357284,
+              "projected": 78192129.71428572,
+              "gap": 0.0376187352278476,
+              "ok": true
+            },
+            "loopsCount": 7,
+            "normalCount": 7,
+            "medianMinutes": 13.266666666666667,
+            "avgMinutes": 13.65,
+            "avgNet": 75357284,
+            "costPerLoop": 345406.28571428574,
+            "meritsPerLoop": 2149.4285714285716,
+            "cargo": 1232,
+            "trends": [
+              {
+                "commodity": "bauxite",
+                "lastSell": 41661,
+                "lastBuy": 706,
+                "firstSell": 41661,
+                "erosion": 0,
+                "buyRise": 0,
+                "measured": true,
+                "fixedFor": 7,
+                "series": [
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661,
+                  41661
+                ],
+                "name": "Bauxite"
+              },
+              {
+                "commodity": "indium",
+                "lastSell": 25136,
+                "lastBuy": 2343,
+                "firstSell": 25272,
+                "erosion": 23.25,
+                "buyRise": 3.32,
+                "measured": true,
+                "fixedFor": 1,
+                "series": [
+                  25272,
+                  25237,
+                  25220,
+                  25192,
+                  25163,
+                  25144,
+                  25136
+                ],
+                "name": "Indium"
+              }
+            ],
+            "goal": 7000000000,
+            "balance": 1482406575,
+            "remaining": 5517593425,
+            "progress": 0.21177236785714285,
+            "projection": {
+              "loops": 72,
+              "reachable": true,
+              "firstGain": 78192129.71428572,
+              "lastGain": 75867998.67428571,
+              "total": 5546164621.988571,
+              "jumps": 288,
+              "hours": 16.380000000000003,
+              "evenings": 6,
+              "perHour": 343701669.0737834,
+              "merits": 154759
+            },
+            "sensitivity": [
+              {
+                "price": 41661,
+                "current": true,
+                "gainPerLoop": 78192129.71428572,
+                "gainPerHour": 343701669.0737834,
+                "low": false,
+                "loops": 72
+              },
+              {
+                "price": 30000,
+                "current": false,
+                "gainPerLoop": 63825777.71428572,
+                "gainPerHour": 280552869.07378334,
+                "low": false,
+                "loops": 89
+              },
+              {
+                "price": 20000,
+                "current": false,
+                "gainPerLoop": 51505777.71428572,
+                "gainPerHour": 226399022.9199372,
+                "low": false,
+                "loops": 112
+              },
+              {
+                "price": 10000,
+                "current": false,
+                "gainPerLoop": 39185777.71428572,
+                "gainPerHour": 172245176.76609105,
+                "low": false,
+                "loops": 151
+              }
+            ],
+            "legAverages": [
+              404.2857142857143,
+              414.7142857142857
+            ],
+            "totals": {
+              "net": 527500988,
+              "merits": 15046,
+              "repairs": 167086,
+              "wages": 2239195,
+              "rebuy": 0,
+              "destroyed": 0,
+              "destructionLoss": 0,
+              "playSec": 5733
+            }
+          },
+          "live": {
+            "state": "running",
+            "text": "Soute vide, en route vers Meech Dock (Cemiess)",
+            "startAt": "2026-10-28T00:01:50.000Z",
+            "legIndex": 0,
+            "legCount": 2,
+            "legStartAt": "2026-10-28T00:01:50.000Z",
+            "activeSec": 27,
+            "legActiveSec": 27,
+            "lastActivityAt": "2026-10-28T00:02:17.000Z",
+            "inMenu": false,
+            "pauseGapSec": 240,
+            "next": {
+              "station": "Meech Dock",
+              "system": "Cemiess"
+            },
+            "avgLoopSec": 819,
+            "avgLegSec": 404.2857142857143,
+            "destroyed": false,
+            "netSoFar": -869792,
+            "meritsSoFar": 0
+          },
+          "laden": {
+            "range": 17.92,
+            "manual": false,
+            "longestJump": 16.7,
+            "margin": 1.22
+          },
+          "market": [
+            {
+              "leg": 0,
+              "from": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715
+              },
+              "to": {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168
+              },
+              "commodity": {
+                "commodity": "bauxite",
+                "name": "Bauxite"
+              },
+              "stock": null,
+              "topups": []
+            },
+            {
+              "leg": 1,
+              "from": {
+                "system": "Cemiess",
+                "station": "Meech Dock",
+                "marketId": 3222823168
+              },
+              "to": {
+                "system": "ICZ KC-U b3-4",
+                "station": "Port Draught",
+                "marketId": 4362099715
+              },
+              "commodity": {
+                "commodity": "indium",
+                "name": "Indium"
+              },
+              "stock": null,
+              "topups": []
+            }
+          ],
+          "alerts": {
+            "alerts": [],
+            "notes": [
+              "Prix de vente de bauxite fixe à 41 661 cr/t depuis 7 boucles : il peut décrocher d'un coup.",
+              "Érosion mesurée d'indium : −23,25 cr/t par boucle."
+            ]
+          },
+          "game": {
+            "balance": 1482406575,
+            "legalState": null,
+            "ship": "Panther Clipper Mk II",
+            "system": "ICZ KC-U b3-4",
+            "commander": "Testeur"
+          },
+          "loops": [
+            {
+              "id": 7,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:47:49.000Z",
+              "endAt": "2026-10-28T00:01:50.000Z",
+              "durationSec": 841,
+              "activeSec": 841,
+              "netGain": 78457707,
+              "sales": 82293904,
+              "purchases": 3756368,
+              "fuel": 1762,
+              "repairs": 78067,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2177,
+              "cargo": 1232,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232
+                }
+              ],
+              "legTimes": [
+                452,
+                389
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 6,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:35:09.000Z",
+              "endAt": "2026-10-27T23:47:49.000Z",
+              "durationSec": 760,
+              "activeSec": 760,
+              "netGain": 78548150,
+              "sales": 82303760,
+              "purchases": 3753904,
+              "fuel": 1706,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2176,
+              "cargo": 1232,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1232
+                }
+              ],
+              "legTimes": [
+                388,
+                372
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 5,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:18:52.000Z",
+              "endAt": "2026-10-27T23:35:09.000Z",
+              "durationSec": 977,
+              "activeSec": 977,
+              "netGain": 74428900,
+              "sales": 78050432,
+              "purchases": 3555392,
+              "fuel": 1582,
+              "repairs": 64558,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2061,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                536,
+                441
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 4,
+              "routeId": 1,
+              "startAt": "2026-10-27T23:05:47.000Z",
+              "endAt": "2026-10-27T23:18:52.000Z",
+              "durationSec": 785,
+              "activeSec": 785,
+              "netGain": 74531946,
+              "sales": 78084304,
+              "purchases": 3550720,
+              "fuel": 1638,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2058,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                352,
+                433
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 3,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:53:32.000Z",
+              "endAt": "2026-10-27T23:05:47.000Z",
+              "durationSec": 735,
+              "activeSec": 735,
+              "netGain": 74568156,
+              "sales": 78117008,
+              "purchases": 3547216,
+              "fuel": 1636,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2056,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                319,
+                416
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 2,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:39:33.000Z",
+              "endAt": "2026-10-27T22:53:32.000Z",
+              "durationSec": 839,
+              "activeSec": 839,
+              "netGain": 74591507,
+              "sales": 78136864,
+              "purchases": 3543712,
+              "fuel": 1645,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2053,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                409,
+                430
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            },
+            {
+              "id": 1,
+              "routeId": 1,
+              "startAt": "2026-10-27T22:26:17.000Z",
+              "endAt": "2026-10-27T22:39:33.000Z",
+              "durationSec": 796,
+              "activeSec": 796,
+              "netGain": 72374622,
+              "sales": 78177744,
+              "purchases": 3537872,
+              "fuel": 1594,
+              "repairs": 24461,
+              "wages": 2239195,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 2465,
+              "cargo": 1168,
+              "cargoDetail": [
+                {
+                  "commodity": "bauxite",
+                  "name": "Bauxite",
+                  "count": 1168
+                }
+              ],
+              "legTimes": [
+                374,
+                422
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 4
+            }
+          ]
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1482406575,
+          "commander": "Testeur",
+          "loops": 7,
+          "net": 527500988,
+          "merits": 15046,
+          "repairs": 167086,
+          "wages": 2239195,
+          "rebuy": 0,
+          "playSec": 5733,
+          "destroyed": 0,
+          "routes": [
+            {
+              "id": 1,
+              "name": "Port Draught ⇄ Meech Dock",
+              "active": true,
+              "loops": 7,
+              "net": 527500988,
+              "merits": 15046
+            }
+          ]
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 250000000,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 250000000,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 250000000,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 250000000,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1091804863,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 200,
+        "corps": {
+          "startSystem": "Fujin",
+          "startStation": "Futen Spaceport",
+          "startMarketId": 128134392,
+          "startCommodity": "fujintea",
+          "startCommodityName": "Thé de Fujin",
+          "start": {
+            "buys": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "total": 35535,
+                "t": 1793646296000,
+                "price": 1545
+              }
+            ]
+          },
+          "stops": [
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L",
+              "buys": [],
+              "sells": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23,
+                  "total": 385825,
+                  "t": 1793646824000,
+                  "price": 16775
+                }
+              ]
+            }
+          ],
+          "arrival": {
+            "sells": []
+          },
+          "legs": [
+            {
+              "from": {
+                "system": "Fujin",
+                "station": "Futen Spaceport"
+              },
+              "to": {
+                "system": "Muang",
+                "station": "Broo's Legacy"
+              },
+              "jumps": [
+                {
+                  "system": "Ceti Sector GR-V b2-1",
+                  "dist": 72.1
+                },
+                {
+                  "system": "ICZ AV-Y b1",
+                  "dist": 72.8
+                },
+                {
+                  "system": "Muang",
+                  "dist": 12.2
+                }
+              ],
+              "distance": 157.1
+            },
+            {
+              "from": {
+                "system": "Muang",
+                "station": "Broo's Legacy"
+              },
+              "to": {
+                "system": "Fujin",
+                "station": "Futen Spaceport"
+              },
+              "jumps": [
+                {
+                  "system": "HJ 3456B",
+                  "dist": 74.3
+                },
+                {
+                  "system": "LTT 11244",
+                  "dist": 74.1
+                },
+                {
+                  "system": "Fujin",
+                  "dist": 6.8
+                }
+              ],
+              "distance": 155.2
+            }
+          ],
+          "legCommodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            },
+            null
+          ],
+          "jumpsPerLoop": 6,
+          "longestJump": 74.3,
+          "stations": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "marketId": 128134392,
+              "pad": "L"
+            },
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "Fujin",
+            "Muang"
+          ],
+          "commodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "anchors": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "loopStart": "2026-11-02T19:04:56.000Z",
+          "loopEnd": "2026-11-02T19:20:07.000Z",
+          "suggestedName": "Futen Spaceport ⇄ Broo's Legacy",
+          "occurrences": 1,
+          "loop": {
+            "startAt": "2026-11-02T19:04:56.000Z",
+            "endAt": "2026-11-02T19:20:07.000Z",
+            "durationSec": 911,
+            "activeSec": 911,
+            "netGain": 348888,
+            "sales": 385825,
+            "purchases": 35535,
+            "fuel": 1402,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": [
+              493,
+              418
+            ],
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "trades": [
+              {
+                "at": "2026-11-02T19:04:56.000Z",
+                "station": "Futen Spaceport",
+                "system": "Fujin",
+                "marketId": 128134392,
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "price": 1545,
+                "total": 35535,
+                "side": "buy"
+              },
+              {
+                "at": "2026-11-02T19:13:44.000Z",
+                "station": "Broo's Legacy",
+                "system": "Muang",
+                "marketId": 128674695,
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "price": 16775,
+                "total": 385825,
+                "side": "sell"
+              }
+            ]
+          },
+          "earlierLoops": 1
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 201,
+        "corps": {
+          "id": 1,
+          "name": "Futen Spaceport ⇄ Broo's Legacy",
+          "startSystem": "Fujin",
+          "startStation": "Futen Spaceport",
+          "startCommodity": "fujintea",
+          "stations": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "marketId": 128134392,
+              "pad": "L"
+            },
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "Fujin",
+            "Muang"
+          ],
+          "commodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "goal": 7000000000,
+          "active": true,
+          "createdAt": "2026-11-02T19:49:24.000Z",
+          "lastUsedAt": "2026-11-02T19:49:24.000Z",
+          "trackFrom": "1970-01-01T00:00:00.000Z"
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 3,
+            "routeId": 1,
+            "startAt": "2026-11-02T19:20:07.000Z",
+            "endAt": "2026-11-02T19:34:20.000Z",
+            "durationSec": 853,
+            "activeSec": 853,
+            "netGain": -37144,
+            "sales": 0,
+            "purchases": 35535,
+            "fuel": 1408,
+            "repairs": 201,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[456,397]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          },
+          {
+            "id": 2,
+            "routeId": 1,
+            "startAt": "2026-11-02T19:04:56.000Z",
+            "endAt": "2026-11-02T19:20:07.000Z",
+            "durationSec": 911,
+            "activeSec": 911,
+            "netGain": 348888,
+            "sales": 385825,
+            "purchases": 35535,
+            "fuel": 1402,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[493,418]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          },
+          {
+            "id": 1,
+            "routeId": 1,
+            "startAt": "2026-11-02T18:17:43.000Z",
+            "endAt": "2026-11-02T19:04:56.000Z",
+            "durationSec": 2833,
+            "activeSec": 1373,
+            "netGain": -47082,
+            "sales": 0,
+            "purchases": 35535,
+            "fuel": 1363,
+            "repairs": 10184,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[449,924]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              },
+              {
+                "type": "pause",
+                "label": "Pause de 24 min (non comptée)"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          }
+        ]
+      },
+      "GET /routes/1 après création": {
+        "statut": 200,
+        "corps": {
+          "route": {
+            "id": 1,
+            "name": "Futen Spaceport ⇄ Broo's Legacy",
+            "startSystem": "Fujin",
+            "startStation": "Futen Spaceport",
+            "startCommodity": "fujintea",
+            "stations": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392,
+                "pad": "L"
+              },
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "Fujin",
+              "Muang"
+            ],
+            "commodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "goal": 7000000000,
+            "active": true,
+            "createdAt": "2026-11-02T19:49:24.000Z",
+            "lastUsedAt": "2026-11-02T19:49:24.000Z",
+            "trackFrom": "1970-01-01T00:00:00.000Z"
+          },
+          "structure": {
+            "startSystem": "Fujin",
+            "startStation": "Futen Spaceport",
+            "startMarketId": 128134392,
+            "startCommodity": "fujintea",
+            "startCommodityName": "Thé de Fujin",
+            "start": {
+              "buys": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23,
+                  "total": 35535,
+                  "t": 1793646296000,
+                  "price": 1545
+                }
+              ]
+            },
+            "stops": [
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L",
+                "buys": [],
+                "sells": [
+                  {
+                    "commodity": "fujintea",
+                    "name": "Thé de Fujin",
+                    "count": 23,
+                    "total": 385825,
+                    "t": 1793646824000,
+                    "price": 16775
+                  }
+                ]
+              }
+            ],
+            "arrival": {
+              "sells": []
+            },
+            "legs": [
+              {
+                "from": {
+                  "system": "Fujin",
+                  "station": "Futen Spaceport"
+                },
+                "to": {
+                  "system": "Muang",
+                  "station": "Broo's Legacy"
+                },
+                "jumps": [
+                  {
+                    "system": "Ceti Sector GR-V b2-1",
+                    "dist": 72.1
+                  },
+                  {
+                    "system": "ICZ AV-Y b1",
+                    "dist": 72.8
+                  },
+                  {
+                    "system": "Muang",
+                    "dist": 12.2
+                  }
+                ],
+                "distance": 157.1
+              },
+              {
+                "from": {
+                  "system": "Muang",
+                  "station": "Broo's Legacy"
+                },
+                "to": {
+                  "system": "Fujin",
+                  "station": "Futen Spaceport"
+                },
+                "jumps": [
+                  {
+                    "system": "HJ 3456B",
+                    "dist": 74.3
+                  },
+                  {
+                    "system": "LTT 11244",
+                    "dist": 74.1
+                  },
+                  {
+                    "system": "Fujin",
+                    "dist": 6.8
+                  }
+                ],
+                "distance": 155.2
+              }
+            ],
+            "legCommodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              },
+              null
+            ],
+            "jumpsPerLoop": 6,
+            "longestJump": 74.3,
+            "stations": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392,
+                "pad": "L"
+              },
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "Fujin",
+              "Muang"
+            ],
+            "commodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "anchors": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "loopStart": "2026-11-02T19:04:56.000Z",
+            "loopEnd": "2026-11-02T19:20:07.000Z",
+            "suggestedName": "Futen Spaceport ⇄ Broo's Legacy",
+            "occurrences": 1,
+            "earlierLoops": 1
+          },
+          "overrides": {},
+          "hoursPerEvening": 3,
+          "stats": {
+            "check": {
+              "measured": 88220.66666666667,
+              "projected": 5112427.333333333,
+              "gap": 56.95045000793464,
+              "ok": false
+            },
+            "loopsCount": 3,
+            "normalCount": 3,
+            "medianMinutes": 15.183333333333334,
+            "avgMinutes": 17.42777777777778,
+            "avgNet": 88220.66666666667,
+            "costPerLoop": 4852.666666666667,
+            "meritsPerLoop": 0,
+            "cargo": 336,
+            "trends": [
+              {
+                "commodity": "fujintea",
+                "lastSell": 16775,
+                "lastBuy": 1545,
+                "firstSell": 16775,
+                "erosion": 0,
+                "buyRise": 0,
+                "measured": false,
+                "fixedFor": 1,
+                "series": [
+                  16775
+                ],
+                "name": "Thé de Fujin"
+              }
+            ],
+            "goal": 7000000000,
+            "balance": 1091804863,
+            "remaining": 5908195137,
+            "progress": 0.15597212328571428,
+            "projection": {
+              "loops": 1156,
+              "reachable": true,
+              "firstGain": 5112427.333333333,
+              "lastGain": 5112427.333333333,
+              "total": 5909965997.333286,
+              "jumps": 6936,
+              "hours": 335.77518518518525,
+              "evenings": 112,
+              "perHour": 17600961.173095312,
+              "merits": 0
+            },
+            "sensitivity": [
+              {
+                "price": 16775,
+                "current": true,
+                "gainPerLoop": 5112427.333333333,
+                "gainPerHour": 17600961.173095312,
+                "low": true,
+                "loops": 1156
+              },
+              {
+                "price": 30000,
+                "current": false,
+                "gainPerLoop": 9556027.333333334,
+                "gainPerHour": 32899297.16289448,
+                "low": true,
+                "loops": 619
+              },
+              {
+                "price": 20000,
+                "current": false,
+                "gainPerLoop": 6196027.333333333,
+                "gainPerHour": 21331557.284029324,
+                "low": true,
+                "loops": 954
+              },
+              {
+                "price": 10000,
+                "current": false,
+                "gainPerLoop": 2836027.3333333335,
+                "gainPerHour": 9763817.405164167,
+                "low": true,
+                "loops": 2084
+              }
+            ],
+            "legAverages": [
+              466,
+              579.6666666666666
+            ],
+            "totals": {
+              "net": 264662,
+              "merits": 0,
+              "repairs": 10385,
+              "wages": 0,
+              "rebuy": 0,
+              "destroyed": 0,
+              "destructionLoss": 0,
+              "playSec": 3137
+            }
+          },
+          "live": {
+            "state": "running",
+            "text": "Soute vide, en route vers Futen Spaceport (Fujin)",
+            "startAt": "2026-11-02T19:34:20.000Z",
+            "legIndex": 1,
+            "legCount": 2,
+            "legStartAt": "2026-11-02T19:42:26.000Z",
+            "activeSec": 594,
+            "legActiveSec": 108,
+            "lastActivityAt": "2026-11-02T19:44:14.000Z",
+            "inMenu": false,
+            "pauseGapSec": 240,
+            "next": {
+              "station": "Futen Spaceport",
+              "system": "Fujin"
+            },
+            "avgLoopSec": 1045.6666666666667,
+            "avgLegSec": 579.6666666666666,
+            "destroyed": false,
+            "netSoFar": 282471,
+            "meritsSoFar": 0
+          },
+          "laden": {
+            "range": 59.63,
+            "manual": false,
+            "longestJump": 74.3,
+            "margin": -14.67
+          },
+          "market": [
+            {
+              "leg": 0,
+              "from": {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392
+              },
+              "to": {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695
+              },
+              "commodity": {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              },
+              "stock": null,
+              "topups": []
+            },
+            {
+              "leg": 1,
+              "from": {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695
+              },
+              "to": {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392
+              },
+              "commodity": null,
+              "stock": null,
+              "topups": []
+            }
+          ],
+          "alerts": {
+            "alerts": [
+              {
+                "level": "danger",
+                "text": "Le gain calculé avec les prix (5 112 427 cr par boucle) ne correspond pas à tes boucles réelles (88 221 cr en moyenne). Les marchandises de la route sont probablement mal détectées : clique sur « Re-détecter la boucle »."
+              },
+              {
+                "level": "danger",
+                "text": "Le plus long saut (74.3 al) dépasse la portée chargée (59.63 al)."
+              }
+            ],
+            "notes": []
+          },
+          "game": {
+            "balance": 1091804863,
+            "legalState": null,
+            "ship": "Caspian Explorer",
+            "system": "Muang",
+            "commander": "Testeur"
+          },
+          "loops": [
+            {
+              "id": 3,
+              "routeId": 1,
+              "startAt": "2026-11-02T19:20:07.000Z",
+              "endAt": "2026-11-02T19:34:20.000Z",
+              "durationSec": 853,
+              "activeSec": 853,
+              "netGain": -37144,
+              "sales": 0,
+              "purchases": 35535,
+              "fuel": 1408,
+              "repairs": 201,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                456,
+                397
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 1
+            },
+            {
+              "id": 2,
+              "routeId": 1,
+              "startAt": "2026-11-02T19:04:56.000Z",
+              "endAt": "2026-11-02T19:20:07.000Z",
+              "durationSec": 911,
+              "activeSec": 911,
+              "netGain": 348888,
+              "sales": 385825,
+              "purchases": 35535,
+              "fuel": 1402,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                493,
+                418
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 2
+            },
+            {
+              "id": 1,
+              "routeId": 1,
+              "startAt": "2026-11-02T18:17:43.000Z",
+              "endAt": "2026-11-02T19:04:56.000Z",
+              "durationSec": 2833,
+              "activeSec": 1373,
+              "netGain": -47082,
+              "sales": 0,
+              "purchases": 35535,
+              "fuel": 1363,
+              "repairs": 10184,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                449,
+                924
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                },
+                {
+                  "type": "pause",
+                  "label": "Pause de 24 min (non comptée)"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 1
+            }
+          ]
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1091804863,
+          "commander": "Testeur",
+          "loops": 3,
+          "net": 264662,
+          "merits": 0,
+          "repairs": 10385,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 3137,
+          "destroyed": 0,
+          "routes": [
+            {
+              "id": 1,
+              "name": "Futen Spaceport ⇄ Broo's Legacy",
+              "active": true,
+              "loops": 3,
+              "net": 264662,
+              "merits": 0
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1091804863,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 200,
+        "corps": {
+          "startSystem": "Fujin",
+          "startStation": "Futen Spaceport",
+          "startMarketId": 128134392,
+          "startCommodity": "fujintea",
+          "startCommodityName": "Thé de Fujin",
+          "start": {
+            "buys": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "total": 35535,
+                "t": 1793646296000,
+                "price": 1545
+              }
+            ]
+          },
+          "stops": [
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L",
+              "buys": [],
+              "sells": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23,
+                  "total": 385825,
+                  "t": 1793646824000,
+                  "price": 16775
+                }
+              ]
+            }
+          ],
+          "arrival": {
+            "sells": []
+          },
+          "legs": [
+            {
+              "from": {
+                "system": "Fujin",
+                "station": "Futen Spaceport"
+              },
+              "to": {
+                "system": "Muang",
+                "station": "Broo's Legacy"
+              },
+              "jumps": [
+                {
+                  "system": "Ceti Sector GR-V b2-1",
+                  "dist": 72.1
+                },
+                {
+                  "system": "ICZ AV-Y b1",
+                  "dist": 72.8
+                },
+                {
+                  "system": "Muang",
+                  "dist": 12.2
+                }
+              ],
+              "distance": 157.1
+            },
+            {
+              "from": {
+                "system": "Muang",
+                "station": "Broo's Legacy"
+              },
+              "to": {
+                "system": "Fujin",
+                "station": "Futen Spaceport"
+              },
+              "jumps": [
+                {
+                  "system": "HJ 3456B",
+                  "dist": 74.3
+                },
+                {
+                  "system": "LTT 11244",
+                  "dist": 74.1
+                },
+                {
+                  "system": "Fujin",
+                  "dist": 6.8
+                }
+              ],
+              "distance": 155.2
+            }
+          ],
+          "legCommodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            },
+            null
+          ],
+          "jumpsPerLoop": 6,
+          "longestJump": 74.3,
+          "stations": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "marketId": 128134392,
+              "pad": "L"
+            },
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "Fujin",
+            "Muang"
+          ],
+          "commodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "anchors": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "loopStart": "2026-11-02T19:04:56.000Z",
+          "loopEnd": "2026-11-02T19:20:07.000Z",
+          "suggestedName": "Futen Spaceport ⇄ Broo's Legacy",
+          "occurrences": 1,
+          "loop": {
+            "startAt": "2026-11-02T19:04:56.000Z",
+            "endAt": "2026-11-02T19:20:07.000Z",
+            "durationSec": 911,
+            "activeSec": 911,
+            "netGain": 348888,
+            "sales": 385825,
+            "purchases": 35535,
+            "fuel": 1402,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": [
+              493,
+              418
+            ],
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "trades": [
+              {
+                "at": "2026-11-02T19:04:56.000Z",
+                "station": "Futen Spaceport",
+                "system": "Fujin",
+                "marketId": 128134392,
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "price": 1545,
+                "total": 35535,
+                "side": "buy"
+              },
+              {
+                "at": "2026-11-02T19:13:44.000Z",
+                "station": "Broo's Legacy",
+                "system": "Muang",
+                "marketId": 128674695,
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23,
+                "price": 16775,
+                "total": 385825,
+                "side": "sell"
+              }
+            ]
+          },
+          "earlierLoops": 1
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 201,
+        "corps": {
+          "id": 1,
+          "name": "Futen Spaceport ⇄ Broo's Legacy",
+          "startSystem": "Fujin",
+          "startStation": "Futen Spaceport",
+          "startCommodity": "fujintea",
+          "stations": [
+            {
+              "system": "Fujin",
+              "station": "Futen Spaceport",
+              "marketId": 128134392,
+              "pad": "L"
+            },
+            {
+              "system": "Muang",
+              "station": "Broo's Legacy",
+              "marketId": 128674695,
+              "pad": "L"
+            }
+          ],
+          "systems": [
+            "Fujin",
+            "Muang"
+          ],
+          "commodities": [
+            {
+              "commodity": "fujintea",
+              "name": "Thé de Fujin"
+            }
+          ],
+          "goal": 7000000000,
+          "active": true,
+          "createdAt": "2026-11-02T19:49:24.000Z",
+          "lastUsedAt": "2026-11-02T19:49:24.000Z",
+          "trackFrom": "1970-01-01T00:00:00.000Z"
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 3,
+            "routeId": 1,
+            "startAt": "2026-11-02T19:20:07.000Z",
+            "endAt": "2026-11-02T19:34:20.000Z",
+            "durationSec": 853,
+            "activeSec": 853,
+            "netGain": -37144,
+            "sales": 0,
+            "purchases": 35535,
+            "fuel": 1408,
+            "repairs": 201,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[456,397]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          },
+          {
+            "id": 2,
+            "routeId": 1,
+            "startAt": "2026-11-02T19:04:56.000Z",
+            "endAt": "2026-11-02T19:20:07.000Z",
+            "durationSec": 911,
+            "activeSec": 911,
+            "netGain": 348888,
+            "sales": 385825,
+            "purchases": 35535,
+            "fuel": 1402,
+            "repairs": 0,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[493,418]",
+            "tags": [],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          },
+          {
+            "id": 1,
+            "routeId": 1,
+            "startAt": "2026-11-02T18:17:43.000Z",
+            "endAt": "2026-11-02T19:04:56.000Z",
+            "durationSec": 2833,
+            "activeSec": 1373,
+            "netGain": -47082,
+            "sales": 0,
+            "purchases": 35535,
+            "fuel": 1363,
+            "repairs": 10184,
+            "wages": 0,
+            "ammo": 0,
+            "rebuy": 0,
+            "merits": 0,
+            "cargo": 23,
+            "cargoDetail": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin",
+                "count": 23
+              }
+            ],
+            "legTimes": "[449,924]",
+            "tags": [
+              {
+                "type": "shields",
+                "label": "Sans bouclier"
+              },
+              {
+                "type": "pause",
+                "label": "Pause de 24 min (non comptée)"
+              }
+            ],
+            "destroyed": false,
+            "pause": false,
+            "routeName": "Futen Spaceport ⇄ Broo's Legacy"
+          }
+        ]
+      },
+      "GET /routes/1 après création": {
+        "statut": 200,
+        "corps": {
+          "route": {
+            "id": 1,
+            "name": "Futen Spaceport ⇄ Broo's Legacy",
+            "startSystem": "Fujin",
+            "startStation": "Futen Spaceport",
+            "startCommodity": "fujintea",
+            "stations": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392,
+                "pad": "L"
+              },
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "Fujin",
+              "Muang"
+            ],
+            "commodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "goal": 7000000000,
+            "active": true,
+            "createdAt": "2026-11-02T19:49:24.000Z",
+            "lastUsedAt": "2026-11-02T19:49:24.000Z",
+            "trackFrom": "1970-01-01T00:00:00.000Z"
+          },
+          "structure": {
+            "startSystem": "Fujin",
+            "startStation": "Futen Spaceport",
+            "startMarketId": 128134392,
+            "startCommodity": "fujintea",
+            "startCommodityName": "Thé de Fujin",
+            "start": {
+              "buys": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23,
+                  "total": 35535,
+                  "t": 1793646296000,
+                  "price": 1545
+                }
+              ]
+            },
+            "stops": [
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L",
+                "buys": [],
+                "sells": [
+                  {
+                    "commodity": "fujintea",
+                    "name": "Thé de Fujin",
+                    "count": 23,
+                    "total": 385825,
+                    "t": 1793646824000,
+                    "price": 16775
+                  }
+                ]
+              }
+            ],
+            "arrival": {
+              "sells": []
+            },
+            "legs": [
+              {
+                "from": {
+                  "system": "Fujin",
+                  "station": "Futen Spaceport"
+                },
+                "to": {
+                  "system": "Muang",
+                  "station": "Broo's Legacy"
+                },
+                "jumps": [
+                  {
+                    "system": "Ceti Sector GR-V b2-1",
+                    "dist": 72.1
+                  },
+                  {
+                    "system": "ICZ AV-Y b1",
+                    "dist": 72.8
+                  },
+                  {
+                    "system": "Muang",
+                    "dist": 12.2
+                  }
+                ],
+                "distance": 157.1
+              },
+              {
+                "from": {
+                  "system": "Muang",
+                  "station": "Broo's Legacy"
+                },
+                "to": {
+                  "system": "Fujin",
+                  "station": "Futen Spaceport"
+                },
+                "jumps": [
+                  {
+                    "system": "HJ 3456B",
+                    "dist": 74.3
+                  },
+                  {
+                    "system": "LTT 11244",
+                    "dist": 74.1
+                  },
+                  {
+                    "system": "Fujin",
+                    "dist": 6.8
+                  }
+                ],
+                "distance": 155.2
+              }
+            ],
+            "legCommodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              },
+              null
+            ],
+            "jumpsPerLoop": 6,
+            "longestJump": 74.3,
+            "stations": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392,
+                "pad": "L"
+              },
+              {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695,
+                "pad": "L"
+              }
+            ],
+            "systems": [
+              "Fujin",
+              "Muang"
+            ],
+            "commodities": [
+              {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "anchors": [
+              {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              }
+            ],
+            "loopStart": "2026-11-02T19:04:56.000Z",
+            "loopEnd": "2026-11-02T19:20:07.000Z",
+            "suggestedName": "Futen Spaceport ⇄ Broo's Legacy",
+            "occurrences": 1,
+            "earlierLoops": 1
+          },
+          "overrides": {},
+          "hoursPerEvening": 3,
+          "stats": {
+            "check": {
+              "measured": 88220.66666666667,
+              "projected": 5112427.333333333,
+              "gap": 56.95045000793464,
+              "ok": false
+            },
+            "loopsCount": 3,
+            "normalCount": 3,
+            "medianMinutes": 15.183333333333334,
+            "avgMinutes": 17.42777777777778,
+            "avgNet": 88220.66666666667,
+            "costPerLoop": 4852.666666666667,
+            "meritsPerLoop": 0,
+            "cargo": 336,
+            "trends": [
+              {
+                "commodity": "fujintea",
+                "lastSell": 16775,
+                "lastBuy": 1545,
+                "firstSell": 16775,
+                "erosion": 0,
+                "buyRise": 0,
+                "measured": false,
+                "fixedFor": 1,
+                "series": [
+                  16775
+                ],
+                "name": "Thé de Fujin"
+              }
+            ],
+            "goal": 7000000000,
+            "balance": 1091804863,
+            "remaining": 5908195137,
+            "progress": 0.15597212328571428,
+            "projection": {
+              "loops": 1156,
+              "reachable": true,
+              "firstGain": 5112427.333333333,
+              "lastGain": 5112427.333333333,
+              "total": 5909965997.333286,
+              "jumps": 6936,
+              "hours": 335.77518518518525,
+              "evenings": 112,
+              "perHour": 17600961.173095312,
+              "merits": 0
+            },
+            "sensitivity": [
+              {
+                "price": 16775,
+                "current": true,
+                "gainPerLoop": 5112427.333333333,
+                "gainPerHour": 17600961.173095312,
+                "low": true,
+                "loops": 1156
+              },
+              {
+                "price": 30000,
+                "current": false,
+                "gainPerLoop": 9556027.333333334,
+                "gainPerHour": 32899297.16289448,
+                "low": true,
+                "loops": 619
+              },
+              {
+                "price": 20000,
+                "current": false,
+                "gainPerLoop": 6196027.333333333,
+                "gainPerHour": 21331557.284029324,
+                "low": true,
+                "loops": 954
+              },
+              {
+                "price": 10000,
+                "current": false,
+                "gainPerLoop": 2836027.3333333335,
+                "gainPerHour": 9763817.405164167,
+                "low": true,
+                "loops": 2084
+              }
+            ],
+            "legAverages": [
+              466,
+              579.6666666666666
+            ],
+            "totals": {
+              "net": 264662,
+              "merits": 0,
+              "repairs": 10385,
+              "wages": 0,
+              "rebuy": 0,
+              "destroyed": 0,
+              "destructionLoss": 0,
+              "playSec": 3137
+            }
+          },
+          "live": {
+            "state": "running",
+            "text": "Soute vide, en route vers Futen Spaceport (Fujin)",
+            "startAt": "2026-11-02T19:34:20.000Z",
+            "legIndex": 1,
+            "legCount": 2,
+            "legStartAt": "2026-11-02T19:42:26.000Z",
+            "activeSec": 594,
+            "legActiveSec": 108,
+            "lastActivityAt": "2026-11-02T19:44:14.000Z",
+            "inMenu": false,
+            "pauseGapSec": 240,
+            "next": {
+              "station": "Futen Spaceport",
+              "system": "Fujin"
+            },
+            "avgLoopSec": 1045.6666666666667,
+            "avgLegSec": 579.6666666666666,
+            "destroyed": false,
+            "netSoFar": 282471,
+            "meritsSoFar": 0
+          },
+          "laden": {
+            "range": 59.63,
+            "manual": false,
+            "longestJump": 74.3,
+            "margin": -14.67
+          },
+          "market": [
+            {
+              "leg": 0,
+              "from": {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392
+              },
+              "to": {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695
+              },
+              "commodity": {
+                "commodity": "fujintea",
+                "name": "Thé de Fujin"
+              },
+              "stock": null,
+              "topups": []
+            },
+            {
+              "leg": 1,
+              "from": {
+                "system": "Muang",
+                "station": "Broo's Legacy",
+                "marketId": 128674695
+              },
+              "to": {
+                "system": "Fujin",
+                "station": "Futen Spaceport",
+                "marketId": 128134392
+              },
+              "commodity": null,
+              "stock": null,
+              "topups": []
+            }
+          ],
+          "alerts": {
+            "alerts": [
+              {
+                "level": "danger",
+                "text": "Le gain calculé avec les prix (5 112 427 cr par boucle) ne correspond pas à tes boucles réelles (88 221 cr en moyenne). Les marchandises de la route sont probablement mal détectées : clique sur « Re-détecter la boucle »."
+              },
+              {
+                "level": "danger",
+                "text": "Le plus long saut (74.3 al) dépasse la portée chargée (59.63 al)."
+              }
+            ],
+            "notes": []
+          },
+          "game": {
+            "balance": 1091804863,
+            "legalState": null,
+            "ship": "Caspian Explorer",
+            "system": "Muang",
+            "commander": "Testeur"
+          },
+          "loops": [
+            {
+              "id": 3,
+              "routeId": 1,
+              "startAt": "2026-11-02T19:20:07.000Z",
+              "endAt": "2026-11-02T19:34:20.000Z",
+              "durationSec": 853,
+              "activeSec": 853,
+              "netGain": -37144,
+              "sales": 0,
+              "purchases": 35535,
+              "fuel": 1408,
+              "repairs": 201,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                456,
+                397
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 1
+            },
+            {
+              "id": 2,
+              "routeId": 1,
+              "startAt": "2026-11-02T19:04:56.000Z",
+              "endAt": "2026-11-02T19:20:07.000Z",
+              "durationSec": 911,
+              "activeSec": 911,
+              "netGain": 348888,
+              "sales": 385825,
+              "purchases": 35535,
+              "fuel": 1402,
+              "repairs": 0,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                493,
+                418
+              ],
+              "tags": [],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 2
+            },
+            {
+              "id": 1,
+              "routeId": 1,
+              "startAt": "2026-11-02T18:17:43.000Z",
+              "endAt": "2026-11-02T19:04:56.000Z",
+              "durationSec": 2833,
+              "activeSec": 1373,
+              "netGain": -47082,
+              "sales": 0,
+              "purchases": 35535,
+              "fuel": 1363,
+              "repairs": 10184,
+              "wages": 0,
+              "ammo": 0,
+              "rebuy": 0,
+              "merits": 0,
+              "cargo": 23,
+              "cargoDetail": [
+                {
+                  "commodity": "fujintea",
+                  "name": "Thé de Fujin",
+                  "count": 23
+                }
+              ],
+              "legTimes": [
+                449,
+                924
+              ],
+              "tags": [
+                {
+                  "type": "shields",
+                  "label": "Sans bouclier"
+                },
+                {
+                  "type": "pause",
+                  "label": "Pause de 24 min (non comptée)"
+                }
+              ],
+              "destroyed": false,
+              "pause": false,
+              "tradesCount": 1
+            }
+          ]
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1091804863,
+          "commander": "Testeur",
+          "loops": 3,
+          "net": 264662,
+          "merits": 0,
+          "repairs": 10385,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 3137,
+          "destroyed": 0,
+          "routes": [
+            {
+              "id": 1,
+              "name": "Futen Spaceport ⇄ Broo's Legacy",
+              "active": true,
+              "loops": 3,
+              "net": 264662,
+              "merits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 710436236,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 710436236,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 710436236,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 710436236,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 4657623341,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 4657623341,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 4657623341,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 4657623341,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1437731057,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1437731057,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1437731057,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1437731057,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1297113684,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1297113684,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1297113684,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1297113684,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1441305056,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1441305056,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 1441305056,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 1441305056,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 198005296,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 198005296,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 198005296,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 198005296,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 554813934,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 554813934,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    },
+    "direct": {
+      "GET /routes": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /loops": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /questions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /dashboard": {
+        "statut": 200,
+        "corps": {
+          "balance": 554813934,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      },
+      "POST /detect": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /markets?system=Cemiess": {
+        "statut": 200,
+        "corps": []
+      },
+      "POST /routes (objectif 7 Md, historique compris)": {
+        "statut": 404,
+        "corps": {
+          "error": "Aucun aller-retour complet trouvé dans les journaux. Fais une boucle complète en jeu (achat → vente → achat → vente → retour au point de départ), puis réessaie."
+        }
+      },
+      "GET /loops après création": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /routes/1 après création": {
+        "statut": 404,
+        "corps": {
+          "error": "Route introuvable."
+        }
+      },
+      "GET /dashboard après création": {
+        "statut": 200,
+        "corps": {
+          "balance": 554813934,
+          "commander": "Testeur",
+          "loops": 0,
+          "net": 0,
+          "merits": 0,
+          "repairs": 0,
+          "wages": 0,
+          "rebuy": 0,
+          "playSec": 0,
+          "destroyed": 0,
+          "routes": []
+        }
+      }
+    }
+  }
+}

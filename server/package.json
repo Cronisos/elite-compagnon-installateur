@@ -1,0 +1,21 @@
+{
+  "name": "elite-companion-server",
+  "private": true,
+  "author": "Cronisos Lysiris",
+  "type": "module",
+  "scripts": {
+    "predev": "node dbPush.mjs",
+    "dev": "node dev.js",
+    "start": "node src/index.js",
+    "test": "node --test \"src/**/*.test.js\" dbPush.test.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.10.1",
+    "express": "^5.3.0",
+    "tesseract.js": "^7.0.0",
+    "@prisma/adapter-better-sqlite3": "^7.10.1"
+  },
+  "devDependencies": {
+    "prisma": "^7.10.1"
+  }
+}

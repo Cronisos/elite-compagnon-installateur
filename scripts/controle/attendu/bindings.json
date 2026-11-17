@@ -1,0 +1,2122 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-27T17:13:52.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-28T00:07:17.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-27T17:13:52.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-28T00:07:17.000Z"
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-01T19:55:00.000Z",
+            "running": false,
+            "endedAt": "2026-11-01T21:05:00.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-01T21:10:00.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-01T19:55:00.000Z",
+            "running": false,
+            "endedAt": "2026-11-01T21:05:00.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-01T21:10:00.000Z"
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-02T17:43:14.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-02T19:49:24.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-02T17:43:14.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-02T19:49:24.000Z"
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-07T08:15:30.000Z",
+            "running": false,
+            "endedAt": "2026-11-07T14:18:13.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-07T14:23:13.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-07T08:15:30.000Z",
+            "running": false,
+            "endedAt": "2026-11-07T14:18:13.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-07T14:23:13.000Z"
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-29T14:07:20.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-29T14:49:32.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-29T14:07:20.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-29T14:49:32.000Z"
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-26T09:37:12.000Z",
+            "running": false,
+            "endedAt": "2026-10-26T20:41:08.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-26T20:46:08.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-26T09:37:12.000Z",
+            "running": false,
+            "endedAt": "2026-10-26T20:41:08.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-26T20:46:08.000Z"
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-05T12:15:12.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-05T12:41:17.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-05T12:15:12.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-05T12:41:17.000Z"
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-01T09:32:27.000Z",
+            "running": false,
+            "endedAt": "2026-11-01T13:57:56.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-01T14:02:56.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-01T09:32:27.000Z",
+            "running": false,
+            "endedAt": "2026-11-01T13:57:56.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-01T14:02:56.000Z"
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-31T14:59:25.000Z",
+            "running": false,
+            "endedAt": "2026-10-31T23:11:57.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-31T23:16:57.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-10-31T14:59:25.000Z",
+            "running": false,
+            "endedAt": "2026-10-31T23:11:57.000Z",
+            "ended": "shutdown"
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-10-31T23:16:57.000Z"
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-06T08:56:57.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-06T23:11:36.000Z"
+        }
+      }
+    },
+    "direct": {
+      "GET /status": {
+        "statut": 200,
+        "corps": {
+          "dir": "<banc>\\options\\Bindings",
+          "displayDir": "<banc>\\options\\Bindings",
+          "dirFound": true,
+          "game": {
+            "launchedAt": "2026-11-06T08:56:57.000Z",
+            "running": true,
+            "endedAt": null,
+            "ended": null
+          },
+          "log": {
+            "file": "BindingLoadingErrors.log",
+            "modifiedAt": "2026-10-01T00:00:00.000Z",
+            "concerns": "previous",
+            "lines": [
+              "There where errors when loading preset file: Custom.4.2.binds",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+              "Missing devices: SaitekX52"
+            ],
+            "entries": [
+              {
+                "line": "There where errors when loading preset file: Custom.4.2.binds",
+                "kind": "preset-errors"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "There are multiple entries of binding \"MouseGUI\" Only the first will be used",
+                "kind": "duplicate"
+              },
+              {
+                "line": "Missing devices: SaitekX52",
+                "kind": "missing-devices"
+              }
+            ],
+            "presetFiles": [
+              "Custom.4.2.binds"
+            ],
+            "missingDevices": [
+              "SaitekX52"
+            ],
+            "duplicates": [
+              "MouseGUI"
+            ],
+            "other": []
+          },
+          "level": "ok",
+          "alert": null,
+          "banner": false,
+          "overlay": false,
+          "startPresets": {
+            "file": "StartPreset.4.start",
+            "categories": [
+              {
+                "label": "Commandes générales",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "Vaisseau",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "SRV",
+                "preset": "Custom",
+                "file": "Custom.4.2.binds",
+                "builtin": false
+              },
+              {
+                "label": "À pied",
+                "preset": "SaitekX52",
+                "file": null,
+                "builtin": true
+              }
+            ]
+          },
+          "profiles": [
+            {
+              "file": "Custom.4.2.binds",
+              "preset": "Custom",
+              "version": "4.2",
+              "modifiedAt": "2026-10-01T00:00:00.000Z",
+              "devices": [
+                {
+                  "id": "SaitekX52",
+                  "count": 6,
+                  "missing": false
+                }
+              ]
+            }
+          ],
+          "backups": [],
+          "checkedAt": "2026-11-06T23:11:36.000Z"
+        }
+      }
+    }
+  }
+}

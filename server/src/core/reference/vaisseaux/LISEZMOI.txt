@@ -1,0 +1,7 @@
+Vector Ships - CMDR Qohen Leth (2025)
+Licence : Creative Commons Attribution - Pas d'utilisation commerciale - Partage dans les memes conditions 4.0
+International (CC BY-NC-SA 4.0) : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Dessins copies sans modification depuis le pack "Vector Ships by Qohen Leth_2025" (dossier SVG). Seul le nom des
+fichiers a change : la cle du vaisseau dans les donnees de reference (coriolis), par exemple type_11_prospector.svg.
+Elite Dangerous (c) Frontier Developments plc ; ces dessins sont des creations de fan, non affiliees a Frontier.

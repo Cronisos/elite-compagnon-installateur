@@ -1,0 +1,11 @@
+// Modèles du module « Projet extension ».
+
+// Route Powerplay à prendre système par système
+model ExpansionProject {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String   @default("")
+  steps       String   @default("[]") // JSON : [{ name, jump, role }] du départ à l'arrivée
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

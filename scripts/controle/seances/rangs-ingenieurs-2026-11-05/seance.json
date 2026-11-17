@@ -1,0 +1,18 @@
+{
+  "titre": "Rangs d'ingénieur : Lei Cheung débloqué et monté du rang 1 au rang 5 (1er nov.), The Dweller (rang 3, 40 %) et Selene Jean (rang 4) montés au rang 5 ; Broo Tarquin (rang 3, 24 %) : 5 applications de G3 à distance sans montée, puis rang 5 à son atelier (5 nov.)",
+  "origine": "journaux réels de Cro, anonymisés (scripts/controle/seances/extraire.mjs)",
+  "maintenant": "2026-11-05T12:41:17Z",
+  "fichiers": [
+    {
+      "nom": "Journal.2026-11-01T150447.01.log",
+      "lignes": 1157,
+      "de": "2026-11-01T22:30:00Z",
+      "a": "2026-11-01T23:58:00Z"
+    },
+    {
+      "nom": "Journal.2026-11-05T131516.01.log",
+      "lignes": 350,
+      "a": "2026-11-05T12:37:00Z"
+    }
+  ]
+}

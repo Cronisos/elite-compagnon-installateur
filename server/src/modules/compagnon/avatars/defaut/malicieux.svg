@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Copilote, malicieux</title>
+  <!-- Personnage original dessiné pour Compagnon Elite (pack par défaut du module compagnon). -->
+  <defs>
+    <radialGradient id="helmet" cx="38%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.55" stop-color="#e3e8ee"/>
+      <stop offset="1" stop-color="#b7c1cd"/>
+    </radialGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b4757"/>
+      <stop offset="1" stop-color="#1f2630"/>
+    </linearGradient>
+    <radialGradient id="skin" cx="45%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#d3e0ff"/>
+      <stop offset="1" stop-color="#9cb3ec"/>
+    </radialGradient>
+    <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fe6ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#3fa9d9" stop-opacity="0.55"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffc27a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="dome"><circle cx="256" cy="240" r="146"/></clipPath>
+  </defs>
+  <!-- épaules -->
+  <path d="M92 512 C98 446 150 410 214 402 L298 402 C362 410 414 446 420 512 Z" fill="url(#suit)"/>
+  <path d="M132 470 C150 440 178 424 206 418" stroke="#ff9a3c" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M380 470 C362 440 334 424 306 418" stroke="#ff9a3c" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M256 446 L270 462 L256 478 L242 462 Z" fill="#ff9a3c"/>
+  <!-- antenne -->
+  <line x1="256" y1="98" x2="256" y2="56" stroke="#7d8794" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="256" cy="46" r="24" fill="url(#glow)"/>
+  <circle cx="256" cy="46" r="11" fill="#ff9a3c"/>
+  <circle cx="252" cy="42" r="3.5" fill="#ffffff" opacity="0.8"/>
+  <!-- écouteurs -->
+  <circle cx="120" cy="252" r="36" fill="#2b3440" stroke="#ff9a3c" stroke-width="6"/>
+  <circle cx="120" cy="252" r="13" fill="#ff9a3c" opacity="0.85"/>
+  <circle cx="392" cy="252" r="36" fill="#2b3440" stroke="#ff9a3c" stroke-width="6"/>
+  <circle cx="392" cy="252" r="13" fill="#ff9a3c" opacity="0.85"/>
+  <!-- casque -->
+  <circle cx="256" cy="240" r="148" fill="url(#helmet)" stroke="#97a3b1" stroke-width="4"/>
+  <!-- visière relevée -->
+  <g clip-path="url(#dome)">
+    <rect x="100" y="80" width="312" height="72" fill="url(#visor)"/>
+  </g>
+  <rect x="146" y="146" width="220" height="14" rx="7" fill="#2b3440"/>
+  <path d="M170 128 Q206 104 250 98" stroke="#ffffff" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.65"/>
+  <!-- col -->
+  <ellipse cx="256" cy="400" rx="78" ry="20" fill="#ff9a3c"/>
+  <ellipse cx="256" cy="396" rx="62" ry="10" fill="#c96f22" opacity="0.6"/>
+  <!-- ouverture du visage -->
+  <ellipse cx="256" cy="264" rx="110" ry="100" fill="#2b3440"/>
+  <ellipse cx="256" cy="264" rx="101" ry="91" fill="url(#skin)"/>
+  <ellipse cx="226" cy="214" rx="34" ry="12" fill="#ffffff" opacity="0.25"/>
+  <g id="visage">
+    <path d="M200 234 Q218 230 236 234" stroke="#232a36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M276 216 Q295 202 314 214" stroke="#232a36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path d="M202 264 Q218 246 234 264" stroke="#232a36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <ellipse cx="294" cy="260" rx="15" ry="19" fill="#232a36"/>
+  <circle cx="289.05" cy="252.4" r="5.3999999999999995" fill="#ffffff"/>
+  <circle cx="299.25" cy="265.7" r="2.4" fill="#ffffff" opacity="0.85"/>
+    <path d="M278 247 L311 250" stroke="#232a36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <ellipse cx="190" cy="298" rx="17" ry="9" fill="#ff8fa3" opacity="0.6"/>
+  <ellipse cx="322" cy="298" rx="17" ry="9" fill="#ff8fa3" opacity="0.6"/>
+    <path d="M236 312 Q262 324 282 300" stroke="#232a36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <ellipse cx="270" cy="318" rx="8" ry="5" fill="#ff7a8a"/>
+  </g>
+  <path d="M388 278 Q378 332 326 338" stroke="#2b3440" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <rect x="304" y="330" width="26" height="15" rx="7.5" fill="#ff9a3c" stroke="#2b3440" stroke-width="3"/>
+</svg>

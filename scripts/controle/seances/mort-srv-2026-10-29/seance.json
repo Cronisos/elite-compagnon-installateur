@@ -1,0 +1,17 @@
+{
+  "titre": "Deux SRV détruits à 16 Librae (retour gratuit), puis le vaisseau détruit et racheté (20,6 M cr)",
+  "origine": "journaux réels de Cro, anonymisés (scripts/controle/seances/extraire.mjs)",
+  "maintenant": "2026-10-29T14:49:32Z",
+  "fichiers": [
+    {
+      "nom": "Journal.2026-10-29T111437.01.log",
+      "lignes": 206,
+      "de": "2026-10-29T12:26:00Z"
+    },
+    {
+      "nom": "Journal.2026-10-29T150723.01.log",
+      "lignes": 254,
+      "a": "2026-10-29T14:45:00Z"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+// Modèles du module « Systèmes importants ».
+
+// Système ou zone mis en favori, avec la raison pour laquelle il compte
+model ImportantSystem {
+  id          Int      @id @default(autoincrement())
+  name        String
+  system      String   // système de référence : à copier dans la carte de la galaxie
+  tag         String   @default("")
+  description String   @default("")
+  sol         Float?   // distance à Sol, en AL
+  planets     String   @default("[]") // JSON : planètes retenues, figées au moment de l'ajout
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

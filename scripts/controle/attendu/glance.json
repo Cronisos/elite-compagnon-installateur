@@ -1,0 +1,2928 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1482406575,
+            "at": "2026-10-27T17:14:22Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 105,
+            "merits": 819159,
+            "at": "2026-10-27T17:14:36Z"
+          },
+          "system": {
+            "name": "ICZ KC-U b3-4",
+            "at": "2026-10-27T23:58:27Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Aisling Duval",
+            "progress": 0.147036,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 44704,
+            "undermining": 668,
+            "conflict": [],
+            "previous": {
+              "at": "2026-10-27T23:45:10Z",
+              "label": "Forteresse",
+              "points": null,
+              "conflict": []
+            },
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 5,
+              "bodies": 13,
+              "value": 6035
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 1232,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 0,
+            "consumables": 300,
+            "data": 0,
+            "at": "2026-10-27T23:59:40Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-27T23:29:57Z"
+            },
+            "rebuy": 25805829,
+            "estimated": false,
+            "balance": 1482406575,
+            "covered": true,
+            "missing": 0,
+            "times": 57,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 25811864,
+              "rebuy": 25805829,
+              "toCash": 6035,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "EDFR",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-10-27T17:14:22Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-10-27T23:59:45Z",
+            "alertHours": 24,
+            "active": [
+              {
+                "id": 863,
+                "title": "Opération minière de Faulcon DeLacy",
+                "system": "Reorte",
+                "station": "Davies High",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 33.87861111111111,
+                "status": "active",
+                "contribution": 0,
+                "contributors": 7384,
+                "total": 3071190,
+                "band": null,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": null,
+                "tierName": null,
+                "topTier": 5,
+                "reward": null,
+                "noContribution": true,
+                "zeroAlert": false,
+                "at": "2026-10-27T23:59:45Z"
+              },
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 33.87861111111111,
+                "status": "active",
+                "contribution": 789,
+                "contributors": 12688,
+                "total": 87924666,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-27T23:59:45Z"
+              }
+            ],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1482406575,
+            "at": "2026-10-27T17:14:22Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 105,
+            "merits": 819159,
+            "at": "2026-10-27T17:14:36Z"
+          },
+          "system": {
+            "name": "ICZ KC-U b3-4",
+            "at": "2026-10-27T23:58:27Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Aisling Duval",
+            "progress": 0.147036,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 44704,
+            "undermining": 668,
+            "conflict": [],
+            "previous": {
+              "at": "2026-10-27T23:45:10Z",
+              "label": "Forteresse",
+              "points": null,
+              "conflict": []
+            },
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 5,
+              "bodies": 13,
+              "value": 6035
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 1232,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 0,
+            "consumables": 300,
+            "data": 0,
+            "at": "2026-10-27T23:59:40Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-27T23:29:57Z"
+            },
+            "rebuy": 25805829,
+            "estimated": false,
+            "balance": 1482406575,
+            "covered": true,
+            "missing": 0,
+            "times": 57,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 25811864,
+              "rebuy": 25805829,
+              "toCash": 6035,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "EDFR",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-10-27T17:14:22Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-10-27T23:59:45Z",
+            "alertHours": 24,
+            "active": [
+              {
+                "id": 863,
+                "title": "Opération minière de Faulcon DeLacy",
+                "system": "Reorte",
+                "station": "Davies High",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 33.87861111111111,
+                "status": "active",
+                "contribution": 0,
+                "contributors": 7384,
+                "total": 3071190,
+                "band": null,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": null,
+                "tierName": null,
+                "topTier": 5,
+                "reward": null,
+                "noContribution": true,
+                "zeroAlert": false,
+                "at": "2026-10-27T23:59:45Z"
+              },
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 33.87861111111111,
+                "status": "active",
+                "contribution": 789,
+                "contributors": 12688,
+                "total": 87924666,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-27T23:59:45Z"
+              }
+            ],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 250000000,
+            "at": "2026-11-01T19:55:21Z"
+          },
+          "powerplay": {
+            "power": null,
+            "rank": null,
+            "merits": null,
+            "at": null
+          },
+          "system": {
+            "name": "Bleae Thua ED-D c12-5",
+            "at": "2026-11-01T19:55:30Z",
+            "state": null,
+            "label": null,
+            "power": null,
+            "progress": null,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": null,
+            "undermining": null,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 0,
+              "bodies": 0,
+              "value": 0
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": null,
+          "goals": [],
+          "rebuy": {
+            "ship": null,
+            "rebuy": null,
+            "estimated": false,
+            "balance": 250000000,
+            "covered": null,
+            "missing": 0,
+            "times": null,
+            "alert": null,
+            "docked": false,
+            "atStake": null,
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-01T19:55:21Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": null,
+            "alertHours": 24,
+            "active": [],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 250000000,
+            "at": "2026-11-01T19:55:21Z"
+          },
+          "powerplay": {
+            "power": null,
+            "rank": null,
+            "merits": null,
+            "at": null
+          },
+          "system": {
+            "name": "Bleae Thua ED-D c12-5",
+            "at": "2026-11-01T19:55:30Z",
+            "state": null,
+            "label": null,
+            "power": null,
+            "progress": null,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": null,
+            "undermining": null,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 0,
+              "bodies": 0,
+              "value": 0
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": null,
+          "goals": [],
+          "rebuy": {
+            "ship": null,
+            "rebuy": null,
+            "estimated": false,
+            "balance": 250000000,
+            "covered": null,
+            "missing": 0,
+            "times": null,
+            "alert": null,
+            "docked": false,
+            "atStake": null,
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-01T19:55:21Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": null,
+            "alertHours": 24,
+            "active": [],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1091804863,
+            "at": "2026-11-02T18:57:15Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 140,
+            "merits": 1095073,
+            "at": "2026-11-02T17:43:50Z"
+          },
+          "system": {
+            "name": "Muang",
+            "at": "2026-11-02T19:38:14Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Archon Delaine",
+            "progress": 0.255731,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 2626,
+            "undermining": 11695,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-02T19:24:08Z",
+              "label": "Forteresse",
+              "points": null,
+              "conflict": []
+            },
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 11978147,
+            "bonds": 0,
+            "exploration": {
+              "systems": 2,
+              "bodies": 9,
+              "value": 2909
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-02T19:44:00Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Caspian Explorer",
+              "type": "explorer_nx",
+              "at": "2026-11-02T18:57:20Z"
+            },
+            "rebuy": 16442313,
+            "estimated": false,
+            "balance": 1091804863,
+            "covered": true,
+            "missing": 0,
+            "times": 66,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 28423369,
+              "rebuy": 16442313,
+              "toCash": 11981056,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-02T18:57:15Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-02T18:57:26Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-02T18:57:26Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "12 M cr de primes à encaisser."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1091804863,
+            "at": "2026-11-02T18:57:15Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 140,
+            "merits": 1095073,
+            "at": "2026-11-02T17:43:50Z"
+          },
+          "system": {
+            "name": "Muang",
+            "at": "2026-11-02T19:38:14Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Archon Delaine",
+            "progress": 0.255731,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 2626,
+            "undermining": 11695,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-02T19:24:08Z",
+              "label": "Forteresse",
+              "points": null,
+              "conflict": []
+            },
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 11978147,
+            "bonds": 0,
+            "exploration": {
+              "systems": 2,
+              "bodies": 9,
+              "value": 2909
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-02T19:44:00Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Caspian Explorer",
+              "type": "explorer_nx",
+              "at": "2026-11-02T18:57:20Z"
+            },
+            "rebuy": 16442313,
+            "estimated": false,
+            "balance": 1091804863,
+            "covered": true,
+            "missing": 0,
+            "times": 66,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 28423369,
+              "rebuy": 16442313,
+              "toCash": 11981056,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-02T18:57:15Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-02T18:57:26Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-02T18:57:26Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "12 M cr de primes à encaisser."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 710436236,
+            "at": "2026-11-07T08:15:50Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 165,
+            "merits": 1296017,
+            "at": "2026-11-07T08:16:09Z"
+          },
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "at": "2026-11-07T14:09:19Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Aisling Duval",
+            "progress": 0.59237,
+            "points": 207329,
+            "tier": 350000,
+            "erosion": 9985,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 62905,
+            "undermining": 5175,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-07T08:16:09Z",
+              "label": "Exploité",
+              "points": 189723,
+              "conflict": []
+            },
+            "change": {
+              "points": 17606,
+              "since": "2026-11-07T08:16:09Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 0,
+              "bodies": 0,
+              "value": 0
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-07T14:14:42Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Type-11 Prospector",
+              "type": "lakonminer",
+              "at": "2026-11-07T13:07:57Z"
+            },
+            "rebuy": 4498040,
+            "estimated": false,
+            "balance": 710436236,
+            "covered": true,
+            "missing": 0,
+            "times": 157,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 4498040,
+              "rebuy": 4498040,
+              "toCash": 0,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-07T08:15:50Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-07T13:49:33Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-07T13:49:33Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 710436236,
+            "at": "2026-11-07T08:15:50Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 165,
+            "merits": 1296017,
+            "at": "2026-11-07T08:16:09Z"
+          },
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "at": "2026-11-07T14:09:19Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Aisling Duval",
+            "progress": 0.59237,
+            "points": 207329,
+            "tier": 350000,
+            "erosion": 9985,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 62905,
+            "undermining": 5175,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-07T08:16:09Z",
+              "label": "Exploité",
+              "points": 189723,
+              "conflict": []
+            },
+            "change": {
+              "points": 17606,
+              "since": "2026-11-07T08:16:09Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 0,
+              "bodies": 0,
+              "value": 0
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-07T14:14:42Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Type-11 Prospector",
+              "type": "lakonminer",
+              "at": "2026-11-07T13:07:57Z"
+            },
+            "rebuy": 4498040,
+            "estimated": false,
+            "balance": 710436236,
+            "covered": true,
+            "missing": 0,
+            "times": 157,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 4498040,
+              "rebuy": 4498040,
+              "toCash": 0,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-07T08:15:50Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-07T13:49:33Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-07T13:49:33Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 4657623341,
+            "at": "2026-10-29T14:07:50Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 114,
+            "merits": 888683,
+            "at": "2026-10-29T14:08:08Z"
+          },
+          "system": {
+            "name": "Gungnir",
+            "at": "2026-10-29T14:41:50Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Yuri Grom",
+            "progress": 0.211426,
+            "points": 73999,
+            "tier": 350000,
+            "erosion": 0,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 0,
+            "undermining": 0,
+            "conflict": [],
+            "previous": {
+              "at": "2026-10-29T14:30:05Z",
+              "label": "Exploité",
+              "points": 73999,
+              "conflict": []
+            },
+            "change": {
+              "points": 0,
+              "since": "2026-10-29T14:30:05Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 3,
+              "bodies": 9,
+              "value": 297536
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": "2026-10-29T14:37:01Z"
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-10-29T14:41:50Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-29T14:38:04Z"
+            },
+            "rebuy": 20559981,
+            "estimated": false,
+            "balance": 4657623341,
+            "covered": true,
+            "missing": 0,
+            "times": 226,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 20857517,
+              "rebuy": 20559981,
+              "toCash": 297536,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-10-29T14:07:50Z"
+            },
+            "resurrect": {
+              "at": "2026-10-29T14:37:59Z",
+              "seenAt": 1793284679000,
+              "option": "rebuy",
+              "optionStatus": "mesurée",
+              "cost": 20559981,
+              "expectedCost": 20559981,
+              "bankrupt": false,
+              "text": "Rachat payé : 20 559 981 cr.",
+              "loss": "Perdu : au moins 297 034 cr d'exploration, 37 t de soute.",
+              "recent": true
+            }
+          },
+          "communityGoals": {
+            "at": "2026-10-29T14:08:13Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13912,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-29T14:08:13Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Rachat payé : 20 559 981 cr. Perdu : au moins 297 034 cr d'exploration, 37 t de soute."
+            },
+            {
+              "level": "warning",
+              "text": "Au moins 297 536 cr de données d'exploration à vendre (3 systèmes)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 4657623341,
+            "at": "2026-10-29T14:07:50Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 114,
+            "merits": 888683,
+            "at": "2026-10-29T14:08:08Z"
+          },
+          "system": {
+            "name": "Gungnir",
+            "at": "2026-10-29T14:41:50Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Yuri Grom",
+            "progress": 0.211426,
+            "points": 73999,
+            "tier": 350000,
+            "erosion": 0,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 0,
+            "undermining": 0,
+            "conflict": [],
+            "previous": {
+              "at": "2026-10-29T14:30:05Z",
+              "label": "Exploité",
+              "points": 73999,
+              "conflict": []
+            },
+            "change": {
+              "points": 0,
+              "since": "2026-10-29T14:30:05Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 3,
+              "bodies": 9,
+              "value": 297536
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": "2026-10-29T14:37:01Z"
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-10-29T14:41:50Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-29T14:38:04Z"
+            },
+            "rebuy": 20559981,
+            "estimated": false,
+            "balance": 4657623341,
+            "covered": true,
+            "missing": 0,
+            "times": 226,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 20857517,
+              "rebuy": 20559981,
+              "toCash": 297536,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-10-29T14:07:50Z"
+            },
+            "resurrect": {
+              "at": "2026-10-29T14:37:59Z",
+              "seenAt": 1793285372000,
+              "option": "rebuy",
+              "optionStatus": "mesurée",
+              "cost": 20559981,
+              "expectedCost": 20559981,
+              "bankrupt": false,
+              "text": "Rachat payé : 20 559 981 cr.",
+              "loss": "Perdu : au moins 297 034 cr d'exploration, 37 t de soute.",
+              "recent": true
+            }
+          },
+          "communityGoals": {
+            "at": "2026-10-29T14:08:13Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13912,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-29T14:08:13Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Rachat payé : 20 559 981 cr. Perdu : au moins 297 034 cr d'exploration, 37 t de soute."
+            },
+            {
+              "level": "warning",
+              "text": "Au moins 297 536 cr de données d'exploration à vendre (3 systèmes)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1437731057,
+            "at": "2026-10-26T09:37:40Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 0,
+            "merits": 804113,
+            "at": "2026-10-26T09:37:58Z"
+          },
+          "system": {
+            "name": "Talta",
+            "at": "2026-10-26T19:47:01Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Aisling Duval",
+            "progress": 0.314817,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 105458,
+            "undermining": 4641,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 4,
+              "bodies": 9,
+              "value": 5315
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 0,
+            "consumables": 300,
+            "data": 0,
+            "at": "2026-10-26T20:40:02Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Asp Explorer",
+              "type": "asp",
+              "at": "2026-10-26T20:40:02Z"
+            },
+            "rebuy": 2399416,
+            "estimated": false,
+            "balance": 1437731057,
+            "covered": true,
+            "missing": 0,
+            "times": 599,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 2404731,
+              "rebuy": 2399416,
+              "toCash": 5315,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "EDFR",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-10-26T09:37:40Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-10-26T20:39:41Z",
+            "alertHours": 24,
+            "active": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 61.23111111111111,
+                "status": "active",
+                "contribution": 789,
+                "contributors": 11501,
+                "total": 73688197,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-26T20:39:41Z"
+              },
+              {
+                "id": 863,
+                "title": "Opération minière de Faulcon DeLacy",
+                "system": "Reorte",
+                "station": "Davies High",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 61.23111111111111,
+                "status": "active",
+                "contribution": 0,
+                "contributors": 6337,
+                "total": 2364886,
+                "band": null,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": null,
+                "tierName": null,
+                "topTier": 5,
+                "reward": null,
+                "noContribution": true,
+                "zeroAlert": false,
+                "at": "2026-10-26T20:39:41Z"
+              }
+            ],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1437731057,
+            "at": "2026-10-26T09:37:40Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 0,
+            "merits": 804113,
+            "at": "2026-10-26T09:37:58Z"
+          },
+          "system": {
+            "name": "Talta",
+            "at": "2026-10-26T19:47:01Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Aisling Duval",
+            "progress": 0.314817,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 105458,
+            "undermining": 4641,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 4,
+              "bodies": 9,
+              "value": 5315
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 0,
+            "consumables": 300,
+            "data": 0,
+            "at": "2026-10-26T20:40:02Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Asp Explorer",
+              "type": "asp",
+              "at": "2026-10-26T20:40:02Z"
+            },
+            "rebuy": 2399416,
+            "estimated": false,
+            "balance": 1437731057,
+            "covered": true,
+            "missing": 0,
+            "times": 599,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 2404731,
+              "rebuy": 2399416,
+              "toCash": 5315,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "EDFR",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-10-26T09:37:40Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-10-26T20:39:41Z",
+            "alertHours": 24,
+            "active": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 61.23111111111111,
+                "status": "active",
+                "contribution": 789,
+                "contributors": 11501,
+                "total": 73688197,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-10-26T20:39:41Z"
+              },
+              {
+                "id": 863,
+                "title": "Opération minière de Faulcon DeLacy",
+                "system": "Reorte",
+                "station": "Davies High",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 61.23111111111111,
+                "status": "active",
+                "contribution": 0,
+                "contributors": 6337,
+                "total": 2364886,
+                "band": null,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": null,
+                "tierName": null,
+                "topTier": 5,
+                "reward": null,
+                "noContribution": true,
+                "zeroAlert": false,
+                "at": "2026-10-26T20:39:41Z"
+              }
+            ],
+            "toClaim": []
+          },
+          "reminders": []
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1297113684,
+            "at": "2026-11-05T12:15:49Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 150,
+            "merits": 1177496,
+            "at": "2026-11-05T12:16:06Z"
+          },
+          "system": {
+            "name": "Muang",
+            "at": "2026-11-05T12:28:05Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Archon Delaine",
+            "progress": 0.252805,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 0,
+            "undermining": 1195,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 6,
+              "bodies": 13,
+              "value": 8439
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-05T12:31:12Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Federal Corvette",
+              "type": "federation_corvette",
+              "at": "2026-11-05T12:16:06Z"
+            },
+            "rebuy": 29503381,
+            "estimated": false,
+            "balance": 1297113684,
+            "covered": true,
+            "missing": 0,
+            "times": 43,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 29511820,
+              "rebuy": 29503381,
+              "toCash": 8439,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "Coéquipier 8",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-11-05T12:15:49Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-05T12:16:16Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-05T12:16:16Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1297113684,
+            "at": "2026-11-05T12:15:49Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 150,
+            "merits": 1177496,
+            "at": "2026-11-05T12:16:06Z"
+          },
+          "system": {
+            "name": "Muang",
+            "at": "2026-11-05T12:28:05Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "Archon Delaine",
+            "progress": 0.252805,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 0,
+            "undermining": 1195,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 6,
+              "bodies": 13,
+              "value": 8439
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-05T12:31:12Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Federal Corvette",
+              "type": "federation_corvette",
+              "at": "2026-11-05T12:16:06Z"
+            },
+            "rebuy": 29503381,
+            "estimated": false,
+            "balance": 1297113684,
+            "covered": true,
+            "missing": 0,
+            "times": 43,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 29511820,
+              "rebuy": 29503381,
+              "toCash": 8439,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "Coéquipier 8",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-11-05T12:15:49Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-05T12:16:16Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-05T12:16:16Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1441305056,
+            "at": "2026-11-01T09:33:08Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 140,
+            "merits": 1095073,
+            "at": "2026-11-01T09:33:29Z"
+          },
+          "system": {
+            "name": "Xinca",
+            "at": "2026-11-01T13:52:10Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "A. Lavigny-Duval",
+            "progress": 0.275474,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 1882,
+            "undermining": 6208,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 6,
+              "bodies": 22,
+              "value": 124767
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-01T13:52:10Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Federal Corvette",
+              "type": "federation_corvette",
+              "at": "2026-11-01T13:37:31Z"
+            },
+            "rebuy": 29592461,
+            "estimated": false,
+            "balance": 1441305056,
+            "covered": true,
+            "missing": 0,
+            "times": 48,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 29717228,
+              "rebuy": 29592461,
+              "toCash": 124767,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-01T09:33:08Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-01T09:33:35Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-01T09:33:35Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 124 767 cr de données d'exploration à vendre (6 systèmes)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 1441305056,
+            "at": "2026-11-01T09:33:08Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 140,
+            "merits": 1095073,
+            "at": "2026-11-01T09:33:29Z"
+          },
+          "system": {
+            "name": "Xinca",
+            "at": "2026-11-01T13:52:10Z",
+            "state": "Stronghold",
+            "label": "Forteresse",
+            "power": "A. Lavigny-Duval",
+            "progress": 0.275474,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": 1882,
+            "undermining": 6208,
+            "conflict": [],
+            "previous": null,
+            "change": null
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 6,
+              "bodies": 22,
+              "value": 124767
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-01T13:52:10Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Federal Corvette",
+              "type": "federation_corvette",
+              "at": "2026-11-01T13:37:31Z"
+            },
+            "rebuy": 29592461,
+            "estimated": false,
+            "balance": 1441305056,
+            "covered": true,
+            "missing": 0,
+            "times": 48,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 29717228,
+              "rebuy": 29592461,
+              "toCash": 124767,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-11-01T09:33:08Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-01T09:33:35Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Tier 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-01T09:33:35Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 124 767 cr de données d'exploration à vendre (6 systèmes)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 198005296,
+            "at": "2026-10-31T14:59:57Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 139,
+            "merits": 1094314,
+            "at": "2026-10-31T15:00:05Z"
+          },
+          "system": {
+            "name": "Synuefe GA-I b57-6",
+            "at": "2026-10-31T18:36:15Z",
+            "state": "Unoccupied",
+            "label": "Non occupé",
+            "power": null,
+            "progress": null,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": null,
+            "undermining": null,
+            "conflict": [
+              {
+                "power": "Aisling Duval",
+                "progress": 0.007608,
+                "points": 913,
+                "tier": 120000
+              }
+            ],
+            "previous": {
+              "at": "2026-10-31T15:00:05Z",
+              "label": "Non occupé",
+              "points": null,
+              "conflict": [
+                {
+                  "power": "Aisling Duval",
+                  "progress": 0.007608,
+                  "points": 913,
+                  "tier": 120000
+                }
+              ]
+            },
+            "change": {
+              "points": 0,
+              "since": "2026-10-31T15:00:05Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 29,
+              "bodies": 94,
+              "value": 124581
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-10-31T23:00:37Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-31T22:57:50Z"
+            },
+            "rebuy": 20559981,
+            "estimated": false,
+            "balance": 198005296,
+            "covered": true,
+            "missing": 0,
+            "times": 9,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 20684562,
+              "rebuy": 20559981,
+              "toCash": 124581,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-10-31T14:59:57Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": null,
+            "alertHours": 24,
+            "active": [],
+            "toClaim": []
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 124 581 cr de données d'exploration à vendre (29 systèmes)."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 198005296,
+            "at": "2026-10-31T14:59:57Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 139,
+            "merits": 1094314,
+            "at": "2026-10-31T15:00:05Z"
+          },
+          "system": {
+            "name": "Synuefe GA-I b57-6",
+            "at": "2026-10-31T18:36:15Z",
+            "state": "Unoccupied",
+            "label": "Non occupé",
+            "power": null,
+            "progress": null,
+            "points": null,
+            "tier": null,
+            "erosion": null,
+            "erosionVerifiee": false,
+            "next": null,
+            "reinforcement": null,
+            "undermining": null,
+            "conflict": [
+              {
+                "power": "Aisling Duval",
+                "progress": 0.007608,
+                "points": 913,
+                "tier": 120000
+              }
+            ],
+            "previous": {
+              "at": "2026-10-31T15:00:05Z",
+              "label": "Non occupé",
+              "points": null,
+              "conflict": [
+                {
+                  "power": "Aisling Duval",
+                  "progress": 0.007608,
+                  "points": 913,
+                  "tier": 120000
+                }
+              ]
+            },
+            "change": {
+              "points": 0,
+              "since": "2026-10-31T15:00:05Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 29,
+              "bodies": 94,
+              "value": 124581
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 0,
+            "items": [],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-10-31T23:00:37Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Panther Clipper Mk II",
+              "type": "panthermkii",
+              "at": "2026-10-31T22:57:50Z"
+            },
+            "rebuy": 20559981,
+            "estimated": false,
+            "balance": 198005296,
+            "covered": true,
+            "missing": 0,
+            "times": 9,
+            "alert": null,
+            "docked": true,
+            "atStake": {
+              "total": 20684562,
+              "rebuy": 20559981,
+              "toCash": 124581,
+              "cargo": 0,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Solo",
+              "group": null,
+              "label": "Solo",
+              "open": false,
+              "at": "2026-10-31T14:59:57Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": null,
+            "alertHours": 24,
+            "active": [],
+            "toClaim": []
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 124 581 cr de données d'exploration à vendre (29 systèmes)."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 554813934,
+            "at": "2026-11-06T14:30:09Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 159,
+            "merits": 1248766,
+            "at": "2026-11-06T08:58:20Z"
+          },
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "at": "2026-11-06T21:09:32Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Aisling Duval",
+            "progress": 0.514204,
+            "points": 179971,
+            "tier": 350000,
+            "erosion": 7705,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 35547,
+            "undermining": 5175,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-06T14:30:14Z",
+              "label": "Exploité",
+              "points": 160503,
+              "conflict": []
+            },
+            "change": {
+              "points": 19468,
+              "since": "2026-11-06T14:30:14Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 1,
+              "bodies": 2,
+              "value": 161102
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 198,
+            "items": [
+              {
+                "name": "iridium",
+                "label": "Iridium",
+                "count": 198
+              }
+            ],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-06T21:27:36Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Type-11 Prospector",
+              "type": "lakonminer",
+              "at": "2026-11-06T19:45:21Z"
+            },
+            "rebuy": 4498040,
+            "estimated": false,
+            "balance": 554813934,
+            "covered": true,
+            "missing": 0,
+            "times": 123,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 42985408,
+              "rebuy": 4498040,
+              "toCash": 161102,
+              "cargo": 38326266,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "Coéquipier 8",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-11-06T14:30:09Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-06T20:26:59Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-06T20:26:59Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 161 102 cr de données d'exploration à vendre (1 système)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /summary": {
+        "statut": 200,
+        "corps": {
+          "commander": "Testeur",
+          "credits": {
+            "balance": 554813934,
+            "at": "2026-11-06T14:30:09Z"
+          },
+          "powerplay": {
+            "power": "Aisling Duval",
+            "rank": 159,
+            "merits": 1248766,
+            "at": "2026-11-06T08:58:20Z"
+          },
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "at": "2026-11-06T21:09:32Z",
+            "state": "Exploited",
+            "label": "Exploité",
+            "power": "Aisling Duval",
+            "progress": 0.514204,
+            "points": 179971,
+            "tier": 350000,
+            "erosion": 7705,
+            "erosionVerifiee": true,
+            "next": "Consolidé",
+            "reinforcement": 35547,
+            "undermining": 5175,
+            "conflict": [],
+            "previous": {
+              "at": "2026-11-06T14:30:14Z",
+              "label": "Exploité",
+              "points": 160503,
+              "conflict": []
+            },
+            "change": {
+              "points": 19468,
+              "since": "2026-11-06T14:30:14Z"
+            }
+          },
+          "merc": {
+            "value": null,
+            "updatedAt": null,
+            "source": "saisie manuelle (absent du journal)"
+          },
+          "toCash": {
+            "bounties": 0,
+            "bonds": 0,
+            "exploration": {
+              "systems": 1,
+              "bodies": 2,
+              "value": 161102
+            },
+            "exobiology": {
+              "count": 0,
+              "value": 0,
+              "unknownValues": 0,
+              "items": []
+            },
+            "lostAt": null
+          },
+          "cargo": {
+            "count": 198,
+            "items": [
+              {
+                "name": "iridium",
+                "label": "Iridium",
+                "count": 198
+              }
+            ],
+            "powerplay": []
+          },
+          "missions": [],
+          "locker": {
+            "items": 0,
+            "components": 1000,
+            "consumables": 290,
+            "data": 0,
+            "at": "2026-11-06T21:27:36Z"
+          },
+          "goals": [],
+          "rebuy": {
+            "ship": {
+              "label": "Type-11 Prospector",
+              "type": "lakonminer",
+              "at": "2026-11-06T19:45:21Z"
+            },
+            "rebuy": 4498040,
+            "estimated": false,
+            "balance": 554813934,
+            "covered": true,
+            "missing": 0,
+            "times": 123,
+            "alert": null,
+            "docked": false,
+            "atStake": {
+              "total": 42985408,
+              "rebuy": 4498040,
+              "toCash": 161102,
+              "cargo": 38326266,
+              "unpriced": [],
+              "missionTons": 0
+            },
+            "mode": {
+              "mode": "Group",
+              "group": "Coéquipier 8",
+              "label": "Groupe privé",
+              "open": false,
+              "at": "2026-11-06T14:30:09Z"
+            },
+            "resurrect": null
+          },
+          "communityGoals": {
+            "at": "2026-11-06T20:26:59Z",
+            "alertHours": 24,
+            "active": [],
+            "toClaim": [
+              {
+                "id": 864,
+                "title": "Opération commerciale de Faulcon DeLacy",
+                "system": "AD Leonis",
+                "station": "Homer Platform",
+                "expiry": "2026-10-29T10:00:00Z",
+                "hoursLeft": 0,
+                "status": "claim",
+                "contribution": 789,
+                "contributors": 13931,
+                "total": 102482894,
+                "band": 75,
+                "inTopRank": false,
+                "topRankSize": 10,
+                "tier": 3,
+                "tierName": "Niveau 3",
+                "topTier": 6,
+                "reward": 170000000,
+                "noContribution": false,
+                "zeroAlert": false,
+                "at": "2026-11-06T20:26:59Z",
+                "claimAt": {
+                  "station": "Homer Platform",
+                  "system": "AD Leonis"
+                }
+              }
+            ]
+          },
+          "reminders": [
+            {
+              "level": "warning",
+              "text": "Au moins 161 102 cr de données d'exploration à vendre (1 système)."
+            },
+            {
+              "level": "warning",
+              "text": "Récompense d'objectif communautaire à réclamer à Homer Platform (AD Leonis) : « Opération commerciale de Faulcon DeLacy », 170 M cr."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

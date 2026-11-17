@@ -1,0 +1,17 @@
+// Modèles du module « Coup d'œil ».
+
+// Valeurs saisies à la main (ex. points de mercenaire, absents du journal)
+model GlanceValue {
+  key       String   @id
+  value     Float
+  updatedAt DateTime @updatedAt
+}
+
+// Objectifs à comparer à ce que l'on possède (crédits, mérites, points de mercenaire)
+model GlanceGoal {
+  id        Int      @id @default(autoincrement())
+  label     String
+  currency  String   // credits | merits | merc
+  target    Float
+  createdAt DateTime @default(now())
+}

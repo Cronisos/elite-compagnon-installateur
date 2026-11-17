@@ -1,0 +1,235 @@
+{
+  "bonjour": [
+    { "texte": "Salut {cmdr} ! Les réacteurs sont chauds, on y va quand tu veux.", "humeur": "content" },
+    { "texte": "o7 {cmdr}. Ton {vaisseau} t’attendait, il commençait à s’ennuyer.", "humeur": "malicieux" },
+    { "texte": "Te revoilà, {cmdr} ! J’ai gardé ta place au chaud dans le cockpit.", "humeur": "content" },
+    { "texte": "{cmdr} aux commandes. Moi au bavardage. L’équipe parfaite.", "humeur": "malicieux" },
+    { "texte": "Bonjour {cmdr} ! Un café, une poignée de crédits, et la galaxie est à nous.", "humeur": "content", "cas": "matin" },
+    { "texte": "Déjà debout, {cmdr} ? La galaxie dort encore, profitons-en.", "humeur": "malicieux", "cas": "matin" },
+    { "texte": "Bonjour {cmdr} ! Systèmes vérifiés, carburant vérifié, bonne humeur vérifiée.", "humeur": "ravi", "cas": "matin" },
+    { "texte": "Bon après-midi, {cmdr} ! Parfait pour une petite virée entre deux étoiles.", "humeur": "content", "cas": "aprem" },
+    { "texte": "Salut {cmdr} ! Cet après-midi sent bon les crédits.", "humeur": "content", "cas": "aprem" },
+    { "texte": "Bonsoir {cmdr} ! La soirée commence, les étoiles aussi.", "humeur": "content", "cas": "soir" },
+    { "texte": "Bonsoir {cmdr}. Petite session ou grosse session ? Je dis ça, je dis rien.", "humeur": "malicieux", "cas": "soir" },
+    { "texte": "Bonsoir {cmdr} ! Ton {vaisseau} piaffe d’impatience.", "humeur": "content", "cas": "soir" },
+    { "texte": "Encore debout, {cmdr} ? Bon, je ne dirai rien à personne.", "humeur": "malicieux", "cas": "nuit" },
+    { "texte": "Session de nuit, {cmdr} ? Les meilleures routes se font quand tout le monde dort.", "humeur": "malicieux", "cas": "nuit" },
+    { "texte": "Il est tard, {cmdr}… Allez, juste un saut. Ou dix.", "humeur": "endormi", "cas": "nuit" },
+    { "texte": "{cmdr} ! Ça faisait une éternité. J’ai cru que tu ne reviendrais jamais !", "humeur": "surpris", "cas": "retour" },
+    { "texte": "Te revoilà enfin, {cmdr} ! La galaxie a un peu bougé, mais moi je suis toujours là.", "humeur": "ravi", "cas": "retour" },
+    { "texte": "Oh, {cmdr} ! J’ai dépoussiéré le tableau de bord en t’attendant.", "humeur": "ravi", "cas": "retour" }
+  ],
+  "vente": [
+    { "texte": "+{profit} de bénéfice. Ça, c’est du commerce !", "humeur": "content" },
+    { "texte": "{quantite} t de {marchandise} vendues, {profit} dans la poche. Joli.", "humeur": "content" },
+    { "texte": "Belle vente ! {profit} de gagnés, ton compte en banque te dit merci.", "humeur": "ravi" },
+    { "texte": "{profit} de marge. Tu as le sens des affaires, {cmdr}.", "humeur": "malicieux" },
+    { "texte": "Hop, {profit} de plus. À ce rythme, tu vas pouvoir t’offrir un porteur. Ou deux.", "humeur": "malicieux" },
+    { "texte": "Le marché de {station} vient de te faire un beau cadeau : {profit}.", "humeur": "content" },
+    { "texte": "Tu entends ce petit bruit ? Ce sont {profit} qui tombent. J’adore ce bruit.", "humeur": "content" }
+  ],
+  "jackpot": [
+    { "texte": "WOW. {profit} d’un coup ! Je crois que je vais m’évanouir.", "humeur": "ravi" },
+    { "texte": "{profit} ! Tu as dévalisé {station} ou quoi ?", "humeur": "surpris" },
+    { "texte": "Jackpot ! {profit} de bénéfice. Tu as bien choisi ta cargaison.", "humeur": "ravi" },
+    { "texte": "Attends, je recompte… {profit}. Oui, c’est bien ça. Énorme !", "humeur": "surpris" },
+    { "texte": "{quantite} t de {marchandise} et {profit} de bénéfice. Les marchands de {station} vont parler de toi.", "humeur": "ravi" },
+    { "texte": "Avec {profit}, je propose qu’on fête ça. Moi je danse, toi tu pilotes.", "humeur": "ravi" }
+  ],
+  "perte": [
+    { "texte": "Euh… tu viens de vendre à perte : {perte} envolés.", "humeur": "inquiet" },
+    { "texte": "{perte} de perte sur ta cargaison de {marchandise}. On dira que c’était pour la science.", "humeur": "triste" },
+    { "texte": "Aïe. {perte} dans le rouge. Le marché n’était pas d’humeur.", "humeur": "triste" },
+    { "texte": "Vendre moins cher qu’à l’achat… stratégie audacieuse. {perte} de perte.", "humeur": "malicieux" },
+    { "texte": "On a perdu {perte}, mais pas notre dignité. Enfin, presque.", "humeur": "malicieux" },
+    { "texte": "Petite perte de {perte}. Parfois, il faut juste libérer la soute.", "humeur": "neutre" }
+  ],
+  "merites": [
+    { "texte": "+{merites} mérites pour {puissance}. Bien joué !", "humeur": "content" },
+    { "texte": "{merites} mérites de plus. Tu en es à {total}, ça commence à compter.", "humeur": "content" },
+    { "texte": "Encore {merites} mérites. {puissance} te remercie.", "humeur": "content" },
+    { "texte": "Mérites encaissés : {merites}. La galaxie se souviendra de ton nom. Peut-être.", "humeur": "malicieux" },
+    { "texte": "{merites} mérites ! Continue comme ça et on te dédiera une statue.", "humeur": "malicieux" },
+    { "texte": "{merites} mérites d’un coup ! Là, tu fais vraiment bouger les lignes.", "humeur": "ravi", "cas": "gros" },
+    { "texte": "Énorme moisson : {merites} mérites. Total : {total}. Respect.", "humeur": "ravi", "cas": "gros" }
+  ],
+  "minage": [
+    { "texte": "Rafale terminée : {tonnes} t de {minerai} raffinées. Beau travail !", "humeur": "content" },
+    { "texte": "{tonnes} t de {minerai} en soute. Ça, c’est du caillou qui rapporte.", "humeur": "content" },
+    { "texte": "Fin de l’astéroïde : {tonnes} t. On en cherche un autre ?", "humeur": "neutre" },
+    { "texte": "{tonnes} t de {minerai}. Mes capteurs adorent le bruit de la raffinerie.", "humeur": "content" },
+    { "texte": "Joli coup de laser ! {tonnes} t de {minerai} pour la collection.", "humeur": "malicieux" },
+    { "texte": "{tonnes} t raffinées d’un seul caillou ! Tu l’as complètement vidé, ce pauvre astéroïde.", "humeur": "ravi", "cas": "gros" },
+    { "texte": "Rafale de compétition : {tonnes} t de {minerai}. Ta soute te remercie.", "humeur": "ravi", "cas": "gros" }
+  ],
+  "amarrage": [
+    { "texte": "Amarrage accordé à {station}, plateforme {plateforme}. Pose-toi en douceur.", "humeur": "neutre" },
+    { "texte": "Plateforme {plateforme} ! Essaie de ne pas rayer la peinture.", "humeur": "malicieux" },
+    { "texte": "{station} nous ouvre ses portes. Plateforme {plateforme}, c’est par là.", "humeur": "content" },
+    { "texte": "Autorisation reçue. Plateforme {plateforme}, et on lève le pied dans le hangar.", "humeur": "neutre" },
+    { "texte": "Plateforme {plateforme} à {station}. Je retiens mon souffle pour l’atterrissage.", "humeur": "malicieux" },
+    { "texte": "C’est bon pour {station}. Pense au train d’atterrissage, hein.", "humeur": "malicieux" }
+  ],
+  "refus": [
+    { "texte": "Amarrage refusé à {station} : {raison}. Charmant accueil.", "humeur": "triste" },
+    { "texte": "Refus de {station} : {raison}. On ne se vexe pas, on retente.", "humeur": "neutre" },
+    { "texte": "Pas de plateforme pour nous : {raison}. Snif.", "humeur": "triste" },
+    { "texte": "Ils disent non. Motif : {raison}. Moi, je dis qu’ils ont tort.", "humeur": "malicieux" },
+    { "texte": "{station} ne veut pas de nous… {raison}.", "humeur": "inquiet" },
+    { "texte": "Trop loin pour demander ! Rapproche-toi de {station} et redemande.", "humeur": "malicieux", "cas": "distance" },
+    { "texte": "Ton vaisseau est trop grand pour leurs plateformes. Ce n’est pas toi, c’est eux.", "humeur": "malicieux", "cas": "toolarge" },
+    { "texte": "Ils n’aiment pas ton dossier, apparemment. Et si on payait ces amendes ?", "humeur": "inquiet", "cas": "offences" },
+    { "texte": "Plus une place de libre à {station}. Un petit tour et on redemande ?", "humeur": "neutre", "cas": "nospace" },
+    { "texte": "{station} nous considère comme hostiles. Je ne traînerais pas dans le coin…", "humeur": "inquiet", "cas": "hostile" },
+    { "texte": "Ton chasseur est encore dehors ! Rappelle-le avant de demander.", "humeur": "neutre", "cas": "activefighter" },
+    { "texte": "Le porteur va sauter, il ne prend plus personne. On attendra.", "humeur": "neutre", "cas": "jumpimminent" }
+  ],
+  "interception": [
+    { "texte": "Interdiction ! Suis le vecteur d’évasion, vite !", "humeur": "surpris" },
+    { "texte": "Quelqu’un essaie de nous arracher au supercruise ! Accroche-toi !", "humeur": "inquiet" },
+    { "texte": "Alerte interdiction ! Garde le cap sur le vecteur !", "humeur": "inquiet" },
+    { "texte": "On nous tire hors du supercruise ! Bats-toi !", "humeur": "surpris" },
+    { "texte": "Tentative d’interdiction ! Tu luttes, ou tu te soumets et tu files. À toi de voir !", "humeur": "inquiet" }
+  ],
+  "interdiction": [
+    { "texte": "Interdiction réussie pour {interdicteur}. Boucliers, armes ou fuite : on décide vite !", "humeur": "inquiet" },
+    { "texte": "Arrachés au supercruise. {interdicteur} veut discuter, apparemment.", "humeur": "inquiet" },
+    { "texte": "Aïe, ils nous ont eus. Recharge le FSD et file, ou montre-leur qui commande !", "humeur": "inquiet" },
+    { "texte": "On a de la compagnie : {interdicteur}. Je déteste qu’on nous coupe la route.", "humeur": "inquiet" },
+    { "texte": "Soumission tactique, j’approuve. Le FSD se recharge plus vite : prépare-toi à repartir.", "humeur": "neutre", "cas": "soumis" },
+    { "texte": "Tu t’es laissé faire pour mieux filer ? Malin. On dégage dès que possible.", "humeur": "malicieux", "cas": "soumis" }
+  ],
+  "evasion": [
+    { "texte": "Évasion réussie ! {interdicteur} peut repasser.", "humeur": "ravi" },
+    { "texte": "Ha ! {interdicteur} a raté son coup. Trop fort, {cmdr}.", "humeur": "malicieux" },
+    { "texte": "Interdiction ratée. Ils peuvent toujours courir derrière nous.", "humeur": "malicieux" },
+    { "texte": "On leur a filé entre les doigts ! Bien joué.", "humeur": "ravi" },
+    { "texte": "Trop rapide pour eux. Je n’ai même pas eu le temps d’avoir peur.", "humeur": "content" }
+  ],
+  "boucliers": [
+    { "texte": "Boucliers tombés ! Attention à la coque !", "humeur": "inquiet" },
+    { "texte": "Plus de boucliers ! Je suggère poliment de déguerpir.", "humeur": "inquiet" },
+    { "texte": "Boucliers à zéro ! Envoie l’énergie aux systèmes, vite !", "humeur": "surpris" },
+    { "texte": "On est à découvert ! Boucliers hors service.", "humeur": "inquiet" },
+    { "texte": "Les boucliers ont lâché. Ce serait le bon moment pour une sortie élégante.", "humeur": "inquiet" }
+  ],
+  "boucliersRetour": [
+    { "texte": "Boucliers rétablis ! On respire.", "humeur": "content" },
+    { "texte": "Les boucliers sont de retour. Ouf.", "humeur": "content" },
+    { "texte": "Boucliers en ligne. On reprend la danse ?", "humeur": "malicieux" },
+    { "texte": "La bulle de protection est revenue ! Je me sens tout de suite mieux.", "humeur": "content" },
+    { "texte": "Boucliers OK. Tu peux recommencer à prendre des risques… raisonnables.", "humeur": "malicieux" }
+  ],
+  "degats": [
+    { "texte": "Coque à {coque}. Ça frotte un peu, là.", "humeur": "inquiet" },
+    { "texte": "On prend des coups ! Coque à {coque}.", "humeur": "inquiet" },
+    { "texte": "Aïe, aïe, aïe. Coque à {coque}, fais attention à nous.", "humeur": "inquiet" },
+    { "texte": "La peinture souffre : coque à {coque}.", "humeur": "malicieux" },
+    { "texte": "Coque à {coque}. Je ne panique pas, mais je prends des notes.", "humeur": "inquiet" }
+  ],
+  "coqueCritique": [
+    { "texte": "Coque à {coque} ! On sort de là, MAINTENANT !", "humeur": "surpris" },
+    { "texte": "Alerte rouge : coque à {coque} ! Fuis, vite !", "humeur": "inquiet" },
+    { "texte": "Coque à {coque} ! Je ferme les yeux, dis-moi quand c’est fini.", "humeur": "inquiet" },
+    { "texte": "Ça sent le roussi, {cmdr} : coque à {coque} !", "humeur": "inquiet" },
+    { "texte": "Coque à {coque} ! Saut, boost, n’importe quoi, mais vite !", "humeur": "surpris" }
+  ],
+  "mort": [
+    { "texte": "Oh non… on a explosé.", "humeur": "triste", "cas": "vaisseau" },
+    { "texte": "Et boum. Bon, ça arrive aux meilleurs.", "humeur": "triste", "cas": "vaisseau" },
+    { "texte": "Vaisseau détruit. Je garde le moral pour deux.", "humeur": "triste", "cas": "vaisseau" },
+    { "texte": "Destruction totale. J’espère que tu as de quoi payer le rachat…", "humeur": "inquiet", "cas": "vaisseau" },
+    { "texte": "Ouch. On dira que c’était un test de solidité. Raté.", "humeur": "triste" },
+    { "texte": "Rideau. Respire un grand coup, on repart.", "humeur": "triste" },
+    { "texte": "Au tapis ! À pied, on est quand même moins solide qu’avec une coque.", "humeur": "triste", "cas": "pied" },
+    { "texte": "Aïe… Ta combinaison n’a pas tenu le choc.", "humeur": "inquiet", "cas": "pied" },
+    { "texte": "Face contre terre. Pas la pose la plus héroïque, {cmdr}.", "humeur": "triste", "cas": "pied" }
+  ],
+  "reapparition": [
+    { "texte": "Te revoilà ! Rachat payé : {cout}. Le portefeuille pleure un peu.", "humeur": "neutre", "cas": "rachat" },
+    { "texte": "Rachat à {cout}. Cher, mais toujours moins qu’un vaisseau neuf.", "humeur": "neutre", "cas": "rachat" },
+    { "texte": "Réapparition réussie. Ça a coûté {cout}, on se rattrapera.", "humeur": "content", "cas": "rachat" },
+    { "texte": "Nouveau départ ! {cout} de rachat, et une leçon gratuite en prime.", "humeur": "malicieux", "cas": "rachat" },
+    { "texte": "On repart de presque zéro. Allez, on y retourne !", "humeur": "content", "cas": "rachat" },
+    { "texte": "On souffle un coup, et on y retourne.", "humeur": "content" },
+    { "texte": "Et c’est reparti ! La galaxie n’a même pas eu le temps de nous oublier.", "humeur": "malicieux" },
+    { "texte": "Retour sans frais. Pas mal, pour un crash !", "humeur": "content", "cas": "gratuit" },
+    { "texte": "Te revoilà en un seul morceau, et gratuitement en plus.", "humeur": "content", "cas": "gratuit" },
+    { "texte": "Te revoilà sur tes deux jambes. On évite les balles, cette fois ?", "humeur": "malicieux", "cas": "pied" },
+    { "texte": "Combinaison comme neuve, dignité un peu froissée. On y retourne !", "humeur": "content", "cas": "pied" },
+    { "texte": "Retour au point de départ, à pied. Les bottes sont propres, au moins.", "humeur": "neutre", "cas": "pied" }
+  ],
+  "carburant": [
+    { "texte": "Carburant bas : {carburant} ! Une étoile à écoper serait la bienvenue.", "humeur": "inquiet" },
+    { "texte": "Réservoir à {carburant}. On écope ou on cherche une station ?", "humeur": "inquiet" },
+    { "texte": "Plus que {carburant} de carburant. Je n’ai pas envie d’appeler les Fuel Rats.", "humeur": "inquiet" },
+    { "texte": "{carburant} au réservoir. Les étoiles KGBFOAM sont tes amies.", "humeur": "malicieux" },
+    { "texte": "On roule sur la réserve : {carburant}. On fait le plein ?", "humeur": "inquiet" },
+    { "texte": "Carburant bas ! Ce n’est pas le moment de faire du tourisme.", "humeur": "inquiet" }
+  ],
+  "rang": [
+    { "texte": "Promotion en {domaine} ! On fête ça ?", "humeur": "ravi" },
+    { "texte": "Nouveau rang en {domaine}. Tu grimpes, {cmdr} !", "humeur": "ravi" },
+    { "texte": "{domaine} : rang supérieur. Je le savais.", "humeur": "content" },
+    { "texte": "Félicitations ! Promotion en {domaine}. Je mets à jour ta légende.", "humeur": "ravi" },
+    { "texte": "Ding ! Promotion en {domaine}. Ça, c’est fait.", "humeur": "malicieux" },
+    { "texte": "Rang Powerplay {niveau} pour {puissance} ! Ça grimpe.", "humeur": "content", "cas": "powerplay" },
+    { "texte": "{puissance} te fait monter au rang {niveau}. Respect.", "humeur": "ravi", "cas": "powerplay" }
+  ],
+  "ingenieur": [
+    { "texte": "{ingenieur} t’invite à passer le voir. Le début d’une belle amitié ?", "humeur": "content", "cas": "invite" },
+    { "texte": "Invitation de {ingenieur} ! On commence à être connus dans le milieu.", "humeur": "malicieux", "cas": "invite" },
+    { "texte": "{ingenieur} a entendu parler de toi. Bonne nouvelle… je crois.", "humeur": "malicieux", "cas": "invite" },
+    { "texte": "{ingenieur} débloqué ! Son atelier t’est ouvert.", "humeur": "ravi", "cas": "debloque" },
+    { "texte": "Accès à {ingenieur} obtenu. Tes modules vont adorer.", "humeur": "ravi", "cas": "debloque" },
+    { "texte": "Nouvel ingénieur : {ingenieur}. Ton vaisseau tremble déjà d’impatience.", "humeur": "content", "cas": "debloque" },
+    { "texte": "Grade 5 chez {ingenieur} ! Le maximum, rien que ça.", "humeur": "ravi", "cas": "grade5" },
+    { "texte": "{ingenieur} t’a tout appris : grade 5 atteint.", "humeur": "ravi", "cas": "grade5" },
+    { "texte": "Grade maximal chez {ingenieur}. Tu fais partie de la maison, maintenant.", "humeur": "content", "cas": "grade5" }
+  ],
+  "porteur": [
+    { "texte": "Saut du porteur programmé vers {systeme}, départ à {heure}. Attachez vos ceintures !", "humeur": "content" },
+    { "texte": "Le porteur part pour {systeme} à {heure}. Tout le monde à bord ?", "humeur": "neutre" },
+    { "texte": "Cap sur {systeme} ! Départ du porteur à {heure}.", "humeur": "content" },
+    { "texte": "Destination {systeme}, {heure}. J’ai déjà le mal de l’espace.", "humeur": "malicieux" },
+    { "texte": "Saut prévu à {heure}. Pense à vérifier ton tritium.", "humeur": "neutre" }
+  ],
+  "porteurArrivee": [
+    { "texte": "Porteur arrivé à {systeme}. Tout est en place, rien de cassé.", "humeur": "content" },
+    { "texte": "Et voilà {systeme} ! Le porteur a fait son saut sans casse.", "humeur": "content" },
+    { "texte": "Bienvenue à {systeme}. Vous pouvez détacher vos ceintures.", "humeur": "malicieux" },
+    { "texte": "Saut terminé : {systeme}. J’adore ce petit frisson.", "humeur": "ravi" },
+    { "texte": "{systeme}, terminus ! Tout le monde descend… ou pas.", "humeur": "malicieux" }
+  ],
+  "nouveauSysteme": [
+    { "texte": "{systeme}, première visite ! Ça sent la découverte.", "humeur": "surpris" },
+    { "texte": "Jamais venus à {systeme}. On regarde un peu le paysage ?", "humeur": "content" },
+    { "texte": "Nouveau système dans le carnet de bord : {systeme}.", "humeur": "content" },
+    { "texte": "{systeme}… ça ne me dit rien. Bienvenue en terre inconnue !", "humeur": "surpris" },
+    { "texte": "Saut de {distance} vers l’inconnu : {systeme}. J’adore.", "humeur": "ravi" },
+    { "texte": "Premier passage à {systeme}. Je prends une photo mentale.", "humeur": "malicieux" }
+  ],
+  "ennui": [
+    { "texte": "Ça fait {minutes} min que rien ne bouge… Je peux faire une sieste ?", "humeur": "endormi" },
+    { "texte": "Psst… {cmdr} ? Tu es toujours là ?", "humeur": "endormi" },
+    { "texte": "Pendant ta pause, je compte les étoiles. J’en suis à quatre mille douze.", "humeur": "malicieux" },
+    { "texte": "Zzz… Ah, pardon. Rien ne bougeait depuis {minutes} min.", "humeur": "endormi" },
+    { "texte": "Je commence à m’ennuyer. Même le vide intersidéral est plus bavard.", "humeur": "endormi" },
+    { "texte": "Si c’est la pause café, j’en veux un aussi.", "humeur": "malicieux" }
+  ],
+  "reveil": [
+    { "texte": "Ah ! Te revoilà. Je ne dormais pas, je méditais.", "humeur": "surpris" },
+    { "texte": "Hein ? Oh, c’est reparti ! J’étais à deux doigts de rêver de crédits.", "humeur": "surpris" },
+    { "texte": "Bon retour ! On reprend où on en était ?", "humeur": "content" },
+    { "texte": "Fin de la pause ? Parfait, j’ai rechargé mes batteries.", "humeur": "content" },
+    { "texte": "Réveil en fanfare ! Enfin, en silence, mais tu as compris l’idée.", "humeur": "malicieux" }
+  ],
+  "aurevoir": [
+    { "texte": "À plus, {cmdr} ! Je garde le vaisseau propre.", "humeur": "content" },
+    { "texte": "Fin de session. Repose-toi, la galaxie sera encore là demain.", "humeur": "content" },
+    { "texte": "o7 {cmdr}. À la prochaine !", "humeur": "content" },
+    { "texte": "Déjà ? Bon… je vais compter les étoiles en t’attendant.", "humeur": "triste" },
+    { "texte": "Je coupe les moteurs. À très vite, {cmdr} !", "humeur": "content" },
+    { "texte": "Mission accomplie pour aujourd’hui. Reviens vite !", "humeur": "content" }
+  ]
+}

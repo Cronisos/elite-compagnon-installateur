@@ -1,0 +1,4025 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "systemAddress": "9468120933817",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "systemAddress": "9468120933817",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "systemAddress": "9468120933817",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "ICZ KC-U b3-4",
+          "systemAddress": "9468120933817",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "systemAddress": "1458040738922",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "systemAddress": "1458040738922",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "systemAddress": "1458040738922",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Bleae Thua ED-D c12-5",
+          "systemAddress": "1458040738922",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "station": "TST-001",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "planets": [
+            {
+              "body": "Synuefe OU-E c28-2 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 4",
+              "name": "4",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 25,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 2,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 2
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "station": "TST-001",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 1,
+            "waypointId": null,
+            "label": "Synuefe OU-E c28-2",
+            "siteNumber": null,
+            "body": null,
+            "system": "Synuefe OU-E c28-2",
+            "startedAt": "2026-11-07T08:17:30.000Z",
+            "endedAt": "2026-11-07T14:08:30.000Z",
+            "segments": "[{\"start\":\"2026-11-07T08:17:30.000Z\",\"end\":\"2026-11-07T14:08:30.000Z\"}]",
+            "summary": {
+              "durationSec": 12204,
+              "refined": 388,
+              "transferred": 428,
+              "perHour": 114,
+              "recentPerHour": 73,
+              "sold": 384,
+              "unsold": 4,
+              "soldOutside": 242,
+              "credits": 68864976,
+              "creditsPerHour": 20314152,
+              "merits": 47251,
+              "meritsPerHour": 13938,
+              "ores": [
+                {
+                  "key": "iridium",
+                  "label": "Iridium",
+                  "refined": 388,
+                  "transferred": 428,
+                  "sold": 384,
+                  "credits": 68864976
+                }
+              ],
+              "materials": [
+                {
+                  "key": "sulphur",
+                  "label": "Soufre",
+                  "count": 23,
+                  "grade": 1
+                },
+                {
+                  "key": "nickel",
+                  "label": "Nickel",
+                  "count": 22,
+                  "grade": 1
+                },
+                {
+                  "key": "chromium",
+                  "label": "Chrome",
+                  "count": 19,
+                  "grade": 2
+                },
+                {
+                  "key": "selenium",
+                  "label": "Sélénium",
+                  "count": 5,
+                  "grade": 4
+                },
+                {
+                  "key": "tellurium",
+                  "label": "Tellure",
+                  "count": 3,
+                  "grade": 4
+                },
+                {
+                  "key": "ruthenium",
+                  "label": "Ruthénium",
+                  "count": 2,
+                  "grade": 4
+                },
+                {
+                  "key": "yttrium",
+                  "label": "Yttrium",
+                  "count": 2,
+                  "grade": 4
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "planets": [
+            {
+              "body": "Synuefe OU-E c28-2 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 4",
+              "name": "4",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 25,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 2,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 2
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "systemAddress": "766391617907",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "systemAddress": "766391617907",
+          "planets": [
+            {
+              "body": "Gungnir 3",
+              "name": "3",
+              "subType": "High metal content body",
+              "type": "Haute teneur en métaux",
+              "distance": null,
+              "gravity": null,
+              "count": 14,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 1,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 1
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Magnésite",
+            "Or",
+            "Iridium",
+            "Platine",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "systemAddress": "766391617907",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 1,
+            "waypointId": null,
+            "label": "16 Librae",
+            "siteNumber": null,
+            "body": null,
+            "system": "16 Librae",
+            "startedAt": "2026-10-29T13:19:06.000Z",
+            "endedAt": "2026-10-29T14:20:46.000Z",
+            "segments": "[{\"start\":\"2026-10-29T13:19:06.000Z\",\"end\":\"2026-10-29T14:20:46.000Z\"}]",
+            "summary": {
+              "durationSec": 1323,
+              "refined": 7,
+              "transferred": 0,
+              "perHour": 19,
+              "recentPerHour": 19,
+              "sold": 0,
+              "unsold": 7,
+              "soldOutside": 0,
+              "credits": 0,
+              "creditsPerHour": 0,
+              "merits": 0,
+              "meritsPerHour": 0,
+              "ores": [
+                {
+                  "key": "magnesite",
+                  "label": "Magnésite",
+                  "refined": 4,
+                  "transferred": 0,
+                  "sold": 0,
+                  "credits": 0
+                },
+                {
+                  "key": "gold",
+                  "label": "Or",
+                  "refined": 3,
+                  "transferred": 0,
+                  "sold": 0,
+                  "credits": 0
+                }
+              ],
+              "materials": [
+                {
+                  "key": "sulphur",
+                  "label": "Soufre",
+                  "count": 3,
+                  "grade": 1
+                },
+                {
+                  "key": "vanadium",
+                  "label": "Vanadium",
+                  "count": 2,
+                  "grade": 2
+                },
+                {
+                  "key": "nickel",
+                  "label": "Nickel",
+                  "count": 1,
+                  "grade": 1
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Gungnir",
+          "systemAddress": "766391617907",
+          "planets": [
+            {
+              "body": "Gungnir 3",
+              "name": "3",
+              "subType": "High metal content body",
+              "type": "Haute teneur en métaux",
+              "distance": null,
+              "gravity": null,
+              "count": 14,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 1,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 1
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Magnésite",
+            "Or",
+            "Iridium",
+            "Platine",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "systemAddress": "29258256754089",
+          "station": "MiesvanderRohe Gateway",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "systemAddress": "29258256754089",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "systemAddress": "29258256754089",
+          "station": "MiesvanderRohe Gateway",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Talta",
+          "systemAddress": "29258256754089",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "station": "Broo's Legacy",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "station": "Broo's Legacy",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Muang",
+          "systemAddress": "4481966019282",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "systemAddress": "4408557439331",
+          "station": "TST-001",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "systemAddress": "4408557439331",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "systemAddress": "4408557439331",
+          "station": "TST-001",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Xinca",
+          "systemAddress": "4408557439331",
+          "planets": [],
+          "totals": {
+            "planets": 0,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 0
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "systemAddress": "13868046558697",
+          "station": "Rorschach Terminal",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": null
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "systemAddress": "13868046558697",
+          "planets": [
+            {
+              "body": "Synuefe GA-I b57-6 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 7,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe GA-I b57-6 4",
+              "name": "4",
+              "subType": "High metal content body",
+              "type": "Haute teneur en métaux",
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 2,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 2
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "systemAddress": "13868046558697",
+          "station": "Rorschach Terminal",
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "runningSince": null,
+          "priorSec": 10015,
+          "pause": "offline",
+          "waypointId": null,
+          "label": "Synuefe GA-I b57-6",
+          "siteNumber": null,
+          "body": null,
+          "system": "Synuefe GA-I b57-6",
+          "startedAt": "2026-10-31T19:37:21.000Z",
+          "durationSec": 10015,
+          "refined": 1191,
+          "transferred": 1184,
+          "perHour": 428,
+          "recentPerHour": 287,
+          "sold": 1184,
+          "unsold": 7,
+          "soldOutside": 0,
+          "credits": 303910304,
+          "creditsPerHour": 109243844,
+          "merits": 0,
+          "meritsPerHour": 0,
+          "ores": [
+            {
+              "key": "iridium",
+              "label": "Iridium",
+              "refined": 1191,
+              "transferred": 1184,
+              "sold": 1184,
+              "credits": 303910304
+            }
+          ],
+          "materials": [
+            {
+              "key": "chromium",
+              "label": "Chrome",
+              "count": 47,
+              "grade": 2
+            },
+            {
+              "key": "tin",
+              "label": "Étain",
+              "count": 38,
+              "grade": 3
+            },
+            {
+              "key": "molybdenum",
+              "label": "Molybdène",
+              "count": 29,
+              "grade": 3
+            },
+            {
+              "key": "niobium",
+              "label": "Niobium",
+              "count": 28,
+              "grade": 3
+            },
+            {
+              "key": "yttrium",
+              "label": "Yttrium",
+              "count": 14,
+              "grade": 4
+            },
+            {
+              "key": "selenium",
+              "label": "Sélénium",
+              "count": 9,
+              "grade": 4
+            },
+            {
+              "key": "tellurium",
+              "label": "Tellure",
+              "count": 9,
+              "grade": 4
+            },
+            {
+              "key": "ruthenium",
+              "label": "Ruthénium",
+              "count": 6,
+              "grade": 4
+            },
+            {
+              "key": "iron",
+              "label": "Fer",
+              "count": 5,
+              "grade": 1
+            },
+            {
+              "key": "nickel",
+              "label": "Nickel",
+              "count": 3,
+              "grade": 1
+            },
+            {
+              "key": "phosphorus",
+              "label": "Phosphore",
+              "count": 1,
+              "grade": 1
+            },
+            {
+              "key": "sulphur",
+              "label": "Soufre",
+              "count": 1,
+              "grade": 1
+            }
+          ],
+          "cargo": {
+            "srv": 0,
+            "srvMax": 72,
+            "srvName": "VRS Rhino",
+            "ship": 0,
+            "shipCapacity": 1184,
+            "shipItems": []
+          },
+          "prices": {
+            "rhodplumsite": 793457,
+            "palladium": 53814,
+            "iridium": 256681
+          }
+        }
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe GA-I b57-6",
+          "systemAddress": "13868046558697",
+          "planets": [
+            {
+              "body": "Synuefe GA-I b57-6 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 7,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe GA-I b57-6 4",
+              "name": "4",
+              "subType": "High metal content body",
+              "type": "Haute teneur en métaux",
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 2,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 2
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "id": 1,
+          "runningSince": 1794005900000,
+          "priorSec": 0,
+          "pause": null,
+          "waypointId": null,
+          "label": "Synuefe OU-E c28-2",
+          "siteNumber": null,
+          "body": null,
+          "system": "Synuefe OU-E c28-2",
+          "startedAt": "2026-11-06T22:58:20.000Z",
+          "durationSec": 796,
+          "refined": 45,
+          "transferred": 0,
+          "perHour": 204,
+          "recentPerHour": 183,
+          "sold": 0,
+          "unsold": 45,
+          "soldOutside": 0,
+          "credits": 0,
+          "creditsPerHour": 0,
+          "merits": 0,
+          "meritsPerHour": 0,
+          "ores": [
+            {
+              "key": "iridium",
+              "label": "Iridium",
+              "refined": 45,
+              "transferred": 0,
+              "sold": 0,
+              "credits": 0
+            }
+          ],
+          "materials": [
+            {
+              "key": "sulphur",
+              "label": "Soufre",
+              "count": 9,
+              "grade": 1
+            },
+            {
+              "key": "chromium",
+              "label": "Chrome",
+              "count": 1,
+              "grade": 2
+            },
+            {
+              "key": "nickel",
+              "label": "Nickel",
+              "count": 1,
+              "grade": 1
+            }
+          ],
+          "cargo": {
+            "srv": 45,
+            "srvMax": 72,
+            "srvName": "VRS Rhino",
+            "ship": 198,
+            "shipCapacity": 268,
+            "shipItems": [
+              {
+                "label": "Iridium",
+                "count": 198
+              }
+            ]
+          },
+          "prices": {
+            "iridium": 193567,
+            "titanium": 5479,
+            "haematite": 1253
+          }
+        }
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "planets": [
+            {
+              "body": "Synuefe OU-E c28-2 2",
+              "name": "2",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 20,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 4",
+              "name": "4",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 25,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 3,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 3
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    },
+    "direct": {
+      "GET /waypoints": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /categories": {
+        "statut": 200,
+        "corps": {
+          "bio": "Exobiologie",
+          "geo": "Géologie",
+          "guardian": "Site Gardien",
+          "thargoid": "Site Thargoïde",
+          "settlement": "Base / colonie",
+          "mining": "Minage",
+          "wreck": "Épave / signal",
+          "view": "Point de vue",
+          "autre": "Autre"
+        }
+      },
+      "GET /sweep": {
+        "statut": 200,
+        "corps": {
+          "state": "empty",
+          "scan": 1500,
+          "marge": 300,
+          "startedAt": null,
+          "eep": null,
+          "eeps": 0
+        }
+      },
+      "GET /sweep/top-ores": {
+        "statut": 503,
+        "corps": {
+          "error": "Ardent Insight injoignable : prix des minerais indisponibles pour le moment."
+        }
+      },
+      "GET /sweep/markets": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "ores": {},
+          "ranking": [],
+          "error": null,
+          "ardent": {
+            "auto": false,
+            "loaded": false,
+            "at": null
+          }
+        }
+      },
+      "GET /here": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "station": null,
+          "body": null,
+          "latitude": null,
+          "longitude": null,
+          "altitude": null,
+          "heading": null,
+          "planetRadius": null,
+          "vehicle": null,
+          "grounded": false,
+          "at": null
+        }
+      },
+      "GET /guide-target": {
+        "statut": 200,
+        "corps": {
+          "id": null
+        }
+      },
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "id": 3,
+          "runningSince": 1794005901000,
+          "priorSec": 1533,
+          "pause": null,
+          "waypointId": null,
+          "label": "Synuefe OU-E c28-2",
+          "siteNumber": null,
+          "body": null,
+          "system": "Synuefe OU-E c28-2",
+          "startedAt": "2026-11-06T21:30:05.000Z",
+          "durationSec": 2328,
+          "refined": 243,
+          "transferred": 198,
+          "perHour": 376,
+          "recentPerHour": 383,
+          "sold": 0,
+          "unsold": 243,
+          "soldOutside": 0,
+          "credits": 0,
+          "creditsPerHour": 0,
+          "merits": 0,
+          "meritsPerHour": 0,
+          "ores": [
+            {
+              "key": "iridium",
+              "label": "Iridium",
+              "refined": 243,
+              "transferred": 198,
+              "sold": 0,
+              "credits": 0
+            }
+          ],
+          "materials": [
+            {
+              "key": "sulphur",
+              "label": "Soufre",
+              "count": 25,
+              "grade": 1
+            },
+            {
+              "key": "nickel",
+              "label": "Nickel",
+              "count": 13,
+              "grade": 1
+            },
+            {
+              "key": "iron",
+              "label": "Fer",
+              "count": 9,
+              "grade": 1
+            },
+            {
+              "key": "chromium",
+              "label": "Chrome",
+              "count": 8,
+              "grade": 2
+            },
+            {
+              "key": "yttrium",
+              "label": "Yttrium",
+              "count": 2,
+              "grade": 4
+            }
+          ],
+          "cargo": {
+            "srv": 45,
+            "srvMax": 72,
+            "srvName": "VRS Rhino",
+            "ship": 198,
+            "shipCapacity": 268,
+            "shipItems": [
+              {
+                "label": "Iridium",
+                "count": 198
+              }
+            ]
+          },
+          "prices": {
+            "iridium": 193567,
+            "titanium": 5479,
+            "haematite": 1253
+          }
+        }
+      },
+      "GET /sessions": {
+        "statut": 200,
+        "corps": [
+          {
+            "id": 2,
+            "waypointId": null,
+            "label": "Synuefe OU-E c28-2",
+            "siteNumber": null,
+            "body": null,
+            "system": "Synuefe OU-E c28-2",
+            "startedAt": "2026-11-06T16:12:06.000Z",
+            "endedAt": "2026-11-06T21:08:41.000Z",
+            "segments": "[{\"start\":\"2026-11-06T16:12:06.000Z\",\"end\":\"2026-11-06T21:08:41.000Z\"}]",
+            "summary": {
+              "durationSec": 11875,
+              "refined": 814,
+              "transferred": 804,
+              "perHour": 247,
+              "recentPerHour": 312,
+              "sold": 804,
+              "unsold": 10,
+              "soldOutside": 0,
+              "credits": 155627868,
+              "creditsPerHour": 47179817,
+              "merits": 60779,
+              "meritsPerHour": 18426,
+              "ores": [
+                {
+                  "key": "iridium",
+                  "label": "Iridium",
+                  "refined": 814,
+                  "transferred": 804,
+                  "sold": 804,
+                  "credits": 155627868
+                }
+              ],
+              "materials": [
+                {
+                  "key": "iron",
+                  "label": "Fer",
+                  "count": 56,
+                  "grade": 1
+                },
+                {
+                  "key": "nickel",
+                  "label": "Nickel",
+                  "count": 50,
+                  "grade": 1
+                },
+                {
+                  "key": "sulphur",
+                  "label": "Soufre",
+                  "count": 43,
+                  "grade": 1
+                },
+                {
+                  "key": "phosphorus",
+                  "label": "Phosphore",
+                  "count": 28,
+                  "grade": 1
+                },
+                {
+                  "key": "chromium",
+                  "label": "Chrome",
+                  "count": 25,
+                  "grade": 2
+                },
+                {
+                  "key": "cadmium",
+                  "label": "Cadmium",
+                  "count": 17,
+                  "grade": 3
+                },
+                {
+                  "key": "manganese",
+                  "label": "Manganèse",
+                  "count": 10,
+                  "grade": 2
+                },
+                {
+                  "key": "yttrium",
+                  "label": "Yttrium",
+                  "count": 8,
+                  "grade": 4
+                },
+                {
+                  "key": "selenium",
+                  "label": "Sélénium",
+                  "count": 8,
+                  "grade": 4
+                },
+                {
+                  "key": "tellurium",
+                  "label": "Tellure",
+                  "count": 7,
+                  "grade": 4
+                },
+                {
+                  "key": "ruthenium",
+                  "label": "Ruthénium",
+                  "count": 7,
+                  "grade": 4
+                },
+                {
+                  "key": "vanadium",
+                  "label": "Vanadium",
+                  "count": 3,
+                  "grade": 2
+                },
+                {
+                  "key": "tungsten",
+                  "label": "Tungstène",
+                  "count": 3,
+                  "grade": 3
+                },
+                {
+                  "key": "tin",
+                  "label": "Étain",
+                  "count": 1,
+                  "grade": 3
+                }
+              ]
+            }
+          },
+          {
+            "id": 1,
+            "waypointId": null,
+            "label": "HIP 73834",
+            "siteNumber": null,
+            "body": null,
+            "system": "HIP 73834",
+            "startedAt": "2026-11-06T09:24:24.000Z",
+            "endedAt": "2026-11-06T09:30:31.000Z",
+            "segments": "[{\"start\":\"2026-11-06T09:24:24.000Z\",\"end\":\"2026-11-06T09:30:31.000Z\"}]",
+            "summary": {
+              "durationSec": 367,
+              "refined": 8,
+              "transferred": 0,
+              "perHour": 78,
+              "recentPerHour": 79,
+              "sold": 0,
+              "unsold": 8,
+              "soldOutside": 0,
+              "credits": 0,
+              "creditsPerHour": 0,
+              "merits": 0,
+              "meritsPerHour": 0,
+              "ores": [
+                {
+                  "key": "iridium",
+                  "label": "Iridium",
+                  "refined": 8,
+                  "transferred": 0,
+                  "sold": 0,
+                  "credits": 0
+                }
+              ],
+              "materials": [
+                {
+                  "key": "iron",
+                  "label": "Fer",
+                  "count": 1,
+                  "grade": 1
+                },
+                {
+                  "key": "sulphur",
+                  "label": "Soufre",
+                  "count": 1,
+                  "grade": 1
+                },
+                {
+                  "key": "cadmium",
+                  "label": "Cadmium",
+                  "count": 1,
+                  "grade": 3
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "GET /survey": {
+        "statut": 200,
+        "corps": {
+          "system": "Synuefe OU-E c28-2",
+          "systemAddress": "633943823090",
+          "planets": [
+            {
+              "body": "Synuefe OU-E c28-2 2",
+              "name": "2",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 20,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 3",
+              "name": "3",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 10,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            },
+            {
+              "body": "Synuefe OU-E c28-2 4",
+              "name": "4",
+              "subType": null,
+              "type": null,
+              "distance": null,
+              "gravity": null,
+              "count": 25,
+              "seen": 0,
+              "good": 0,
+              "best": null,
+              "verdict": "unknown",
+              "depletedUntil": null,
+              "out": false,
+              "notes": "",
+              "sites": [],
+              "looseWaypoints": [],
+              "ores": [],
+              "here": false
+            }
+          ],
+          "totals": {
+            "planets": 3,
+            "good": 0,
+            "depleted": 0,
+            "low": 0,
+            "out": 0,
+            "unknown": 3
+          },
+          "current": {
+            "body": null,
+            "site": null
+          },
+          "ores": [
+            "Iridium",
+            "Platine",
+            "Or",
+            "Rhodplumsite",
+            "Palladium",
+            "Osmium",
+            "Argent",
+            "Uranium",
+            "Titane",
+            "Hématite",
+            "Magnésite",
+            "Hélium"
+          ],
+          "spansh": {
+            "auto": false,
+            "available": true,
+            "loaded": false,
+            "at": null,
+            "error": null
+          }
+        }
+      },
+      "GET /survey/systems": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /drills": {
+        "statut": 200,
+        "corps": {
+          "active": false,
+          "max": 6,
+          "destroyRadius": null,
+          "drills": []
+        }
+      },
+      "GET /drills/guide": {
+        "statut": 200,
+        "corps": {
+          "target": null,
+          "state": "off"
+        }
+      },
+      "GET /captures": {
+        "statut": 200,
+        "corps": []
+      },
+      "GET /eeps": {
+        "statut": 200,
+        "corps": {
+          "eeps": [],
+          "actif": null
+        }
+      }
+    }
+  }
+}

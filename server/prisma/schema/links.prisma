@@ -1,0 +1,14 @@
+// Modèles du module « Applications externes ».
+
+// Lien du menu personnel, ou modèle de lien contextuel (kind renseigné)
+model ExternalLink {
+  id        Int      @id @default(autoincrement())
+  theme     String   // Commerce, Ingénierie, Vaisseaux…
+  label     String
+  url       String   // peut contenir {system}, {station}, {marketId}, {systemAddress}
+  kind      String?  // null = lien du menu ; "system", "station" = lien contextuel
+  position  Int      @default(0)
+  verified  Boolean  @default(true) // false = adresse proposée, à tester par l'utilisateur
+  source    String?  // d'où vient l'adresse (vérification)
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,14 @@
+{
+  "name": "elite-companion-overlay",
+  "private": true,
+  "author": "Cronisos Lysiris",
+  "description": "Overlay transparent par-dessus le jeu : affiche une page HUD de l'application",
+  "main": "main.js",
+  "scripts": {
+    "start": "node start.js",
+    "test": "node --test place.test.js atomic.test.js guards.test.js main.test.js closed.test.js canal.test.js"
+  },
+  "devDependencies": {
+    "electron": "^45.2.3"
+  }
+}

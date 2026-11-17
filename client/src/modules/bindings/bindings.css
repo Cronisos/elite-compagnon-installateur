@@ -1,0 +1,140 @@
+/* Garde des commandes : bandeau de l'app, fenêtre de l'overlay et page. Classes préfixées « bnd- ». */
+
+/* --- Bandeau, en haut de toutes les pages ---
+   Placé au bas de la barre du haut (header.topbar, collante) et dans le flux : il pousse la page au lieu de la
+   couvrir, et les alertes flottantes des autres modules (.buy-alerts, .route-questions) passent au-dessus. */
+.bnd-banner {
+  position: relative; /* repère du bouton ✕ */
+  align-self: center;
+  box-sizing: border-box;
+  width: min(760px, 100%);
+  margin: 0 0 0.6rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 0.8rem 2.6rem 0.8rem 1rem;
+  border: 1px solid var(--bad);
+  border-radius: var(--radius);
+  background: #2a0f10;
+  color: #ffd6d6;
+}
+/* Sans barre du haut : à la suite de la page, dans le flux */
+.content > .bnd-banner {
+  margin: 1rem auto 0;
+}
+.bnd-banner.is-warning {
+  border-color: var(--warn);
+  background: #241a08;
+  color: #ffe3b0;
+}
+.bnd-banner-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--bad);
+}
+.bnd-banner.is-warning .bnd-banner-icon,
+.bnd-banner.is-warning strong {
+  color: var(--warn);
+}
+.bnd-banner-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+.bnd-banner strong {
+  color: var(--bad);
+  font-size: 1.05rem;
+}
+.bnd-banner-message {
+  font-weight: 600;
+  color: var(--text-strong);
+}
+.bnd-banner-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.bnd-banner-hint a {
+  color: var(--accent);
+}
+.bnd-banner-close {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  padding: 0.2rem 0.5rem;
+  color: var(--muted);
+}
+
+/* --- Page --- */
+.bnd-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.bnd-status strong {
+  font-size: 1.1rem;
+}
+.bnd-path {
+  font-family: Consolas, 'Cascadia Mono', monospace;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
+.bnd-lines {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.bnd-lines li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.bnd-lines code {
+  font-family: Consolas, 'Cascadia Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--text-strong);
+  overflow-wrap: anywhere;
+}
+.bnd-steps {
+  margin: 0.4rem 0 0;
+  padding-left: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* --- Fenêtre de l'overlay (/hud/bindings), taille d'un HUD : 700 × 124 --- */
+.bnd-hud.hud.hud-overlay {
+  border-color: rgba(255, 77, 77, 0.6);
+}
+.bnd-hud .bnd-hud-row {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 0;
+}
+.bnd-hud .bnd-hud-icon {
+  font-size: 30px;
+  line-height: 1;
+  color: #ff4d4d;
+  text-shadow: 0 0 12px rgba(255, 77, 77, 0.5);
+}
+.bnd-hud.is-warning .bnd-hud-icon,
+.bnd-hud.is-warning .bnd-hud-title {
+  color: #ff9a3c;
+}
+.bnd-hud .bnd-hud-title {
+  color: #ff4d4d;
+}
+.bnd-hud .bnd-hud-message {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #f4f6f8;
+}

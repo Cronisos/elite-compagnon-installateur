@@ -1,0 +1,302 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1232,
+          "pad": "L",
+          "range": 17.920342152365354,
+          "rangeEmpty": 33.134552,
+          "system": "ICZ KC-U b3-4",
+          "station": null
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1232,
+          "pad": "L",
+          "range": 17.920342152365354,
+          "rangeEmpty": 33.134552,
+          "system": "ICZ KC-U b3-4",
+          "station": null
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-9 Heavy",
+          "cargo": null,
+          "pad": null,
+          "range": null,
+          "rangeEmpty": null,
+          "system": "Bleae Thua ED-D c12-5",
+          "station": null
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-9 Heavy",
+          "cargo": null,
+          "pad": null,
+          "range": null,
+          "rangeEmpty": null,
+          "system": "Bleae Thua ED-D c12-5",
+          "station": null
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Caspian Explorer",
+          "cargo": 336,
+          "pad": "M",
+          "range": 59.62668205892568,
+          "rangeEmpty": 77.645729,
+          "system": "Muang",
+          "station": null
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Caspian Explorer",
+          "cargo": 336,
+          "pad": "M",
+          "range": 59.62668205892568,
+          "rangeEmpty": 77.645729,
+          "system": "Muang",
+          "station": null
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-11 Prospector",
+          "cargo": 268,
+          "pad": "M",
+          "range": 16.221401220843806,
+          "rangeEmpty": 25.069561,
+          "system": "Synuefe OU-E c28-2",
+          "station": "TST-001"
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-11 Prospector",
+          "cargo": 268,
+          "pad": "M",
+          "range": 16.221401220843806,
+          "rangeEmpty": 25.069561,
+          "system": "Synuefe OU-E c28-2",
+          "station": "TST-001"
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1184,
+          "pad": "L",
+          "range": 21.427454759324185,
+          "rangeEmpty": 39.701969,
+          "system": "Gungnir",
+          "station": null
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1184,
+          "pad": "L",
+          "range": 21.427454759324185,
+          "rangeEmpty": 39.701969,
+          "system": "Gungnir",
+          "station": null
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Asp Explorer",
+          "cargo": 28,
+          "pad": "M",
+          "range": 26.487307591397848,
+          "rangeEmpty": 30.040483,
+          "system": "Talta",
+          "station": "MiesvanderRohe Gateway"
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Asp Explorer",
+          "cargo": 28,
+          "pad": "M",
+          "range": 26.487307591397848,
+          "rangeEmpty": 30.040483,
+          "system": "Talta",
+          "station": "MiesvanderRohe Gateway"
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Federal Corvette",
+          "cargo": 0,
+          "pad": "L",
+          "range": 20.093769295158616,
+          "rangeEmpty": 20.345615,
+          "system": "Muang",
+          "station": "Broo's Legacy"
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Federal Corvette",
+          "cargo": 0,
+          "pad": "L",
+          "range": 20.093769295158616,
+          "rangeEmpty": 20.345615,
+          "system": "Muang",
+          "station": "Broo's Legacy"
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Federal Corvette",
+          "cargo": 0,
+          "pad": "L",
+          "range": 18.570069300803322,
+          "rangeEmpty": 18.793663,
+          "system": "Xinca",
+          "station": "TST-001"
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Federal Corvette",
+          "cargo": 0,
+          "pad": "L",
+          "range": 18.570069300803322,
+          "rangeEmpty": 18.793663,
+          "system": "Xinca",
+          "station": "TST-001"
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1184,
+          "pad": "L",
+          "range": 21.427454759324185,
+          "rangeEmpty": 39.701969,
+          "system": "Synuefe GA-I b57-6",
+          "station": "Rorschach Terminal"
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Panther Clipper Mk II",
+          "cargo": 1184,
+          "pad": "L",
+          "range": 21.427454759324185,
+          "rangeEmpty": 39.701969,
+          "system": "Synuefe GA-I b57-6",
+          "station": "Rorschach Terminal"
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-11 Prospector",
+          "cargo": 268,
+          "pad": "M",
+          "range": 16.221401220843806,
+          "rangeEmpty": 25.069561,
+          "system": "Synuefe OU-E c28-2",
+          "station": null
+        }
+      }
+    },
+    "direct": {
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "ship": "Type-11 Prospector",
+          "cargo": 268,
+          "pad": "M",
+          "range": 16.221401220843806,
+          "rangeEmpty": 25.069561,
+          "system": "Synuefe OU-E c28-2",
+          "station": null
+        }
+      }
+    }
+  }
+}

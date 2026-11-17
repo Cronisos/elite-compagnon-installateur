@@ -1,0 +1,12 @@
+{
+  "name": "elite-compagnon-bureau",
+  "productName": "Elite Compagnon",
+  "private": true,
+  "author": "Cronisos Lysiris",
+  "description": "App de bureau : serveur, interface et overlay dans un seul programme (Electron de l'overlay)",
+  "main": "main.js",
+  "scripts": {
+    "start": "node start.js",
+    "test": "node --test donnees.test.js etat.test.js emplacement.test.js gif.test.js gifFond.test.js interface.test.js noeud.test.js partage.test.js ports.test.js processus.test.js sites.test.js version.test.js"
+  }
+}

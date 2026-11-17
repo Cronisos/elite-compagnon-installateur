@@ -1,0 +1,658 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "ICZ KC-U b3-4",
+            "address": 9468120933817,
+            "at": "2026-10-27T23:58:27Z"
+          },
+          "away": false,
+          "count": 2,
+          "groups": [
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Kummer Sanctuary",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Pfister Landing",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "ICZ KC-U b3-4",
+            "address": 9468120933817,
+            "at": "2026-10-27T23:58:27Z"
+          },
+          "away": false,
+          "count": 2,
+          "groups": [
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Kummer Sanctuary",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Pfister Landing",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Bleae Thua ED-D c12-5",
+            "address": 1458040738922,
+            "at": "2026-11-01T19:55:30Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Bleae Thua ED-D c12-5",
+            "address": 1458040738922,
+            "at": "2026-11-01T19:55:30Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Muang",
+            "address": 4481966019282,
+            "at": "2026-11-02T19:38:14Z"
+          },
+          "away": false,
+          "count": 4,
+          "groups": [
+            {
+              "group": "megaship",
+              "title": "Mégavaisseaux",
+              "items": [
+                {
+                  "label": "MUA-501 Henry-class Hauler",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            },
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Chief Commerce Bureau",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Camus Millennial Ring",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Green Lagoon General Hospital",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Muang",
+            "address": 4481966019282,
+            "at": "2026-11-02T19:38:14Z"
+          },
+          "away": false,
+          "count": 4,
+          "groups": [
+            {
+              "group": "megaship",
+              "title": "Mégavaisseaux",
+              "items": [
+                {
+                  "label": "MUA-501 Henry-class Hauler",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            },
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Chief Commerce Bureau",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Camus Millennial Ring",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Green Lagoon General Hospital",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "address": 633943823090,
+            "at": "2026-11-07T14:09:19Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "res",
+              "title": "Sites d'extraction",
+              "items": [
+                {
+                  "label": "Site d'extraction de ressources [Danger]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources [Pauvre]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "address": 633943823090,
+            "at": "2026-11-07T14:09:19Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "res",
+              "title": "Sites d'extraction",
+              "items": [
+                {
+                  "label": "Site d'extraction de ressources [Danger]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources [Pauvre]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Gungnir",
+            "address": 766391617907,
+            "at": "2026-10-29T14:41:50Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Gungnir",
+            "address": 766391617907,
+            "at": "2026-10-29T14:41:50Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Talta",
+            "address": 29258256754089,
+            "at": "2026-10-26T19:47:01Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Talta",
+            "address": 29258256754089,
+            "at": "2026-10-26T19:47:01Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Muang",
+            "address": 4481966019282,
+            "at": "2026-11-05T12:28:05Z"
+          },
+          "away": false,
+          "count": 4,
+          "groups": [
+            {
+              "group": "megaship",
+              "title": "Mégavaisseaux",
+              "items": [
+                {
+                  "label": "MUA-501 Henry-class Hauler",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            },
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Camus Millennial Ring",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Chief Commerce Bureau",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Green Lagoon General Hospital",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Muang",
+            "address": 4481966019282,
+            "at": "2026-11-05T12:28:05Z"
+          },
+          "away": false,
+          "count": 4,
+          "groups": [
+            {
+              "group": "megaship",
+              "title": "Mégavaisseaux",
+              "items": [
+                {
+                  "label": "MUA-501 Henry-class Hauler",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            },
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Camus Millennial Ring",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Chief Commerce Bureau",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Green Lagoon General Hospital",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Xinca",
+            "address": 4408557439331,
+            "at": "2026-11-01T13:52:10Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Xinca",
+            "address": 4408557439331,
+            "at": "2026-11-01T13:52:10Z"
+          },
+          "away": false,
+          "count": 0,
+          "groups": []
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe GA-I b57-6",
+            "address": 13868046558697,
+            "at": "2026-10-31T18:36:15Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Schwarzschild Platform",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Boleyn Relay",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Mcguire Hub",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe GA-I b57-6",
+            "address": 13868046558697,
+            "at": "2026-10-31T18:36:15Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "installation",
+              "title": "Installations",
+              "items": [
+                {
+                  "label": "Schwarzschild Platform",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Boleyn Relay",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Mcguire Hub",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "address": 633943823090,
+            "at": "2026-11-06T21:09:32Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "res",
+              "title": "Sites d'extraction",
+              "items": [
+                {
+                  "label": "Site d'extraction de ressources [Danger]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources [Pauvre]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /session": {
+        "statut": 200,
+        "corps": {
+          "system": {
+            "name": "Synuefe OU-E c28-2",
+            "address": 633943823090,
+            "at": "2026-11-06T21:09:32Z"
+          },
+          "away": false,
+          "count": 3,
+          "groups": [
+            {
+              "group": "res",
+              "title": "Sites d'extraction",
+              "items": [
+                {
+                  "label": "Site d'extraction de ressources [Danger]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources [Pauvre]",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                },
+                {
+                  "label": "Site d'extraction de ressources",
+                  "count": 1,
+                  "threat": null,
+                  "expires": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

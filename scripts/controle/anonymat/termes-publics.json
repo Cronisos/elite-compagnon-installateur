@@ -1,0 +1,10 @@
+{
+  "about": "Termes publics du jeu (noms par défaut, vocabulaire du jeu) qu'un autre joueur peut porter tel quel : un porteur d'escadron qui garde le nom que le jeu lui donne s'appelle « Squadron Carrier ». Ce ne sont pas des secrets : 60-anonymat ne les cherche pas dans les fichiers de test (others.words). S'y ajoutent les libellés des règles (terms de server/src/modules/regles/regles.json). N'ajoute ici QUE des termes publics du jeu ou de l'app, jamais un nom choisi par un joueur.",
+  "termes": [
+    "Squadron Carrier",
+    "Fleet Carrier",
+    "Carrier",
+    "Squadron",
+    "Commander"
+  ]
+}

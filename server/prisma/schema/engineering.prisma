@@ -1,0 +1,50 @@
+// Modèles du module « Mon ingénierie ».
+
+// Plan d'ingénierie d'un vaisseau (config visée)
+model EngineeringPlan {
+  id        Int          @id @default(autoincrement())
+  shipId    Int?         // ShipID du jeu (null pour un vaisseau vierge)
+  commanderId String?    // commandant du vaisseau (FID, sinon « nom:<nom> », core/commander.js) ; null : plan vierge, ou d'avant les commandants
+  shipType  String       // clé coriolis du vaisseau (ex. "anaconda")
+  name      String
+  selected  Boolean      @default(true) // inclus dans le dashboard
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  modules   PlanModule[]
+}
+
+model PlanModule {
+  id                  Int             @id @default(autoincrement())
+  planId              Int
+  plan                EngineeringPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  slot                String          // clé d'emplacement (ex. "std-fsd", "int-3", "hp-0")
+  module              String?         // symbole du module visé (null = emplacement vide)
+  blueprint           String?         // modification visée (ex. "FSD_LongRange")
+  grade               Int             @default(0)
+  experimental        String?         // effet expérimental visé (ex. "special_fsd_heavy")
+  currentModule       String?
+  currentBlueprint    String?
+  currentGrade        Int             @default(0)
+  currentQuality      Float           @default(0)
+  currentExperimental String?
+
+  @@unique([planId, slot])
+}
+
+// Inventaire des matériaux, reconstruit depuis le journal
+model MaterialInventory {
+  name      String   @id // nom interne du journal (ex. "chemicalprocessors")
+  label     String
+  type      String   // Raw, Manufactured, Encoded
+  grade     Int
+  count     Int
+  updatedAt DateTime @updatedAt
+}
+
+// Version des données de référence téléchargées
+model ReferenceData {
+  id           Int      @id @default(1)
+  version      String
+  downloadedAt DateTime
+  files        Int
+}

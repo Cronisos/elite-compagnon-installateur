@@ -1,0 +1,15 @@
+// Modèles du module « Constructeur de builds ».
+
+// Build enregistré, au format EDSY (identifiants d'eddb.js)
+model Build {
+  id         Int      @id @default(autoincrement())
+  name       String
+  shipId     Int      // identifiant EDSY du vaisseau
+  shipType   String   // nom du vaisseau dans le journal (ex. "cutter")
+  gameShipId Int?     // ShipID du jeu : vaisseau réel auquel le build est destiné
+  commanderId String? // commandant de ce vaisseau (FID, sinon « nom:<nom> », core/commander.js) ; null : aucun vaisseau, ou d'avant les commandants
+  slots      String   // JSON : { hardpoint: [...], utility, component, military, internal }
+  notes      String   @default("")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

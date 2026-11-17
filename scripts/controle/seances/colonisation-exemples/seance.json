@@ -1,0 +1,11 @@
+{
+  "titre": "Colonisation : exemples documentés du module (dépôt, livraison, revendication, balise, abandon), sur un journal construit",
+  "origine": "exemples documentés de server/src/modules/colonisation/fixtures/examples.js (EDDI, BGS-Tally, SrvSurvey, schéma edomh), journal construit",
+  "maintenant": "2026-11-01T21:10:00Z",
+  "fichiers": [
+    {
+      "nom": "Journal.2026-11-01T195500.01.log",
+      "lignes": 14
+    }
+  ]
+}

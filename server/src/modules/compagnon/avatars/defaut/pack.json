@@ -1,0 +1,15 @@
+{
+  "nom": "Copilote",
+  "auteur": "Compagnon Elite (personnage original)",
+  "humeurs": {
+    "neutre": "neutre.svg",
+    "clignement": "clignement.svg",
+    "content": "content.svg",
+    "ravi": "ravi.svg",
+    "inquiet": "inquiet.svg",
+    "triste": "triste.svg",
+    "malicieux": "malicieux.svg",
+    "surpris": "surpris.svg",
+    "endormi": "endormi.svg"
+  }
+}

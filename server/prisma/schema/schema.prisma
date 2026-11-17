@@ -1,0 +1,30 @@
+// Schéma commun : configuration Prisma et modèles partagés par toute l'application.
+// Chaque module déclare ses propres modèles dans un fichier séparé de ce dossier.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Adresse de la base : server/prisma.config.mjs (Prisma 7), la même que l'app (core/paths.js, databaseFileUrl)
+datasource db {
+  provider = "sqlite"
+}
+
+// Paramètres globaux (une seule ligne, id = 1)
+model Settings {
+  id              Int    @id @default(1)
+  journalPath     String
+  hoursPerEvening Float  @default(3)
+}
+
+// Nom donné par le joueur à un vaisseau, par (commandant, ShipID du jeu) : deux Cutter restent distincts, et le
+// vaisseau n° 1 d'un second compte sur le même PC n'a pas le nom du n° 1 du premier (server/src/core/commander.js)
+model ShipNickname {
+  id          Int      @id @default(autoincrement())
+  commanderId String?  // FID du commandant, sinon « nom:<nom> » ; null : nom d'avant les commandants (migration 0002)
+  shipId      Int
+  nickname    String
+  updatedAt   DateTime @updatedAt
+
+  @@unique([commanderId, shipId])
+}

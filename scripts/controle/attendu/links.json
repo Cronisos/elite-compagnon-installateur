@@ -1,0 +1,5222 @@
+{
+  "boucle-commerce-2026-10-27": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "ICZ KC-U b3-4",
+            "systemAddress": 9468120933817,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=ICZ%20KC-U%20b3-4"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/9468120933817"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-28T00:07:17.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "ICZ KC-U b3-4",
+            "systemAddress": 9468120933817,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=ICZ%20KC-U%20b3-4"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/9468120933817"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "colonisation-exemples": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Bleae%20Thua%20ED-D%20c12-5"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/1458040738922"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T21:10:00.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Bleae Thua ED-D c12-5",
+            "systemAddress": 1458040738922,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Bleae%20Thua%20ED-D%20c12-5"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/1458040738922"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ingenieur-2026-11-02": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Muang"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4481966019282"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-02T19:49:24.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Muang"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4481966019282"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "minage-rhino-2026-11-07": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": "TST-001",
+            "marketId": 3700000001
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20OU-E%20c28-2"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/633943823090"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=TST-001%20[Synuefe%20OU-E%20c28-2]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/3700000001"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-07T14:23:13.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": "TST-001",
+            "marketId": 3700000001
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20OU-E%20c28-2"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/633943823090"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=TST-001%20[Synuefe%20OU-E%20c28-2]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/3700000001"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "mort-srv-2026-10-29": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Gungnir",
+            "systemAddress": 766391617907,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Gungnir"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/766391617907"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-29T14:49:32.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Gungnir",
+            "systemAddress": 766391617907,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Gungnir"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/766391617907"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "objectif-communautaire-2026-10-26": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Talta",
+            "systemAddress": 29258256754089,
+            "station": "MiesvanderRohe Gateway",
+            "marketId": 4225986051
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Talta"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/29258256754089"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=MiesvanderRohe%20Gateway%20[Talta]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/4225986051"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-26T20:46:08.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Talta",
+            "systemAddress": 29258256754089,
+            "station": "MiesvanderRohe Gateway",
+            "marketId": 4225986051
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Talta"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/29258256754089"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=MiesvanderRohe%20Gateway%20[Talta]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/4225986051"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "rangs-ingenieurs-2026-11-05": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": "Broo's Legacy",
+            "marketId": 128674695
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Muang"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4481966019282"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=Broo's%20Legacy%20[Muang]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/128674695"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-05T12:41:17.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Muang",
+            "systemAddress": 4481966019282,
+            "station": "Broo's Legacy",
+            "marketId": 128674695
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Muang"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4481966019282"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=Broo's%20Legacy%20[Muang]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/128674695"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "saut-porteur-2026-11-01": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Xinca",
+            "systemAddress": 4408557439331,
+            "station": "TST-001",
+            "marketId": 3700000001
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Xinca"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4408557439331"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=TST-001%20[Xinca]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/3700000001"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-01T14:02:56.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Xinca",
+            "systemAddress": 4408557439331,
+            "station": "TST-001",
+            "marketId": 3700000001
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Xinca"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/4408557439331"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=TST-001%20[Xinca]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/3700000001"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-10-31": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe GA-I b57-6",
+            "systemAddress": 13868046558697,
+            "station": "Rorschach Terminal",
+            "marketId": 4330329347
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20GA-I%20b57-6"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/13868046558697"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=Rorschach%20Terminal%20[Synuefe%20GA-I%20b57-6]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/4330329347"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-10-31T23:16:57.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe GA-I b57-6",
+            "systemAddress": 13868046558697,
+            "station": "Rorschach Terminal",
+            "marketId": 4330329347
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20GA-I%20b57-6"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/13868046558697"
+            },
+            {
+              "id": 3,
+              "kind": "station",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search=Rorschach%20Terminal%20[Synuefe%20GA-I%20b57-6]"
+            },
+            {
+              "id": 4,
+              "kind": "station",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/4330329347"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ventes-powerplay-2026-11-06": {
+    "historique": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20OU-E%20c28-2"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/633943823090"
+            }
+          ]
+        }
+      }
+    },
+    "direct": {
+      "GET /links": {
+        "statut": 200,
+        "corps": {
+          "themes": [
+            "Ici et maintenant",
+            "Commerce",
+            "Ingénierie",
+            "Vaisseaux",
+            "Powerplay",
+            "Escadron",
+            "Galaxie",
+            "Commandant",
+            "Autres"
+          ],
+          "links": [
+            {
+              "id": 1,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search={system}",
+              "kind": "system",
+              "position": 0,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 2,
+              "theme": "Ici et maintenant",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/{systemAddress}",
+              "kind": "system",
+              "position": 1,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 3,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Inara",
+              "url": "https://inara.cz/elite/station/?search={station}%20[{system}]",
+              "kind": "station",
+              "position": 2,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py) et EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 4,
+              "theme": "Ici et maintenant",
+              "label": "Station sur Spansh",
+              "url": "https://spansh.co.uk/station/{marketId}",
+              "kind": "station",
+              "position": 3,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 5,
+              "theme": "Galaxie",
+              "label": "Inara",
+              "url": "https://inara.cz/elite/",
+              "kind": null,
+              "position": 4,
+              "verified": true,
+              "source": "EDMarketConnector (plugins/inara.py)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 6,
+              "theme": "Galaxie",
+              "label": "Spansh",
+              "url": "https://spansh.co.uk/",
+              "kind": null,
+              "position": 5,
+              "verified": true,
+              "source": "EDDiscovery (EliteDangerousCore)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 7,
+              "theme": "Vaisseaux",
+              "label": "EDSY (constructeur de builds)",
+              "url": "https://edsy.org/",
+              "kind": null,
+              "position": 6,
+              "verified": true,
+              "source": "code source EDSY",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 8,
+              "theme": "Vaisseaux",
+              "label": "Coriolis (constructeur de builds)",
+              "url": "https://coriolis.io/",
+              "kind": null,
+              "position": 7,
+              "verified": true,
+              "source": "coriolis-data (package.json)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 9,
+              "theme": "Commerce",
+              "label": "Recherche de marchandises",
+              "url": "https://inara.cz/elite/commodities/",
+              "kind": null,
+              "position": 8,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 10,
+              "theme": "Commerce",
+              "label": "Routes commerciales",
+              "url": "https://inara.cz/elite/market-traderoutes/",
+              "kind": null,
+              "position": 9,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 11,
+              "theme": "Ingénierie",
+              "label": "Ingénieurs",
+              "url": "https://inara.cz/elite/engineers/",
+              "kind": null,
+              "position": 10,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 12,
+              "theme": "Ingénierie",
+              "label": "Recettes (blueprints)",
+              "url": "https://inara.cz/elite/blueprints/",
+              "kind": null,
+              "position": 11,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 13,
+              "theme": "Ingénierie",
+              "label": "Matériaux",
+              "url": "https://inara.cz/elite/components/",
+              "kind": null,
+              "position": 12,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 14,
+              "theme": "Vaisseaux",
+              "label": "Stations les plus proches",
+              "url": "https://inara.cz/elite/nearest-stations/",
+              "kind": null,
+              "position": 13,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 15,
+              "theme": "Powerplay",
+              "label": "Powerplay",
+              "url": "https://inara.cz/elite/powerplay/",
+              "kind": null,
+              "position": 14,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 16,
+              "theme": "Escadron",
+              "label": "Escadrons",
+              "url": "https://inara.cz/elite/squadrons/",
+              "kind": null,
+              "position": 15,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 17,
+              "theme": "Galaxie",
+              "label": "GalNet",
+              "url": "https://inara.cz/elite/galnet/",
+              "kind": null,
+              "position": 16,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 18,
+              "theme": "Galaxie",
+              "label": "Objectifs communautaires",
+              "url": "https://inara.cz/elite/communitygoals/",
+              "kind": null,
+              "position": 17,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            },
+            {
+              "id": 19,
+              "theme": "Commandant",
+              "label": "Mon profil de commandant",
+              "url": "https://inara.cz/elite/cmdr/",
+              "kind": null,
+              "position": 18,
+              "verified": false,
+              "source": "proposition non vérifiée (Inara bloque les accès automatisés)",
+              "createdAt": "2026-11-06T23:11:36.000Z"
+            }
+          ]
+        }
+      },
+      "GET /context": {
+        "statut": 200,
+        "corps": {
+          "vars": {
+            "system": "Synuefe OU-E c28-2",
+            "systemAddress": 633943823090,
+            "station": null,
+            "marketId": null
+          },
+          "links": [
+            {
+              "id": 1,
+              "kind": "system",
+              "label": "Système sur Inara",
+              "url": "https://inara.cz/elite/starsystem/?search=Synuefe%20OU-E%20c28-2"
+            },
+            {
+              "id": 2,
+              "kind": "system",
+              "label": "Système sur Spansh",
+              "url": "https://spansh.co.uk/system/633943823090"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
