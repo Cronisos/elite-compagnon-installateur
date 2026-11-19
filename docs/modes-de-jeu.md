@@ -180,6 +180,17 @@ l'heure de départ et le tritium.
 Elle s'ajoute au mode de jeu en cours et se ferme 2 min après le départ, à l'arrivée, ou à l'annulation du saut.
 Comme les autres, elle se déplace avec ✥ et garde sa position. Il faut que l'app tourne au moment de la programmation.
 
+**Cargaison estimée** (`server/src/modules/carrier/cargo.js`, `GET /api/modules/carrier/cargo`). Le jeu n'écrit nulle
+part le contenu d'un porteur, seulement ce que tu y fais : le module l'estime, porteur par porteur (son MarketID),
+depuis tout l'historique du journal. `CargoTransfer` à quai au porteur : « tocarrier » ajoute, « toship » retire,
+« tosrv » est ignoré ; `MarketSell` à son marché ajoute, `MarketBuy` retire ; jamais sous zéro. Ton porteur est celui
+de `CarrierStats`, qui donne aussi le total réel à bord (`SpaceUsage.Cargo`, vu à 1 748 t dans la séance de minage du
+7 nov. 2026) : l'écart avec l'estimation est montré, jamais corrigé. Il vient de ce que tes journaux ne voient pas :
+achats et ventes des autres joueurs à son marché, transferts d'autres membres, tout ce qui précède tes journaux. Un
+porteur qui n'est pas le tien (escadron) est suivi à part, d'après tes seuls transferts. La Colonisation s'en sert
+(voir [Colonisation](colonisation.md)). À vérifier avec un vrai journal : le sens « toship » à quai au porteur, et la
+forme des noms de `CargoTransfer` (« steel » supposé, comme Cargo.json).
+
 ## Refroidissement FSD et « SCO prêt »
 
 Sans fenêtre : une jauge ronde par refroidissement, icône de propulseur au centre (FSD en bleu, SCO en orange), anneau qui

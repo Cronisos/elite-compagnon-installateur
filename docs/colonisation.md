@@ -75,6 +75,13 @@ Liste de courses et fin estimée (`plan.js`, calculs purs) :
   la compterait plusieurs fois ; les autres affichent « soute comptée pour le chantier actif ». La cargaison de
   mission (ligne de Cargo.json avec `MissionID`, gardé pour cela par l'état du jeu) ne compte pas : elle est réservée
   à la mission. Les marchandises volées comptent.
+- **Ton porteur** : sa cargaison estimée (module Porteur, voir [Saut du porteur](modes-de-jeu.md#saut-du-porteur), lue
+  par son API locale toutes les 30 s et 1 s après un transfert, un achat ou une vente) est déduite après la soute :
+  **à acheter** = reste − soute − porteur, jamais négatif, pour le chantier actif seulement (comme la soute : elle ne
+  sert qu'une fois). La page montre le porteur (total estimé, écart au total que le jeu donne, en orange) avec la case
+  « Compter sa cargaison dans « À acheter » » (cochée par défaut ; `PUT /settings { carrier }`, gardée dans
+  `colonisation-reglages.json` à côté de l'archive) ; le détail d'un chantier a une colonne « Porteur », le HUD et la
+  liste de courses disent ce qui est sur le porteur. Seulement ton porteur (`CarrierStats`), pas celui d'un autre.
 - **Trajets** = reste ÷ capacité de soute du vaisseau actuel (`CargoCapacity` du Loadout), arrondi au-dessus ;
   inconnus sans capacité, 0 sans reste.
 - **Durée d'une boucle** : saisie, sinon mesurée sur tes livraisons à ce chantier (médiane des écarts entre deux

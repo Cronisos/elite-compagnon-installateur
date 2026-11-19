@@ -5,6 +5,14 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { deadlineText, etaText, hudCells, hudLine, releveText, stationLabel, statusOf, toBuyList, toLocalInput } from './view.js';
 
+test('HUD : ce qui est sur ton porteur, à côté de la soute', () => {
+  const plan = { known: true, items: [], totals: { required: 100, remaining: 80, toBuy: 30, inHold: 20, onCarrier: 30 }, trips: 1, capacity: 720 };
+  const cells = hudCells({ reason: 'pinned', site: { label: 'X', progress: 0.2, plan } });
+  assert.equal(cells[2].sub, '20 t soute · 30 t porteur');
+  const sansPorteur = hudCells({ reason: 'pinned', site: { label: 'X', progress: 0.2, plan: { ...plan, totals: { ...plan.totals, onCarrier: 0 } } } });
+  assert.equal(sansPorteur[2].sub, '20 t en soute');
+});
+
 test('projet de l’escadron : nom d’un chantier relevé par un membre, et qui l’a relevé', () => {
   assert.equal(stationLabel('$EXT_PANEL_ColonisationShip; Judson Depot'), 'Vaisseau de colonisation · Judson Depot');
   assert.equal(stationLabel('$EXT_PNL_ColonisationShip:#index=2;'), 'Vaisseau de colonisation · n° 2');

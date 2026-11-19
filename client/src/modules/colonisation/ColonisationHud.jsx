@@ -59,13 +59,14 @@ export function ShoppingListOverlay() {
           <div key={i.symbol} className="cl-row">
             <span className="cl-name">{i.name}</span>
             {i.inHold > 0 && <span className="cl-hold">{int(i.inHold)} en soute</span>}
+            {i.onCarrier > 0 && <span className="cl-hold">{int(i.onCarrier)} sur le porteur</span>}
             <span className="cl-qty">{int(i.toBuy)} t</span>
           </div>
         ))}
         {held.map((i) => (
           <div key={i.symbol} className="cl-row is-hold">
             <span className="cl-name">{i.name}</span>
-            <span className="cl-qty">✓ {int(i.remaining)} t en soute</span>
+            <span className="cl-qty">✓ {int(i.remaining)} t {i.onCarrier ? (i.inHold ? 'en soute et sur le porteur' : 'sur le porteur') : 'en soute'}</span>
           </div>
         ))}
         {!buy.length && !held.length && <p className="cl-empty">{site.complete ? 'Chantier terminé.' : 'Plus rien à livrer.'}</p>}

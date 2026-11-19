@@ -39,7 +39,7 @@ test('soute : la cargaison de mission (MissionID gardé par l’état du jeu) ne
 test('liste de courses : reste − soute, jamais négatif ; le plus gros reste en tête', () => {
   const site = siteFromExample({ copper: 240 }); // cuivre complet
   const items = shoppingList(site.resources, [{ name: 'steel', count: 720 }, { name: 'water', count: 9999 }, { name: 'gold', count: 50 }]);
-  assert.deepEqual(items[0], { symbol: 'steel', name: 'Steel', required: 6680, provided: 720, remaining: 5960, inHold: 720, toBuy: 5240, done: false });
+  assert.deepEqual(items[0], { symbol: 'steel', name: 'Steel', required: 6680, provided: 720, remaining: 5960, inHold: 720, onCarrier: 0, toBuy: 5240, done: false });
   assert.equal(items.find((i) => i.symbol === 'water').toBuy, 0); // plus en soute que nécessaire
   assert.equal(items.at(-1).symbol, 'copper');
   assert.equal(items.at(-1).done, true);

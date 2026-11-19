@@ -16,6 +16,8 @@ export const colApi = {
   update: (marketId, body) => api(`${base}/sites/${encodeURIComponent(marketId)}`, { method: 'PUT', body }),
   forget: (marketId) => api(`${base}/sites/${encodeURIComponent(marketId)}`, { method: 'DELETE' }),
   diagnostics: () => api(`${base}/diagnostics`),
+  // Réglages du module : { carrier } (compter la cargaison estimée de ton porteur)
+  settings: (body) => api(`${base}/settings`, { method: 'PUT', body }),
   // Projet de l'escadron vu d'ici : chantiers dans l'ordre du chef, avec la lecture la plus récente
   // frais : la page s'ouvre, le module Escadron relit son serveur en arrière-plan (au plus toutes les 30 s)
   escadron: (frais = false) => api(`${base}/escadron${frais ? '?frais=1' : ''}`),

@@ -87,7 +87,7 @@ export function hudCells(active) {
   return [
     { label: 'Avancement', value: pct(site.progress), color: site.complete ? '#5fd38d' : '#ffd24a', sub: site.complete ? 'terminé' : site.provisional ? 'estimé (tes livraisons)' : site.releve ? `relevé par ${site.releve.by || 'l’escadron'}` : site.updatedAt ? 'lu au dépôt' : 'pas encore lu' },
     { label: 'Reste', value: plan.known ? tonnes(plan.totals.remaining) : '?', color: '#6fd3ff', sub: plan.known ? `sur ${int(plan.totals.required)} t` : 'ouvre le contact du chantier' },
-    { label: 'À acheter', value: plan.known ? tonnes(plan.totals.toBuy) : '?', color: 'var(--accent)', sub: !plan.known ? 'besoins inconnus' : plan.totals.inHold ? `${int(plan.totals.inHold)} t en soute` : 'rien en soute' },
+    { label: 'À acheter', value: plan.known ? tonnes(plan.totals.toBuy) : '?', color: 'var(--accent)', sub: !plan.known ? 'besoins inconnus' : plan.totals.onCarrier ? `${int(plan.totals.inHold || 0)} t soute · ${int(plan.totals.onCarrier)} t porteur` : plan.totals.inHold ? `${int(plan.totals.inHold)} t en soute` : 'rien en soute' },
     { label: 'Trajets', value: plan.trips == null ? '?' : int(plan.trips), color: '#5fd38d', sub: plan.capacity ? `soute ${int(plan.capacity)} t` : 'soute inconnue' },
   ];
 }

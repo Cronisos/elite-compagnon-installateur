@@ -71,7 +71,7 @@ export const MODULES = {
   bilan: m('/api/modules/bilan', ['GET /sessions', 'GET /fenetre']),
   materials: m('/api/modules/materials', ['GET /session']),
   colonisation: m('/api/modules/colonisation', ['GET /sites', 'GET /here', 'GET /active', 'GET /diagnostics']),
-  carrier: m('/api/modules/carrier', ['GET /session']),
+  carrier: m('/api/modules/carrier', ['GET /session', 'GET /cargo']),
   signals: m('/api/modules/signals', ['GET /session']),
   navroute: m('/api/modules/navroute', ['GET /session']),
   fsdcool: m('/api/modules/fsdcool', ['GET /session', 'GET /sco']),

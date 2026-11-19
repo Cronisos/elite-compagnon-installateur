@@ -35,7 +35,8 @@ before(async () => {
     fetchImpl: async () => ({ status: 200, ok: true, json: async () => [] }),
     selfUrl: 'http://127.0.0.1:9',
     localFetchImpl: async (url) => {
-      assert.match(url, /\/api\/modules\/escadron\/colonisation$/);
+      if (/\/api\/modules\/carrier\/cargo$/.test(url)) return new Response(JSON.stringify({ carriers: [] }), { status: 200 });
+      assert.match(url, /\/api\/modules\/escadron\/colonisation(\?frais=1)?$/);
       return new Response(JSON.stringify(squad), { status: 200, headers: { 'content-type': 'application/json' } });
     },
   });

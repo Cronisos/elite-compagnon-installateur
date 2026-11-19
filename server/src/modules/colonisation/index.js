@@ -6,11 +6,13 @@
 // Écrit sans vrai journal de colonisation de l’auteur : il suit la spécification documentée (README) et note dans
 // GET /diagnostics tout ce qui s'en écarte, pour l'affiner le jour où un vrai journal arrivera.
 
+import path from 'node:path';
+import { readJsonFile, writeJsonAtomicSync } from '../../core/atomic.js';
 import { localFetch } from '../../core/net.js';
 import { dataPath } from '../../core/paths.js';
 import { shipPad } from '../../core/ship.js';
 import { firstOpen, freshest, projectView, relevesById } from './escadron.js';
-import { marketIdOf } from './events.js';
+import { marketIdOf, symbolOf } from './events.js';
 import { planSite } from './plan.js';
 import { ColonisationSources, DEFAULTS } from './sources.js';
 import { buildState, ColonisationState, loadArchive, parseArchive, saveArchive, TRACKED_EVENTS } from './state.js';
@@ -26,6 +28,9 @@ const CONTRIBUTIONS_SHOWN = 50;
 // Projet de l'escadron : relu à l'API locale du module Escadron (sa copie en mémoire, aucun réseau) toutes les 30 s,
 // pour le HUD ; la page, elle, le relit à chaque affichage
 const SQUAD_MS = 30_000;
+// Cargaison du porteur relue peu après un transfert, un achat ou une vente (le module Porteur l'a revue entre-temps)
+const CARRIER_MOVES = new Set(['CargoTransfer', 'MarketBuy', 'MarketSell', 'CarrierStats']);
+const CARRIER_READ_MS = 1000;
 
 function httpError(status, message) {
   return Object.assign(new Error(message), { status, publicMessage: message });
@@ -138,6 +143,49 @@ export default {
     };
 
     // --- Projet de colonisation de l'escadron (module Escadron, lu par son API locale, jamais son code) ---
+    // --- Réglages du module (à côté de l'archive) : compter ou non la cargaison de ton porteur ---
+    const settingsFile = path.join(path.dirname(dataFile), 'colonisation-reglages.json');
+    const settings = { carrier: true };
+    const savedSettings = readJsonFile(settingsFile, { fallback: null, label: 'Colonisation : réglages' });
+    if (typeof savedSettings?.carrier === 'boolean') settings.carrier = savedSettings.carrier;
+
+    // --- Cargaison de ton porteur, estimée par le module Porteur (son API locale, jamais son code) ---
+    let carriers = null; // [{ id, name, callsign, mine, cargo: [{ symbol, name, count }], total, reported, gap, since }] ou null
+    let carrierKey = '';
+    async function readCarrier() {
+      if (!selfUrl) return carriers;
+      try {
+        const res = await localFetch(`${selfUrl}/api/modules/carrier/cargo`, {}, { fetchImpl: localFetchImpl, timeoutMs: 5000 });
+        const data = res.ok ? await res.json() : null;
+        carriers = Array.isArray(data?.carriers) ? data.carriers : null;
+      } catch {
+        // module Porteur indisponible : on garde la dernière vue
+      }
+      const key = JSON.stringify(myCarrier());
+      if (key !== carrierKey) {
+        carrierKey = key;
+        notify();
+      }
+      return carriers;
+    }
+    /** Ton porteur (CarrierStats), s'il est connu. */
+    const myCarrier = () => (Array.isArray(carriers) ? carriers.find((c) => c?.mine === true) ?? null : null);
+    /** Sa cargaison estimée, par symbole de marchandise : vide si le réglage est coupé ou sans porteur. */
+    function carrierStock() {
+      const c = settings.carrier ? myCarrier() : null;
+      const stock = new Map();
+      for (const x of Array.isArray(c?.cargo) ? c.cargo : []) {
+        const symbol = symbolOf(x?.symbol);
+        if (symbol && Number.isFinite(x.count) && x.count > 0) stock.set(symbol, (stock.get(symbol) || 0) + x.count);
+      }
+      return stock;
+    }
+    /** Ton porteur pour la page : nom, total estimé, écart au total donné par le jeu, compté ou non. */
+    function carrierSummary() {
+      const c = myCarrier();
+      return c ? { counted: settings.carrier, name: c.name ?? null, callsign: c.callsign ?? null, total: c.total ?? 0, reported: c.reported ?? null, gap: c.gap ?? null, since: c.since ?? null } : null;
+    }
+
     let squad = null; // sa vue : { actif, pret, chef, projet, releves, … }, ou null (module absent, ou pas encore lu)
     let squadKey = '';
     const squadOn = () => Boolean(squad?.actif && squad.projet);
@@ -160,7 +208,12 @@ export default {
       }
       return squad;
     }
-    if (squadMs > 0) setInterval(() => readSquad(), squadMs).unref?.();
+    if (squadMs > 0) {
+      setInterval(() => {
+        readSquad();
+        readCarrier();
+      }, squadMs).unref?.();
+    }
     /** Le chantier avec la lecture la plus récente (la tienne, ou celle de l'escadron) : { site, releve }. */
     const current = (site) => (squadOn() ? freshest(site, relevesById(squad).get(site.marketId) ?? null) : { site, releve: null });
     const squadView = () => (squadOn() ? projectView(squad, state.sites) : null);
@@ -185,7 +238,8 @@ export default {
      */
     const planOf = (site, s = ship(), holdFor = activeId(s)) => {
       const holdCounted = site.marketId === holdFor;
-      return { ...planSite(site, { cargo: holdCounted ? s.cargo : [], capacity: s.capacity, hoursPerEvening }), holdCounted };
+      // Ta soute et ton porteur ne servent qu'une fois : pour le chantier actif seulement
+      return { ...planSite(site, { cargo: holdCounted ? s.cargo : [], carrier: holdCounted ? carrierStock() : new Map(), capacity: s.capacity, hoursPerEvening }), holdCounted };
     };
 
     /** Ligne de la liste des chantiers (avec la lecture la plus récente, la tienne ou celle de l'escadron). */
@@ -252,6 +306,7 @@ export default {
         claims: state.claimList(),
         active: activeView(s),
         ship: { capacity: s.capacity, pad: s.pad },
+        carrier: carrierSummary(), // ton porteur (cargaison estimée), compté ou non dans « à acheter »
         // Projet de l'escadron, en bref (la page le détaille avec GET /escadron)
         escadron: v ? { chantiers: v.sites.length, enCours: v.sites.filter((x) => x.site && !x.site.complete && !x.site.failed).length } : null,
       };
@@ -310,7 +365,7 @@ export default {
       notifyTimer.unref?.();
     };
 
-    journal.addInterest(TRACKED_EVENTS);
+    journal.addInterest([...TRACKED_EVENTS, ...CARRIER_MOVES]);
     journal.on('ready', ({ history }) => {
       // Archive = ce qui est connu juste avant (relu comme un fichier : rien n'y passe sans vérification)
       const archive = parseArchive(JSON.parse(JSON.stringify(state.toJSON())));
@@ -319,12 +374,20 @@ export default {
       notify();
     });
     journal.on('event', (ev) => {
+      if (CARRIER_MOVES.has(ev.event)) scheduleCarrier();
       if (!TRACKED.has(ev.event)) return;
       if (state.apply(ev)) {
         scheduleSave();
         notify();
       }
     });
+    // Transfert vers ou depuis un porteur, achat ou vente : le module Porteur a revu sa cargaison, on la relit
+    let carrierTimer = null;
+    function scheduleCarrier() {
+      clearTimeout(carrierTimer);
+      carrierTimer = setTimeout(() => readCarrier().then(() => refreshStation()), CARRIER_READ_MS);
+      carrierTimer.unref?.();
+    }
     // Soute, vaisseau (capacité, plateforme) ou amarrage : la liste de courses change. Le reste de l'état du jeu
     // (carburant, solde, destination…) bouge sans cesse en vol : il n'envoie rien.
     let shipKey = JSON.stringify(ship());
@@ -394,6 +457,20 @@ export default {
 
     router.get('/sites', wrap(async (req, res) => {
       await refreshSettings();
+      await readCarrier();
+      res.json(overview());
+    }));
+
+    /** Réglages du module : { carrier } (compter la cargaison estimée de ton porteur dans « à acheter »). */
+    router.put('/settings', wrap(async (req, res) => {
+      const b = req.body;
+      if (!b || typeof b !== 'object' || Array.isArray(b) || !Object.hasOwn(b, 'carrier') || typeof b.carrier !== 'boolean') {
+        throw httpError(400, 'Réglage attendu : { carrier: vrai ou faux }.');
+      }
+      settings.carrier = b.carrier;
+      writeJsonAtomicSync(settingsFile, settings);
+      notify();
+      refreshStation();
       res.json(overview());
     }));
 

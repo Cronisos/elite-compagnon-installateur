@@ -6,6 +6,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -13,6 +19,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -24,6 +36,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -31,6 +49,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -42,6 +66,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -49,6 +79,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -60,6 +96,28 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1748,
+                "at": "2026-11-07T10:43:07Z"
+              },
+              "gap": 1748,
+              "since": "2026-11-07T10:43:07Z",
+              "updatedAt": null
+            }
+          ]
+        }
       }
     },
     "direct": {
@@ -67,6 +125,28 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1748,
+                "at": "2026-11-07T10:43:07Z"
+              },
+              "gap": 1748,
+              "since": "2026-11-07T10:43:07Z",
+              "updatedAt": null
+            }
+          ]
         }
       }
     }
@@ -78,6 +158,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -85,6 +171,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -96,6 +188,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -103,6 +201,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -114,6 +218,28 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1460,
+                "at": "2026-11-01T23:15:55Z"
+              },
+              "gap": 1460,
+              "since": "2026-11-01T14:05:35Z",
+              "updatedAt": null
+            }
+          ]
+        }
       }
     },
     "direct": {
@@ -121,6 +247,28 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1460,
+                "at": "2026-11-01T23:15:55Z"
+              },
+              "gap": 1460,
+              "since": "2026-11-01T14:05:35Z",
+              "updatedAt": null
+            }
+          ]
         }
       }
     }
@@ -132,6 +280,28 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1460,
+                "at": "2026-11-01T13:35:48Z"
+              },
+              "gap": 1460,
+              "since": "2026-11-01T10:26:05Z",
+              "updatedAt": null
+            }
+          ]
+        }
       }
     },
     "direct": {
@@ -139,6 +309,28 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": [
+            {
+              "id": 3700000001,
+              "name": "PORTEUR 1",
+              "callsign": "TST-001",
+              "mine": true,
+              "cargo": [],
+              "total": 0,
+              "reported": {
+                "cargo": 1460,
+                "at": "2026-11-01T13:35:48Z"
+              },
+              "gap": 1460,
+              "since": "2026-11-01T10:26:05Z",
+              "updatedAt": null
+            }
+          ]
         }
       }
     }
@@ -150,6 +342,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -157,6 +355,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }
@@ -168,6 +372,12 @@
         "corps": {
           "jump": null
         }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
+        }
       }
     },
     "direct": {
@@ -175,6 +385,12 @@
         "statut": 200,
         "corps": {
           "jump": null
+        }
+      },
+      "GET /cargo": {
+        "statut": 200,
+        "corps": {
+          "carriers": []
         }
       }
     }

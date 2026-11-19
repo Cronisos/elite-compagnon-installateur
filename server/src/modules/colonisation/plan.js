@@ -37,13 +37,17 @@ export function holdBySymbol(cargo = []) {
 
 /**
  * Lignes de la liste de courses : celles qui restent à livrer d'abord (le plus gros reste en tête), puis les
- * marchandises complètes. inHold : ce qui est en soute, utile ou non ; toBuy : reste − soute, jamais négatif.
+ * marchandises complètes. inHold : ce qui est en soute, utile ou non ; onCarrier : ce qui est sur ton porteur (estimé,
+ * Map symbole → tonnes), compté seulement pour ce que la soute ne couvre pas ; toBuy : reste − soute − porteur, jamais
+ * négatif.
  */
-export function shoppingList(resources = [], cargo = []) {
+export function shoppingList(resources = [], cargo = [], carrier = new Map()) {
   const hold = holdBySymbol(cargo);
   return resources.map((r) => {
     const remaining = finite(r.remaining) ? r.remaining : finite(r.required) && finite(r.provided) ? Math.max(0, r.required - r.provided) : null;
     const inHold = hold.get(r.symbol) || 0;
+    const stock = carrier.get(r.symbol) || 0;
+    const onCarrier = remaining == null ? 0 : Math.min(stock, Math.max(0, remaining - inHold));
     return {
       symbol: r.symbol,
       name: r.name,
@@ -51,7 +55,8 @@ export function shoppingList(resources = [], cargo = []) {
       provided: r.provided ?? null,
       remaining,
       inHold,
-      toBuy: remaining == null ? null : Math.max(0, remaining - inHold),
+      onCarrier,
+      toBuy: remaining == null ? null : Math.max(0, remaining - inHold - onCarrier),
       done: remaining === 0,
     };
   }).sort((a, b) => (a.done - b.done) || (b.remaining ?? 0) - (a.remaining ?? 0) || String(a.name).localeCompare(String(b.name), 'fr'));
@@ -130,11 +135,11 @@ export function deadlineVerdict({ deadline, complete, playMinutes, evenings, now
  * @param capacity  capacité de soute du vaisseau actuel (t), ou null
  * @param hoursPerEvening heures de jeu par soirée (Paramètres), pour compter les soirées
  */
-export function planSite(site, { cargo = [], capacity = null, hoursPerEvening = null, now = Date.now() } = {}) {
+export function planSite(site, { cargo = [], carrier = new Map(), capacity = null, hoursPerEvening = null, now = Date.now() } = {}) {
   // Chantier terminé : plus rien à livrer ni à acheter, même si la dernière lecture du dépôt est antérieure à la
   // fin (fin déduite de l'amarrage) ; demandé et livré restent ceux de cette lecture
-  const listed = shoppingList(site.resources || [], cargo);
-  const items = site.complete ? listed.map((i) => ({ ...i, remaining: 0, toBuy: 0, done: true })) : listed;
+  const listed = shoppingList(site.resources || [], cargo, carrier);
+  const items = site.complete ? listed.map((i) => ({ ...i, remaining: 0, onCarrier: 0, toBuy: 0, done: true })) : listed;
   const known = items.length > 0;
   const total = (k) => (known ? items.reduce((a, i) => a + (finite(i[k]) ? i[k] : 0), 0) : null);
   const remaining = site.complete ? 0 : total('remaining');
@@ -144,6 +149,8 @@ export function planSite(site, { cargo = [], capacity = null, hoursPerEvening = 
     remaining,
     // En soute, seulement ce qui sert au chantier (pas plus que le reste)
     inHold: known ? items.reduce((a, i) => a + Math.min(i.inHold, i.remaining ?? 0), 0) : null,
+    // Sur ton porteur (estimé), seulement ce qui sert et que la soute ne couvre pas
+    onCarrier: known ? items.reduce((a, i) => a + (i.onCarrier || 0), 0) : null,
     toBuy: site.complete ? 0 : total('toBuy'),
   };
   const cap = finite(capacity) && capacity > 0 ? capacity : null;
