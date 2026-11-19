@@ -478,6 +478,8 @@ export const HUD = {
     seances: ['Vaisseau de colonisation · Judson Depot', 'Titanium', '5 471 t', 'Superconductors'],
     vide: ['Aucun chantier suivi : amarre-toi à un dépôt de construction.'],
   },
+  // « À acheter ici » : ouverte par le serveur quand un marché est lu en direct ; ouverte sans marché lu, elle le dit
+  'colonisation-station': { textes: ['À acheter ici', 'Ouvre le marché d’une station'] },
   carrier: { rien: true }, // aucun saut programmé à l'heure figée
   signals: {
     seances: ['Synuefe OU-E c28-2', "Site d'extraction de ressources [Danger]", 'arrivée à 15:09'],
@@ -550,6 +552,7 @@ export const FENETRES = {
     materials: { apres: ['Bruts', '76', 'pause · jeu fermé', PROPOSE] },
     colonisation: { apres: [PROPOSE] }, // pas de chantier dans cette séance
     'colonisation-list': { apres: ['Aucun chantier suivi'] },
+    'colonisation-station': { apres: ['Ouvre le marché d’une station'] },
     carrier: { apres: { rien: true } },
     signals: { apres: ['Synuefe OU-E c28-2', "Site d'extraction de ressources [Danger]", 'arrivée à 15:09'] },
     navroute: { apres: { rien: true } },

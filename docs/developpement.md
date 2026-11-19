@@ -243,7 +243,7 @@ Quatre passes, chacune sur son serveur isolé :
 
 Les deux premières ouvrent chaque page des modules clients (et leurs sous-pages, déclarées par leurs `<Route>`), les
 pages du cœur (accueil, paramètres, page inconnue), chaque onglet listé, et chaque fenêtre `/hud/<page>` (liste tirée
-des modules clients : `Hud` et `hudPages`), deux fois : avec le pont de l'overlay simulé (`scripts/controle/pages/pont.mjs`,
+des modules clients : `Hud`, `hudPages` et `hudExtras`), deux fois : avec le pont de l'overlay simulé (`scripts/controle/pages/pont.mjs`,
 mêmes fonctions que `overlay/preload.js`, comme dans le jeu), puis dans un navigateur ordinaire. Les routes à paramètre
 sont ouvertes par un parcours d'utilisateur (« Build depuis ce vaisseau », nom tapé au clavier, « Enregistrer le
 build » ; « Créer un plan » puis « Tout en G5 », « Calculer » et le Dashboard, où le coût des rangs d'ingénieur doit

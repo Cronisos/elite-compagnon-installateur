@@ -14,6 +14,10 @@ import { marketIdOf } from './events.js';
 import { planSite } from './plan.js';
 import { ColonisationSources, DEFAULTS } from './sources.js';
 import { buildState, ColonisationState, loadArchive, parseArchive, saveArchive, TRACKED_EVENTS } from './state.js';
+import { buyHere, readMarket } from './station.js';
+
+/** Fenêtre en jeu « À acheter ici » : ouverte par le module, en mode Colonisation, quand le marché lu en a. */
+export const STATION_PAGE = 'colonisation-station';
 
 export const DATA_FILE = dataPath('colonisation.json');
 const TRACKED = new Set(TRACKED_EVENTS);
@@ -99,7 +103,7 @@ export default {
    * @param selfUrl   adresse de l'API locale, pour lire le projet de l'escadron (module Escadron) ; tests : simulée
    * @param squadMs   relecture du projet de l'escadron (0 : seulement à la demande)
    */
-  async register({ router, journal, game, broadcast, getSettings, dataFile = DATA_FILE, fetchImpl, saveDelayMs = 1000, selfUrl = null, localFetchImpl, squadMs = process.env.NODE_TEST_CONTEXT ? 0 : SQUAD_MS }) {
+  async register({ router, journal, game, broadcast, getSettings, overlay = null, dataFile = DATA_FILE, fetchImpl, saveDelayMs = 1000, selfUrl = null, localFetchImpl, squadMs = process.env.NODE_TEST_CONTEXT ? 0 : SQUAD_MS }) {
     let state = buildState([], loadArchive(dataFile)); // en attendant l'historique du journal
     const sources = new ColonisationSources(fetchImpl ? { fetchImpl } : {});
     let hoursPerEvening = null;
@@ -130,18 +134,21 @@ export default {
 
     const ship = () => {
       const g = game.snapshot();
-      return { cargo: g.cargo || [], capacity: g.loadout?.cargoCapacity ?? null, pad: shipPad(g.loadout?.ship), docked: g.docked, marketId: g.marketId };
+      return { cargo: g.cargo || [], cargoCount: g.cargoCount ?? 0, capacity: g.loadout?.cargoCapacity ?? null, pad: shipPad(g.loadout?.ship), docked: g.docked, marketId: g.marketId };
     };
 
     // --- Projet de colonisation de l'escadron (module Escadron, lu par son API locale, jamais son code) ---
     let squad = null; // sa vue : { actif, pret, chef, projet, releves, … }, ou null (module absent, ou pas encore lu)
     let squadKey = '';
     const squadOn = () => Boolean(squad?.actif && squad.projet);
-    /** Relit la vue du module Escadron ; prévient les pages si le projet ou ses relevés ont changé. */
-    async function readSquad() {
+    /**
+     * Relit la vue du module Escadron ; prévient les pages si le projet ou ses relevés ont changé. `frais` : une page
+     * s'ouvre, le module Escadron relit son serveur en arrière-plan si sa dernière lecture a plus de 30 s.
+     */
+    async function readSquad({ frais = false } = {}) {
       if (!selfUrl) return squad;
       try {
-        const res = await localFetch(`${selfUrl}/api/modules/escadron/colonisation`, {}, { fetchImpl: localFetchImpl, timeoutMs: 5000 });
+        const res = await localFetch(`${selfUrl}/api/modules/escadron/colonisation${frais ? '?frais=1' : ''}`, {}, { fetchImpl: localFetchImpl, timeoutMs: 5000 });
         squad = res.ok ? await res.json() : null;
       } catch {
         // module Escadron indisponible : on garde la dernière vue
@@ -275,8 +282,8 @@ export default {
     }
 
     /** Le projet de l'escadron vu d'ici : son état (module Escadron) et ses chantiers, dans l'ordre du chef. */
-    async function squadronOverview() {
-      await readSquad();
+    async function squadronOverview({ frais = false } = {}) {
+      await readSquad({ frais });
       const s = ship();
       const holdFor = activeId(s);
       const { projet: _, releves: __, ...etat } = squad ?? {};
@@ -326,7 +333,48 @@ export default {
       if (key === shipKey) return;
       shipKey = key;
       if (state.sites.size || squadOn()) notify();
+      refreshStation(); // achat (soute), départ de la station
     });
+
+    // --- « À acheter ici » : le marché de la station (Market.json) comparé à la liste de courses du chantier actif ---
+    let market = null; // dernier marché lu
+    let stationOpen = null; // MarketID où la fenêtre est ouverte, ou null
+    let stationClosed = null; // MarketID où ✕ l'a fermée (jusqu'à la prochaine station)
+    /** Ce que la fenêtre montre : la station, le chantier, ce qu'il faut y acheter. */
+    function stationView(s = ship()) {
+      const here = s.docked && market && market.marketId === s.marketId ? market : null;
+      const a = here && !state.sites.has(here.marketId) ? activeEntry(s) : null;
+      if (!a) return { docked: Boolean(s.docked), marketId: here?.marketId ?? null, station: here?.station ?? null, system: here?.system ?? null, at: here?.at ?? null, site: null, items: [], total: { tonnes: 0, cost: 0 }, free: null };
+      const d = detail(state.sites.has(a.site.marketId) ? a.site : { site: a.site, releve: a.releve ?? null }, s);
+      return {
+        docked: true, marketId: here.marketId, station: here.station, system: here.system, at: here.at,
+        site: { marketId: d.marketId, label: d.label, reason: a.reason, known: d.plan.known },
+        ...buyHere(d.plan.items, here, { capacity: s.capacity, cargoCount: s.cargoCount }),
+      };
+    }
+    /**
+     * Ouvre la fenêtre quand un marché est lu en direct (jamais à la relecture), à quai, en mode Colonisation, et qu'il
+     * vend ce qu'il manque ; la tient à jour (achats) ; la ferme au départ de la station, hors du mode, ou après ✕.
+     */
+    function refreshStation({ marketRead = false } = {}) {
+      const v = stationView();
+      const inMode = overlay?.mode?.() === 'colonisation';
+      if (stationOpen != null && (!inMode || !v.docked || v.marketId !== stationOpen)) {
+        stationOpen = null;
+        overlay?.setExtra?.(STATION_PAGE, false);
+      }
+      if (!v.docked) stationClosed = null;
+      if (marketRead && inMode && stationOpen == null && v.items.length && stationClosed !== v.marketId) {
+        stationOpen = v.marketId;
+        overlay?.setExtra?.(STATION_PAGE, true);
+      }
+      broadcast('colonisation:station', v);
+    }
+    journal.on('market', (data, { initial } = {}) => {
+      market = readMarket(data) ?? market;
+      refreshStation({ marketRead: !initial });
+    });
+    overlay?.onMode?.(() => refreshStation());
 
     const siteOr404 = (req) => {
       const id = parseMarketId(req.params.marketId);
@@ -340,7 +388,7 @@ export default {
       if (state.sites.has(id)) return current(state.sites.get(id));
       const v = squadView();
       const e = v && [...v.sites, ...v.others].find((x) => x.site && x.site.marketId === id);
-      if (!e) throw httpError(404, 'Chantier inconnu (jamais vu dans le journal, ni relevé par ton escadron).');
+      if (!e) throw httpError(404, 'Chantier inconnu (jamais vu dans le journal, ou oublié).');
       return { site: e.site, releve: e.releve };
     };
 
@@ -360,7 +408,7 @@ export default {
     /** Projet de colonisation de l'escadron vu d'ici : chantiers dans l'ordre du chef, avec la lecture la plus récente. */
     router.get('/escadron', wrap(async (req, res) => {
       await refreshSettings();
-      res.json(await squadronOverview());
+      res.json(await squadronOverview({ frais: req.query.frais === '1' }));
     }));
 
     /** Chantier où tu es à quai, avec sa liste de courses ; site null ailleurs. */
@@ -373,6 +421,21 @@ export default {
     /** Chantier actif du HUD : à quai, épinglé, ou le dernier en cours. */
     router.get('/active', wrap(async (req, res) => {
       res.json(activeView());
+    }));
+
+    /** « À acheter ici » : la station où tu es à quai (son marché lu), et ce qu'il faut y acheter pour le chantier actif. */
+    router.get('/station', wrap(async (req, res) => {
+      res.json(stationView());
+    }));
+    /** ✕ dans la fenêtre : fermée jusqu'à la prochaine station. */
+    router.post('/station/close', wrap(async (req, res) => {
+      const v = stationView();
+      stationClosed = v.marketId;
+      if (stationOpen != null) {
+        stationOpen = null;
+        overlay?.setExtra?.(STATION_PAGE, false);
+      }
+      res.json(v);
     }));
 
     router.get('/sites/:marketId/sources', wrap(async (req, res) => {

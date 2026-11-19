@@ -12,6 +12,7 @@ const NOMS = {
   'waypoints-sweep': 'Balayage de l’EEP',
   capture: 'Cadre de capture',
   'colonisation-list': 'Liste de courses (colonisation)',
+  'colonisation-station': 'À acheter ici (colonisation)',
   'engineering-visit': 'Chez l’ingénieur',
   'engineering-passage': 'Échangeur sur la route',
   'expansion-sale': 'Vente (projet extension)',
@@ -45,7 +46,7 @@ export function fenetresOverlay(modules, exclues = []) {
   };
   for (const m of modules) {
     if (m.Hud) ajouter(m.id, m.title);
-    for (const page of Object.keys(m.hudPages || {})) ajouter(page, m.title);
+    for (const page of Object.keys({ ...m.hudPages, ...m.hudExtras })) ajouter(page, m.title);
   }
   return out;
 }

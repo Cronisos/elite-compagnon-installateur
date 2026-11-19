@@ -17,14 +17,14 @@ export default function ProjetEscadron() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
   const [edition, setEdition] = useState(false);
-  const load = () => colApi.escadron().then(setData).catch(() => {});
+  const load = (frais = false) => colApi.escadron(frais).then(setData).catch(() => {});
   useEffect(() => {
-    load();
-    // Relit le serveur de l'escadron en arrivant sur la page (au plus toutes les 30 s ; refus si le projet n'est pas suivi)
-    projetApi.lire().then(load).catch(() => {});
+    // En arrivant sur la page : relecture du serveur de l'escadron en arrière-plan, si le projet est suivi (au plus
+    // toutes les 30 s) ; son résultat arrive par « escadron:colonisation ». Une lecture, jamais une écriture.
+    load(true);
   }, []);
-  useEvent('escadron:colonisation', load);
-  useEvent('colonisation:update', load);
+  useEvent('escadron:colonisation', () => load());
+  useEvent('colonisation:update', () => load());
 
   async function run(fn) {
     setBusy(true);

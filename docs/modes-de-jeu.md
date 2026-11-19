@@ -31,7 +31,9 @@ ce fichier tel quel (`client/src/core/modes.js`, intégré par Vite), chaque mod
 `mode: modeInfo('<id>')`, et le serveur s'en sert pour ouvrir seul les fenêtres d'un mode. Un mode ajouté là devient
 aussitôt un rôle de vaisseau possible. Concordance avec les modules clients (identifiant, page, HUD et `hudPages` =
 fenêtres, dans l'ordre) vérifiée par `client/src/core/modes.test.js` et par le banc (étape `75-pages`, sur les
-modules tels que Vite les charge).
+modules tels que Vite les charge). Une fenêtre qu'un module ouvre lui-même, quand son serveur le décide
+(`ctx.overlay.setExtra`), et jamais avec le mode, se déclare à part dans `hudExtras` (« À acheter ici » de la
+Colonisation) : elle a sa page `/hud/<page>` et son nom dans « Disposer les fenêtres », sans faire partie du mode.
 
 - Chaque fenêtre a son bouton **✥** : on la fait glisser, puis **📌** fixe sa position, retenue pour la suite.
   La fenêtre Coup d'œil se redimensionne aussi en mode déplacement, avec ◂ ▸ ▴ ▾.

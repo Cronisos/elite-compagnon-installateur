@@ -177,6 +177,22 @@ test('système retiré du projet : ses relevés sont effacés ; projet arrêté 
   assert.equal(fin.releves.length, 0);
 });
 
+test('page ouverte : relecture en arrière-plan seulement si le projet est suivi et la dernière lecture vieille de 30 s', async () => {
+  const e = escadron();
+  await e.chef.envoyerColonisation(PROJET);
+  const coupe = await e.app('Testeur', { actif: false });
+  const avant = e.appels.length;
+  coupe.rafraichirSiVieux();
+  assert.equal(e.appels.length, avant);
+  const a = await e.app('Testeur 2');
+  a.rafraichirSiVieux();
+  await a.enCours;
+  assert.ok(a.view().projet);
+  const lus = e.appels.length;
+  a.rafraichirSiVieux(); // lu à l'instant : rien
+  assert.equal(e.appels.length, lus);
+});
+
 test('installation à confirmer : ni lecture ni relevé', async () => {
   const e = escadron();
   await e.chef.envoyerColonisation(PROJET);

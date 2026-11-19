@@ -282,7 +282,11 @@ export function setup({ router, journal, broadcast, dataDir = DATA_DIR, fetch = 
       apresDepot.unref?.();
     });
   }
-  router.get('/colonisation', (req, res) => res.json(colonisation.view()));
+  // ?frais=1 : une page s'ouvre, relecture en arrière-plan si la dernière a plus de 30 s (le HUD, lui, lit sans relire)
+  router.get('/colonisation', (req, res) => {
+    if (req.query.frais === '1') colonisation.rafraichirSiVieux();
+    res.json(colonisation.view());
+  });
   router.put('/colonisation/actif', asyncRoute(async (req, res) => {
     colonisation.activer(req.body?.actif);
     if (req.body?.actif === true) await colonisation.enFond(); // une première lecture tout de suite (l'erreur est dans la vue)

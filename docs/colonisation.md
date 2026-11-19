@@ -25,6 +25,16 @@ combien de trajets il reste avec ton vaisseau actuel et où acheter près du cha
   acheter en premier) et la fenêtre libre « 🛒 Liste de courses » (`/hud/colonisation-list`), ouverte avec le mode :
   ce qu'il reste à acheter moins la soute, ce qui est déjà tout en soute coché, trajets restants. Pas de chrono ni de
   session : changer de mode ne remet rien à zéro ici.
+- **« 🛒 À acheter ici »** (`/hud/colonisation-station`, `server/src/modules/colonisation/station.js`) : en mode
+  Colonisation, à quai, quand tu ouvres le marché des marchandises (le jeu écrit alors `Market.json`) et que la
+  station vend ce qu'il reste à acheter pour le chantier actif, la fenêtre s'ouvre d'elle-même. Pour chaque
+  marchandise : ce qu'il faut prendre ici (le moins entre ce qu'il faut, le stock de la station et la place libre en
+  soute, partagée dans l'ordre de la liste de courses), le stock (en orange s'il ne suffit pas), le prix, puis le total
+  et la place restante. Elle suit tes achats (la soute se remplit, ce qu'il reste baisse), et se ferme au départ de la
+  station ou hors du mode ; ✕ la ferme jusqu'à la station suivante. Jamais pour un marché relu au démarrage de l'app,
+  jamais au chantier lui-même. Aucune recherche en ligne : seulement le marché que le jeu a écrit (les stations
+  proches, elles, restent à la demande sur la page). API : `GET /station`, `POST /station/close` ; temps réel
+  `colonisation:station`.
 - **Mode proposé** à l'amarrage à un chantier ou à une livraison (voir « Menu « Mode de jeu » »).
 
 Reconnaissance d'un chantier, à l'amarrage (`Docked`, ou `Location` à quai) : nom de station

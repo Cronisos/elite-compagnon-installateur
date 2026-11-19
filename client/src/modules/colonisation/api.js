@@ -17,7 +17,11 @@ export const colApi = {
   forget: (marketId) => api(`${base}/sites/${encodeURIComponent(marketId)}`, { method: 'DELETE' }),
   diagnostics: () => api(`${base}/diagnostics`),
   // Projet de l'escadron vu d'ici : chantiers dans l'ordre du chef, avec la lecture la plus récente
-  escadron: () => api(`${base}/escadron`),
+  // frais : la page s'ouvre, le module Escadron relit son serveur en arrière-plan (au plus toutes les 30 s)
+  escadron: (frais = false) => api(`${base}/escadron${frais ? '?frais=1' : ''}`),
+  // « À acheter ici » (fenêtre en jeu colonisation-station)
+  station: () => api(`${base}/station`),
+  stationClose: () => api(`${base}/station/close`, { method: 'POST' }),
 };
 
 // Projet de colonisation de l'escadron, par le module Escadron : le suivre, le relire ; côté chef, le publier

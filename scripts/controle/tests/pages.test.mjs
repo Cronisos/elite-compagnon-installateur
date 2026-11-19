@@ -152,8 +152,8 @@ test('interface du banc : même proxy que client/vite.config.js, vers le serveur
   assert.deepEqual(proxyDuBanc({ '/api': 'http://127.0.0.1:3001/' }, api), { '/api': { target: api } });
   assert.throws(() => proxyDuBanc({}, api), /plus de proxy \/api/);
   assert.throws(() => proxyDuBanc({ '/api': { target: 'http://127.0.0.1:3001' }, '/ext': { target: 'https://exemple.org' } }, api), /« \/ext » vise https:\/\/exemple\.org/);
-  const [m] = decrireModules([{ id: 'colonisation', title: 'Colonisation', path: '/colonisation', Component() {}, Hud() {}, hudPages: { 'colonisation-list': () => null }, mode: { id: 'colonisation', label: 'Colonisation' } }]);
-  assert.deepEqual(m, { id: 'colonisation', titre: 'Colonisation', chemin: '/colonisation', hud: true, pagesHud: ['colonisation-list'], nav: true, mode: 'Colonisation', modeId: 'colonisation', permanent: false });
+  const [m] = decrireModules([{ id: 'colonisation', title: 'Colonisation', path: '/colonisation', Component() {}, Hud() {}, hudPages: { 'colonisation-list': () => null }, hudExtras: { 'colonisation-station': () => null }, mode: { id: 'colonisation', label: 'Colonisation' } }]);
+  assert.deepEqual(m, { id: 'colonisation', titre: 'Colonisation', chemin: '/colonisation', hud: true, pagesHud: ['colonisation-list'], pagesExtras: ['colonisation-station'], nav: true, mode: 'Colonisation', modeId: 'colonisation', permanent: false });
   for (const port of [3001, 5173, 80, 70000, '4000']) {
     await assert.rejects(demarrerServeur({ portInterface: port }), /Port d'interface refusé/, String(port));
     await assert.rejects(servirClient({ client: {}, api, port }), /Port d'interface refusé/, String(port));

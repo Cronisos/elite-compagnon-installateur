@@ -249,7 +249,18 @@ export class ColonisationEscadron {
     return this.passage().catch(() => null);
   }
 
-  /** Passage demandé par la page : tout de suite, sauf si le dernier a moins de 30 s (deux pages ouvertes). */
+  /**
+   * Une page s'ouvre (lecture, jamais une écriture) : passage en arrière-plan si le projet est suivi ici et que la
+   * dernière lecture a plus de 30 s. Comme le partage (partage.js, rafraichirSiVieux).
+   */
+  rafraichirSiVieux() {
+    const a = this.acces();
+    if (!this.etat.actif || !a?.base || !a?.token || this.enCours) return;
+    const age = this.etat.luAt ? this.now() - Date.parse(this.etat.luAt) : Infinity;
+    if (age > FRAICHEUR_MS) this.passage().catch(() => {});
+  }
+
+  /** Passage demandé par la page (« Actualiser ») : tout de suite, sauf si le dernier a moins de 30 s. */
   async lire({ force = false } = {}) {
     const age = this.etat.luAt ? this.now() - Date.parse(this.etat.luAt) : Infinity;
     if (!force && age < FRAICHEUR_MS && !this.etat.erreur) return this.view();
