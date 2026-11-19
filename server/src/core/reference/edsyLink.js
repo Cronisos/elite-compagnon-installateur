@@ -99,10 +99,12 @@ const MAX_TEXTE = 4096; // caractères du lien lus pour le nom du build : bien p
  * manquant après « _ » ou « - » compte pour 0 ; un rang de ponctuation hors liste ne donne rien.
  */
 export function decodeText(code) {
-  const s = String(code).slice(0, MAX_TEXTE);
+  // Un texte, et rien d'autre (pas un objet qui annoncerait une longueur) ; la boucle a sa propre borne
+  const s = typeof code === 'string' ? code : String(code ?? '');
+  const fin = Math.min(s.length, MAX_TEXTE);
   let out = '';
   let i = 0;
-  while (i < s.length) {
+  while (i < fin) {
     const c = s[i++];
     const lead = DIGIT_VALUE.get(c);
     if (lead === undefined) continue;
