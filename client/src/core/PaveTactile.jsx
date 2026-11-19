@@ -76,7 +76,7 @@ export default function PaveTactile() {
           <button type="button" className="pave-retour" onClick={() => setPile(pile.slice(0, -1))}>◂ Retour</button>
         ) : favoris.length > 0 && !pageFavoris ? (
           <button type="button" className="pave-retour" onClick={() => setSurFavoris(true)}>★ Favoris</button>
-        ) : <span className="pave-marque">◆ Elite Compagnon</span>}
+        ) : <span className="pave-marque">◆ Enova</span>}
         <span className="pave-fil" title="Fais glisser ici pour déplacer le pavé">{fil}</span>
         <button type="button" className={`pave-outil${edition ? ' is-on' : ''}`} onClick={() => setEdition(!edition)} title={edition ? 'Terminer' : 'Composer tes favoris'}>✎</button>
         <button type="button" className={`pave-outil${cache ? ' is-on' : ''}`} onClick={() => bureau.basculer()} title={cache ? 'Réafficher l’app' : 'Tout cacher (le pavé reste)'}>◆</button>

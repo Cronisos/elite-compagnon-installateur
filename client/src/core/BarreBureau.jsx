@@ -6,6 +6,7 @@
 // en jeu (comme le menu de la fenêtre principale), sans ouvrir la fenêtre principale. Le ◆ cache toute l'app ou la
 // réaffiche ; clic droit : le menu de l'app (Quitter…). Rien dans un navigateur.
 
+import logoEnova from '../assets/enova.png';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { bureau } from './bureau.js';
 import { PLAN, filDAriane } from './navigation.js';
@@ -130,11 +131,11 @@ export default function BarreBureau() {
             e.preventDefault();
             bureau.menuLanceur();
           }}
-          title={cache ? 'Réafficher Elite Compagnon (clic droit : menu)' : 'Tout cacher : fenêtres, fenêtres en jeu et ce menu ; le ◆ reste (clic droit : menu)'}
+          title={cache ? 'Réafficher Enova (clic droit : menu)' : 'Tout cacher : fenêtres, fenêtres en jeu et ce menu ; le logo reste (clic droit : menu)'}
         >
-          ◆
+          <img src={logoEnova} alt="" />
         </button>
-        {/* Tout caché : seul le ◆ reste, pour tout réafficher */}
+        {/* Tout caché : seul le logo reste, pour tout réafficher */}
         {!cache && (
           <span ref={(el) => { blocs.current.mode = el; }} className={`bb-rubrique-bloc bb-mode${ouverte === 'mode' ? ' is-open' : ''}`} onMouseEnter={() => ouverte !== 'mode' && (setChemin([]), setOuverte('mode'))}>
             <button type="button" className="bb-rubrique" onClick={() => (ouverte === 'mode' ? fermer() : (setChemin([]), setOuverte('mode')))} title="Mode de jeu : ses fenêtres par-dessus le jeu">

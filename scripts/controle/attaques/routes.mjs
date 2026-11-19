@@ -14,7 +14,7 @@ const JOUEES = { ALL: ['GET', 'POST'] };
  * Chemin que le banc sait remplir : segments fixes et paramètres simples en tête de segment (:id, :id.png), sans motif
  * (?, *, (…), +).
  */
-const CHEMIN_SIMPLE = /^(\/(:\w+)?[^/:*?()+]*)+$/;
+const CHEMIN_SIMPLE = /^(?:\/(?::\w+(?!\w))?[^/:*?()+]*)+$/;
 
 /**
  * Routes du serveur, une entrée par méthode : { methode, chemin, params: ['id', …], module: 'engineering' | null }.

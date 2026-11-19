@@ -1,11 +1,11 @@
 # App de bureau
 
-> Partie de la notice d’Elite Compagnon : sommaire dans le [README](../README.md#documentation).
+> Partie de la notice d’Enova : sommaire dans le [README](../README.md#documentation).
 
-## App de bureau « Elite Compagnon »
+## App de bureau « Enova »
 
 Un seul programme (dossier `desktop/`, l'Electron de l'overlay) : double-clic sur **`Lancer EliteApp.cmd`**, sur le
-raccourci « Elite Compagnon » du Bureau ou du menu Démarrer (`npm run raccourcis` les écrit, `npm run raccourcis --
+raccourci « Enova » du Bureau ou du menu Démarrer (`npm run raccourcis` les écrit, `npm run raccourcis --
 --retirer` les efface), ou `npm run bureau` depuis un terminal. Déjà lancée : la fenêtre principale revient.
 
 - **Démarrage** (`desktop/main.js`) : met la base à jour (`server/dbPush.mjs`), lance le serveur puis l'interface avec
@@ -118,13 +118,13 @@ chef.
 Au démarrage, sans le jeu lancé (Node.js introuvable ou trop ancien, par exemple), une boîte d'erreur s'affiche tout
 de suite, avec le chemin du journal de l'app. Si le jeu tourne, ou en plein vol, l'app ne t'ouvre jamais de boîte qui
 prendrait le clavier et la souris du jeu. Une bulle de Windows te prévient, l'icône reste dans la zone de
-notification, et l'erreur s'ouvre quand tu cliques sur la bulle ou sur l'icône, ou quand tu relances Elite Compagnon.
+notification, et l'erreur s'ouvre quand tu cliques sur la bulle ou sur l'icône, ou quand tu relances Enova.
 
 ### Mise à jour : l'overlay range ses réglages avec l'app
 
 L'overlay range maintenant ses réglages dans `%APPDATA%\Elite Compagnon\overlay` (une copie est faite une fois depuis
 l'ancien dossier, `%APPDATA%\elite-companion-overlay`). Juste après cette mise à jour, l'overlay de l'ancienne version
-peut rester ouvert à côté du nouveau, et tu vois des HUD en double. Quitte alors Elite Compagnon (icône → Quitter),
+peut rester ouvert à côté du nouveau, et tu vois des HUD en double. Quitte alors Enova (icône → Quitter),
 attends 5 minutes ou redémarre le PC, puis relance-le. Cela n'arrive qu'une fois.
 
 ## Protection de l'API locale

@@ -1,6 +1,8 @@
-# Compagnon Elite
+<p align="center"><img src="marque/enova-logo.png" alt="Logo d'Enova" width="340"></p>
 
-Application compagnon **locale** pour Elite Dangerous (PC). Elle lit les journaux du jeu en temps réel et
+# Enova
+
+**Enova** (Elite Navigation, Operations & Virtual Assistant) : application compagnon **locale** et gratuite pour Elite Dangerous (PC). Elle lit les journaux du jeu en temps réel et
 remplit tout automatiquement. Aucune donnée personnelle n'est envoyée sur Internet (le calculateur de routes, les
 stations proches d'un chantier de colonisation, les Systèmes importants, « Où agir cette semaine » et, dans Mes
 repères, la prospection et les prix des minerais n'envoient qu'un nom de système, son adresse dans le jeu ou un nom de
@@ -26,7 +28,7 @@ Tout est dans la version la plus récente, page [Releases](../../releases/latest
 
 | Tu veux | Prends | Ce que ça fait |
 | --- | --- | --- |
-| Toute l'app | `Installer Elite Compagnon … .exe` | Fenêtres en jeu, vaisseaux, ingénierie, Powerplay, partage de builds, et l'envoi de tes mérites à l'escadron si tu l'actives |
+| Toute l'app | `Installer Enova … .exe` | Fenêtres en jeu, vaisseaux, ingénierie, Powerplay, partage de builds, et l'envoi de tes mérites à l'escadron si tu l'actives |
 | Seulement compter pour le Powerplay de l'escadron | `Squadron_Tracker.zip` | Un petit plugin pour [EDMarketConnector](https://github.com/EDCD/EDMarketConnector) qui envoie tes gains de mérites, rien d'autre |
 
 **L'app.** Télécharge le `.exe` et lance-le. L'installateur n'est pas signé : Windows affiche « Windows a protégé
@@ -172,7 +174,7 @@ Le détail de chaque partie de l’app est dans `docs/`, un fichier par sujet :
 | [Mes repères et Systèmes importants](docs/reperes.md) | Repères de minage, prospection, balayage, systèmes importants |
 | [Projet extension](docs/extension.md) | Routes Powerplay, mérites, calculateur de routes, « Où agir cette semaine » |
 | [Modes de jeu et fenêtres en jeu](docs/modes-de-jeu.md) | Menu « Mode de jeu », minage, matériaux, signaux, itinéraire, porteur, FSD, combat, sauvetage, bilans |
-| [Colonisation](docs/colonisation.md) | Chantiers suivis, liste de courses, stations proches |
+| [Colonisation](docs/colonisation.md) | Chantiers suivis, liste de courses, stations proches, projet de l'escadron |
 | [Outils](docs/outils.md) | Applications externes, Règles du jeu, Coup d’œil, commandes, couleurs du HUD, Compagnon, Moniteur PC |
 | [IA de bord (Alicia)](docs/ia.md) | Le copilote facultatif, sur ton PC |
 | [Escadron](docs/escadron.md) | Squadron Tracker : rejoindre, monter le serveur, route, suivi Discord |
@@ -182,7 +184,7 @@ Le détail de chaque partie de l’app est dans `docs/`, un fichier par sujet :
 
 Required Notice: Copyright Cronisos Lysiris (https://github.com/Cronisos)
 
-Le code d'Elite Compagnon est sous licence [PolyForm Noncommercial 1.0.0](LICENSE.md) : tu peux l'utiliser, le lire,
+Le code d'Enova est sous licence [PolyForm Noncommercial 1.0.0](LICENSE.md) : tu peux l'utiliser, le lire,
 le modifier et le redistribuer gratuitement, pour tout usage non commercial. Personne ne peut le vendre ni s'en servir
 pour gagner de l'argent. La ligne « Required Notice » ci-dessus et le texte de la licence doivent accompagner toute
 copie.

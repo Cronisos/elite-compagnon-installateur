@@ -9,7 +9,8 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 
-const NOM_APP = 'Elite Compagnon';
+const NOM_APP = 'Elite Compagnon'; // nom du dossier des données (%APPDATA%) et identité Windows de l'app : ne change pas
+const NOM_AFFICHE = 'Enova'; // nom montré au joueur (titres de fenêtres, bulles, messages)
 const SOUS_DOSSIER = 'donnees';
 /** Dossier de l'overlay (places des fenêtres en jeu…), dans celui de l'app (overlay/dossier.js). */
 const SOUS_DOSSIER_OVERLAY = 'overlay';
@@ -40,7 +41,7 @@ function racineApp(env = process.env) {
   if (local && !estReseau(local)) {
     return { base: local, repli: `%APPDATA% est sur le réseau (${appData}) : dossier de l'app rangé dans %LOCALAPPDATA% (${path.join(local, NOM_APP)})` };
   }
-  throw new Error(`Tes dossiers Windows %APPDATA% (${appData}) et %LOCALAPPDATA% sont sur le réseau : Elite Compagnon a besoin d'un dossier de ce PC pour ses données. Demande à la personne qui gère ce PC d'en garder un sur son disque.`);
+  throw new Error(`Tes dossiers Windows %APPDATA% (${appData}) et %LOCALAPPDATA% sont sur le réseau : Enova a besoin d'un dossier de ce PC pour ses données. Demande à la personne qui gère ce PC d'en garder un sur son disque.`);
 }
 
 /** Dossier racine de l'app (Electron y met aussi son cache) : %APPDATA%\Elite Compagnon (repli : racineApp). */
@@ -57,7 +58,7 @@ function dossierAppOuArret({ montrer, arreter }, env = process.env) {
   try {
     return dossierApp(env);
   } catch (err) {
-    montrer(NOM_APP, `Elite Compagnon ne peut pas démarrer.\n\n${err.message}`);
+    montrer(NOM_AFFICHE, `Enova ne peut pas démarrer.\n\n${err.message}`);
     arreter(1);
     return null;
   }
@@ -234,8 +235,13 @@ const NOM_SAUVEGARDE = /^\d{4}-\d{2}-\d{2} \d{2}h\d{2}m\d{2}$/;
 /** Dossier des données d'avant la dernière restauration, gardé à côté (un seul : le précédent est remplacé). */
 const SUFFIXE_AVANT = '.avant-restauration';
 
-/** Dossier des sauvegardes : Documents du compte Windows. */
+/**
+ * Dossier des sauvegardes : ELITE_SAUVEGARDES_DIR s'il est réglé (chemin absolu, comme pour le serveur :
+ * server/src/core/paths.js), sinon Documents du compte Windows.
+ */
 function dossierSauvegardes(env = process.env, home = os.homedir()) {
+  const propre = String(env.ELITE_SAUVEGARDES_DIR ?? '').trim();
+  if (propre && path.isAbsolute(propre)) return path.resolve(propre);
   return path.join(env.USERPROFILE || home, 'Documents', NOM_SAUVEGARDES);
 }
 
@@ -308,7 +314,7 @@ function restaurerSiDemande({ app, cible, sauvegardes }) {
 
 module.exports = {
   dossierSauvegardes, demanderRestauration, restaurerSiDemande,
-  NOM_APP, SOUS_DOSSIER_OVERLAY, ANCIEN_OVERLAY, MARQUEUR_DEV,
+  NOM_APP, NOM_AFFICHE, SOUS_DOSSIER_OVERLAY, ANCIEN_OVERLAY, MARQUEUR_DEV,
   dossierApp, dossierAppOuArret, dossierDonnees, repliDossierApp, sourceDev, donneesLaisseesDeCote,
   preparerDonnees, demanderEffacement, effacerSiDemande,
 };

@@ -82,6 +82,14 @@ export const PLAN = Object.freeze([
           { id: 'ext-ou-agir', titre: 'Où agir cette semaine', chemin: '/extension?onglet=ou-agir' },
         ],
       },
+      {
+        // Pages du module Colonisation (les modules ne s'importent pas entre eux), rangées ici : c'est l'affaire de l'escadron
+        id: 'colonisation-escadron', titre: 'Colonisation de l’escadron', icone: '▣', chemin: '/colonisation/escadron', description: 'Les chantiers de l’escadron, dans l’ordre du chef',
+        enfants: [
+          { id: 'colo-esc-projet', titre: 'Projet en cours', chemin: '/colonisation/escadron' },
+          { id: 'colo-esc-composer', titre: 'Composer le projet (chef)', chemin: '/colonisation/escadron/composer' },
+        ],
+      },
       { id: 'systemes', titre: 'Systèmes importants', icone: '★', chemin: '/systemes', description: 'Les systèmes que tu suis' },
       {
         id: 'escadron', titre: 'Escadron', icone: '⛨', chemin: '/escadron', description: 'Ton apport à l’escadron, le rejoindre',

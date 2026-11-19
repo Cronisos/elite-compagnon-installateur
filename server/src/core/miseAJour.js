@@ -12,7 +12,7 @@ import path from 'node:path';
 import { isPlainObject, readJsonFile, writeJsonAtomicSync } from './atomic.js';
 
 export const FICHIER_MISE_A_JOUR = 'mise-a-jour.json';
-export const DEPOT_INSTALLATEUR = 'Cronisos/elite-compagnon-installateur';
+export const DEPOT_INSTALLATEUR = 'Cronisos/enova';
 export const ADRESSE_VERSIONS = `https://api.github.com/repos/${DEPOT_INSTALLATEUR}/releases/latest`;
 export const PAGE_VERSIONS = `https://github.com/${DEPOT_INSTALLATEUR}/releases/latest`;
 const DOUZE_HEURES = 12 * 3600 * 1000;
@@ -34,7 +34,7 @@ export function versionInstallee(racine) {
 
 /**
  * Ce que dit la dernière version publiée (réponse de GitHub), sans confiance : { version, publieeLe, page } ou null.
- * La version est lue dans le nom de l'installateur joint (« Installer Elite Compagnon 2026.11.17-ab12cd3.exe »), à
+ * La version est lue dans le nom de l'installateur joint (« Installer Enova 2026.11.20-ab12cd3.exe », avant le 19 nov. 2026 « Installer Elite Compagnon … »), à
  * défaut dans l'étiquette de la version. Le lien est toujours la page des versions du dépôt, jamais une adresse lue
  * dans la réponse.
  */

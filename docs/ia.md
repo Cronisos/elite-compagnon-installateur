@@ -1,6 +1,6 @@
 # IA de bord (Alicia)
 
-> Partie de la notice d’Elite Compagnon : sommaire dans le [README](../README.md#documentation).
+> Partie de la notice d’Enova : sommaire dans le [README](../README.md#documentation).
 
 ## Module « IA de bord » : Alicia (facultatif)
 

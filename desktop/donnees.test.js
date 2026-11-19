@@ -23,7 +23,7 @@ test('%APPDATA% redirigé sur le réseau : dossier de l’app sous %LOCALAPPDATA
   assert.match(repliDossierApp(env), /%APPDATA% est sur le réseau \(\\\\serveur.*%LOCALAPPDATA%/);
   assert.equal(dossierApp({ ...env, APPDATA: '//serveur/profils' }), path.join('C:\\U\\AppData\\Local', 'Elite Compagnon'));
   // Les deux sur le réseau : un message clair plutôt qu'un dossier que le serveur refusera
-  assert.throws(() => dossierApp({ ...env, LOCALAPPDATA: '\\\\serveur\\local' }), /sur le réseau : Elite Compagnon a besoin d'un dossier de ce PC/);
+  assert.throws(() => dossierApp({ ...env, LOCALAPPDATA: '\\\\serveur\\local' }), /sur le réseau : Enova a besoin d'un dossier de ce PC/);
   assert.equal(repliDossierApp({ ...env, LOCALAPPDATA: '' }), null);
 });
 
@@ -33,8 +33,8 @@ test('lancement sans dossier de ce PC : message en français pour le joueur, pui
   const reseau = { APPDATA: '\\\\serveur\\profils\\Testeur', LOCALAPPDATA: '\\\\serveur\\local' };
   assert.equal(dossierAppOuArret(sortie, reseau), null);
   assert.equal(vus.length, 2);
-  assert.equal(vus[0][1], 'Elite Compagnon');
-  assert.match(vus[0][2], /^Elite Compagnon ne peut pas démarrer\.\n\nTes dossiers Windows .* sont sur le réseau/);
+  assert.equal(vus[0][1], 'Enova');
+  assert.match(vus[0][2], /^Enova ne peut pas démarrer\.\n\nTes dossiers Windows .* sont sur le réseau/);
   assert.doesNotMatch(vus[0][2], /\bat .*\.js:\d+|Error:/, 'pas de pile technique');
   assert.deepEqual(vus[1], ['arreter', 1]);
   vus.length = 0;
@@ -156,6 +156,9 @@ test('restauration : la sauvegarde remplace les données, celles d’avant sont 
   const cible = path.join(app, 'donnees');
   const sauvegardes = dossierSauvegardes(env);
   assert.equal(sauvegardes, path.join(t, 'Documents', 'Elite Compagnon - sauvegardes'));
+  // Comme le serveur (server/src/core/paths.js) : ELITE_SAUVEGARDES_DIR, s'il est absolu, remplace Documents
+  assert.equal(dossierSauvegardes({ ...env, ELITE_SAUVEGARDES_DIR: path.join(t, 'banc') }), path.join(t, 'banc'));
+  assert.equal(dossierSauvegardes({ ...env, ELITE_SAUVEGARDES_DIR: 'relatif' }), sauvegardes);
   const ecrire = (f, c) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, c); };
   ecrire(path.join(cible, 'elite.db'), 'base actuelle');
   ecrire(path.join(cible, 'reference', 'gros.json'), 'référence');

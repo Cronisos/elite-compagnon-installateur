@@ -11,8 +11,8 @@ import { DEMO, repondreEnDemo } from './demo.js';
 
 export const API_HEADERS = { 'X-Elite-Compagnon': '1' };
 
-export const MESSAGE_SANS_REPONSE = "L'app ne répond plus : attends quelques secondes, ou relance Elite Compagnon.";
-export const MESSAGE_SERVEUR_INJOIGNABLE = 'Serveur local injoignable : relance Elite Compagnon si ça dure.';
+export const MESSAGE_SANS_REPONSE = "L'app ne répond plus : attends quelques secondes, ou relance Enova.";
+export const MESSAGE_SERVEUR_INJOIGNABLE = 'Serveur local injoignable : relance Enova si ça dure.';
 
 /** Message d'une réponse en erreur qui n'en donne pas, selon son code HTTP. */
 export function messageStatut(status) {

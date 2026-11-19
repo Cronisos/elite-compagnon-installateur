@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import logoEnova from '../assets/enova.png';
+import logoGrand from '../assets/enova-grand.png';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router';
 import { useConnected } from './stream.js';
 import { useGameState } from './useGameState.js';
@@ -21,7 +23,7 @@ import { confirmerDepart } from './gardeModifs.js';
 function titrePage(pathname) {
   if (pathname === '/') return 'Accueil';
   if (pathname.startsWith('/parametres')) return 'Paramètres';
-  return modules.find((m) => m.path && (pathname === m.path || pathname.startsWith(`${m.path}/`)))?.title || 'Elite Compagnon';
+  return modules.find((m) => m.path && (pathname === m.path || pathname.startsWith(`${m.path}/`)))?.title || 'Enova';
 }
 
 /** Fenêtre détachée de l'app de bureau : une barre fine (titre, premier plan, fermer) et la page, sans menus. */
@@ -58,12 +60,14 @@ function LayoutPrincipal({ children }) {
 
   return (
     <div className={`app${bureau ? ' est-bureau' : ''}`}>
+      {/* Filigrane : le grand logo, discret, derrière le contenu, en bas à gauche sur toutes les pages */}
+      <img className="filigrane" src={logoGrand} alt="" aria-hidden="true" />
       <header className="topbar">
         <div className="topbar-top">
           {/* Menu ☰ : seulement dans un navigateur ; l'app de bureau a sa barre de menu en haut à droite de l'écran */}
           {!bureau && <MenuCascade />}
           <Link to="/" className="brand">
-            <span className="brand-mark">◆</span> Elite Compagnon
+            <img className="brand-logo" src={logoEnova} alt="" /> Enova
           </Link>
           <div className="topbar-state">
             {game?.commander && <span>CMDR {game.commander}</span>}

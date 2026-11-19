@@ -42,8 +42,8 @@ function trouverNode(env = process.env, { existe = fs.existsSync, version = (f) 
     if (v !== null && v >= VERSION_MIN) return f;
     trop ??= { f, v };
   }
-  if (trop) throw new Error(`Node.js ${trop.v ?? '?'} trouvé (${trop.f}), mais Elite Compagnon demande Node.js ${VERSION_MIN} ou plus : installe la version LTS depuis nodejs.org.`);
-  throw new Error(`Node.js introuvable : Elite Compagnon en a besoin (version ${VERSION_MIN} ou plus). Installe la version LTS depuis nodejs.org.`);
+  if (trop) throw new Error(`Node.js ${trop.v ?? '?'} trouvé (${trop.f}), mais Enova demande Node.js ${VERSION_MIN} ou plus : installe la version LTS depuis nodejs.org.`);
+  throw new Error(`Node.js introuvable : Enova en a besoin (version ${VERSION_MIN} ou plus). Installe la version LTS depuis nodejs.org.`);
 }
 
 module.exports = { NODE_LIVRE, VERSION_MIN, pistesNode, versionMajeure, trouverNode };

@@ -1,12 +1,12 @@
 // Place du vaisseau sur la carte de la route (RouteMap.jsx), sans React : testé seul. Même règle que la carte Discord
 // du Squadron Tracker (tracker/src/card.js) : à tenir ensemble.
 //
-// Chaque tronçon entre deux systèmes se parcourt en deux temps. Sa première part (TRANSIT) pendant l'attente du
-// passage de semaine, une fois le système d'avant complet : le vaisseau avance alors au fil des jours, pour arriver à
-// cette part le jeudi. Le reste au rythme des mérites du système visé. Le vaisseau n'est donc jamais « déjà arrivé »
-// sur un système où l'on ne peut pas encore travailler, et il ne recule jamais quand la semaine change.
+// Le vaisseau est au-dessus du système où l'on travaille : dès qu'un système s'ouvre (passage de semaine), il y est,
+// et il y reste tant qu'on y gagne des mérites ; l'anneau du système dit où l'on en est (l’auteur, 19 nov. 2026). Il ne
+// voyage que pendant l'attente du jeudi, une fois le système d'avant complet : il parcourt alors TRANSIT du tronçon au
+// fil des jours, sans jamais être « déjà arrivé » sur un système où l'on ne peut pas encore travailler.
 
-export const TRANSIT = 0.6;
+export const TRANSIT = 0.9;
 const SEMAINE_MS = 7 * 24 * 3600 * 1000;
 const borne = (v) => Math.min(1, Math.max(0, v));
 
@@ -27,7 +27,7 @@ export function positionVaisseau({ index, frac, last, enAttente = false, semaine
   if (index > last) return 1;
   if (index === 0) return 0;
   if (enAttente) return (index - 1 + TRANSIT * borne(semaine)) / last;
-  return Math.min(1, (index - 1 + TRANSIT + (1 - TRANSIT) * borne(frac)) / last);
+  return index / last; // système ouvert : le vaisseau est dessus, quel que soit son avancement (frac)
 }
 
 /** Places des flèches de route sur un tronçon, de son système de départ à celui d'arrivée : `n` valeurs de t. */

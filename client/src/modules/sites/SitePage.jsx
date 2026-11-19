@@ -61,7 +61,7 @@ export default function SitePage({ site }) {
         <header className="route-header">
           <div>
             <h1>{site.titre}</h1>
-            <p className="muted">{site.titre} refuse d’être affiché dans une autre page web : il s’affiche ici dans l’app de bureau « Elite Compagnon ».</p>
+            <p className="muted">{site.titre} refuse d’être affiché dans une autre page web : il s’affiche ici dans l’app de bureau « Enova ».</p>
           </div>
         </header>
         <a className="btn" href={site.accueil} target="_blank" rel="noreferrer noopener">Ouvrir {site.titre} dans le navigateur ↗</a>

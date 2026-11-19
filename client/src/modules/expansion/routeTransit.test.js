@@ -27,14 +27,15 @@ test('en attente du jeudi : le vaisseau a quitté le système complet, sans êtr
   assert.ok(fin < 1 / last, 'jamais sur le système suivant avant le passage');
 });
 
-test('le passage de semaine ne fait pas reculer le vaisseau ; ensuite il avance avec les mérites', () => {
+test('système ouvert : le vaisseau est dessus dès le passage de semaine, quel que soit son avancement', () => {
   const last = 11;
   const veille = positionVaisseau({ index: 1, frac: 0, last, enAttente: true, semaine: 1 });
   const lendemain = positionVaisseau({ index: 1, frac: 0, last, enAttente: false });
-  proche(veille, lendemain);
-  proche(positionVaisseau({ index: 1, frac: 0.5, last }), (TRANSIT + (1 - TRANSIT) * 0.5) / last);
+  assert.ok(veille < lendemain, 'le passage le fait arriver, jamais reculer');
+  proche(lendemain, 1 / last);
+  proche(positionVaisseau({ index: 1, frac: 0.5, last }), 1 / last);
   proche(positionVaisseau({ index: 1, frac: 1, last }), 1 / last);
-  proche(positionVaisseau({ index: 4, frac: 1, last }), 4 / last);
+  proche(positionVaisseau({ index: 4, frac: 0.2, last }), 4 / last);
 });
 
 test('bords : premier système, route finie, route d’un seul système', () => {

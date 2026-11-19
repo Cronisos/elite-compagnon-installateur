@@ -30,13 +30,13 @@ function avertissementEmplacement(dossier, env = process.env) {
   const ailleurs = `par exemple dans C:\\Jeux\\Elite Compagnon${local ? ` ou ${local}` : ''}`;
   if (risque === 'programmes') {
     return {
-      court: "Elite Compagnon est dans « Program Files » : Windows l'empêche de se mettre à jour. Déplace son dossier (C:\\Jeux\\Elite Compagnon, par exemple).",
-      long: `Elite Compagnon est installé dans « ${dossier} », un dossier de programmes de Windows. L'app doit pouvoir écrire dans son dossier (mise à jour de la base, de l'interface), ce que Windows y refuse sans droits d'administrateur : elle risque de ne pas démarrer. Déplace tout son dossier ailleurs, ${ailleurs}, puis relance l'installateur.`,
+      court: "Enova est dans « Program Files » : Windows l'empêche de se mettre à jour. Déplace son dossier (C:\\Jeux\\Elite Compagnon, par exemple).",
+      long: `Enova est installé dans « ${dossier} », un dossier de programmes de Windows. L'app doit pouvoir écrire dans son dossier (mise à jour de la base, de l'interface), ce que Windows y refuse sans droits d'administrateur : elle risque de ne pas démarrer. Déplace tout son dossier ailleurs, ${ailleurs}, puis relance l'installateur.`,
     };
   }
   return {
-    court: 'Elite Compagnon est dans un dossier OneDrive : la synchronisation peut le faire échouer au lancement. Déplace son dossier hors de OneDrive.',
-    long: `Elite Compagnon est installé dans « ${dossier} », un dossier synchronisé par OneDrive. OneDrive verrouille des fichiers pendant que l'app les écrit (mise à jour de la base, de l'interface) : des lancements peuvent échouer au hasard. Déplace tout son dossier hors de OneDrive, ${ailleurs}, puis relance l'installateur.`,
+    court: 'Enova est dans un dossier OneDrive : la synchronisation peut le faire échouer au lancement. Déplace son dossier hors de OneDrive.',
+    long: `Enova est installé dans « ${dossier} », un dossier synchronisé par OneDrive. OneDrive verrouille des fichiers pendant que l'app les écrit (mise à jour de la base, de l'interface) : des lancements peuvent échouer au hasard. Déplace tout son dossier hors de OneDrive, ${ailleurs}, puis relance l'installateur.`,
   };
 }
 

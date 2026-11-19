@@ -228,7 +228,7 @@ export class EepLibrary {
    * fait à moitié si la base refuse).
    */
   importer(data) {
-    if (!data || data.format !== 'elite-compagnon-eep' || data.version !== VERSION_EXPORT) throw bad('Ce fichier n’est pas une carte d’EEP d’Elite Compagnon.');
+    if (!data || data.format !== 'elite-compagnon-eep' || data.version !== VERSION_EXPORT) throw bad('Ce fichier n’est pas une carte d’EEP d’Enova.');
     const c = data.center;
     const ok = (v, max) => Number.isFinite(v) && Math.abs(v) <= max;
     if (!c || !ok(c.latitude, 90) || !ok(c.longitude, 180) || typeof c.body !== 'string' || !c.body) throw bad('Carte illisible : centre de l’EEP manquant.');

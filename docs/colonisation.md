@@ -1,6 +1,6 @@
 # Colonisation
 
-> Partie de la notice d’Elite Compagnon : sommaire dans le [README](../README.md#documentation).
+> Partie de la notice d’Enova : sommaire dans le [README](../README.md#documentation).
 
 ## Module « Colonisation »
 
@@ -25,6 +25,16 @@ combien de trajets il reste avec ton vaisseau actuel et où acheter près du cha
   acheter en premier) et la fenêtre libre « 🛒 Liste de courses » (`/hud/colonisation-list`), ouverte avec le mode :
   ce qu'il reste à acheter moins la soute, ce qui est déjà tout en soute coché, trajets restants. Pas de chrono ni de
   session : changer de mode ne remet rien à zéro ici.
+- **« 🛒 À acheter ici »** (`/hud/colonisation-station`, `server/src/modules/colonisation/station.js`) : en mode
+  Colonisation, à quai, quand tu ouvres le marché des marchandises (le jeu écrit alors `Market.json`) et que la
+  station vend ce qu'il reste à acheter pour le chantier actif, la fenêtre s'ouvre d'elle-même. Pour chaque
+  marchandise : ce qu'il faut prendre ici (le moins entre ce qu'il faut, le stock de la station et la place libre en
+  soute, partagée dans l'ordre de la liste de courses), le stock (en orange s'il ne suffit pas), le prix, puis le total
+  et la place restante. Elle suit tes achats (la soute se remplit, ce qu'il reste baisse), et se ferme au départ de la
+  station ou hors du mode ; ✕ la ferme jusqu'à la station suivante. Jamais pour un marché relu au démarrage de l'app,
+  jamais au chantier lui-même. Aucune recherche en ligne : seulement le marché que le jeu a écrit (les stations
+  proches, elles, restent à la demande sur la page). API : `GET /station`, `POST /station/close` ; temps réel
+  `colonisation:station`.
 - **Mode proposé** à l'amarrage à un chantier ou à une livraison (voir « Menu « Mode de jeu » »).
 
 Reconnaissance d'un chantier, à l'amarrage (`Docked`, ou `Location` à quai) : nom de station
@@ -65,6 +75,13 @@ Liste de courses et fin estimée (`plan.js`, calculs purs) :
   la compterait plusieurs fois ; les autres affichent « soute comptée pour le chantier actif ». La cargaison de
   mission (ligne de Cargo.json avec `MissionID`, gardé pour cela par l'état du jeu) ne compte pas : elle est réservée
   à la mission. Les marchandises volées comptent.
+- **Ton porteur** : sa cargaison estimée (module Porteur, voir [Saut du porteur](modes-de-jeu.md#saut-du-porteur), lue
+  par son API locale toutes les 30 s et 1 s après un transfert, un achat ou une vente) est déduite après la soute :
+  **à acheter** = reste − soute − porteur, jamais négatif, pour le chantier actif seulement (comme la soute : elle ne
+  sert qu'une fois). La page montre le porteur (total estimé, écart au total que le jeu donne, en orange) avec la case
+  « Compter sa cargaison dans « À acheter » » (cochée par défaut ; `PUT /settings { carrier }`, gardée dans
+  `colonisation-reglages.json` à côté de l'archive) ; le détail d'un chantier a une colonne « Porteur », le HUD et la
+  liste de courses disent ce qui est sur le porteur. Seulement ton porteur (`CarrierStats`), pas celui d'un autre.
 - **Trajets** = reste ÷ capacité de soute du vaisseau actuel (`CargoCapacity` du Loadout), arrondi au-dessus ;
   inconnus sans capacité, 0 sans reste.
 - **Durée d'une boucle** : saisie, sinon mesurée sur tes livraisons à ce chantier (médiane des écarts entre deux
@@ -130,5 +147,80 @@ de chantier lue au dépôt (sinon déduite de l'amarrage).
 Aucune règle non vérifiée n'est codée : ni délai de 4 semaines pour un chantier, ni fenêtre de revendication, ni
 besoins par type de chantier (Frontier les a déjà changés : ils viennent toujours du dépôt).
 
-Plus tard (hors périmètre) : chantier partagé de l'escadron (avec le partage Cloudflare), recherche d'un système à
-coloniser, lien avec Raven Colonial.
+## Projet de l'escadron
+
+Le chef de l'escadron choisit, dans son app, les systèmes à coloniser puis leurs chantiers dans l'ordre où les
+construire, et publie ce projet sur le serveur de l'escadron. Chaque membre qui le suit voit, en tête de la page
+Colonisation, ce qu'il manque à chaque chantier. Les relevés des membres qui y passent le tiennent à jour : personne
+n'a besoin d'aller au chantier pour savoir quoi acheter.
+
+- **Le chef** (ce PC gère le serveur : adresse et clé de chef connues, page du chef de l'escadron) : « Composer le
+  projet » ou « Modifier le projet ». Il donne de 1 à 10 systèmes (nom exact, comme dans le jeu ; ses revendications
+  et les systèmes de ses chantiers sont proposés), puis classe jusqu'à 40 chantiers (↑ ↓ ✕). Les chantiers proposés
+  sont ceux que son PC suit dans ces systèmes et ceux que les membres y ont relevés : un chantier n'existe qu'une fois
+  la construction lancée en jeu, et son MarketID n'est connu qu'au premier amarrage. Il peut donc publier les systèmes
+  d'abord, puis classer les chantiers à mesure qu'ils apparaissent. « Publier à l'escadron » remplace le projet du
+  serveur pour tous (version + 1). « Arrêter le projet » l'efface, avec tous ses relevés.
+- **Les membres** : « Suivre le projet de l'escadron » (une fois, coupé par défaut ; « Ne plus suivre » l'arrête).
+  Il faut avoir rejoint l'escadron, et une installation confirmée. La page montre les chantiers du chef dans son
+  ordre (n°, avancement, reste, à acheter, trajets, d'où vient la lecture), « En priorité » (les marchandises à
+  acheter d'abord pour le premier chantier en cours), les autres chantiers connus dans les systèmes du projet (pas
+  encore classés), et les systèmes où aucun chantier n'est encore connu. Un chantier relevé par l'escadron sans que tu
+  t'y sois amarré a sa page (`/colonisation/<MarketID>`, avec « Où acheter »), sans réglages ni « Oublier ».
+- **Le HUD** et la liste de courses : à quai à un chantier, c'est lui ; sinon le chantier épinglé ; sinon le **premier
+  chantier en cours du projet**, dans l'ordre du chef (« Projet de l'escadron ») ; sinon le dernier en cours. La soute
+  n'est déduite que pour ce chantier actif, comme avant.
+
+**La lecture la plus récente l'emporte.** Le relevé du dépôt (`ColonisationConstructionDepot`) est un instantané
+absolu des livraisons de tous les CMDR : celui d'un autre membre vaut le tien. Pour chaque chantier, l'app prend la
+lecture la plus récente, la tienne ou celle de l'escadron (« relevé par … il y a … »). Tes réglages et tes livraisons
+restent les tiens. Tes livraisons faites après le relevé de l'escadron y sont ajoutées à titre provisoire, comme sur
+une lecture du dépôt faite ici, jusqu'au relevé suivant (`server/src/modules/colonisation/escadron.js`, calculs purs).
+
+**Ce qui part, et quand** (`server/src/modules/escadron/colonisation.js`). Seulement si le projet est suivi : le
+relevé du dépôt des chantiers des systèmes du projet, jamais les autres. Il contient le MarketID, le système, le nom
+brut du chantier, l'heure du relevé (celle du journal ; ou la fin du chantier si elle est plus récente, fin déduite
+de l'amarrage), l'avancement et, pour chaque marchandise, le demandé et le livré. Le serveur sait qui l'envoie (le
+jeton), les autres membres le voient. Ni ta soute, ni tes livraisons, ni ta position ailleurs. Une lecture
+provisoire (tes livraisons ajoutées en attendant le dépôt) ne part jamais : seulement ce que le jeu a écrit. Un
+relevé ne part que s'il est plus récent que celui du serveur, et pas s'il n'apprend rien (même contenu, moins de
+30 min après). L'app relit le projet toutes les 2 min, 10 s après un relevé du dépôt, une livraison ou un amarrage
+(un seul passage pour la rafale : le jeu peut écrire le dépôt toutes les 15 s à quai), et à l'ouverture de la page
+(au plus toutes les 30 s). Le module Colonisation lit la vue du module Escadron par son API locale (sa copie en
+mémoire, aucun réseau) toutes les 30 s pour le HUD, et à chaque affichage de la page. Le module Escadron lit les
+chantiers de ce PC par l'API locale du module Colonisation (`GET /sites/:marketId?local=1` : ta propre lecture,
+jamais celle d'un autre membre).
+
+**Serveur de l'escadron** (`chef/worker/`, à reporter dans le dépôt squadron-tracker) : le projet est dans `state`
+(clé `colonisation` : `{ projet, version, updatedAt }`), les relevés dans `colonisation_releves` (un par chantier, le
+plus récent d'après l'heure du journal, écrit seulement s'il l'est : `ON CONFLICT … WHERE excluded.at > at`).
+`GET /v1/colonisation` (membres confirmés, chef, suivi) rend le projet et les relevés de ses systèmes ;
+`PUT /v1/colonisation/releve` (membres confirmés, 120 appels par minute comme le reste) refuse un relevé du futur
+(plus de 5 min), de plus de 30 jours, mal formé (400), hors des systèmes du projet (409), ou un 101e chantier (429) ;
+`PUT` et `DELETE /admin/colonisation` (clé de chef) publient et arrêtent le projet. Une installation à confirmer ne lit
+ni n'envoie rien (403). Un serveur d'avant cette version répond 404 : la page dit que le chef doit le remonter
+(page du chef, étape 1 ; la table se crée sans toucher au reste).
+
+API locale : `GET /api/modules/colonisation/escadron` (le projet vu d'ici) ; module Escadron :
+`GET /api/modules/escadron/colonisation`, `PUT …/colonisation/actif` `{ actif }`, `POST …/colonisation/lire`
+`{ force? }` ; côté chef `POST …/chef/colonisation/lire`, `PUT …/chef/colonisation` `{ projet: { systems, sites:
+[{ marketId, system, name? }] } }`, `DELETE …/chef/colonisation`.
+
+**Carte Discord du projet** (facultative, « 3. Carte Discord » dans l'éditeur du chef, une fois le projet publié).
+Le chef colle le lien d'un webhook Discord (`PUT /admin/colonisation/discord { webhook }`, vérifié comme celui de
+la carte du Powerplay) : le serveur de l'escadron poste aussitôt un message, puis le **modifie** (même message) à
+chaque nouvelle version du projet et à chaque relevé gardé. Au plus une modification par minute : une modification
+retenue part à la lecture suivante d'un membre (toutes les 2 min) ; une nouvelle version du projet part tout de
+suite. Message supprimé dans Discord : reposté. Lien refusé par Discord : rien n'est gardé, la page le dit. Le
+message : les chantiers dans l'ordre du chef (10 au plus, puis « et N autres »), puis les autres relevés ; pour
+chacun une barre d'avancement, le reste en tonnes, l'heure du relevé (heure relative de Discord) et les trois
+marchandises qui manquent le plus ; « Projet terminé. » à l'arrêt. Aucun nom de commandant ; les noms venus du jeu
+sont échappés et aucune mention ne peut sonner (`allowed_mentions` vide). Le lien reste dans la base du serveur
+(`state`, clé `colonisation-discord`), jamais sur le PC du chef ni dans une réponse ; `{ webhook: null }` retire la
+carte. Pas de GitHub : contrairement à la carte du Powerplay, c'est le Worker qui écrit à Discord, quand un relevé
+arrive.
+
+Limites assumées : le code de l'escadron ne prouve pas l'identité, un membre confirmé pourrait envoyer un faux relevé
+(le serveur vérifie la forme, pas la vérité) ; le relevé suivant d'un autre membre le remplace.
+
+Plus tard (hors périmètre) : recherche d'un système à coloniser, lien avec Raven Colonial.

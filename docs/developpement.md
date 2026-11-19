@@ -1,6 +1,6 @@
 # Développement
 
-> Partie de la notice d’Elite Compagnon : sommaire dans le [README](../README.md#documentation).
+> Partie de la notice d’Enova : sommaire dans le [README](../README.md#documentation).
 
 ## Tests
 
@@ -243,7 +243,7 @@ Quatre passes, chacune sur son serveur isolé :
 
 Les deux premières ouvrent chaque page des modules clients (et leurs sous-pages, déclarées par leurs `<Route>`), les
 pages du cœur (accueil, paramètres, page inconnue), chaque onglet listé, et chaque fenêtre `/hud/<page>` (liste tirée
-des modules clients : `Hud` et `hudPages`), deux fois : avec le pont de l'overlay simulé (`scripts/controle/pages/pont.mjs`,
+des modules clients : `Hud`, `hudPages` et `hudExtras`), deux fois : avec le pont de l'overlay simulé (`scripts/controle/pages/pont.mjs`,
 mêmes fonctions que `overlay/preload.js`, comme dans le jeu), puis dans un navigateur ordinaire. Les routes à paramètre
 sont ouvertes par un parcours d'utilisateur (« Build depuis ce vaisseau », nom tapé au clavier, « Enregistrer le
 build » ; « Créer un plan » puis « Tout en G5 », « Calculer » et le Dashboard, où le coût des rangs d'ingénieur doit
@@ -553,7 +553,7 @@ overlay/               Electron : overlay transparent par-dessus le jeu (pages /
                        navigations et fonctions du pont permises ; closed.js : avis « overlay quitté » envoyé au
                        serveur à Alt+Maj+Q, gardé si le serveur est arrêté et transmis au lancement suivant
                        (tests : npm test -w overlay)
-desktop/               app de bureau « Elite Compagnon » (Electron de l'overlay) : main.js lance la base, le serveur
+desktop/               app de bureau « Enova » (Electron de l'overlay) : main.js lance la base, le serveur
                        et l'interface (interface.mjs : compilée si besoin, vite preview sur 127.0.0.1:5173), fenêtre
                        principale, pages détachées, barre de menu, zone de notification ; donnees.js : copie unique
                        de server/data dans %APPDATA% ; etat.js : bascule et places ; sites.js : sites externes

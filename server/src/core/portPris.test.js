@@ -42,7 +42,7 @@ test('port pris : netstat puis tasklist ; outils absents ou hors de Windows : nu
 test('port pris : message en français, sans « npm run dev », qui nomme le programme et dit quoi faire', () => {
   const nous = messagePortPris(3001, { pid: 4321, nom: 'node.exe' });
   assert.match(nous, /port 3001 de ce PC est déjà pris par « node\.exe » \(PID 4321\)/);
-  assert.match(nous, /autre copie d'Elite Compagnon/);
+  assert.match(nous, /autre copie d'Enova/);
   const autre = messagePortPris(3001, { pid: 12, nom: 'serveur-photo.exe' });
   assert.match(autre, /« serveur-photo\.exe » \(PID 12\)/);
   assert.match(autre, /gestionnaire des tâches/);

@@ -98,7 +98,7 @@ export default function GuideMembre() {
       {error && <p className="bad">{error}</p>}
 
       <section className="panel">
-        <h2>A. Avec Elite Compagnon</h2>
+        <h2>A. Avec Enova</h2>
         <p className="muted small">L'app rattrape aussi les mérites gagnés quand elle était fermée, jusqu'à 30 jours. C'est le chemin conseillé.</p>
         {!status ? <p className="muted">Chargement…</p> : (
           <ol className="guide-etapes">

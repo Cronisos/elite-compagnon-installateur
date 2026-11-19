@@ -1,4 +1,4 @@
-// Elite Compagnon, l'app de bureau (Electron). Un seul programme :
+// Enova, l'app de bureau (Electron). Un seul programme :
 //  - lance le serveur (server/src/index.js) et l'interface compilée (desktop/interface.mjs) avec le Node du PC, données
 //    dans %APPDATA%\Elite Compagnon\donnees (vides au premier lancement ; copiées depuis server/data seulement avec
 //    ELITE_COPIER_DONNEES_DEV=1, sur le PC du développeur) ; l'overlay des HUD reste lancé par le serveur, comme avec
@@ -22,7 +22,7 @@ const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 const { allowedRequest, demoFrame, samePage } = require('../overlay/guards.js');
 const { writeJsonAtomicSync } = require('../overlay/atomic.js');
-const { NOM_APP, dossierApp, dossierAppOuArret, dossierDonnees, repliDossierApp, sourceDev, donneesLaisseesDeCote, preparerDonnees, demanderEffacement, effacerSiDemande, dossierSauvegardes, demanderRestauration, restaurerSiDemande } = require('./donnees.js');
+const { NOM_APP, NOM_AFFICHE, dossierApp, dossierAppOuArret, dossierDonnees, repliDossierApp, sourceDev, donneesLaisseesDeCote, preparerDonnees, demanderEffacement, effacerSiDemande, dossierSauvegardes, demanderRestauration, restaurerSiDemande } = require('./donnees.js');
 const { MAX_DETACHEES, basculer, boiteErreur, centrerSur, listerEcrans, zoneEcran, cheminDetachable, cheminNavigable, fondFenetre, jeuDansListe, lireEtat, outilsDevPermis, placeBarre, reglageMar, reglagePave, surUnEcran, tailleDefaut } = require('./etat.js');
 const { trouverNode } = require('./noeud.js');
 const { choisirPorts } = require('./ports.js');
@@ -93,7 +93,7 @@ async function demarrer() {
   const avert = avertissementEmplacement(RACINE);
   if (avert) {
     log.ecrire('bureau', `attention : ${avert.long}`);
-    tray?.displayBalloon?.({ iconType: 'warning', title: NOM_APP, content: avert.court, noSound: true });
+    tray?.displayBalloon?.({ iconType: 'warning', title: NOM_AFFICHE, content: avert.court, noSound: true });
   }
   const node = trouverNode();
   // « Effacer mes données » demandé au lancement d'avant : fait ici, avant que le serveur n'ouvre la base
@@ -142,7 +142,7 @@ async function demarrer() {
       compilation = true;
       etape("Compilation de l'interface (son code a changé, une fois)…");
     },
-    surSortie: () => !quitter && pret && echec(new Error("L'interface s'est arrêtée. Relance Elite Compagnon.")),
+    surSortie: () => !quitter && pret && echec(new Error("L'interface s'est arrêtée. Relance Enova.")),
   });
   enfants.interface = ui.enfant;
   ui.pret.catch(() => {}); // son échec est traité plus bas, une fois la base et le serveur prêts
@@ -205,7 +205,7 @@ async function lancerServeur(node, env) {
       // Plantage : relancé, au plus 3 fois en 5 minutes
       const now = Date.now();
       relances = relances.filter((t) => now - t < 5 * 60_000);
-      if (relances.length >= 3) return echec(new Error("Le serveur s'est arrêté trois fois en cinq minutes. Regarde bureau.log, puis relance Elite Compagnon."));
+      if (relances.length >= 3) return echec(new Error("Le serveur s'est arrêté trois fois en cinq minutes. Regarde bureau.log, puis relance Enova."));
       relances.push(now);
       log.ecrire('bureau', 'serveur arrêté : relance');
       setTimeout(() => lancerServeur(node, env).catch(echec), 1000);
@@ -228,7 +228,7 @@ function etape(texte) {
  * introuvable avant même que la fenêtre de chargement ne s'affiche) : la boîte d'erreur s'affiche (etat.js,
  * boiteErreur). Sinon (en plein vol, ou démarrage pendant que le jeu tourne) : jamais une boîte qui prendrait le clavier
  * et la souris du jeu ; une bulle de Windows le dit, l'icône de la zone de notification reste, et la boîte ne s'ouvre
- * qu'au clic sur la bulle ou l'icône, ou en relançant Elite Compagnon.
+ * qu'au clic sur la bulle ou l'icône, ou en relançant Enova.
  */
 let enEchec = false;
 let montrerErreur = null;
@@ -241,7 +241,7 @@ function echec(err) {
   if (boiteErreur({ pret, devant, tray: !!tray && !tray.isDestroyed?.(), jeuLance })) {
     enEchec = true; // la fenêtre de chargement, pas encore affichée, ne s'ouvre plus derrière la boîte
     for (const w of BrowserWindow.getAllWindows()) if (!w.isDestroyed()) w.hide();
-    dialog.showErrorBox(NOM_APP, texte);
+    dialog.showErrorBox(NOM_AFFICHE, texte);
     toutQuitter();
     return;
   }
@@ -249,21 +249,21 @@ function echec(err) {
   arreterEnfants();
   for (const w of BrowserWindow.getAllWindows()) if (!w.isDestroyed()) w.hide();
   const montrer = () => {
-    dialog.showErrorBox(NOM_APP, texte);
+    dialog.showErrorBox(NOM_AFFICHE, texte);
     toutQuitter();
   };
   montrerErreur = montrer;
   tray.removeAllListeners('click');
   tray.on('click', montrer);
   tray.once('balloon-click', montrer);
-  tray.setToolTip(`${NOM_APP} : arrêté sur une erreur, clique pour voir`);
+  tray.setToolTip(`${NOM_AFFICHE} : arrêté sur une erreur, clique pour voir`);
   tray.setContextMenu(Menu.buildFromTemplate([
     { label: 'Voir l’erreur', click: montrer },
     { label: 'Journal de l’app', click: () => shell.showItemInFolder(log.fichier) },
     { type: 'separator' },
     { label: 'Quitter', click: toutQuitter },
   ]));
-  tray.displayBalloon?.({ iconType: 'error', title: `${NOM_APP} s'est arrêté`, content: `${message.slice(0, 160)} Clique ici pour voir.`, noSound: true });
+  tray.displayBalloon?.({ iconType: 'error', title: `${NOM_AFFICHE} s'est arrêté`, content: `${message.slice(0, 160)} Clique ici pour voir.`, noSound: true });
 }
 
 // --- Sécurité des fenêtres ---
@@ -635,7 +635,7 @@ function creerPrincipale() {
     // (styles.css). Windows 10 : fond opaque (etat.js), sinon la fenêtre serait entièrement transparente
     ...FOND_FENETRE,
     icon: ICONE,
-    title: NOM_APP,
+    title: NOM_AFFICHE,
     show: false,
     webPreferences: { preload: PRELOAD, contextIsolation: true, sandbox: true, nodeIntegration: false, spellcheck: false },
   });
@@ -680,7 +680,7 @@ function detacher(chemin, place = null) {
     // Fond translucide (acrylique de Windows 11) sinon opaque, comme la fenêtre principale
     ...FOND_FENETRE,
     icon: ICONE,
-    title: NOM_APP,
+    title: NOM_AFFICHE,
     alwaysOnTop: true,
     skipTaskbar: true,
     webPreferences: { preload: PRELOAD, contextIsolation: true, sandbox: true, nodeIntegration: false, spellcheck: false },
@@ -785,7 +785,7 @@ function creerPave() {
     frame: false,
     backgroundColor: '#07090c',
     icon: ICONE,
-    title: `${NOM_APP} · pavé`,
+    title: `${NOM_AFFICHE} · pavé`,
     focusable: false,
     skipTaskbar: true,
     alwaysOnTop: true,
@@ -898,9 +898,9 @@ function ouvrirPage(chemin) {
 
 function creerTray() {
   tray = new Tray(ICONE);
-  tray.setToolTip(NOM_APP);
+  tray.setToolTip(NOM_AFFICHE);
   tray.setContextMenu(Menu.buildFromTemplate([
-    { label: 'Afficher Elite Compagnon', click: montrerTout },
+    { label: 'Afficher Enova', click: montrerTout },
     { label: 'Tout cacher', click: () => basculerTout(true) },
     { type: 'separator' },
     { label: 'Journal de l’app', click: () => shell.showItemInFolder(log.fichier) },
@@ -1099,7 +1099,7 @@ ipcMain.on('bureau:menuLanceur', (event) => {
     { label: 'Afficher tout', click: montrerTout },
     { label: 'Tout cacher', click: () => basculerTout(true) },
     { type: 'separator' },
-    { label: 'Quitter Elite Compagnon', click: toutQuitter },
+    { label: 'Quitter Enova', click: toutQuitter },
   ]).popup({ window: BrowserWindow.fromWebContents(event.sender) || barre });
 });
 // Pavé tactile (Paramètres) : activé, il s'ouvre tout de suite ; coupé, il se ferme ; gardé au lancement suivant

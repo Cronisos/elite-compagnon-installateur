@@ -1,4 +1,4 @@
-// Textes montrés au joueur : tutoiement partout, nom de l'app à l'endroit (« Elite Compagnon »), onglets en français.
+// Textes montrés au joueur : tutoiement partout, nom de l'app à l'endroit (« Enova »), onglets en français.
 // Lus dans l'interface (client/src) ET dans le serveur (server/src : ses messages d'erreur s'affichent tels quels dans
 // les pages), l'app de bureau et l'overlay. Tous les modules, escadron compris.
 
@@ -73,7 +73,7 @@ test('tutoiement : ni « vous », ni « votre », ni impératif en -ez (interfac
   assert.deepEqual(trouver(VOUS, { garder: vouvoie, sauf: EXCEPTIONS }), []);
 });
 
-test('nom de l’app : « Elite Compagnon », jamais à l’envers', () => {
+test('nom de l’app : « Enova », jamais à l’envers', () => {
   assert.deepEqual(trouver(/Compagnon Elite/), []);
 });
 

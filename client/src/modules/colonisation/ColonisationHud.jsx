@@ -4,8 +4,9 @@ import { useActiveSite } from './useColonisation.jsx';
 import { hudCells, hudLine, REASONS, toBuyList } from './view.js';
 
 /**
- * HUD du mode Colonisation (/hud/colonisation) : chantier actif (à quai, épinglé ou le dernier en cours),
- * avancement, reste, à acheter (reste − soute) et trajets restants. Pas de chrono : rien à chronométrer.
+ * HUD du mode Colonisation (/hud/colonisation) : chantier actif (à quai, épinglé, le premier en cours du projet de
+ * l'escadron s'il est suivi, ou le dernier en cours), avancement, reste, à acheter (reste − soute) et trajets restants.
+ * Pas de chrono : rien à chronométrer.
  */
 export function ColonisationHud() {
   const active = useActiveSite();
@@ -58,13 +59,14 @@ export function ShoppingListOverlay() {
           <div key={i.symbol} className="cl-row">
             <span className="cl-name">{i.name}</span>
             {i.inHold > 0 && <span className="cl-hold">{int(i.inHold)} en soute</span>}
+            {i.onCarrier > 0 && <span className="cl-hold">{int(i.onCarrier)} sur le porteur</span>}
             <span className="cl-qty">{int(i.toBuy)} t</span>
           </div>
         ))}
         {held.map((i) => (
           <div key={i.symbol} className="cl-row is-hold">
             <span className="cl-name">{i.name}</span>
-            <span className="cl-qty">✓ {int(i.remaining)} t en soute</span>
+            <span className="cl-qty">✓ {int(i.remaining)} t {i.onCarrier ? (i.inHold ? 'en soute et sur le porteur' : 'sur le porteur') : 'en soute'}</span>
           </div>
         ))}
         {!buy.length && !held.length && <p className="cl-empty">{site.complete ? 'Chantier terminé.' : 'Plus rien à livrer.'}</p>}

@@ -59,6 +59,8 @@ export function decrireModules(modules) {
     chemin: m.Component ? m.path : null,
     hud: Boolean(m.Hud),
     pagesHud: Object.keys(m.hudPages || {}),
+    // Fenêtres ouvertes par le serveur du module, jamais avec le mode (« À acheter ici ») : contrôlées comme les autres
+    pagesExtras: Object.keys(m.hudExtras || {}),
     nav: m.nav !== false,
     mode: m.mode?.label || null,
     modeId: typeof m.mode?.id === 'string' ? m.mode.id : null, // déclaration commune (core/modes.js), vérifiée par concordanceModes

@@ -230,7 +230,7 @@ app.put('/api/overlay', (req, res, next) => {
   }
   if (request.mode !== null && !isMode(request.mode)) return res.status(400).json({ error: `Mode de jeu inconnu : « ${request.mode} ».` });
   if (!overlayState().installed) {
-    const error = overlayDisabled() ? "L'overlay est coupé (ELITE_NO_OVERLAY) : aucune fenêtre ne s'ouvre." : "Fenêtres en jeu indisponibles : l'overlay n'est pas installé. Relance l'installateur d'Elite Compagnon.";
+    const error = overlayDisabled() ? "L'overlay est coupé (ELITE_NO_OVERLAY) : aucune fenêtre ne s'ouvre." : "Fenêtres en jeu indisponibles : l'overlay n'est pas installé. Relance l'installateur d'Enova.";
     return res.status(409).json({ error });
   }
   // Mode changé à la main : noté avec le vaisseau et l'heure, pour qu'aucune bascule ne l'écrase dans ce vaisseau
@@ -499,7 +499,7 @@ const server = app.listen(PORT, '127.0.0.1', (err) => {
  * dit aussi à l'app de bureau ({ type: 'erreur' }, affiché tel quel), puis arrêt. Autre erreur d'écoute : arrêt aussi.
  */
 function ecouteImpossible(err) {
-  const message = err?.code === 'EADDRINUSE' ? messagePortPris(PORT, quiTientLePort(PORT)) : `Elite Compagnon ne peut pas démarrer : écoute impossible sur le port ${PORT} (${err?.code || err?.message}).`;
+  const message = err?.code === 'EADDRINUSE' ? messagePortPris(PORT, quiTientLePort(PORT)) : `Enova ne peut pas démarrer : écoute impossible sur le port ${PORT} (${err?.code || err?.message}).`;
   console.error(message);
   process.send?.({ type: 'erreur', message });
   process.exitCode = 1;

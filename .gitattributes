@@ -1,3 +1,11 @@
+# Fins de ligne Unix (LF) dans le dossier de travail, quel que soit le réglage de git sur le PC (core.autocrlf=true
+# sous Windows les changerait en CRLF : des tests qui lisent le code source, comme discord.test.js ou electron.test.mjs
+# du banc, échouaient alors). Les scripts de Windows gardent CRLF, comme cmd.exe et PowerShell les attendent.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
 # Banc de contrôle : journaux, options du jeu et résultats attendus gardés octet pour octet (fins de ligne du jeu comprises)
 scripts/controle/seances/** -text
 scripts/controle/options/** -text

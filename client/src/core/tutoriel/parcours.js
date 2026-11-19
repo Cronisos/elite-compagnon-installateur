@@ -23,7 +23,7 @@ const PARCOURS_BASE = [
     chemin: '/',
     etapes: [
       {
-        titre: 'Bienvenue dans Elite Compagnon',
+        titre: 'Bienvenue dans Enova',
         texte: 'L’app lit les journaux que le jeu écrit sur ton PC et te montre où tu en es. Elle ne touche jamais au jeu. Ce petit tour dure une minute : tu peux le passer à tout moment, et le revoir dans Paramètres.',
       },
       {

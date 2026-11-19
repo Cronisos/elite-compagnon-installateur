@@ -10,7 +10,9 @@
           "ship": {
             "capacity": 1232,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -106,7 +108,9 @@
           "ship": {
             "capacity": 1232,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -219,7 +223,8 @@
               "pinned": false,
               "docked": false,
               "lastSeen": "2026-11-01T20:05:00Z",
-              "updatedAt": "2026-11-01T20:01:00Z"
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "releve": null
             }
           ],
           "claims": [
@@ -430,6 +435,8 @@
                 "loopMinutes": null,
                 "pinned": false
               },
+              "local": true,
+              "releve": null,
               "label": "Vaisseau de colonisation · Judson Depot",
               "docked": false,
               "mine": {
@@ -464,6 +471,7 @@
                     "provided": 0,
                     "remaining": 5471,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 5471,
                     "done": false
                   },
@@ -474,6 +482,7 @@
                     "provided": 1220,
                     "remaining": 5460,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 5460,
                     "done": false
                   },
@@ -484,6 +493,7 @@
                     "provided": 0,
                     "remaining": 4518,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 4518,
                     "done": false
                   },
@@ -494,6 +504,7 @@
                     "provided": 0,
                     "remaining": 1865,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 1865,
                     "done": false
                   },
@@ -504,6 +515,7 @@
                     "provided": 0,
                     "remaining": 717,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 717,
                     "done": false
                   },
@@ -514,6 +526,7 @@
                     "provided": 0,
                     "remaining": 521,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 521,
                     "done": false
                   },
@@ -524,6 +537,7 @@
                     "provided": 0,
                     "remaining": 498,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 498,
                     "done": false
                   },
@@ -534,6 +548,7 @@
                     "provided": 0,
                     "remaining": 480,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 480,
                     "done": false
                   },
@@ -544,6 +559,7 @@
                     "provided": 0,
                     "remaining": 341,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 341,
                     "done": false
                   },
@@ -554,6 +570,7 @@
                     "provided": 0,
                     "remaining": 240,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 240,
                     "done": false
                   },
@@ -564,6 +581,7 @@
                     "provided": 0,
                     "remaining": 116,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 116,
                     "done": false
                   },
@@ -574,6 +592,7 @@
                     "provided": 0,
                     "remaining": 91,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 91,
                     "done": false
                   },
@@ -584,6 +603,7 @@
                     "provided": 0,
                     "remaining": 69,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 69,
                     "done": false
                   },
@@ -594,6 +614,7 @@
                     "provided": 0,
                     "remaining": 61,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 61,
                     "done": false
                   },
@@ -604,6 +625,7 @@
                     "provided": 0,
                     "remaining": 51,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 51,
                     "done": false
                   },
@@ -614,6 +636,7 @@
                     "provided": 0,
                     "remaining": 39,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 39,
                     "done": false
                   },
@@ -624,6 +647,7 @@
                     "provided": 0,
                     "remaining": 19,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 19,
                     "done": false
                   },
@@ -634,6 +658,7 @@
                     "provided": 0,
                     "remaining": 13,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 13,
                     "done": false
                   },
@@ -644,6 +669,7 @@
                     "provided": 0,
                     "remaining": 13,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 13,
                     "done": false
                   }
@@ -653,6 +679,7 @@
                   "provided": 1220,
                   "remaining": 20583,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 20583
                 },
                 "capacity": null,
@@ -672,7 +699,9 @@
           "ship": {
             "capacity": null,
             "pad": null
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -870,6 +899,8 @@
               "loopMinutes": null,
               "pinned": false
             },
+            "local": true,
+            "releve": null,
             "label": "Vaisseau de colonisation · Judson Depot",
             "docked": false,
             "mine": {
@@ -904,6 +935,7 @@
                   "provided": 0,
                   "remaining": 5471,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 5471,
                   "done": false
                 },
@@ -914,6 +946,7 @@
                   "provided": 1220,
                   "remaining": 5460,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 5460,
                   "done": false
                 },
@@ -924,6 +957,7 @@
                   "provided": 0,
                   "remaining": 4518,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 4518,
                   "done": false
                 },
@@ -934,6 +968,7 @@
                   "provided": 0,
                   "remaining": 1865,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 1865,
                   "done": false
                 },
@@ -944,6 +979,7 @@
                   "provided": 0,
                   "remaining": 717,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 717,
                   "done": false
                 },
@@ -954,6 +990,7 @@
                   "provided": 0,
                   "remaining": 521,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 521,
                   "done": false
                 },
@@ -964,6 +1001,7 @@
                   "provided": 0,
                   "remaining": 498,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 498,
                   "done": false
                 },
@@ -974,6 +1012,7 @@
                   "provided": 0,
                   "remaining": 480,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 480,
                   "done": false
                 },
@@ -984,6 +1023,7 @@
                   "provided": 0,
                   "remaining": 341,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 341,
                   "done": false
                 },
@@ -994,6 +1034,7 @@
                   "provided": 0,
                   "remaining": 240,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 240,
                   "done": false
                 },
@@ -1004,6 +1045,7 @@
                   "provided": 0,
                   "remaining": 116,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 116,
                   "done": false
                 },
@@ -1014,6 +1056,7 @@
                   "provided": 0,
                   "remaining": 91,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 91,
                   "done": false
                 },
@@ -1024,6 +1067,7 @@
                   "provided": 0,
                   "remaining": 69,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 69,
                   "done": false
                 },
@@ -1034,6 +1078,7 @@
                   "provided": 0,
                   "remaining": 61,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 61,
                   "done": false
                 },
@@ -1044,6 +1089,7 @@
                   "provided": 0,
                   "remaining": 51,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 51,
                   "done": false
                 },
@@ -1054,6 +1100,7 @@
                   "provided": 0,
                   "remaining": 39,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 39,
                   "done": false
                 },
@@ -1064,6 +1111,7 @@
                   "provided": 0,
                   "remaining": 19,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 19,
                   "done": false
                 },
@@ -1074,6 +1122,7 @@
                   "provided": 0,
                   "remaining": 13,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 13,
                   "done": false
                 },
@@ -1084,6 +1133,7 @@
                   "provided": 0,
                   "remaining": 13,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 13,
                   "done": false
                 }
@@ -1093,6 +1143,7 @@
                 "provided": 1220,
                 "remaining": 20583,
                 "inHold": 0,
+                "onCarrier": 0,
                 "toBuy": 20583
               },
               "capacity": null,
@@ -1527,7 +1578,8 @@
               "pinned": false,
               "docked": false,
               "lastSeen": "2026-11-01T20:05:00Z",
-              "updatedAt": "2026-11-01T20:01:00Z"
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "releve": null
             }
           ],
           "claims": [
@@ -1738,6 +1790,8 @@
                 "loopMinutes": null,
                 "pinned": false
               },
+              "local": true,
+              "releve": null,
               "label": "Vaisseau de colonisation · Judson Depot",
               "docked": false,
               "mine": {
@@ -1772,6 +1826,7 @@
                     "provided": 0,
                     "remaining": 5471,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 5471,
                     "done": false
                   },
@@ -1782,6 +1837,7 @@
                     "provided": 1220,
                     "remaining": 5460,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 5460,
                     "done": false
                   },
@@ -1792,6 +1848,7 @@
                     "provided": 0,
                     "remaining": 4518,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 4518,
                     "done": false
                   },
@@ -1802,6 +1859,7 @@
                     "provided": 0,
                     "remaining": 1865,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 1865,
                     "done": false
                   },
@@ -1812,6 +1870,7 @@
                     "provided": 0,
                     "remaining": 717,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 717,
                     "done": false
                   },
@@ -1822,6 +1881,7 @@
                     "provided": 0,
                     "remaining": 521,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 521,
                     "done": false
                   },
@@ -1832,6 +1892,7 @@
                     "provided": 0,
                     "remaining": 498,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 498,
                     "done": false
                   },
@@ -1842,6 +1903,7 @@
                     "provided": 0,
                     "remaining": 480,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 480,
                     "done": false
                   },
@@ -1852,6 +1914,7 @@
                     "provided": 0,
                     "remaining": 341,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 341,
                     "done": false
                   },
@@ -1862,6 +1925,7 @@
                     "provided": 0,
                     "remaining": 240,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 240,
                     "done": false
                   },
@@ -1872,6 +1936,7 @@
                     "provided": 0,
                     "remaining": 116,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 116,
                     "done": false
                   },
@@ -1882,6 +1947,7 @@
                     "provided": 0,
                     "remaining": 91,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 91,
                     "done": false
                   },
@@ -1892,6 +1958,7 @@
                     "provided": 0,
                     "remaining": 69,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 69,
                     "done": false
                   },
@@ -1902,6 +1969,7 @@
                     "provided": 0,
                     "remaining": 61,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 61,
                     "done": false
                   },
@@ -1912,6 +1980,7 @@
                     "provided": 0,
                     "remaining": 51,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 51,
                     "done": false
                   },
@@ -1922,6 +1991,7 @@
                     "provided": 0,
                     "remaining": 39,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 39,
                     "done": false
                   },
@@ -1932,6 +2002,7 @@
                     "provided": 0,
                     "remaining": 19,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 19,
                     "done": false
                   },
@@ -1942,6 +2013,7 @@
                     "provided": 0,
                     "remaining": 13,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 13,
                     "done": false
                   },
@@ -1952,6 +2024,7 @@
                     "provided": 0,
                     "remaining": 13,
                     "inHold": 0,
+                    "onCarrier": 0,
                     "toBuy": 13,
                     "done": false
                   }
@@ -1961,6 +2034,7 @@
                   "provided": 1220,
                   "remaining": 20583,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 20583
                 },
                 "capacity": null,
@@ -1980,7 +2054,9 @@
           "ship": {
             "capacity": null,
             "pad": null
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -2178,6 +2254,8 @@
               "loopMinutes": null,
               "pinned": false
             },
+            "local": true,
+            "releve": null,
             "label": "Vaisseau de colonisation · Judson Depot",
             "docked": false,
             "mine": {
@@ -2212,6 +2290,7 @@
                   "provided": 0,
                   "remaining": 5471,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 5471,
                   "done": false
                 },
@@ -2222,6 +2301,7 @@
                   "provided": 1220,
                   "remaining": 5460,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 5460,
                   "done": false
                 },
@@ -2232,6 +2312,7 @@
                   "provided": 0,
                   "remaining": 4518,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 4518,
                   "done": false
                 },
@@ -2242,6 +2323,7 @@
                   "provided": 0,
                   "remaining": 1865,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 1865,
                   "done": false
                 },
@@ -2252,6 +2334,7 @@
                   "provided": 0,
                   "remaining": 717,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 717,
                   "done": false
                 },
@@ -2262,6 +2345,7 @@
                   "provided": 0,
                   "remaining": 521,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 521,
                   "done": false
                 },
@@ -2272,6 +2356,7 @@
                   "provided": 0,
                   "remaining": 498,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 498,
                   "done": false
                 },
@@ -2282,6 +2367,7 @@
                   "provided": 0,
                   "remaining": 480,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 480,
                   "done": false
                 },
@@ -2292,6 +2378,7 @@
                   "provided": 0,
                   "remaining": 341,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 341,
                   "done": false
                 },
@@ -2302,6 +2389,7 @@
                   "provided": 0,
                   "remaining": 240,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 240,
                   "done": false
                 },
@@ -2312,6 +2400,7 @@
                   "provided": 0,
                   "remaining": 116,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 116,
                   "done": false
                 },
@@ -2322,6 +2411,7 @@
                   "provided": 0,
                   "remaining": 91,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 91,
                   "done": false
                 },
@@ -2332,6 +2422,7 @@
                   "provided": 0,
                   "remaining": 69,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 69,
                   "done": false
                 },
@@ -2342,6 +2433,7 @@
                   "provided": 0,
                   "remaining": 61,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 61,
                   "done": false
                 },
@@ -2352,6 +2444,7 @@
                   "provided": 0,
                   "remaining": 51,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 51,
                   "done": false
                 },
@@ -2362,6 +2455,7 @@
                   "provided": 0,
                   "remaining": 39,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 39,
                   "done": false
                 },
@@ -2372,6 +2466,7 @@
                   "provided": 0,
                   "remaining": 19,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 19,
                   "done": false
                 },
@@ -2382,6 +2477,7 @@
                   "provided": 0,
                   "remaining": 13,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 13,
                   "done": false
                 },
@@ -2392,6 +2488,7 @@
                   "provided": 0,
                   "remaining": 13,
                   "inHold": 0,
+                  "onCarrier": 0,
                   "toBuy": 13,
                   "done": false
                 }
@@ -2401,6 +2498,7 @@
                 "provided": 1220,
                 "remaining": 20583,
                 "inHold": 0,
+                "onCarrier": 0,
                 "toBuy": 20583
               },
               "capacity": null,
@@ -2822,7 +2920,9 @@
           "ship": {
             "capacity": 336,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -2918,7 +3018,9 @@
           "ship": {
             "capacity": 336,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3016,7 +3118,20 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1748,
+              "at": "2026-11-07T10:43:07Z"
+            },
+            "gap": 1748,
+            "since": "2026-11-07T10:43:07Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3112,7 +3227,20 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1748,
+              "at": "2026-11-07T10:43:07Z"
+            },
+            "gap": 1748,
+            "since": "2026-11-07T10:43:07Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3210,7 +3338,9 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3306,7 +3436,9 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3404,7 +3536,9 @@
           "ship": {
             "capacity": 28,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3500,7 +3634,9 @@
           "ship": {
             "capacity": 28,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3598,7 +3734,20 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1460,
+              "at": "2026-11-01T23:15:55Z"
+            },
+            "gap": 1460,
+            "since": "2026-11-01T14:05:35Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3694,7 +3843,20 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1460,
+              "at": "2026-11-01T23:15:55Z"
+            },
+            "gap": 1460,
+            "since": "2026-11-01T14:05:35Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3792,7 +3954,20 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1460,
+              "at": "2026-11-01T13:35:48Z"
+            },
+            "gap": 1460,
+            "since": "2026-11-01T10:26:05Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3888,7 +4063,20 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "carrier": {
+            "counted": true,
+            "name": "PORTEUR 1",
+            "callsign": "TST-001",
+            "total": 0,
+            "reported": {
+              "cargo": 1460,
+              "at": "2026-11-01T13:35:48Z"
+            },
+            "gap": 1460,
+            "since": "2026-11-01T10:26:05Z"
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3986,7 +4174,9 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4082,7 +4272,9 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4180,7 +4372,9 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4276,7 +4470,9 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "carrier": null,
+          "escadron": null
         }
       },
       "GET /here": {

@@ -2,8 +2,10 @@
 // qui s'ouvre d'elle-même à la programmation et se ferme après le saut ou à l'annulation.
 
 import { AFTER_DEPARTURE_MS, CarrierState, CARRIER_EVENTS } from './state.js';
+import { CARGO_EVENTS, CarrierCargo } from './cargo.js';
 
 const SET = new Set(CARRIER_EVENTS);
+const CARGO = new Set(CARGO_EVENTS);
 const PAGE = 'carrier'; // page /hud/carrier de l'overlay
 
 export default {
@@ -23,16 +25,27 @@ export default {
       broadcast('carrier:update', state.summary());
     }
 
-    journal.addInterest(CARRIER_EVENTS);
+    // Cargaison estimée des porteurs (cargo.js) : rejouée depuis tout l'historique du journal, puis en direct
+    let cargo = new CarrierCargo();
+
+    journal.addInterest([...new Set([...CARRIER_EVENTS, ...CARGO_EVENTS])]);
     journal.on('ready', ({ history }) => {
       state = new CarrierState();
-      for (const ev of history) if (SET.has(ev.event)) state.apply(ev);
+      cargo = new CarrierCargo();
+      for (const ev of history) {
+        if (SET.has(ev.event)) state.apply(ev);
+        if (CARGO.has(ev.event)) cargo.apply(ev);
+      }
       sync(); // un saut programmé avant le lancement de l'app est encore affiché
+      broadcast('carrier:cargo', {});
     });
     journal.on('event', (ev) => {
       if (SET.has(ev.event) && state.apply(ev)) sync();
+      if (CARGO.has(ev.event) && cargo.apply(ev)) broadcast('carrier:cargo', {});
     });
 
     router.get('/session', (req, res) => res.json(state.summary()));
+    /** Cargaison estimée de chaque porteur connu (le tien d'abord), avec l'écart au total donné par le jeu. */
+    router.get('/cargo', (req, res) => res.json({ carriers: cargo.view() }));
   },
 };

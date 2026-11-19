@@ -1,5 +1,5 @@
 @echo off
-rem Lance Elite Compagnon, l'app de bureau (dossier desktop) : serveur, interface et overlay dans un seul programme,
+rem Lance Enova, l'app de bureau (dossier desktop) : serveur, interface et overlay dans un seul programme,
 rem icone dans la zone de notification. Deja lancee : la fenetre principale revient au premier plan.
 rem Les raccourcis Bureau et menu Demarrer font la meme chose (npm run raccourcis). Ancienne version dans le
 rem navigateur : npm run dev, puis http://127.0.0.1:5173.

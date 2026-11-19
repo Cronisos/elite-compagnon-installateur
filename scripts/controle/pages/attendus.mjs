@@ -24,7 +24,7 @@
 
 /** Toutes les pages de l'application (avec le cadre et la barre de menus). */
 export const CADRE = {
-  textes: ['Elite Compagnon'],
+  textes: ['Enova'],
   infobulles: ['Connecté au serveur'], // point vert du cadre : le temps réel est branché
   seances: ['CMDR Testeur', 'Solde 710,4 M'],
   vide: { absents: ['CMDR Testeur'] },
@@ -324,6 +324,14 @@ export const APP = {
     seances: ['Bleae Thua ED-D c12-5', 'Judson Depot', '5,6 %', '20 583 t', 'Titanium 5 471 t', 'North America Sector PI-T c3-4'],
     vide: ["Aucun chantier suivi pour l'instant."],
   },
+  '/colonisation/escadron': {
+    titre: 'Colonisation de l’escadron',
+    textes: ['Les chantiers choisis par le chef'],
+  },
+  '/colonisation/escadron/composer': {
+    titre: 'Colonisation de l’escadron',
+    textes: ['Les chantiers choisis par le chef'],
+  },
   '/colonisation/:marketId': {
     seances: { depuis: { url: '/colonisation', cliquer: 'Vaisseau de colonisation · Judson Depot' }, url: /^\/colonisation\/\d+$/, textes: ['MarketID 3963439106', '1 220 t livrées sur 21 803', '20 583 t', 'Échéance et fin estimée'] },
     vide: { url: '/colonisation/1', textes: ['← Chantiers', 'Chantier inconnu (jamais vu dans le journal, ou oublié).'], toleres: [{ requete: 'GET /api/modules/colonisation/sites/1', statut: 404, raison: 'aucun chantier : la page le dit' }] },
@@ -478,6 +486,8 @@ export const HUD = {
     seances: ['Vaisseau de colonisation · Judson Depot', 'Titanium', '5 471 t', 'Superconductors'],
     vide: ['Aucun chantier suivi : amarre-toi à un dépôt de construction.'],
   },
+  // « À acheter ici » : ouverte par le serveur quand un marché est lu en direct ; ouverte sans marché lu, elle le dit
+  'colonisation-station': { textes: ['À acheter ici', 'Ouvre le marché d’une station'] },
   carrier: { rien: true }, // aucun saut programmé à l'heure figée
   signals: {
     seances: ['Synuefe OU-E c28-2', "Site d'extraction de ressources [Danger]", 'arrivée à 15:09'],
@@ -550,6 +560,7 @@ export const FENETRES = {
     materials: { apres: ['Bruts', '76', 'pause · jeu fermé', PROPOSE] },
     colonisation: { apres: [PROPOSE] }, // pas de chantier dans cette séance
     'colonisation-list': { apres: ['Aucun chantier suivi'] },
+    'colonisation-station': { apres: ['Ouvre le marché d’une station'] },
     carrier: { apres: { rien: true } },
     signals: { apres: ['Synuefe OU-E c28-2', "Site d'extraction de ressources [Danger]", 'arrivée à 15:09'] },
     navroute: { apres: { rien: true } },

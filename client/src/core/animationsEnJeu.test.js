@@ -18,6 +18,6 @@ test('cadre des fenêtres en jeu et jauge du FSD : aucune animation sans fin', (
 test('compagnon : dans sa fenêtre en jeu, chaque animation d’attente a un nombre de cycles', () => {
   const css = lire('../modules/compagnon/CompanionView.jsx');
   for (const sel of ['.cp-window .cp-sway', '.cp-window .cp-breathe', '.cp-window .cp-blink.is-blinking']) {
-    assert.match(css, new RegExp(`${sel.replace(/[.]/g, '\\.')} \\{ animation-iteration-count: \\d+; \\}`), sel);
+    assert.match(css, new RegExp(`${sel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} \\{ animation-iteration-count: \\d+; \\}`), sel);
   }
 });

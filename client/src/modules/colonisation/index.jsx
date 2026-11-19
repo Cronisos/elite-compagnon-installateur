@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { ColonisationHud, ShoppingListOverlay } from './ColonisationHud.jsx';
+import { StationOverlay } from './StationOverlay.jsx';
 import { modeInfo } from '../../core/modes.js';
 
 // Page chargée à sa première visite : ni dans les fenêtres en jeu, ni au démarrage (App.jsx, Suspense)
@@ -15,5 +16,8 @@ export default {
   Hud: ColonisationHud, // overlay : /hud/colonisation
   // Fenêtre en plus, ouverte avec le mode : la liste de courses du chantier actif
   hudPages: { 'colonisation-list': ShoppingListOverlay },
+  // Fenêtre ouverte par le serveur, jamais avec le mode : « À acheter ici », quand le marché d'une station lu en mode
+  // Colonisation vend ce qu'il manque (server/src/modules/colonisation/index.js, STATION_PAGE)
+  hudExtras: { 'colonisation-station': StationOverlay },
   mode: modeInfo('colonisation'), // menu « Mode de jeu » : nom, icône et fenêtres dans core/modes.js
 };

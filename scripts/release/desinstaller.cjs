@@ -1,4 +1,4 @@
-// Désinstalleur d'Elite Compagnon, lancé par « Applications installées » de Windows (inscription faite par
+// Désinstalleur d'Enova, lancé par « Applications installées » de Windows (inscription faite par
 // l'installateur, scripts/release/installeur.cjs) avec le Node livré avec l'app. Il retire les raccourcis,
 // l'inscription et le dossier de l'app. Pour tes données (%APPDATA%\Elite Compagnon : base, réglages, repères…), il
 // demande un mot entier, sans choix par défaut : EFFACER ou CONSERVER. Entrée seule ne décide rien, la question est
@@ -10,7 +10,8 @@ const os = require('node:os');
 const path = require('node:path');
 const { execFileSync, spawn, spawnSync } = require('node:child_process');
 
-const NOM = 'Elite Compagnon';
+const NOM = 'Enova';
+const NOM_DONNEES = 'Elite Compagnon'; // dossier des données (%APPDATA%) : son nom n'a pas changé avec celui de l'app
 const CLE = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\EliteCompagnon';
 const DOSSIER = path.resolve(__dirname, '..', '..');
 
@@ -66,7 +67,7 @@ async function principal() {
   console.log(`\n  Désinstaller ${NOM} (${DOSSIER})\n`);
   if ((await question('  Continuer ? Tape OUI puis Entrée : ')).toUpperCase() !== 'OUI') return console.log('  Rien n’a été touché.');
   while (appOuverte()) await question(`  ${NOM} est ouvert : ferme-le, puis appuie sur Entrée… `);
-  const donnees = path.join(process.env.APPDATA || '', NOM);
+  const donnees = path.join(process.env.APPDATA || '', NOM_DONNEES);
   let effacerDonnees = false;
   if (fs.existsSync(donnees)) {
     console.log(`\n  Et tes données ? (${donnees})\n  Ce sont tes repères, tes builds, tes routes, tes sessions et tes réglages.\n`);

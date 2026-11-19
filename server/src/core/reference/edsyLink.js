@@ -92,12 +92,14 @@ export function encodeText(text) {
   return out;
 }
 
+const MAX_TEXTE = 4096; // caractères du lien lus pour le nom du build : bien plus qu'un vrai nom, et une boucle bornée
+
 /**
  * Texte du lien → nom du build (inverse d'encodeText). Un caractère hors alphabet est ignoré ; un chiffre
  * manquant après « _ » ou « - » compte pour 0 ; un rang de ponctuation hors liste ne donne rien.
  */
 export function decodeText(code) {
-  const s = String(code);
+  const s = String(code).slice(0, MAX_TEXTE);
   let out = '';
   let i = 0;
   while (i < s.length) {

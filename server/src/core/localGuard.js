@@ -69,18 +69,18 @@ const shown = (v) => String(v).slice(0, 80);
 export function refusal({ method, headers }, { hosts, origins }) {
   const host = String(headers.host || '').toLowerCase();
   if (!hosts.includes(host)) {
-    return `Requête refusée : l'API d'Elite Compagnon ne répond qu'à ${hosts.join(' et ')} (adresse reçue : « ${shown(headers.host || 'aucune')} »).`;
+    return `Requête refusée : l'API d'Enova ne répond qu'à ${hosts.join(' et ')} (adresse reçue : « ${shown(headers.host || 'aucune')} »).`;
   }
   const origin = headers.origin;
   if (origin !== undefined && !origins.includes(String(origin).toLowerCase())) {
-    return `Requête refusée : un site web (origine « ${shown(origin)} ») ne peut pas utiliser l'API locale d'Elite Compagnon.`;
+    return `Requête refusée : un site web (origine « ${shown(origin)} ») ne peut pas utiliser l'API locale d'Enova.`;
   }
   const site = String(headers['sec-fetch-site'] || '').trim().toLowerCase();
   if (site === 'cross-site') {
-    return "Requête refusée : elle vient d'un autre site web, qui ne peut pas utiliser l'API locale d'Elite Compagnon.";
+    return "Requête refusée : elle vient d'un autre site web, qui ne peut pas utiliser l'API locale d'Enova.";
   }
   if (site === 'same-site') {
-    return "Requête refusée : elle vient de la page d'un autre programme de ce PC (autre port), qui ne peut pas utiliser l'API locale d'Elite Compagnon.";
+    return "Requête refusée : elle vient de la page d'un autre programme de ce PC (autre port), qui ne peut pas utiliser l'API locale d'Enova.";
   }
   if (!SAFE_METHODS.has(String(method).toUpperCase())) {
     const value = headers[GUARD_HEADER.toLowerCase()];

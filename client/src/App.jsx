@@ -76,8 +76,8 @@ export default function App() {
       {modules.filter((m) => m.Hud).map((m) => (
         <Route key={m.id} path={`/hud/${m.id}`} element={<Guarded attente={null}><CadreDisposition nom={nomFenetre(m.id, m.title)}><HudConnection><m.Hud /></HudConnection></CadreDisposition></Guarded>} />
       ))}
-      {/* Pages d'overlay en plus, ouvertes avec le mode du module (hudPages) */}
-      {modules.flatMap((m) => Object.entries(m.hudPages || {}).map(([page, Page]) => [page, Page, m.title])).map(([page, Page, titre]) => (
+      {/* Pages d'overlay en plus : ouvertes avec le mode du module (hudPages), ou par son serveur quand il le décide (hudExtras) */}
+      {modules.flatMap((m) => Object.entries({ ...m.hudPages, ...m.hudExtras }).map(([page, Page]) => [page, Page, m.title])).map(([page, Page, titre]) => (
         <Route key={page} path={`/hud/${page}`} element={<Guarded attente={null}><CadreDisposition nom={nomFenetre(page, titre)}><HudConnection><Page /></HudConnection></CadreDisposition></Guarded>} />
       ))}
       {/* Pages de capture des modules, sans cadre : l'app de bureau en fait une image (rapport de la semaine en GIF) */}

@@ -216,7 +216,7 @@ export function originText(sale) {
  */
 export function casesText(cases, { zeroOnly = false, now = Date.now() } = {}) {
   const list = cases.filter((c) => !zeroOnly || c.merits === 0);
-  const head = `**${zeroOnly ? 'Ventes Powerplay à 0 mérite' : 'Ventes Powerplay mesurées'}** (Elite Compagnon, relevé du ${utcStamp(new Date(now).toISOString())})`;
+  const head = `**${zeroOnly ? 'Ventes Powerplay à 0 mérite' : 'Ventes Powerplay mesurées'}** (Enova, relevé du ${utcStamp(new Date(now).toISOString())})`;
   const lines = [...list].reverse().map((c) => {
     const state = describePlace({ power: c.here?.power, state: c.here?.state });
     const modeLabel = labelOf(MODE_LABELS, c.mode);

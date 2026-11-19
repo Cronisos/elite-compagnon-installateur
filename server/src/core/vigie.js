@@ -98,6 +98,7 @@ export class Vigie {
   }
 
   regle(id) {
+    if (typeof id !== 'string' || id === '__proto__' || id === 'constructor' || id === 'prototype') throw new TypeError('Identifiant de règle invalide.');
     if (!Object.hasOwn(this.etat.regles, id)) this.etat.regles[id] = { total: 0, conformes: 0, expliques: 0, ecarts: 0, ecartsDepuis: 0, recents: [], dernier: null, alerte: null };
     return this.etat.regles[id];
   }

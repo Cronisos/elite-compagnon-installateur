@@ -108,6 +108,9 @@ FREE.compagnon = { width: 440, height: 180 };
 // Fiche « Chez l'ingénieur » (module Ingénierie) : liste qui suit son contenu
 FREE['engineering-visit'] = { width: 400, height: 420 };
 FREE['engineering-passage'] = { width: 420, height: 150 };
+// « À acheter ici » (module Colonisation) : ouverte par le serveur à quai, quand le marché lu vend ce qu'il manque
+FREE['colonisation-station'] = { width: 400, height: 200 };
+MINS['colonisation-station'] = { width: 300, height: 100 };
 FREE.bilan = { width: 460, height: 190 }; // bilan de session ou de mode (modules/bilan) // alertes de passage (ingénieur, échangeur utiles ici)
 // Alertes de la vigie des règles
 FREE.vigie = { width: 420, height: 160 };
@@ -119,7 +122,7 @@ MINS.compagnon = { width: 200, height: 100 };
 const FREE_PLACES = { compagnon: (area, size) => ({ x: area.x + 20, y: area.y + Math.round(area.height * 0.62) - size.height }) };
 // Fenêtres qui prennent la hauteur de leur contenu (autoHeight de PanelOverlay, IPC 'fit-height') : elles grandissent
 // vers le bas, la place par défaut des autres évite la colonne sous elles.
-const GROWS = new Set(['glance', 'colonisation-list', 'engineering-visit', 'engineering-passage', 'bilan', 'vigie']);
+const GROWS = new Set(['glance', 'colonisation-list', 'colonisation-station', 'engineering-visit', 'engineering-passage', 'bilan', 'vigie']);
 // Seules ces fenêtres demandent leur hauteur (PanelOverlay autoHeight) : une autre page qui la demanderait (jusqu'à toute
 // la hauteur de l'écran, pour photographier ou couvrir plus) est ignorée
 const FIT_HEIGHT = GROWS;
@@ -842,7 +845,7 @@ function trayExit() {
   try {
     const taken = `Raccourcis pris par un autre programme : ${takenShortcuts.join(', ')}`;
     tray = new Tray(path.join(__dirname, '..', 'EliteApp.ico'));
-    tray.setToolTip(`Overlay Elite Compagnon (${taken})`);
+    tray.setToolTip(`Overlay Enova (${taken})`);
     tray.setContextMenu(Menu.buildFromTemplate([
       { label: taken, enabled: false },
       { label: 'Masquer / afficher', click: () => { hidden = !hidden; for (const [page, { win }] of windows) visible(page) ? win.showInactive() : win.hide(); } },

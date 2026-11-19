@@ -51,7 +51,7 @@ test('installé dans les programmes du compte, inscrit avec son désinstalleur, 
   assert.equal(dossierInstallation({ LOCALAPPDATA: 'C:\\Users\\Testeur\\AppData\\Local' }), path.join('C:\\Users\\Testeur\\AppData\\Local', 'Programs', 'Elite Compagnon'));
   const d = 'C:\\Users\\Testeur\\AppData\\Local\\Programs\\Elite Compagnon';
   const i = inscription(d, '2026.11.16-test');
-  assert.equal(i.DisplayName, 'Elite Compagnon');
+  assert.equal(i.DisplayName, 'Enova');
   assert.equal(i.DisplayVersion, '2026.11.16-test');
   assert.equal(i.Publisher, AUTEUR);
   assert.match(i.UninstallString, /runtime\\node\\node\.exe" ".*scripts\\release\\desinstaller\.cjs"$/);

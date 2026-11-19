@@ -72,7 +72,7 @@ async function image(e, vue) {
   }
   g.fillStyle = '#4a525c';
   g.font = '14px "Segoe UI", system-ui, sans-serif';
-  g.fillText('Elite Compagnon · carte d’EEP', W - 220, H - 12);
+  g.fillText('Enova · carte d’EEP', W - 220, H - 12);
   return new Promise((r) => c.toBlob(r, 'image/png'));
 }
 
@@ -117,7 +117,7 @@ function Partage({ e, vue }) {
   const faire = (fn) => () => fn().catch((err) => setMsg(err.message));
   return (
     <span className="eep-partage">
-      <button type="button" className="btn" onClick={faire(fichier)} title="Fichier .eep.json : la carte et les repères de minerais, à importer dans Elite Compagnon">📤 Fichier de carte</button>
+      <button type="button" className="btn" onClick={faire(fichier)} title="Fichier .eep.json : la carte et les repères de minerais, à importer dans Enova">📤 Fichier de carte</button>
       <button type="button" className="btn" onClick={faire(png)} title="Image PNG de la carte, pour Discord">🖼 Image</button>
       {msg && <span className="small muted">{msg}</span>}
     </span>

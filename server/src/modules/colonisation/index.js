@@ -1,21 +1,36 @@
 // Module « Colonisation » : chantiers de construction suivis (vaisseau de colonisation, chantiers orbitaux et
 // planétaires), liste de courses (reste − soute), trajets restants, sources proches (Ardent Insight),
-// échéance saisie et estimation de fin. Monté sur /api/modules/colonisation.
+// échéance saisie et estimation de fin, projet de colonisation de l'escadron (lu au module Escadron par son API
+// locale : chantiers par priorité, relevés des membres). Monté sur /api/modules/colonisation.
 //
 // Écrit sans vrai journal de colonisation de l’auteur : il suit la spécification documentée (README) et note dans
 // GET /diagnostics tout ce qui s'en écarte, pour l'affiner le jour où un vrai journal arrivera.
 
+import path from 'node:path';
+import { readJsonFile, writeJsonAtomicSync } from '../../core/atomic.js';
+import { localFetch } from '../../core/net.js';
 import { dataPath } from '../../core/paths.js';
 import { shipPad } from '../../core/ship.js';
-import { marketIdOf } from './events.js';
+import { firstOpen, freshest, projectView, relevesById } from './escadron.js';
+import { marketIdOf, symbolOf } from './events.js';
 import { planSite } from './plan.js';
 import { ColonisationSources, DEFAULTS } from './sources.js';
 import { buildState, ColonisationState, loadArchive, parseArchive, saveArchive, TRACKED_EVENTS } from './state.js';
+import { buyHere, readMarket } from './station.js';
+
+/** Fenêtre en jeu « À acheter ici » : ouverte par le module, en mode Colonisation, quand le marché lu en a. */
+export const STATION_PAGE = 'colonisation-station';
 
 export const DATA_FILE = dataPath('colonisation.json');
 const TRACKED = new Set(TRACKED_EVENTS);
 const NOTIFY_MS = 300; // regroupe les envois (rafale de lectures du dépôt, soute)
 const CONTRIBUTIONS_SHOWN = 50;
+// Projet de l'escadron : relu à l'API locale du module Escadron (sa copie en mémoire, aucun réseau) toutes les 30 s,
+// pour le HUD ; la page, elle, le relit à chaque affichage
+const SQUAD_MS = 30_000;
+// Cargaison du porteur relue peu après un transfert, un achat ou une vente (le module Porteur l'a revue entre-temps)
+const CARRIER_MOVES = new Set(['CargoTransfer', 'MarketBuy', 'MarketSell', 'CarrierStats']);
+const CARRIER_READ_MS = 1000;
 
 function httpError(status, message) {
   return Object.assign(new Error(message), { status, publicMessage: message });
@@ -90,8 +105,10 @@ export default {
    * @param dataFile  archive JSON (tests : dossier temporaire)
    * @param fetchImpl accès réseau vers Ardent Insight (tests : simulé)
    * @param saveDelayMs délai de regroupement des écritures sur disque
+   * @param selfUrl   adresse de l'API locale, pour lire le projet de l'escadron (module Escadron) ; tests : simulée
+   * @param squadMs   relecture du projet de l'escadron (0 : seulement à la demande)
    */
-  async register({ router, journal, game, broadcast, getSettings, dataFile = DATA_FILE, fetchImpl, saveDelayMs = 1000 }) {
+  async register({ router, journal, game, broadcast, getSettings, overlay = null, dataFile = DATA_FILE, fetchImpl, saveDelayMs = 1000, selfUrl = null, localFetchImpl, squadMs = process.env.NODE_TEST_CONTEXT ? 0 : SQUAD_MS }) {
     let state = buildState([], loadArchive(dataFile)); // en attendant l'historique du journal
     const sources = new ColonisationSources(fetchImpl ? { fetchImpl } : {});
     let hoursPerEvening = null;
@@ -122,21 +139,112 @@ export default {
 
     const ship = () => {
       const g = game.snapshot();
-      return { cargo: g.cargo || [], capacity: g.loadout?.cargoCapacity ?? null, pad: shipPad(g.loadout?.ship), docked: g.docked, marketId: g.marketId };
+      return { cargo: g.cargo || [], cargoCount: g.cargoCount ?? 0, capacity: g.loadout?.cargoCapacity ?? null, pad: shipPad(g.loadout?.ship), docked: g.docked, marketId: g.marketId };
     };
-    /** MarketID du chantier actif (à quai, épinglé ou le dernier en cours), ou null. */
-    const activeId = (s) => state.active(s.docked ? s.marketId : null)?.site.marketId ?? null;
+
+    // --- Projet de colonisation de l'escadron (module Escadron, lu par son API locale, jamais son code) ---
+    // --- Réglages du module (à côté de l'archive) : compter ou non la cargaison de ton porteur ---
+    const settingsFile = path.join(path.dirname(dataFile), 'colonisation-reglages.json');
+    const settings = { carrier: true };
+    const savedSettings = readJsonFile(settingsFile, { fallback: null, label: 'Colonisation : réglages' });
+    if (typeof savedSettings?.carrier === 'boolean') settings.carrier = savedSettings.carrier;
+
+    // --- Cargaison de ton porteur, estimée par le module Porteur (son API locale, jamais son code) ---
+    let carriers = null; // [{ id, name, callsign, mine, cargo: [{ symbol, name, count }], total, reported, gap, since }] ou null
+    let carrierKey = '';
+    async function readCarrier() {
+      if (!selfUrl) return carriers;
+      try {
+        const res = await localFetch(`${selfUrl}/api/modules/carrier/cargo`, {}, { fetchImpl: localFetchImpl, timeoutMs: 5000 });
+        const data = res.ok ? await res.json() : null;
+        carriers = Array.isArray(data?.carriers) ? data.carriers : null;
+      } catch {
+        // module Porteur indisponible : on garde la dernière vue
+      }
+      const key = JSON.stringify(myCarrier());
+      if (key !== carrierKey) {
+        carrierKey = key;
+        notify();
+      }
+      return carriers;
+    }
+    /** Ton porteur (CarrierStats), s'il est connu. */
+    const myCarrier = () => (Array.isArray(carriers) ? carriers.find((c) => c?.mine === true) ?? null : null);
+    /** Sa cargaison estimée, par symbole de marchandise : vide si le réglage est coupé ou sans porteur. */
+    function carrierStock() {
+      const c = settings.carrier ? myCarrier() : null;
+      const stock = new Map();
+      for (const x of Array.isArray(c?.cargo) ? c.cargo : []) {
+        const symbol = symbolOf(x?.symbol);
+        if (symbol && Number.isFinite(x.count) && x.count > 0) stock.set(symbol, (stock.get(symbol) || 0) + x.count);
+      }
+      return stock;
+    }
+    /** Ton porteur pour la page : nom, total estimé, écart au total donné par le jeu, compté ou non. */
+    function carrierSummary() {
+      const c = myCarrier();
+      return c ? { counted: settings.carrier, name: c.name ?? null, callsign: c.callsign ?? null, total: c.total ?? 0, reported: c.reported ?? null, gap: c.gap ?? null, since: c.since ?? null } : null;
+    }
+
+    let squad = null; // sa vue : { actif, pret, chef, projet, releves, … }, ou null (module absent, ou pas encore lu)
+    let squadKey = '';
+    const squadOn = () => Boolean(squad?.actif && squad.projet);
+    /**
+     * Relit la vue du module Escadron ; prévient les pages si le projet ou ses relevés ont changé. `frais` : une page
+     * s'ouvre, le module Escadron relit son serveur en arrière-plan si sa dernière lecture a plus de 30 s.
+     */
+    async function readSquad({ frais = false } = {}) {
+      if (!selfUrl) return squad;
+      try {
+        const res = await localFetch(`${selfUrl}/api/modules/escadron/colonisation${frais ? '?frais=1' : ''}`, {}, { fetchImpl: localFetchImpl, timeoutMs: 5000 });
+        squad = res.ok ? await res.json() : null;
+      } catch {
+        // module Escadron indisponible : on garde la dernière vue
+      }
+      const key = JSON.stringify([squad?.actif, squad?.version, squad?.updatedAt, (squad?.releves ?? []).map((r) => [r.marketId, r.at])]);
+      if (key !== squadKey) {
+        squadKey = key;
+        notify();
+      }
+      return squad;
+    }
+    if (squadMs > 0) {
+      setInterval(() => {
+        readSquad();
+        readCarrier();
+      }, squadMs).unref?.();
+    }
+    /** Le chantier avec la lecture la plus récente (la tienne, ou celle de l'escadron) : { site, releve }. */
+    const current = (site) => (squadOn() ? freshest(site, relevesById(squad).get(site.marketId) ?? null) : { site, releve: null });
+    const squadView = () => (squadOn() ? projectView(squad, state.sites) : null);
+
+    /**
+     * Chantier actif : à quai, sinon épinglé, sinon le premier en cours du projet de l'escadron (s'il est suivi ici),
+     * sinon le dernier en cours. { site, reason } ou null.
+     */
+    const activeEntry = (s) => {
+      const a = state.active(s.docked ? s.marketId : null);
+      if (a && a.reason !== 'recent') return a;
+      const first = firstOpen(squadView());
+      if (!first) return a;
+      // Suivi ici : le chantier lui-même (sa lecture la plus récente est reprise à l'affichage) ; sinon celui de l'escadron
+      return state.sites.has(first.marketId) ? { site: state.sites.get(first.marketId), reason: 'escadron' } : { site: first.site, releve: first.releve, reason: 'escadron' };
+    };
+    /** MarketID du chantier actif, ou null. */
+    const activeId = (s) => activeEntry(s)?.site.marketId ?? null;
     /**
      * Plan d'un chantier. La soute n'est déduite que pour le chantier actif : elle ne sert qu'une fois, et la
      * déduire de chaque chantier qui demande la même marchandise la compterait plusieurs fois.
      */
     const planOf = (site, s = ship(), holdFor = activeId(s)) => {
       const holdCounted = site.marketId === holdFor;
-      return { ...planSite(site, { cargo: holdCounted ? s.cargo : [], capacity: s.capacity, hoursPerEvening }), holdCounted };
+      // Ta soute et ton porteur ne servent qu'une fois : pour le chantier actif seulement
+      return { ...planSite(site, { cargo: holdCounted ? s.cargo : [], carrier: holdCounted ? carrierStock() : new Map(), capacity: s.capacity, hoursPerEvening }), holdCounted };
     };
 
-    /** Ligne de la liste des chantiers. */
-    function summary(site, s, holdFor) {
+    /** Ligne de la liste des chantiers (avec la lecture la plus récente, la tienne ou celle de l'escadron). */
+    function summary(tracked, s, holdFor) {
+      const { site, releve } = current(tracked);
       const plan = planOf(site, s, holdFor);
       return {
         marketId: site.marketId,
@@ -159,14 +267,21 @@ export default {
         docked: s.docked && s.marketId === site.marketId,
         lastSeen: site.lastSeen,
         updatedAt: site.updatedAt,
+        releve, // { by, at } : lecture du dépôt envoyée par un membre de l'escadron, plus récente que la tienne
       };
     }
 
-    /** Chantier complet, avec sa liste de courses. */
-    function detail(site, s = ship()) {
-      const { contributions, ...rest } = site;
+    /**
+     * Chantier complet, avec sa liste de courses. `tracked` : un chantier suivi ici (sa lecture la plus récente est
+     * prise, la tienne ou celle de l'escadron), ou { site, releve } déjà choisi (chantier connu par l'escadron seul).
+     */
+    function detail(tracked, s = ship(), { own = false } = {}) {
+      const { site, releve } = tracked.site ? tracked : own ? { site: tracked, releve: null } : current(tracked);
+      const { contributions, local: _, ...rest } = site;
       return {
         ...rest,
+        local: site.local !== false, // false : connu par l'escadron seul (ni réglages, ni livraisons, rien à oublier)
+        releve,
         label: site.user.name || site.stationLabel || `Chantier ${site.marketId}`,
         docked: s.docked && s.marketId === site.marketId,
         mine: { total: contributions.reduce((a, c) => a + c.total, 0), count: contributions.length, recent: contributions.slice(-CONTRIBUTIONS_SHOWN).reverse() },
@@ -176,17 +291,69 @@ export default {
     }
 
     function activeView(s = ship()) {
-      const a = state.active(s.docked ? s.marketId : null);
-      return a ? { reason: a.reason, site: detail(a.site, s) } : null;
+      const a = activeEntry(s);
+      if (!a) return null;
+      const site = state.sites.has(a.site.marketId) ? a.site : { site: a.site, releve: a.releve ?? null };
+      return { reason: a.reason, site: detail(site, s) };
     }
 
     function overview() {
       const s = ship();
       const holdFor = activeId(s);
+      const v = squadView();
       return {
         sites: state.list().map((site) => summary(site, s, holdFor)),
         claims: state.claimList(),
         active: activeView(s),
+        ship: { capacity: s.capacity, pad: s.pad },
+        carrier: carrierSummary(), // ton porteur (cargaison estimée), compté ou non dans « à acheter »
+        // Projet de l'escadron, en bref (la page le détaille avec GET /escadron)
+        escadron: v ? { chantiers: v.sites.length, enCours: v.sites.filter((x) => x.site && !x.site.complete && !x.site.failed).length } : null,
+      };
+    }
+
+    /** Une ligne du projet de l'escadron : le chantier (s'il est connu) et sa liste de courses. */
+    function squadRow(entry, s, holdFor) {
+      const { site, releve } = entry;
+      if (!site) return { priority: entry.priority, marketId: entry.marketId, system: entry.system, label: entry.name || `Chantier ${entry.marketId}`, known: false };
+      const plan = planOf(site, s, holdFor);
+      return {
+        ...(entry.priority ? { priority: entry.priority } : {}),
+        marketId: site.marketId,
+        label: site.user.name || site.stationLabel || entry.name || `Chantier ${site.marketId}`,
+        kind: site.kind,
+        system: site.system ?? entry.system ?? null,
+        progress: site.progress,
+        complete: site.complete,
+        failed: site.failed,
+        provisional: site.provisional,
+        local: site.local !== false,
+        docked: s.docked && s.marketId === site.marketId,
+        updatedAt: site.updatedAt,
+        releve,
+        known: plan.known,
+        plan: { totals: plan.totals, trips: plan.trips, capacity: plan.capacity, holdCounted: plan.holdCounted, items: plan.items },
+      };
+    }
+
+    /** Le projet de l'escadron vu d'ici : son état (module Escadron) et ses chantiers, dans l'ordre du chef. */
+    async function squadronOverview({ frais = false } = {}) {
+      await readSquad({ frais });
+      const s = ship();
+      const holdFor = activeId(s);
+      const { projet: _, releves: __, ...etat } = squad ?? {};
+      const v = squadView();
+      return {
+        escadron: squad ? etat : null, // null : module Escadron absent ou injoignable
+        projet: v ? {
+          systems: v.systems,
+          sites: v.sites.map((e) => squadRow(e, s, holdFor)),
+          others: v.others.map((e) => squadRow(e, s, holdFor)),
+          empty: v.empty,
+        } : null,
+        // Pour le chef : chantiers suivis ici, de quoi composer le projet (même avant de l'avoir publié)
+        mesChantiers: squad?.chef ? state.list().map((x) => ({ marketId: x.marketId, system: x.system, label: x.user.name || x.stationLabel || `Chantier ${x.marketId}`, complete: x.complete, failed: x.failed })) : [],
+        mesSystemes: squad?.chef ? [...new Set([...state.claimList().map((c) => c.system), ...state.list().map((x) => x.system)].filter(Boolean))] : [],
         ship: { capacity: s.capacity, pad: s.pad },
       };
     }
@@ -198,7 +365,7 @@ export default {
       notifyTimer.unref?.();
     };
 
-    journal.addInterest(TRACKED_EVENTS);
+    journal.addInterest([...TRACKED_EVENTS, ...CARRIER_MOVES]);
     journal.on('ready', ({ history }) => {
       // Archive = ce qui est connu juste avant (relu comme un fichier : rien n'y passe sans vérification)
       const archive = parseArchive(JSON.parse(JSON.stringify(state.toJSON())));
@@ -207,12 +374,20 @@ export default {
       notify();
     });
     journal.on('event', (ev) => {
+      if (CARRIER_MOVES.has(ev.event)) scheduleCarrier();
       if (!TRACKED.has(ev.event)) return;
       if (state.apply(ev)) {
         scheduleSave();
         notify();
       }
     });
+    // Transfert vers ou depuis un porteur, achat ou vente : le module Porteur a revu sa cargaison, on la relit
+    let carrierTimer = null;
+    function scheduleCarrier() {
+      clearTimeout(carrierTimer);
+      carrierTimer = setTimeout(() => readCarrier().then(() => refreshStation()), CARRIER_READ_MS);
+      carrierTimer.unref?.();
+    }
     // Soute, vaisseau (capacité, plateforme) ou amarrage : la liste de courses change. Le reste de l'état du jeu
     // (carburant, solde, destination…) bouge sans cesse en vol : il n'envoie rien.
     let shipKey = JSON.stringify(ship());
@@ -220,8 +395,49 @@ export default {
       const key = JSON.stringify(ship());
       if (key === shipKey) return;
       shipKey = key;
-      if (state.sites.size) notify();
+      if (state.sites.size || squadOn()) notify();
+      refreshStation(); // achat (soute), départ de la station
     });
+
+    // --- « À acheter ici » : le marché de la station (Market.json) comparé à la liste de courses du chantier actif ---
+    let market = null; // dernier marché lu
+    let stationOpen = null; // MarketID où la fenêtre est ouverte, ou null
+    let stationClosed = null; // MarketID où ✕ l'a fermée (jusqu'à la prochaine station)
+    /** Ce que la fenêtre montre : la station, le chantier, ce qu'il faut y acheter. */
+    function stationView(s = ship()) {
+      const here = s.docked && market && market.marketId === s.marketId ? market : null;
+      const a = here && !state.sites.has(here.marketId) ? activeEntry(s) : null;
+      if (!a) return { docked: Boolean(s.docked), marketId: here?.marketId ?? null, station: here?.station ?? null, system: here?.system ?? null, at: here?.at ?? null, site: null, items: [], total: { tonnes: 0, cost: 0 }, free: null };
+      const d = detail(state.sites.has(a.site.marketId) ? a.site : { site: a.site, releve: a.releve ?? null }, s);
+      return {
+        docked: true, marketId: here.marketId, station: here.station, system: here.system, at: here.at,
+        site: { marketId: d.marketId, label: d.label, reason: a.reason, known: d.plan.known },
+        ...buyHere(d.plan.items, here, { capacity: s.capacity, cargoCount: s.cargoCount }),
+      };
+    }
+    /**
+     * Ouvre la fenêtre quand un marché est lu en direct (jamais à la relecture), à quai, en mode Colonisation, et qu'il
+     * vend ce qu'il manque ; la tient à jour (achats) ; la ferme au départ de la station, hors du mode, ou après ✕.
+     */
+    function refreshStation({ marketRead = false } = {}) {
+      const v = stationView();
+      const inMode = overlay?.mode?.() === 'colonisation';
+      if (stationOpen != null && (!inMode || !v.docked || v.marketId !== stationOpen)) {
+        stationOpen = null;
+        overlay?.setExtra?.(STATION_PAGE, false);
+      }
+      if (!v.docked) stationClosed = null;
+      if (marketRead && inMode && stationOpen == null && v.items.length && stationClosed !== v.marketId) {
+        stationOpen = v.marketId;
+        overlay?.setExtra?.(STATION_PAGE, true);
+      }
+      broadcast('colonisation:station', v);
+    }
+    journal.on('market', (data, { initial } = {}) => {
+      market = readMarket(data) ?? market;
+      refreshStation({ marketRead: !initial });
+    });
+    overlay?.onMode?.(() => refreshStation());
 
     const siteOr404 = (req) => {
       const id = parseMarketId(req.params.marketId);
@@ -229,14 +445,47 @@ export default {
       if (!site) throw httpError(404, 'Chantier inconnu (jamais vu dans le journal, ou oublié).');
       return site;
     };
+    /** Chantier suivi ici, ou connu par le projet de l'escadron seul : { site, releve } (lecture la plus récente). */
+    const anySiteOr404 = (req) => {
+      const id = parseMarketId(req.params.marketId);
+      if (state.sites.has(id)) return current(state.sites.get(id));
+      const v = squadView();
+      const e = v && [...v.sites, ...v.others].find((x) => x.site && x.site.marketId === id);
+      if (!e) throw httpError(404, 'Chantier inconnu (jamais vu dans le journal, ou oublié).');
+      return { site: e.site, releve: e.releve };
+    };
 
     router.get('/sites', wrap(async (req, res) => {
       await refreshSettings();
+      await readCarrier();
       res.json(overview());
     }));
 
+    /** Réglages du module : { carrier } (compter la cargaison estimée de ton porteur dans « à acheter »). */
+    router.put('/settings', wrap(async (req, res) => {
+      const b = req.body;
+      if (!b || typeof b !== 'object' || Array.isArray(b) || !Object.hasOwn(b, 'carrier') || typeof b.carrier !== 'boolean') {
+        throw httpError(400, 'Réglage attendu : { carrier: vrai ou faux }.');
+      }
+      settings.carrier = b.carrier;
+      writeJsonAtomicSync(settingsFile, settings);
+      notify();
+      refreshStation();
+      res.json(overview());
+    }));
+
+    // ?local=1 : ta propre lecture du dépôt seulement (module Escadron : le relevé qu'il envoie est le tien, jamais
+    // celui d'un autre membre) ; sinon la plus récente, et un chantier connu par l'escadron seul
     router.get('/sites/:marketId', wrap(async (req, res) => {
-      res.json(detail(siteOr404(req)));
+      if (req.query.local === '1') return res.json(detail(siteOr404(req), ship(), { own: true }));
+      if (selfUrl && !state.sites.has(Number(req.params.marketId))) await readSquad();
+      res.json(detail(anySiteOr404(req)));
+    }));
+
+    /** Projet de colonisation de l'escadron vu d'ici : chantiers dans l'ordre du chef, avec la lecture la plus récente. */
+    router.get('/escadron', wrap(async (req, res) => {
+      await refreshSettings();
+      res.json(await squadronOverview({ frais: req.query.frais === '1' }));
     }));
 
     /** Chantier où tu es à quai, avec sa liste de courses ; site null ailleurs. */
@@ -251,8 +500,23 @@ export default {
       res.json(activeView());
     }));
 
+    /** « À acheter ici » : la station où tu es à quai (son marché lu), et ce qu'il faut y acheter pour le chantier actif. */
+    router.get('/station', wrap(async (req, res) => {
+      res.json(stationView());
+    }));
+    /** ✕ dans la fenêtre : fermée jusqu'à la prochaine station. */
+    router.post('/station/close', wrap(async (req, res) => {
+      const v = stationView();
+      stationClosed = v.marketId;
+      if (stationOpen != null) {
+        stationOpen = null;
+        overlay?.setExtra?.(STATION_PAGE, false);
+      }
+      res.json(v);
+    }));
+
     router.get('/sites/:marketId/sources', wrap(async (req, res) => {
-      const site = siteOr404(req);
+      const { site } = anySiteOr404(req);
       const s = ship();
       const plan = planOf(site, s);
       const result = await sources.nearby({
@@ -294,7 +558,7 @@ export default {
       res.json({ ...state.diagnostics(), sources: sources.stats });
     }));
 
-    return { flush, state: () => state };
+    return { flush, state: () => state, readSquad };
   },
 };
 

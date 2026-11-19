@@ -48,7 +48,7 @@ test('raisonArret : Node.js changé depuis l’installation (better-sqlite3) : q
   ].join('\n');
   for (const sortie of [pile, "code: 'ERR_DLOPEN_FAILED'"]) {
     const m = raisonArret('serveur', sortie, 1);
-    assert.match(m, /^serveur : Node\.js a changé de version depuis l'installation d'Elite Compagnon/);
+    assert.match(m, /^serveur : Node\.js a changé de version depuis l'installation d'Enova/);
     assert.match(m, /Relance l'installation \(npm run installer/);
     assert.doesNotMatch(m, /compiled against|at Module/);
   }
@@ -118,7 +118,7 @@ test('port déjà pris : le programme qui le tient est nommé, et le message par
   const autre = raisonArret('serveur', sortie, 1, { qui: () => ({ pid: 4242, nom: 'Discord.exe' }) });
   assert.match(autre, /Le port 3001 \(serveur\) est déjà pris par le programme « Discord\.exe » \(n° 4242\)\. Ferme-le/);
   const copie = raisonArret('serveur', sortie, 1, { qui: () => ({ pid: 12, nom: 'node.exe' }) });
-  assert.match(copie, /une autre copie d'Elite Compagnon tourne sans doute encore/);
+  assert.match(copie, /une autre copie d'Enova tourne sans doute encore/);
   for (const m of [autre, copie, raisonArret('serveur', sortie, 1, { qui: () => null })]) assert.ok(!/npm/.test(m), 'jamais « npm run dev » pour un joueur');
 });
 

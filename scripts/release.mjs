@@ -1,4 +1,4 @@
-// npm run release : fabrique « Installer Elite Compagnon <version>.exe », l'installateur en libre service (aucun mot
+// npm run release : fabrique « Installer Enova <version>.exe », l'installateur en libre service (aucun mot
 // de passe, aucune donnée de qui que ce soit : chacun règle la sienne dans l'app).
 //
 //   1. paquet propre (scripts/paquet.mjs : seuls les fichiers distribués, contrôlés, paquet.json et son empreinte) ;
@@ -27,9 +27,10 @@ const require = createRequire(import.meta.url);
 const { entetePour } = require('./release/installeur.cjs');
 
 const POSTJECT = 'postject@1.0.0-alpha.6';
+const RCEDIT = 'rcedit@5.0.2'; // pose l'icône et le nom d'Enova sur l'exécutable de l'installateur
 const FUSIBLE = 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2';
 
-export const AIDE = `npm run release : fabrique l'installateur d'Elite Compagnon (un .exe en libre service, sans mot de passe).
+export const AIDE = `npm run release : fabrique l'installateur d'Enova (un .exe en libre service, sans mot de passe).
 
 Options :
   --sortie <dossier>  où ranger l'installateur (par défaut : release/ à la racine, ignoré par git)
@@ -55,6 +56,25 @@ function lancer(cmd, args, opts) {
   const r = spawnSync(cmd, args, { stdio: 'inherit', windowsHide: true, ...opts });
   if (r.error) throw new Error(`${path.basename(cmd)} : ${r.error.message}`);
   if (r.status !== 0) throw new Error(`${path.basename(cmd)} ${args.slice(0, 2).join(' ')} : code ${r.status}`);
+}
+
+/**
+ * Icône et nom d'Enova sur l'exécutable de l'installateur (une copie de node.exe, qui porterait sinon l'icône de Node).
+ * À faire avant d'y ranger l'installateur (postject) : ordre vérifié le 19 nov. 2026. Un échec n'arrête rien :
+ * l'installateur marche sans, avec l'icône de Node.
+ */
+function poserIcone(exe, { travail, env }) {
+  try {
+    const outils = path.join(travail, 'outils');
+    fs.mkdirSync(outils, { recursive: true });
+    lancer(process.execPath, [npmCli(), 'install', '--no-audit', '--no-fund', '--prefix', outils, RCEDIT], { cwd: travail, env });
+    lancer(path.join(outils, 'node_modules', 'rcedit', 'bin', 'rcedit-x64.exe'), [
+      exe, '--set-icon', path.join(RACINE, 'EliteApp.ico'),
+      '--set-version-string', 'ProductName', 'Enova', '--set-version-string', 'FileDescription', 'Installateur d’Enova',
+    ], { cwd: travail });
+  } catch (err) {
+    console.warn(`Icône de l'installateur non posée (${err.message}) : il garde celle de Node.`);
+  }
 }
 
 const sha256 = (f) => createHash('sha256').update(fs.readFileSync(f)).digest('hex');
@@ -113,8 +133,9 @@ async function principal(argv) {
     assets: { entete: path.join(travail, 'entete.json'), app: archive },
   }));
   lancer(process.execPath, ['--experimental-sea-config', config], { cwd: travail });
-  const exe = path.join(sortie, `Installer Elite Compagnon ${infos.version}.exe`);
+  const exe = path.join(sortie, `Installer Enova ${infos.version}.exe`);
   fs.copyFileSync(process.execPath, exe);
+  poserIcone(exe, { travail, env });
   const npx = path.join(path.dirname(npmCli()), 'npx-cli.js');
   lancer(process.execPath, [npx, '--yes', POSTJECT, exe, 'NODE_SEA_BLOB', blob, '--sentinel-fuse', FUSIBLE, '--overwrite'], { cwd: travail, env });
   const empreinte = sha256(exe);

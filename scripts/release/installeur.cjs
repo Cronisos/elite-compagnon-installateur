@@ -1,4 +1,4 @@
-// Installateur d'Elite Compagnon : « Installer Elite Compagnon <version>.exe », fabriqué par scripts/release.mjs (un
+// Installateur d'Enova : « Installer Enova <version>.exe », fabriqué par scripts/release.mjs (un
 // exécutable Node unique, SEA : ce fichier, et l'app compressée en ressource). Il ne dépend que de Node lui-même :
 // aucun require d'un autre fichier du projet. Application créée par Cronisos Lysiris, gratuite, en libre service.
 //
@@ -22,7 +22,10 @@ const os = require('node:os');
 const path = require('node:path');
 const { execFileSync, spawn, spawnSync } = require('node:child_process');
 
-const NOM = 'Elite Compagnon';
+const NOM = 'Enova'; // nom montré : messages, « Applications installées », raccourcis
+// Dossier d'installation : son nom d'avant le changement de nom de l'app, gardé pour qu'une mise à jour remplace
+// l'ancienne version au lieu de s'installer à côté
+const NOM_DOSSIER = 'Elite Compagnon';
 const AUTEUR = 'Cronisos Lysiris';
 const ENTETE = 'ELITE-COMPAGNON-INSTALLATEUR-2';
 
@@ -48,7 +51,7 @@ function verifier(contenu, entete) {
 /** Dossier d'installation : les programmes du compte (%LOCALAPPDATA%\Programs). */
 function dossierInstallation(env = process.env) {
   const local = env.LOCALAPPDATA || path.join(os.homedir(), 'AppData', 'Local');
-  return path.join(local, 'Programs', NOM);
+  return path.join(local, 'Programs', NOM_DOSSIER);
 }
 
 const CLE_DESINSTALLATION = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\EliteCompagnon';
@@ -110,7 +113,7 @@ async function installer() {
   const nouveau = `${dossier}.nouveau`;
   const ancien = `${dossier}.ancien`;
   if (fs.existsSync(dossier)) {
-    while (appOuverte(dossier)) await attendreEntree(`\n  ${NOM} est ouvert : ferme-le (◆ puis Quitter, ou l’icône près de l’horloge), puis appuie sur Entrée… `);
+    while (appOuverte(dossier)) await attendreEntree(`\n  ${NOM} est ouvert : ferme-le (clic droit sur son logo puis Quitter, ou l’icône près de l’horloge), puis appuie sur Entrée… `);
   }
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'elite-compagnon-'));
   try {
@@ -138,7 +141,7 @@ async function installer() {
     execFileSync('reg.exe', ['add', CLE_DESINSTALLATION, '/v', nom, '/t', type, '/d', String(valeur), '/f'], { stdio: 'ignore', windowsHide: true });
   }
   console.log(`\n  Installé dans ${dossier}.`);
-  console.log('  Raccourci « Elite Compagnon » sur le Bureau et dans le menu Démarrer. Lancement…\n');
+  console.log('  Raccourci « Enova » sur le Bureau et dans le menu Démarrer. Lancement…\n');
   const electron = path.join(dossier, 'node_modules', 'electron', 'dist', 'electron.exe');
   const env = { ...process.env };
   delete env.ELECTRON_RUN_AS_NODE; // posée, même vide, elle ferait tourner Electron comme un simple Node
@@ -156,4 +159,4 @@ if (estExecutable()) {
   );
 }
 
-module.exports = { AUTEUR, CLE_DESINSTALLATION, ENTETE, NOM, dossierInstallation, empreinte, entetePour, inscription, verifier };
+module.exports = { AUTEUR, CLE_DESINSTALLATION, ENTETE, NOM, NOM_DOSSIER, dossierInstallation, empreinte, entetePour, inscription, verifier };

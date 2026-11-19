@@ -271,7 +271,7 @@ async function fenetresEnsemble({ seance }, { client, chrome, pont, dossier, jou
     srv = await demarrerServeur({ journaux: [], maintenant: s.maintenant, portInterface: portUi, sortie: (l) => flux.write(`${l}\n`) });
     ui = await servirClient({ client, api: srv.url, port: portUi, sortie: (l) => flux.write(`[interface] ${l}\n`) });
     const horloge = scriptHorloge(srv.maintenant);
-    const pages = client.modules.flatMap((m) => [...(m.hud ? [m.id] : []), ...m.pagesHud]);
+    const pages = client.modules.flatMap((m) => [...(m.hud ? [m.id] : []), ...m.pagesHud, ...(m.pagesExtras ?? [])]);
     session = await chrome.contexte();
     const onglets = [];
     for (const p of pages) onglets.push(await session.onglet({ ...HUD_TAILLE, scripts: [horloge, pont], fond: FOND_JEU }));

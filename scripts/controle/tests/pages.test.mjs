@@ -125,14 +125,14 @@ test('pages : chaque attendu est complet (route à paramètre ouverte par une ad
     for (const t of taches) {
       assert.ok(t.adresse.startsWith('/'), `${passe} ${t.cle} : adresse ${t.adresse}`);
       assert.ok(!t.adresse.includes(':'), `${passe} ${t.cle} : adresse sans paramètre`);
-      if (t.genre === 'page' && !t.cle.includes('navigateur')) assert.ok(t.vue.textes.includes('Elite Compagnon'), `${passe} ${t.cle} : cadre`);
+      if (t.genre === 'page' && !t.cle.includes('navigateur')) assert.ok(t.vue.textes.includes('Enova'), `${passe} ${t.cle} : cadre`);
     }
     // Les parcours qui enregistrent passent à la fin : ils ne sont jamais en lecture seule
     assert.ok(taches.filter((t) => t.ecrit).every((t) => t.depuis?.ecrit));
   }
   assert.deepEqual(Object.keys(FENETRES.attendus).sort(), Object.keys(HUD).sort(), 'une attente par fenêtre, ouvertes ensemble');
   assert.deepEqual(vueAttendue({ titre: 'T', textes: ['a'], seances: ['b'], vide: false }, 'vide'), null);
-  assert.deepEqual(vueAttendue({ textes: ['a'], seances: { textes: ['b'], rien: true } }, 'seances', { cadre: CADRE }).textes, ['Elite Compagnon', 'CMDR Testeur', 'Solde 710,4 M', 'a', 'b']);
+  assert.deepEqual(vueAttendue({ textes: ['a'], seances: { textes: ['b'], rien: true } }, 'seances', { cadre: CADRE }).textes, ['Enova', 'CMDR Testeur', 'Solde 710,4 M', 'a', 'b']);
 });
 
 test('pages : parcours en direct bien formé (séances connues, une action et une attente par étape, un journal d’abord)', () => {
@@ -152,8 +152,8 @@ test('interface du banc : même proxy que client/vite.config.js, vers le serveur
   assert.deepEqual(proxyDuBanc({ '/api': 'http://127.0.0.1:3001/' }, api), { '/api': { target: api } });
   assert.throws(() => proxyDuBanc({}, api), /plus de proxy \/api/);
   assert.throws(() => proxyDuBanc({ '/api': { target: 'http://127.0.0.1:3001' }, '/ext': { target: 'https://exemple.org' } }, api), /« \/ext » vise https:\/\/exemple\.org/);
-  const [m] = decrireModules([{ id: 'colonisation', title: 'Colonisation', path: '/colonisation', Component() {}, Hud() {}, hudPages: { 'colonisation-list': () => null }, mode: { id: 'colonisation', label: 'Colonisation' } }]);
-  assert.deepEqual(m, { id: 'colonisation', titre: 'Colonisation', chemin: '/colonisation', hud: true, pagesHud: ['colonisation-list'], nav: true, mode: 'Colonisation', modeId: 'colonisation', permanent: false });
+  const [m] = decrireModules([{ id: 'colonisation', title: 'Colonisation', path: '/colonisation', Component() {}, Hud() {}, hudPages: { 'colonisation-list': () => null }, hudExtras: { 'colonisation-station': () => null }, mode: { id: 'colonisation', label: 'Colonisation' } }]);
+  assert.deepEqual(m, { id: 'colonisation', titre: 'Colonisation', chemin: '/colonisation', hud: true, pagesHud: ['colonisation-list'], pagesExtras: ['colonisation-station'], nav: true, mode: 'Colonisation', modeId: 'colonisation', permanent: false });
   for (const port of [3001, 5173, 80, 70000, '4000']) {
     await assert.rejects(demarrerServeur({ portInterface: port }), /Port d'interface refusé/, String(port));
     await assert.rejects(servirClient({ client: {}, api, port }), /Port d'interface refusé/, String(port));
@@ -209,7 +209,7 @@ test('Chrome sans fenêtre : chaque défaut d’une page piégée est vu, horlog
     assert.ok(p.some((x) => x.startsWith('HTTP 404 inattendu : POST /api/ecrit')), p.join('\n'));
     assert.ok(p.includes('écriture à la seule ouverture de la page : POST /api/ecrit'), p.join('\n'));
     assert.ok(p.includes("requête vers l'extérieur : GET https://exemple.invalid/fuite"), p.join('\n'));
-    const fuite = bilan.requetes.find((q) => q.url.startsWith('https://exemple.invalid'));
+    const fuite = bilan.requetes.find((q) => q.url.startsWith('https://exemple.invalid/'));
     assert.ok(fuite.echec && !fuite.statut, `la requête vers l'extérieur n'aboutit jamais (${fuite.echec})`);
     await onglet.fermer();
   } finally {

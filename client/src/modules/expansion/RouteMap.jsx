@@ -1,19 +1,21 @@
 // Carte de la route façon rapport Discord du squadron : fond étoilé, route courbe, systèmes validés allumés,
-// Forteresses en hexagone, et le vaisseau sur le système en cours avec sa jauge de progression.
+// Forteresses en hexagone, et le vaisseau sur le système en cours avec sa jauge de progression. Au-delà de 12 systèmes,
+// la route serpente sur plusieurs lignes (routeTrace.js).
 
 import { compact } from '../../core/format.js';
 import shipImage from '../../assets/vaisseau-rapport.png';
 import { partSemaine, placesFleches, positionVaisseau } from './routeTransit.js';
+import { W, poseVaisseau, trace } from './routeTrace.js';
 
-const W = 1200;
-const H = 270; // assez haut pour les noms complets sur deux lignes
 const C = { a: '#ff8a1f', b: '#ffd08a', neb1: '#7a2f0b', neb2: '#231447', bg: '#07060b', flame: '#7fd8ff' };
 const HUD = { fontFamily: 'Chakra Petch, var(--font)', fontWeight: 700 };
 const LABEL = { fontFamily: 'Barlow Condensed, var(--font)', fontWeight: 600 };
 
-const curve = (t) => [75 + 1050 * t, 125 + 48 * Math.sin(t * 7.4 + 0.5)];
-const slope = (t) => (Math.atan2(48 * 7.4 * Math.cos(t * 7.4 + 0.5), 1050) * 180) / Math.PI;
-const trail = (a, b) => Array.from({ length: 61 }, (_, k) => curve(a + ((b - a) * k) / 60).map((n) => n.toFixed(1)).join(',')).join(' ');
+/** Points de la route de a à b (t de 0 à 1), sur le tracé g. */
+function trail(g, a, b) {
+  const pas = Math.max(2, Math.ceil(g.pas * Math.abs(b - a)));
+  return Array.from({ length: pas + 1 }, (_, k) => g.curve(a + ((b - a) * k) / pas).map((n) => n.toFixed(1)).join(',')).join(' ');
+}
 
 function hexagon(x, y, r) {
   return Array.from({ length: 6 }, (_, k) => {
@@ -72,10 +74,12 @@ const flame = ({ x, y, h }, n) => `M${(x - n).toFixed(1)} ${(y - h).toFixed(1)} 
 // Scintillement de l'ancien vaisseau : la flamme s'allonge et se raccourcit (0,6 s)
 const FLICKER = [0.85, 1.2, 0.9, 1.1, 0.85];
 
-function Ship({ t }) {
-  const [x, y] = curve(t);
+function Ship({ t, g }) {
+  const [x, y] = g.curve(t);
+  // Ligne qui revient vers la gauche : le vaisseau est retourné en miroir, pas tête en bas
+  const pose = poseVaisseau(g.slope(t));
   return (
-    <g transform={`translate(${x.toFixed(1)} ${(y - 38).toFixed(1)}) rotate(${slope(t).toFixed(1)})`}>
+    <g transform={`translate(${x.toFixed(1)} ${(y - 38).toFixed(1)}) ${pose.miroir ? 'scale(-1 1) ' : ''}rotate(${pose.angle.toFixed(1)})`}>
       <g>
         <animateTransform attributeName="transform" type="translate" values="0 0;0 4;0 0;0 -4;0 0" dur="2.4s" repeatCount="indefinite" />
         {THRUSTERS.map((th) => (
@@ -91,8 +95,8 @@ function Ship({ t }) {
   );
 }
 
-function Node({ step, k, last, index, frac, merits }) {
-  const [x, y] = curve(last ? k / last : 0);
+function Node({ step, k, last, index, frac, merits, g }) {
+  const [x, y] = g.curve(last ? k / last : 0);
   const done = k < index;
   const current = k === index;
   const fort = step.role === 'stronghold' || step.role === 'held-stronghold';
@@ -138,8 +142,8 @@ const jour = (ms) => new Date(ms).toLocaleDateString('fr-FR', { weekday: 'long',
  * Bulle au-dessus d'un système déclaré atteint (palier passé, le relevé du jeu pas encore) : en attente du passage de
  * semaine. Elle reste dans la carte, même sur le premier ou le dernier système.
  */
-function Attente({ k, last, passage }) {
-  const [x, y] = curve(last ? k / last : 0);
+function Attente({ k, last, passage, g }) {
+  const [x, y] = g.curve(last ? k / last : 0);
   const texte = `PALIER ATTEINT ✓ · PASSAGE ${jour(passage).toUpperCase()}`;
   const l = texte.length * 8.6 + 24;
   const bx = Math.max(8, Math.min(W - 8 - l, x - l / 2));
@@ -161,14 +165,14 @@ const BLEU_ROUTE = '#4fb4ff';
  * Flèches sans queue, bleues, sur le tronçon entre le système complet et le suivant, qui s'illuminent en vague vers
  * l'avant : le vaisseau fait route, le système suivant n'est pas encore ouvert. Seulement en attente du passage.
  */
-function Fleches({ depart, arrivee }) {
+function Fleches({ depart, arrivee, g }) {
   const places = placesFleches(depart, arrivee);
   return (
     <g filter="url(#mh-glow)">
       {places.map((p, k) => {
-        const [x, y] = curve(p);
+        const [x, y] = g.curve(p);
         return (
-          <path key={k} d="M-6 -9 L5 0 L-6 9" transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${slope(p).toFixed(1)})`}
+          <path key={k} d="M-6 -9 L5 0 L-6 9" transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${g.slope(p).toFixed(1)})`}
             fill="none" stroke={BLEU_ROUTE} strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.22">
             {/* La vague part du système complet et court vers le suivant */}
             <animate attributeName="opacity" values="0.22;1;0.22;0.22" keyTimes="0;0.18;0.45;1" dur="1.8s" begin={`${(k * 0.22).toFixed(2)}s`} repeatCount="indefinite" />
@@ -188,11 +192,13 @@ function Fleches({ depart, arrivee }) {
  */
 export default function RouteMap({ steps, progress, systems, passage = null }) {
   const last = steps.length - 1;
+  const g = trace(steps.length);
+  const H = g.H;
   const gained = new Map(systems.map((s) => [s.system, s.merits]));
   const { index, frac } = progress;
   const enAttente = passage != null && index > 0 && index <= last && steps[index - 1]?.declared;
   const end = positionVaisseau({ index, frac, last, enAttente, semaine: partSemaine(passage) });
-  const [cx, cy] = curve(Math.min(index, last) / last);
+  const [cx, cy] = g.curve(last ? Math.min(index, last) / last : 0);
   return (
     <svg className="mh-map" viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Avancée de la route">
       <defs>
@@ -208,15 +214,15 @@ export default function RouteMap({ steps, progress, systems, passage = null }) {
           <feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
       </defs>
-      <polyline points={trail(0, 1)} fill="none" stroke="#fff" strokeOpacity=".28" strokeWidth="2" strokeDasharray="3 9" strokeLinecap="round" />
-      {end > 0 && <polyline points={trail(0, end)} fill="none" stroke={C.b} strokeWidth="6" filter="url(#mh-glow)" />}
-      {enAttente && <Fleches depart={(index - 1) / last} arrivee={index / last} />}
+      <polyline points={trail(g, 0, 1)} fill="none" stroke="#fff" strokeOpacity=".28" strokeWidth="2" strokeDasharray="3 9" strokeLinecap="round" />
+      {end > 0 && <polyline points={trail(g, 0, end)} fill="none" stroke={C.b} strokeWidth="6" filter="url(#mh-glow)" />}
+      {enAttente && <Fleches depart={(index - 1) / last} arrivee={index / last} g={g} />}
       {steps.map((s, k) => (
-        <Node key={s.name} step={s} k={k} last={last} index={index} frac={frac} merits={gained.get(s.name) || 0} />
+        <Node key={s.name} step={s} k={k} last={last} index={index} frac={frac} merits={gained.get(s.name) || 0} g={g} />
       ))}
       {index < steps.length && <path d={`M${cx.toFixed(1)} ${(cy - 32).toFixed(1)} l-7 -12 h14 Z`} fill={C.b} opacity={index === 0 || enAttente ? 0 : 1} />}
-      {passage != null && steps.map((s, k) => (s.declared ? <Attente key={`attente-${s.name}`} k={k} last={last} passage={passage} /> : null))}
-      <Ship t={end} />
+      {passage != null && steps.map((s, k) => (s.declared ? <Attente key={`attente-${s.name}`} k={k} last={last} passage={passage} g={g} /> : null))}
+      <Ship t={end} g={g} />
       {index < steps.length && (
         <text x={W - 24} y={H - 12} textAnchor="end" style={HUD} fontSize="15" fill={C.b} letterSpacing="1">
           {enAttente

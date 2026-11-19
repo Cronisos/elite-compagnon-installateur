@@ -158,10 +158,10 @@ function quiTientLePort(port, { exec = execFileSync, env = process.env } = {}) {
 function messagePortPris(nom, port, qui) {
   const ou = port ? `Le port ${port} (${nom})` : `Le port du ${nom}`;
   if (qui?.nom && !/^(?:node|electron|elite compagnon)\.exe$/i.test(qui.nom)) {
-    return `${ou} est déjà pris par le programme « ${qui.nom} » (n° ${qui.pid}). Ferme-le, puis relance Elite Compagnon.`;
+    return `${ou} est déjà pris par le programme « ${qui.nom} » (n° ${qui.pid}). Ferme-le, puis relance Enova.`;
   }
   const par = qui?.nom ? ` par « ${qui.nom} » (n° ${qui.pid})` : '';
-  return `${ou} est déjà pris${par} : une autre copie d'Elite Compagnon tourne sans doute encore. Quitte-la (clic droit sur son icône près de l'horloge, puis « Quitter »), ou redémarre le PC, puis relance.`;
+  return `${ou} est déjà pris${par} : une autre copie d'Enova tourne sans doute encore. Quitte-la (clic droit sur son icône près de l'horloge, puis « Quitter »), ou redémarre le PC, puis relance.`;
 }
 
 /** Message d'un processus arrêté avant d'être prêt : la cause connue, sinon la fin de sa sortie. */
@@ -173,7 +173,7 @@ function raisonArret(nom, sortie, code, { qui = quiTientLePort } = {}) {
   // Node.js mis à jour (version majeure) depuis l'installation : better-sqlite3 (la base) a été préparé pour l'ancien,
   // et le serveur meurt sur « NODE_MODULE_VERSION … » ou ERR_DLOPEN_FAILED, 4 lignes de pile en anglais
   if (/NODE_MODULE_VERSION|ERR_DLOPEN_FAILED/.test(sortie)) {
-    return `${nom} : Node.js a changé de version depuis l'installation d'Elite Compagnon, et la base n'est plus lisible par cette version. Relance l'installation (npm run installer, dans le dossier de l'app), puis relance l'app. Tes données ne sont pas touchées.`;
+    return `${nom} : Node.js a changé de version depuis l'installation d'Enova, et la base n'est plus lisible par cette version. Relance l'installation (npm run installer, dans le dossier de l'app), puis relance l'app. Tes données ne sont pas touchées.`;
   }
   const fin = sortie.trim().split(/\r?\n/).slice(-4).join('\n');
   return `${nom} s'est arrêté (code ${code ?? '—'}).${fin ? `\n\n${fin}` : ''}`;

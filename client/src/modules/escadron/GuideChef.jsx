@@ -349,6 +349,10 @@ export default function GuideChef() {
                   </div>
                 </>
               )}
+              <p className="tiny muted">
+                Colonisation : le projet de l'escadron (systèmes à coloniser, chantiers par priorité) se compose depuis la
+                page <Link to="/colonisation">Colonisation</Link>, « Composer le projet ».
+              </p>
             </Etape>
 
             <Etape

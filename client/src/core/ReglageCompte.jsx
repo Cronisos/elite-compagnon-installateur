@@ -99,7 +99,7 @@ export default function ReglageCompte() {
           </>
         )}
         <dt>Application</dt>
-        <dd className="muted small">Elite Compagnon, créé par Cronisos Lysiris. Gratuit, en libre service, non affilié à Frontier Developments.</dd>
+        <dd className="muted small">Enova, créé par Cronisos Lysiris. Gratuit, en libre service, non affilié à Frontier Developments.</dd>
       </dl>
 
       {!effacer ? (

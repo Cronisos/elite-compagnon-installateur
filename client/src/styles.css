@@ -161,6 +161,29 @@ h3 {
 .brand-mark {
   color: var(--accent);
 }
+/* Filigrane de la fenêtre principale : sous le contenu (z-index négatif, dans le contexte de .app), jamais cliquable.
+   Même place sur toutes les pages : en bas à gauche, un peu penché (l’auteur, 19 nov. 2026). */
+.app {
+  isolation: isolate;
+}
+.filigrane {
+  position: fixed;
+  left: 2%;
+  bottom: 6%;
+  transform: rotate(-8deg);
+  z-index: -1;
+  width: min(52vh, 560px);
+  height: auto;
+  opacity: 0.13;
+  pointer-events: none;
+  user-select: none;
+}
+.brand-logo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin: -6px 0.35rem -4px 0;
+}
 .topbar-state {
   display: flex;
   flex-wrap: wrap;
@@ -3704,6 +3727,19 @@ html.est-barre #root {
 .bb-losange.is-cache {
   color: #8a94a0;
 }
+.bb-losange {
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.bb-losange img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.bb-losange.is-cache img {
+  opacity: 0.6;
+}
 .bb-menu {
   display: flex;
   flex-direction: row;
@@ -4523,6 +4559,11 @@ html.bureau body {
     radial-gradient(ellipse at 0 30%, rgba(var(--acc-rgb), 0.08), transparent 50%),
     rgba(7, 9, 12, var(--fond-opacite, 0.42));
   background-attachment: fixed;
+}
+/* La teinte se pose deux fois (html, puis body) : body prend toute la hauteur de la fenêtre, sinon le bas d'une page
+   courte n'a qu'une couche et paraît gris (l’auteur, 19 nov. 2026) */
+html.bureau body {
+  min-height: 100vh;
 }
 /* Fond plus transparent : le jeu se voit derrière ; les panneaux gardent assez d'opacité pour être lus */
 html.bureau {

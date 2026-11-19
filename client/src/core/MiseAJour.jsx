@@ -32,7 +32,7 @@ export function MiseAJourNotice() {
   return (
     <div className="alerts" style={{ marginBottom: '1rem' }}>
       <div className="alert alert-info" role="status">
-        Une nouvelle version d'Elite Compagnon est disponible{n.version ? ` (${n.version})` : ''}, publiée le {dateTime(n.publieeLe)}.
+        Une nouvelle version d'Enova est disponible{n.version ? ` (${n.version})` : ''}, publiée le {dateTime(n.publieeLe)}.
         <div className="form-actions" style={{ marginTop: '0.5rem' }}>
           <a className="btn btn-primary small" href={n.page} target="_blank" rel="noopener noreferrer">Ouvrir la page de téléchargement ↗</a>
           <button className="btn btn-ghost small" type="button" onClick={() => regler({ ignorer: true }).catch(() => {})}>Ne plus me le dire pour cette version</button>

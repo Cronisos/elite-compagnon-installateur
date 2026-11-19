@@ -159,7 +159,7 @@ export function sousPages(modules, dossierModules) {
 export function trous({ modules, app, hud, sous, fixes, ensemble = hud }) {
   const t = [];
   const pages = new Set([...fixes, ...modules.filter((m) => m.chemin).map((m) => m.chemin), ...Object.keys(sous)]);
-  const fenetres = new Set(modules.flatMap((m) => [...(m.hud ? [m.id] : []), ...m.pagesHud]));
+  const fenetres = new Set(modules.flatMap((m) => [...(m.hud ? [m.id] : []), ...m.pagesHud, ...(m.pagesExtras ?? [])]));
   for (const p of pages) if (!app.includes(p)) t.push(`page ${p} sans attendu (scripts/controle/pages/attendus.mjs, APP)`);
   for (const p of app) if (!pages.has(p)) t.push(`attendu de page ${p} sans page dans l'interface (faute de frappe, ou page retirée ?)`);
   for (const f of fenetres) if (!hud.includes(f)) t.push(`fenêtre /hud/${f} sans attendu (scripts/controle/pages/attendus.mjs, HUD)`);

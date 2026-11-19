@@ -7,27 +7,26 @@ import Tile from '../../core/Tile.jsx';
 import { ago, cr, date, dateTime, int, pct } from '../../core/format.js';
 import { colApi } from './api.js';
 import { useColonisation } from './useColonisation.jsx';
-import { deadlineText, etaText, KIND_LABELS, LOOP_SOURCES, REASONS, statusOf, toBuyList, toLocalInput, tonnes, VERDICTS } from './view.js';
+import { deadlineText, etaText, KIND_LABELS, LOOP_SOURCES, REASONS, releveText, statusOf, toBuyList, toLocalInput, tonnes, VERDICTS } from './view.js';
 import NomSysteme from '../../core/NomSysteme.jsx';
 import PageIntrouvable from '../../core/PageIntrouvable.jsx';
+import Progress from './Progress.jsx';
+import ProjetEscadron from './ProjetEscadron.jsx';
+import Onglets from '../../core/Onglets.jsx';
 
-/** Page du module : liste des chantiers, et le détail d'un chantier (/colonisation/<MarketID>). */
+/**
+ * Page du module : liste des chantiers, le détail d'un chantier (/colonisation/<MarketID>), et le projet de colonisation
+ * de l'escadron (/colonisation/escadron, et /composer pour le chef), rangé dans le menu sous « Powerplay & Escadron ».
+ */
 export default function ColonisationPage() {
   return (
     <Routes>
       <Route index element={<SiteList />} />
+      <Route path="escadron" element={<PageProjetEscadron key="projet" />} />
+      <Route path="escadron/composer" element={<PageProjetEscadron key="composer" composer />} />
       <Route path=":marketId" element={<SiteDetail />} />
       <Route path="*" element={<PageIntrouvable retour="/colonisation" nom="Colonisation" />} />
     </Routes>
-  );
-}
-
-function Progress({ value, done }) {
-  const w = Math.max(0, Math.min(100, (value || 0) * 100));
-  return (
-    <div className="progress small-progress" title={pct(value)}>
-      <div className={`progress-bar ${done ? 'bar-good' : ''}`} style={{ width: `${w}%` }} />
-    </div>
   );
 }
 
@@ -47,9 +46,9 @@ function ActivePanel({ active }) {
       </div>
       <Progress value={site.progress} done={site.complete} />
       <div className="tiles tiles-4" style={{ marginTop: '0.9rem' }}>
-        <Tile label="Avancement" value={pct(site.progress)} sub={site.provisional ? 'estimé avec tes livraisons, en attendant le dépôt' : site.updatedAt ? `lu ${ago(site.updatedAt)}` : 'pas encore lu'} />
+        <Tile label="Avancement" value={pct(site.progress)} sub={site.provisional ? 'estimé avec tes livraisons, en attendant le dépôt' : site.releve ? releveText(site.releve) : site.updatedAt ? `lu ${ago(site.updatedAt)}` : 'pas encore lu'} />
         <Tile label="Reste à livrer" value={plan.known ? tonnes(plan.totals.remaining) : '?'} sub={plan.known ? `sur ${int(plan.totals.required)} t` : 'ouvre le contact du chantier en jeu'} />
-        <Tile label="À acheter" value={plan.known ? tonnes(plan.totals.toBuy) : '?'} sub={`reste − soute (${int(plan.totals.inHold || 0)} t utiles en soute)`} tone={plan.totals.toBuy === 0 && plan.known ? 'good' : undefined} />
+        <Tile label="À acheter" value={plan.known ? tonnes(plan.totals.toBuy) : '?'} sub={plan.totals.onCarrier ? `reste − soute − porteur (${int(plan.totals.inHold || 0)} t en soute, ${int(plan.totals.onCarrier)} t sur le porteur)` : `reste − soute (${int(plan.totals.inHold || 0)} t utiles en soute)`} tone={plan.totals.toBuy === 0 && plan.known ? 'good' : undefined} />
         <Tile label="Trajets restants" value={plan.trips == null ? '?' : int(plan.trips)} sub={plan.capacity ? `avec ${int(plan.capacity)} t de soute` : 'capacité de soute inconnue'} />
       </div>
       {first.length > 0 && (
@@ -59,8 +58,72 @@ function ActivePanel({ active }) {
   );
 }
 
+/**
+ * Ton porteur : sa cargaison estimée d'après tes journaux (module Porteur), et le réglage pour la compter dans
+ * « À acheter ». L'écart au total que le jeu donne (CarrierStats) est dit : des mouvements manquent à l'estimation.
+ */
+function CarrierPanel({ carrier, onChange }) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
+  async function toggle(e) {
+    setBusy(true);
+    setError(null);
+    try {
+      onChange(await colApi.settings({ carrier: e.target.checked }));
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  const nom = [carrier.name, carrier.callsign].filter(Boolean).join(' · ') || 'Ton porteur';
+  return (
+    <section className="panel">
+      <div className="form-actions">
+        <strong>🛸 {nom}</strong>
+        <span className="small muted">{int(carrier.total)} t estimées d’après tes transferts, achats et ventes</span>
+        <label className="check">
+          <input type="checkbox" checked={carrier.counted} disabled={busy} onChange={toggle} />
+          Compter sa cargaison dans « À acheter »
+        </label>
+        {error && <span className="small bad">{error}</span>}
+      </div>
+      {carrier.gap ? (
+        <p className="tiny warn">
+          Le jeu compte {int(carrier.reported.cargo)} t à bord ({carrier.gap > 0 ? `${int(carrier.gap)} t de plus` : `${int(-carrier.gap)} t de moins`} que
+          l’estimation) : des mouvements ne sont pas dans tes journaux (achats ou ventes d’autres joueurs à son marché,
+          ce qui précède tes journaux). Ce qui manque n’est pas compté.
+        </p>
+      ) : null}
+      <p className="tiny muted">
+        Le porteur est compté pour le chantier actif seulement, après ta soute, comme elle. Le jeu n’écrit pas le contenu
+        d’un porteur : seulement ce que tu y fais.
+      </p>
+    </section>
+  );
+}
+
+/** Projet de colonisation de l'escadron, sur sa page, avec ses onglets ; `composer` : l'éditeur du chef ouvert. */
+function PageProjetEscadron({ composer = false }) {
+  return (
+    <div className="module">
+      <Onglets de="colonisation-escadron" />
+      <div className="page">
+        <header className="route-header">
+          <div>
+            <h1>Colonisation de l’escadron</h1>
+            <p className="muted">Les chantiers choisis par le chef, dans son ordre de priorité, et ce qu’il manque à chacun.</p>
+          </div>
+          <div className="form-actions"><Link className="btn btn-ghost" to="/colonisation">Mes chantiers</Link></div>
+        </header>
+        <ProjetEscadron seul composer={composer} />
+      </div>
+    </div>
+  );
+}
+
 function SiteList() {
-  const { data, error } = useColonisation();
+  const { data, error, reload } = useColonisation();
   if (error && !data) return <div className="page"><h1>Colonisation</h1><p className="bad">{error}</p></div>;
   if (!data) return <div className="page"><h1>Colonisation</h1><p className="muted">Chargement…</p></div>;
   const { sites, claims, active } = data;
@@ -75,6 +138,10 @@ function SiteList() {
       </header>
 
       {active && <ActivePanel active={active} />}
+
+      {data.carrier && <CarrierPanel carrier={data.carrier} onChange={() => reload()} />}
+
+      <p className="small muted">Le projet de colonisation de ton escadron est rangé avec l’escadron : <Link to="/colonisation/escadron">Colonisation de l’escadron</Link>.</p>
 
       <h2>Chantiers</h2>
       {sites.length ? (
@@ -362,6 +429,7 @@ function SiteDetail() {
     load();
   }, [marketId]);
   useEvent('colonisation:update', load);
+  useEvent('escadron:colonisation', load); // relevé d'un membre de l'escadron
 
   async function forget() {
     if (!window.confirm(`Oublier « ${site.label} » ? Ses lectures et tes livraisons passées ne seront plus comptées.`)) return;
@@ -384,8 +452,14 @@ function SiteDetail() {
             {' · '}<Pill s={statusOf(site)} />
             {site.docked && <span className="pill pill-info">À quai</span>}
           </p>
+          {site.releve && (
+            <p className="small">
+              <span className="pill pill-info">Projet de l’escadron</span> Lecture du dépôt la plus récente : {releveText(site.releve)}
+              {site.local ? ', plus récente que la tienne' : ' (tu ne t’es pas encore amarré à ce chantier)'}.
+            </p>
+          )}
           <p className="tiny muted">
-            MarketID {site.marketId} · suivi depuis le {date(site.firstSeen)} · dernière lecture du dépôt {site.updatedAt ? dateTime(site.updatedAt) : 'jamais'}
+            MarketID {site.marketId} · {site.local ? `suivi depuis le ${date(site.firstSeen)} · ` : ''}dernière lecture du dépôt {site.updatedAt ? dateTime(site.updatedAt) : 'jamais'}
             {site.completedAt && ` · terminé le ${dateTime(site.completedAt)}${site.completedBy === 'amarrage' ? " (d'après l'amarrage)" : ''}`}
             {site.successorMarketId && ` · station terminée : MarketID ${site.successorMarketId}`}
             {site.failedAt && ` · échoué le ${dateTime(site.failedAt)}`}
@@ -393,7 +467,7 @@ function SiteDetail() {
         </div>
         <div className="form-actions">
           {site.system && <ExternalLinks kind="system" vars={{ system: site.system, systemAddress: site.systemAddress }} />}
-          <button className="btn btn-ghost" data-tuto="activites-chantier-oublier" onClick={forget}>Oublier</button>
+          {site.local && <button className="btn btn-ghost" data-tuto="activites-chantier-oublier" onClick={forget}>Oublier</button>}
         </div>
       </header>
 
@@ -401,7 +475,7 @@ function SiteDetail() {
       <div className="tiles tiles-4" data-tuto="activites-chantier-tuiles" style={{ marginTop: '0.9rem' }}>
         <Tile label="Avancement" value={pct(site.progress)} sub={site.completedBy === 'amarrage' ? "terminé d'après l'amarrage" : site.provisional ? 'estimé avec tes livraisons' : site.updatedAt ? 'lu au dépôt' : 'pas encore lu'} />
         <Tile label="Reste à livrer" value={plan.known ? tonnes(plan.totals.remaining) : '?'} sub={plan.known ? `${int(plan.totals.provided)} t livrées sur ${int(plan.totals.required)}` : 'ouvre le contact du chantier en jeu'} />
-        <Tile label="À acheter" value={plan.known ? tonnes(plan.totals.toBuy) : '?'} sub={plan.holdCounted ? `${int(plan.totals.inHold || 0)} t utiles en soute` : 'soute comptée pour le chantier actif'} />
+        <Tile label="À acheter" value={plan.known ? tonnes(plan.totals.toBuy) : '?'} sub={!plan.holdCounted ? 'soute comptée pour le chantier actif' : plan.totals.onCarrier ? `${int(plan.totals.inHold || 0)} t en soute, ${int(plan.totals.onCarrier)} t sur le porteur` : `${int(plan.totals.inHold || 0)} t utiles en soute`} />
         <Tile label="Trajets restants" value={plan.trips == null ? '?' : int(plan.trips)} sub={plan.capacity ? `avec ${int(plan.capacity)} t de soute` : 'capacité de soute inconnue'} />
       </div>
 
@@ -423,17 +497,19 @@ function SiteDetail() {
           </dl>
           <p className="tiny muted">« Serré » : plus de soirées de jeu nécessaires que de jours avant l'échéance (une soirée par jour, durée réglée dans Paramètres).</p>
         </section>
-        <section className="panel" data-tuto="activites-chantier-reglages">
-          <h2>Réglages</h2>
-          <Settings site={site} onSaved={setSite} />
-        </section>
+        {site.local && (
+          <section className="panel" data-tuto="activites-chantier-reglages">
+            <h2>Réglages</h2>
+            <Settings site={site} onSaved={setSite} />
+          </section>
+        )}
       </div>
 
       <h2 data-tuto="activites-chantier-marchandises">Marchandises</h2>
       {plan.known ? (
         <div className="table-wrap">
           <table className="table compact">
-            <thead><tr><th>Marchandise</th><th className="right">Demandé</th><th className="right">Livré</th><th className="right">Reste</th><th className="right">En soute</th><th className="right">À acheter</th></tr></thead>
+            <thead><tr><th>Marchandise</th><th className="right">Demandé</th><th className="right">Livré</th><th className="right">Reste</th><th className="right">En soute</th>{plan.totals.onCarrier > 0 && <th className="right">Porteur</th>}<th className="right">À acheter</th></tr></thead>
             <tbody>
               {plan.items.map((i) => (
                 <tr key={i.symbol} className={i.done ? 'row-muted' : ''}>
@@ -442,6 +518,7 @@ function SiteDetail() {
                   <td className="right num">{int(i.provided)}</td>
                   <td className="right num">{int(i.remaining)}</td>
                   <td className="right num">{i.inHold ? int(i.inHold) : '—'}</td>
+                  {plan.totals.onCarrier > 0 && <td className="right num">{i.onCarrier ? int(i.onCarrier) : '—'}</td>}
                   <td className="right num"><strong>{i.toBuy ? int(i.toBuy) : '—'}</strong></td>
                 </tr>
               ))}

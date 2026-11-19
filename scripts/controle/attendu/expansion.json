@@ -1658,7 +1658,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 28 oct. 00:07 UTC)\n- 28 oct. 00:01 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 177 mérites (70 par M cr)\n- 27 oct. 23:55 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:47 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 176 mérites (70 par M cr)\n- 27 oct. 23:41 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:35 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 061 mérites (70 par M cr)\n- 27 oct. 23:28 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:17 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 058 mérites (70 par M cr)\n- 27 oct. 23:12 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:05 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 056 mérites (70 par M cr)\n- 27 oct. 22:59 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:53 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 053 mérites (70 par M cr)\n- 27 oct. 22:47 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:39 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 050 mérites (69 par M cr)\n- 27 oct. 22:33 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 28 oct. 00:07 UTC)\n- 28 oct. 00:01 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 177 mérites (70 par M cr)\n- 27 oct. 23:55 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:47 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 176 mérites (70 par M cr)\n- 27 oct. 23:41 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:35 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 061 mérites (70 par M cr)\n- 27 oct. 23:28 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:17 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 058 mérites (70 par M cr)\n- 27 oct. 23:12 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:05 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 056 mérites (70 par M cr)\n- 27 oct. 22:59 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:53 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 053 mérites (70 par M cr)\n- 27 oct. 22:47 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:39 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 050 mérites (69 par M cr)\n- 27 oct. 22:33 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval."
         }
       }
     },
@@ -3281,7 +3281,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 28 oct. 00:07 UTC)\n- 27 oct. 23:55 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:47 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 176 mérites (70 par M cr)\n- 27 oct. 23:41 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:35 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 061 mérites (70 par M cr)\n- 27 oct. 23:28 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:17 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 058 mérites (70 par M cr)\n- 27 oct. 23:12 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:05 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 056 mérites (70 par M cr)\n- 27 oct. 22:59 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:53 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 053 mérites (70 par M cr)\n- 27 oct. 22:47 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:39 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 050 mérites (69 par M cr)\n- 27 oct. 22:33 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 28 oct. 00:07 UTC)\n- 27 oct. 23:55 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:47 UTC · Indium 1 232 t · 31 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 176 mérites (70 par M cr)\n- 27 oct. 23:41 UTC · Bauxite 1 232 t · 51,3 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:35 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 061 mérites (70 par M cr)\n- 27 oct. 23:28 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:17 UTC · Indium 1 168 t · 29,4 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 058 mérites (70 par M cr)\n- 27 oct. 23:12 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 23:05 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 056 mérites (70 par M cr)\n- 27 oct. 22:59 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:53 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 053 mérites (70 par M cr)\n- 27 oct. 22:47 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval.\n- 27 oct. 22:39 UTC · Indium 1 168 t · 29,5 M cr · vendu à ICZ KC-U b3-4 (Forteresse d'Aisling Duval, renforcement) · acheté à Cemiess · 2 050 mérites (69 par M cr)\n- 27 oct. 22:33 UTC · Bauxite 1 168 t · 48,7 M cr · vendu à Cemiess (Forteresse d'A. Lavigny-Duval, système ennemi) · acheté à ICZ KC-U b3-4 · **0 mérite** · cause probable : Cemiess est Forteresse d'A. Lavigny-Duval : vendre ici ne rapporte rien à Aisling Duval."
         }
       }
     }
@@ -3894,7 +3894,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 1 nov. 21:10 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 1 nov. 21:10 UTC)\n- aucune vente pour l’instant"
         }
       }
     },
@@ -4505,7 +4505,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 1 nov. 21:10 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 1 nov. 21:10 UTC)\n- aucune vente pour l’instant"
         }
       }
     }
@@ -5593,7 +5593,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 2 nov. 19:49 UTC)\n- 2 nov. 19:42 UTC · Thé de Fujin 19 t · 0,3 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval.\n- 2 nov. 19:13 UTC · Thé de Fujin 23 t · 0,4 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 2 nov. 19:49 UTC)\n- 2 nov. 19:42 UTC · Thé de Fujin 19 t · 0,3 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval.\n- 2 nov. 19:13 UTC · Thé de Fujin 23 t · 0,4 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval."
         }
       }
     },
@@ -6638,7 +6638,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 2 nov. 19:49 UTC)\n- 2 nov. 19:13 UTC · Thé de Fujin 23 t · 0,4 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 2 nov. 19:49 UTC)\n- 2 nov. 19:13 UTC · Thé de Fujin 23 t · 0,4 M cr · vendu à Muang (Forteresse d'Archon Delaine, système ennemi) · acheté à Fujin · **0 mérite** · cause probable : Muang est Forteresse d'Archon Delaine : vendre ici ne rapporte rien à Aisling Duval."
         }
       }
     }
@@ -7678,7 +7678,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 7 nov. 14:23 UTC)\n- 7 nov. 13:49 UTC · Iridium 90 t · 17,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 6 841 mérites (391 par M cr)\n- 7 nov. 10:33 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 18 311 mérites (391 par M cr)\n- 7 nov. 08:34 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · 243 t provenance inconnue + 25 t miné sur place · 18 311 mérites"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 7 nov. 14:23 UTC)\n- 7 nov. 13:49 UTC · Iridium 90 t · 17,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 6 841 mérites (391 par M cr)\n- 7 nov. 10:33 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 18 311 mérites (391 par M cr)\n- 7 nov. 08:34 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · 243 t provenance inconnue + 25 t miné sur place · 18 311 mérites"
         }
       }
     },
@@ -8716,7 +8716,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 7 nov. 14:23 UTC)\n- 7 nov. 13:49 UTC · Iridium 90 t · 17,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 6 841 mérites (391 par M cr)\n- 7 nov. 10:33 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 18 311 mérites (391 par M cr)\n- 7 nov. 08:34 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · 243 t provenance inconnue + 25 t miné sur place · 18 311 mérites"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 7 nov. 14:23 UTC)\n- 7 nov. 13:49 UTC · Iridium 90 t · 17,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 6 841 mérites (391 par M cr)\n- 7 nov. 10:33 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 18 311 mérites (391 par M cr)\n- 7 nov. 08:34 UTC · Iridium 268 t · 46,8 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · 243 t provenance inconnue + 25 t miné sur place · 18 311 mérites"
         }
       }
     }
@@ -9329,7 +9329,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 29 oct. 14:49 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 29 oct. 14:49 UTC)\n- aucune vente pour l’instant"
         }
       }
     },
@@ -9940,7 +9940,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 29 oct. 14:49 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 29 oct. 14:49 UTC)\n- aucune vente pour l’instant"
         }
       }
     }
@@ -10944,7 +10944,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 26 oct. 20:46 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 26 oct. 20:46 UTC)\n- aucune vente pour l’instant"
         }
       }
     },
@@ -11946,7 +11946,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 26 oct. 20:46 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 26 oct. 20:46 UTC)\n- aucune vente pour l’instant"
         }
       }
     }
@@ -12559,7 +12559,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 5 nov. 12:41 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 5 nov. 12:41 UTC)\n- aucune vente pour l’instant"
         }
       }
     },
@@ -13170,7 +13170,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 5 nov. 12:41 UTC)\n- aucune vente pour l’instant"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 5 nov. 12:41 UTC)\n- aucune vente pour l’instant"
         }
       }
     }
@@ -14003,7 +14003,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 1 nov. 14:02 UTC)\n- 1 nov. 10:57 UTC · Reliques de Soontill 80 t · 1,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · acheté à Ngurii · 759 mérites (520 par M cr)"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 1 nov. 14:02 UTC)\n- 1 nov. 10:57 UTC · Reliques de Soontill 80 t · 1,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · acheté à Ngurii · 759 mérites (520 par M cr)"
         }
       }
     },
@@ -14834,7 +14834,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 1 nov. 14:02 UTC)\n- 1 nov. 10:57 UTC · Reliques de Soontill 80 t · 1,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · acheté à Ngurii · 759 mérites (520 par M cr)"
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 1 nov. 14:02 UTC)\n- 1 nov. 10:57 UTC · Reliques de Soontill 80 t · 1,5 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · acheté à Ngurii · 759 mérites (520 par M cr)"
         }
       }
     }
@@ -15809,7 +15809,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 31 oct. 23:16 UTC)\n- 31 oct. 23:09 UTC · Iridium 1 184 t · 303,9 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · miné sur place · **0 mérite** · cause probable : Miné à Synuefe GA-I b57-6 (Inoccupé) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:56 UTC · Palladium 10 t · 0,5 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · acheté à HIP 71601 · **0 mérite** · cause probable : Acheté à HIP 71601 (sans puissance) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:00 UTC · Rhodplumsite 1 184 t · 939,5 M cr · vendu à HIP 8060 (sans puissance) · provenance inconnue · **0 mérite** · cause probable : HIP 8060 n'a aucune puissance : aucun mérite."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 31 oct. 23:16 UTC)\n- 31 oct. 23:09 UTC · Iridium 1 184 t · 303,9 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · miné sur place · **0 mérite** · cause probable : Miné à Synuefe GA-I b57-6 (Inoccupé) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:56 UTC · Palladium 10 t · 0,5 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · acheté à HIP 71601 · **0 mérite** · cause probable : Acheté à HIP 71601 (sans puissance) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:00 UTC · Rhodplumsite 1 184 t · 939,5 M cr · vendu à HIP 8060 (sans puissance) · provenance inconnue · **0 mérite** · cause probable : HIP 8060 n'a aucune puissance : aucun mérite."
         }
       }
     },
@@ -16782,7 +16782,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 31 oct. 23:16 UTC)\n- 31 oct. 23:09 UTC · Iridium 1 184 t · 303,9 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · miné sur place · **0 mérite** · cause probable : Miné à Synuefe GA-I b57-6 (Inoccupé) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:56 UTC · Palladium 10 t · 0,5 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · acheté à HIP 71601 · **0 mérite** · cause probable : Acheté à HIP 71601 (sans puissance) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:00 UTC · Rhodplumsite 1 184 t · 939,5 M cr · vendu à HIP 8060 (sans puissance) · provenance inconnue · **0 mérite** · cause probable : HIP 8060 n'a aucune puissance : aucun mérite."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 31 oct. 23:16 UTC)\n- 31 oct. 23:09 UTC · Iridium 1 184 t · 303,9 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · miné sur place · **0 mérite** · cause probable : Miné à Synuefe GA-I b57-6 (Inoccupé) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:56 UTC · Palladium 10 t · 0,5 M cr · vendu à Synuefe GA-I b57-6 (Inoccupé, acquisition) · acheté à HIP 71601 · **0 mérite** · cause probable : Acheté à HIP 71601 (sans puissance) : en acquisition, il doit venir d'un système Consolidé ou Forteresse d'Aisling Duval.\n- 31 oct. 18:00 UTC · Rhodplumsite 1 184 t · 939,5 M cr · vendu à HIP 8060 (sans puissance) · provenance inconnue · **0 mérite** · cause probable : HIP 8060 n'a aucune puissance : aucun mérite."
         }
       }
     }
@@ -18003,7 +18003,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 6 nov. 23:11 UTC)\n- 6 nov. 20:27 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 18:25 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 17:15 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 209 mérites (390 par M cr)\n- 6 nov. 09:39 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système.\n- 6 nov. 09:39 UTC · Hématite 4 t · 5 012 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · **0 mérite** · cause probable : Provenance inconnue : acquise avant les journaux lus, ou hors de la soute suivie.\n- 6 nov. 09:39 UTC · Titane 1 t · 5 479 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · 2 mérites\n- 6 nov. 09:38 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 6 nov. 23:11 UTC)\n- 6 nov. 20:27 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 18:25 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 17:15 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 209 mérites (390 par M cr)\n- 6 nov. 09:39 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système.\n- 6 nov. 09:39 UTC · Hématite 4 t · 5 012 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · **0 mérite** · cause probable : Provenance inconnue : acquise avant les journaux lus, ou hors de la soute suivie.\n- 6 nov. 09:39 UTC · Titane 1 t · 5 479 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · 2 mérites\n- 6 nov. 09:38 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système."
         }
       }
     },
@@ -19222,7 +19222,7 @@
       "GET /sales/text": {
         "statut": 200,
         "corps": {
-          "text": "**Ventes Powerplay mesurées** (Elite Compagnon, relevé du 6 nov. 23:11 UTC)\n- 6 nov. 20:27 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 18:25 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 17:15 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 209 mérites (390 par M cr)\n- 6 nov. 09:39 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système.\n- 6 nov. 09:39 UTC · Hématite 4 t · 5 012 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · **0 mérite** · cause probable : Provenance inconnue : acquise avant les journaux lus, ou hors de la soute suivie.\n- 6 nov. 09:39 UTC · Titane 1 t · 5 479 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · 2 mérites\n- 6 nov. 09:38 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système."
+          "text": "**Ventes Powerplay mesurées** (Enova, relevé du 6 nov. 23:11 UTC)\n- 6 nov. 20:27 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 18:25 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 285 mérites (391 par M cr)\n- 6 nov. 17:15 UTC · Iridium 268 t · 51,9 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné sur place · 20 209 mérites (390 par M cr)\n- 6 nov. 09:39 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système.\n- 6 nov. 09:39 UTC · Hématite 4 t · 5 012 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · **0 mérite** · cause probable : Provenance inconnue : acquise avant les journaux lus, ou hors de la soute suivie.\n- 6 nov. 09:39 UTC · Titane 1 t · 5 479 cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · provenance inconnue · 2 mérites\n- 6 nov. 09:38 UTC · Iridium 1 t · 0,2 M cr · vendu à Synuefe OU-E c28-2 (Exploité d'Aisling Duval, renforcement) · miné à HIP 73834 · **0 mérite** · cause probable : Miné à HIP 73834 : en renforcement, le minerai doit être miné et vendu dans le même système."
         }
       }
     }

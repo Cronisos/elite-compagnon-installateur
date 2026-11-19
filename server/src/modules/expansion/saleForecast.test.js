@@ -261,7 +261,7 @@ test('export texte : une ligne par vente, 0 mérite et cause, en UTC, sans nom d
   ];
   const text = casesText(cases, { now: Date.parse('2026-11-07T20:00:00Z') });
   const lines = text.split('\n');
-  assert.match(lines[0], /^\*\*Ventes Powerplay mesurées\*\* \(Elite Compagnon, relevé du 7 nov\. 20:00 UTC\)$/);
+  assert.match(lines[0], /^\*\*Ventes Powerplay mesurées\*\* \(Enova, relevé du 7 nov\. 20:00 UTC\)$/);
   assert.match(lines[1], /^- 31 oct\. 23:09 UTC · Iridium 1.184 t · 303,9 M cr · vendu à Synuefe GA-I b57-6 \(Inoccupé, acquisition\) · miné sur place · \*\*0 mérite\*\* · cause probable : Miné à/);
   assert.match(lines[2], /Mombaluma \(Forteresse d'Aisling Duval, renforcement\) · miné sur place · 173.355 mérites \(390 par M cr\)$/);
   assert.doesNotMatch(text, /\|/); // pas de tableau

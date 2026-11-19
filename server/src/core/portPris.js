@@ -56,7 +56,7 @@ export function messagePortPris(port, qui) {
   const tenu = qui ? ` par ${qui.nom ? `« ${qui.nom} »` : 'un autre programme'} (PID ${qui.pid})` : ' par un autre programme';
   const nous = qui?.nom && /^(node|electron|elite compagnon)(\.exe)?$/i.test(qui.nom);
   const conseil = nous
-    ? "C'est sans doute une autre copie d'Elite Compagnon encore ouverte : ferme-la (icône près de l'horloge, ou gestionnaire des tâches), puis relance."
-    : "Ferme ce programme (gestionnaire des tâches, onglet Détails, colonne PID), ou redémarre le PC, puis relance Elite Compagnon.";
-  return `Elite Compagnon ne peut pas démarrer : le port ${port} de ce PC est déjà pris${tenu}. ${conseil}`;
+    ? "C'est sans doute une autre copie d'Enova encore ouverte : ferme-la (icône près de l'horloge, ou gestionnaire des tâches), puis relance."
+    : "Ferme ce programme (gestionnaire des tâches, onglet Détails, colonne PID), ou redémarre le PC, puis relance Enova.";
+  return `Enova ne peut pas démarrer : le port ${port} de ce PC est déjà pris${tenu}. ${conseil}`;
 }

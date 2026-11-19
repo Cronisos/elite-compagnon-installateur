@@ -1,4 +1,4 @@
-// Raccourcis de l'app de bureau (npm run raccourcis) : « Elite Compagnon » sur le Bureau et dans le menu Démarrer, vers
+// Raccourcis de l'app de bureau (npm run raccourcis) : « Enova » sur le Bureau et dans le menu Démarrer, vers
 // l'Electron du projet avec le dossier desktop/ (icône EliteApp.ico). Écrits seulement à la demande, jamais à
 // l'installation. Un raccourci existant du même nom est remplacé ; rien d'autre n'est touché.
 // --retirer : efface les deux raccourcis.
@@ -10,7 +10,9 @@ import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const RACINE = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-export const NOM = 'Elite Compagnon';
+export const NOM = 'Enova';
+// Raccourcis posés sous l'ancien nom de l'app : retirés quand on écrit les nouveaux, et à la désinstallation
+export const ANCIENS_NOMS = ['Elite Compagnon'];
 
 /** Ce que pointe le raccourci : l'exécutable d'Electron (celui de l'overlay), le dossier desktop/, l'icône. */
 export function cibleRaccourci(racine = RACINE) {
@@ -20,7 +22,7 @@ export function cibleRaccourci(racine = RACINE) {
     arguments: `"${path.join(racine, 'desktop')}"`,
     dossier: path.join(racine, 'desktop'),
     icone: path.join(racine, 'EliteApp.ico'),
-    description: "Elite Compagnon : l'app compagnon d'Elite Dangerous",
+    description: "Enova : l'app compagnon d'Elite Dangerous",
   };
 }
 
@@ -29,6 +31,11 @@ const SCRIPT = `
 $ErrorActionPreference = 'Stop'
 $noms = @()
 foreach ($dossier in @([Environment]::GetFolderPath('Desktop'), [Environment]::GetFolderPath('Programs'))) {
+  foreach ($ancien in ($env:RAC_ANCIENS.Split('|'))) {
+    if (-not $ancien) { continue }
+    $v = Join-Path $dossier ($ancien + '.lnk')
+    if (Test-Path -LiteralPath $v) { Remove-Item -LiteralPath $v; if ($env:RAC_RETIRER -eq '1') { $noms += $v } }
+  }
   $f = Join-Path $dossier ($env:RAC_NOM + '.lnk')
   if ($env:RAC_RETIRER -eq '1') { if (Test-Path -LiteralPath $f) { Remove-Item -LiteralPath $f; $noms += $f }; continue }
   $l = (New-Object -ComObject WScript.Shell).CreateShortcut($f)
@@ -46,7 +53,7 @@ $noms -join [Environment]::NewLine
 export function ecrireRaccourcis({ retirer = false } = {}) {
   const c = cibleRaccourci();
   if (!retirer && !fs.existsSync(c.cible)) throw new Error("Electron n'est pas installé : lance d'abord « npm run installer ».");
-  const env = { ...process.env, RAC_NOM: NOM, RAC_CIBLE: c.cible, RAC_ARGS: c.arguments, RAC_DOSSIER: c.dossier, RAC_ICONE: c.icone, RAC_DESC: c.description, RAC_RETIRER: retirer ? '1' : '0' };
+  const env = { ...process.env, RAC_NOM: NOM, RAC_ANCIENS: ANCIENS_NOMS.join('|'), RAC_CIBLE: c.cible, RAC_ARGS: c.arguments, RAC_DOSSIER: c.dossier, RAC_ICONE: c.icone, RAC_DESC: c.description, RAC_RETIRER: retirer ? '1' : '0' };
   return execFileSync('powershell.exe', ['-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-Command', SCRIPT], { env, encoding: 'utf8', windowsHide: true }).trim();
 }
 

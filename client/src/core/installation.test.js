@@ -45,8 +45,8 @@ test('messages d’erreur du serveur : jamais « npm install »', () => {
 });
 
 test('overlay absent : l’installateur pour un joueur, la commande du projet pour qui développe', () => {
-  assert.match(texteOverlayAbsent({}, false), /relance l'installateur d'Elite Compagnon/);
-  assert.match(texteOverlayAbsent(undefined, false), /relance l'installateur d'Elite Compagnon/);
+  assert.match(texteOverlayAbsent({}, false), /relance l'installateur d'Enova/);
+  assert.match(texteOverlayAbsent(undefined, false), /relance l'installateur d'Enova/);
   assert.doesNotMatch(texteOverlayAbsent({}, false), /npm/);
   assert.doesNotMatch(texteOverlayAbsentCourt({}, false), /npm/);
   assert.match(texteOverlayAbsent({}, true), /npm run installer/);

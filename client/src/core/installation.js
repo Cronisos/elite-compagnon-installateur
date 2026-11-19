@@ -17,7 +17,7 @@ export function texteOverlayAbsent({ coupe = false } = {}, dev = DEV) {
   if (coupe) return COUPE;
   return dev
     ? "Fenêtres en jeu indisponibles : l'overlay n'est pas installé (lance « npm run installer » à la racine du projet)."
-    : "Fenêtres en jeu indisponibles : relance l'installateur d'Elite Compagnon.";
+    : "Fenêtres en jeu indisponibles : relance l'installateur d'Enova.";
 }
 
 /** Version courte, à côté d'un bouton. */
