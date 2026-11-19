@@ -4,6 +4,7 @@
 //   - dossier de données temporaire (ELITE_DATA_DIR) : copie de server/data/reference et base SQLite neuve ;
 //   - dossier de journaux de test (ELITE_JOURNAL_DIR) : les journaux d'une séance de référence, ou rien ;
 //   - dossier d'options du jeu de test (ELITE_GAME_OPTIONS_DIR) : copie de scripts/controle/options ;
+//   - dossier des sauvegardes temporaire (ELITE_SAUVEGARDES_DIR) : jamais les vrais Documents du PC ;
 //   - réseau coupé (ELITE_NO_NETWORK=1), overlay jamais lancé (ELITE_NO_OVERLAY=1), tutoriels jamais lancés d'eux-mêmes (ELITE_SANS_TUTORIEL=1) ;
 //   - horloge, aléa et langue figés (CONTROLE_NOW, CONTROLE_ALEA, CONTROLE_LANGUE, préchargés par figer.mjs), fuseau
 //     Europe/Paris.
@@ -224,7 +225,7 @@ export async function demarrerServeur(o = {}) {
   await verifierReference();
 
   const racine = fs.mkdtempSync(path.join(os.tmpdir(), 'elite-controle-'));
-  const dossiers = { racine, donnees: path.join(racine, 'donnees'), journaux: path.join(racine, 'journaux'), options: path.join(racine, 'options') };
+  const dossiers = { racine, donnees: path.join(racine, 'donnees'), journaux: path.join(racine, 'journaux'), options: path.join(racine, 'options'), sauvegardes: path.join(racine, 'sauvegardes') };
   const lignes = [];
   let enfant = null;
   const port = await portLibre();
@@ -250,6 +251,7 @@ export async function demarrerServeur(o = {}) {
       ELITE_DATA_DIR: dossiers.donnees,
       ELITE_JOURNAL_DIR: dossiers.journaux,
       ELITE_GAME_OPTIONS_DIR: dossiers.options,
+      ELITE_SAUVEGARDES_DIR: dossiers.sauvegardes,
       ELITE_NO_NETWORK: '1',
       ELITE_NO_OVERLAY: '1',
       ELITE_SANS_TUTORIEL: '1', // aucun tutoriel ne se lance de lui-même pendant le tour des pages

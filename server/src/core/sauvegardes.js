@@ -9,11 +9,12 @@
 // La restauration se fait au lancement suivant de l'app de bureau, base fermée (desktop/donnees.js).
 
 import fs from 'node:fs';
-import os from 'node:os';
 import path from 'node:path';
-import { DATABASE_FILE } from './paths.js';
+import { DATABASE_FILE, NOM_DOSSIER_SAUVEGARDES, dossierSauvegardes } from './paths.js';
 
-export const NOM_DOSSIER = 'Elite Compagnon - sauvegardes';
+export const NOM_DOSSIER = NOM_DOSSIER_SAUVEGARDES;
+// Le dossier lui-même est décidé dans core/paths.js, comme tous les chemins de l'app
+export { dossierSauvegardes };
 export const FICHE = 'sauvegarde.json';
 /** Nom d'une sauvegarde : sa date et son heure locales, « 2026-11-17 14h32m05 ». */
 export const NOM_SAUVEGARDE = /^\d{4}-\d{2}-\d{2} \d{2}h\d{2}m\d{2}$/;
@@ -27,11 +28,6 @@ const EXCLUS = [
   [/\.log$/i, 'journal'],
 ];
 const exclu = (rel) => EXCLUS.some(([re]) => re.test(rel));
-
-/** Dossier des sauvegardes : Documents du compte Windows (jamais le dossier de l'app). */
-export function dossierSauvegardes(env = process.env, home = os.homedir()) {
-  return path.join(env.USERPROFILE || home, 'Documents', NOM_DOSSIER);
-}
 
 const deux = (n) => String(n).padStart(2, '0');
 /** « 2026-11-17 14h32m05 », à l'heure du PC. */

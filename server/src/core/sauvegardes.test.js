@@ -31,6 +31,12 @@ test('le dossier des sauvegardes est dans Documents, jamais dans celui de l’ap
   assert.ok(!dossierSauvegardes({ USERPROFILE: 'C:\\Users\\Testeur', APPDATA: 'C:\\Users\\Testeur\\AppData\\Roaming' }).includes('AppData'));
 });
 
+test('ELITE_SAUVEGARDES_DIR remplace Documents (banc de contrôle) ; vide, ignoré ; relatif ou réseau, refusé', () => {
+  assert.equal(dossierSauvegardes({ USERPROFILE: 'C:\\Users\\Testeur', ELITE_SAUVEGARDES_DIR: 'C:\\Banc\\sauvegardes' }), path.resolve('C:\\Banc\\sauvegardes'));
+  assert.equal(dossierSauvegardes({ USERPROFILE: 'C:\\Users\\Testeur', ELITE_SAUVEGARDES_DIR: '  ' }), path.join('C:\\Users\\Testeur', 'Documents', NOM_DOSSIER));
+  for (const bad of ['sauvegardes', '\\\\serveur\\partage']) assert.throws(() => dossierSauvegardes({ ELITE_SAUVEGARDES_DIR: bad }), /ELITE_SAUVEGARDES_DIR refusé/, bad);
+});
+
 test('nom daté à l’heure du PC, lisible et triable', () => {
   const nom = nomSauvegarde(new Date(2026, 10, 7, 9, 5, 3));
   assert.equal(nom, '2026-11-07 09h05m03');

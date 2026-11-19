@@ -234,8 +234,13 @@ const NOM_SAUVEGARDE = /^\d{4}-\d{2}-\d{2} \d{2}h\d{2}m\d{2}$/;
 /** Dossier des données d'avant la dernière restauration, gardé à côté (un seul : le précédent est remplacé). */
 const SUFFIXE_AVANT = '.avant-restauration';
 
-/** Dossier des sauvegardes : Documents du compte Windows. */
+/**
+ * Dossier des sauvegardes : ELITE_SAUVEGARDES_DIR s'il est réglé (chemin absolu, comme pour le serveur :
+ * server/src/core/paths.js), sinon Documents du compte Windows.
+ */
 function dossierSauvegardes(env = process.env, home = os.homedir()) {
+  const propre = String(env.ELITE_SAUVEGARDES_DIR ?? '').trim();
+  if (propre && path.isAbsolute(propre)) return path.resolve(propre);
   return path.join(env.USERPROFILE || home, 'Documents', NOM_SAUVEGARDES);
 }
 

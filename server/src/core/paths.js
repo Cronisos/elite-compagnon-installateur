@@ -8,6 +8,7 @@
 //                                                   %USERPROFILE%\Saved Games\Frontier Developments\Elite Dangerous
 //   - options du jeu        ELITE_GAME_OPTIONS_DIR  défaut : %LOCALAPPDATA%\Frontier Developments\Elite Dangerous\Options
 //                                                   (Bindings et Graphics en dessous)
+//   - sauvegardes du joueur ELITE_SAUVEGARDES_DIR   défaut : %USERPROFILE%\Documents\Elite Compagnon - sauvegardes
 //
 // Une variable vide compte comme absente. Une valeur doit être un chemin absolu de ce PC : un chemin relatif
 // (qui dépendrait du dossier de lancement), réseau (\\serveur\partage) ou de périphérique (\\?\, \\.\) arrête le
@@ -154,6 +155,19 @@ export function defaultJournalDir(env = process.env, { savedGames = savedGamesDi
 /** Dossier des journaux réellement lu : ELITE_JOURNAL_DIR s'il est réglé, sinon le réglage du joueur. */
 export function journalDir(settingPath, env = process.env) {
   return journalDirOverride(env) ?? settingPath;
+}
+
+// --- Sauvegardes du joueur (Paramètres › Mon compte), hors du dossier de l'app ---
+
+/** Nom du dossier des sauvegardes, dans Documents (desktop/donnees.js doit garder le même). */
+export const NOM_DOSSIER_SAUVEGARDES = 'Elite Compagnon - sauvegardes';
+
+/**
+ * Dossier des sauvegardes : ELITE_SAUVEGARDES_DIR s'il est réglé (banc de contrôle : jamais les vrais Documents du PC),
+ * sinon Documents du compte Windows (jamais le dossier de l'app).
+ */
+export function dossierSauvegardes(env = process.env, home = os.homedir()) {
+  return envDir(env, 'ELITE_SAUVEGARDES_DIR') ?? path.join(env.USERPROFILE || home, 'Documents', NOM_DOSSIER_SAUVEGARDES);
 }
 
 // --- Programmes installés à part pour l'IA de bord (Whisper, sherpa-onnx), dans %LOCALAPPDATA%\Programs ---

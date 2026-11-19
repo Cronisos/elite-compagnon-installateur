@@ -92,6 +92,6 @@ test('longueur bornée, sans couper un caractère en deux ; valeurs vides', () =
 test('client et serveur : même code, mêmes résultats', () => {
   const samples = [PIEGE, '# x', '1. y', '**a**', '<@&1>', 'https://z', 'Synuefe GA-I b57-6', '\u{202e}abc', 'é'.repeat(300), null, '', 'a\nb', '`x`'];
   for (const s of samples) assert.equal(client.discordName(s), server.discordName(s), String(s));
-  const corps = (f) => fs.readFileSync(new URL(f, import.meta.url), 'utf8').replace(/^\/\/.*\n/gm, '');
+  const corps = (f) => fs.readFileSync(new URL(f, import.meta.url), 'utf8').replace(/^\/\/.*\r?\n/gm, ''); // \r? : fins de ligne Windows (git core.autocrlf)
   assert.equal(corps('./discord.js'), corps('../../../server/src/core/discord.js'), 'les deux fichiers ne diffèrent que par leurs commentaires');
 });

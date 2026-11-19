@@ -156,6 +156,9 @@ test('restauration : la sauvegarde remplace les données, celles d’avant sont 
   const cible = path.join(app, 'donnees');
   const sauvegardes = dossierSauvegardes(env);
   assert.equal(sauvegardes, path.join(t, 'Documents', 'Elite Compagnon - sauvegardes'));
+  // Comme le serveur (server/src/core/paths.js) : ELITE_SAUVEGARDES_DIR, s'il est absolu, remplace Documents
+  assert.equal(dossierSauvegardes({ ...env, ELITE_SAUVEGARDES_DIR: path.join(t, 'banc') }), path.join(t, 'banc'));
+  assert.equal(dossierSauvegardes({ ...env, ELITE_SAUVEGARDES_DIR: 'relatif' }), sauvegardes);
   const ecrire = (f, c) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, c); };
   ecrire(path.join(cible, 'elite.db'), 'base actuelle');
   ecrire(path.join(cible, 'reference', 'gros.json'), 'référence');

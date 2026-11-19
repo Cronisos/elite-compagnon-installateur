@@ -157,6 +157,7 @@ const PERMIS = new Map([
   ['core/atomic.js', 'la fonction elle-même'],
   ['core/ocr.js', 'images temporaires de l’OCR dans le dossier temporaire de Windows, effacées ensuite'],
   ['core/reference/download.js', 'téléchargement dans un dossier temporaire, qui remplace l’ancien d’un coup (replaceDir)'],
+  ['core/sauvegardes.js', 'copie complète dans un dossier temporaire voisin, renommé d’un coup à la fin : une sauvegarde coupée en route ne ressemble jamais à une bonne'],
   ['modules/hudcolours/store.js', 'fichier du jeu : sa propre écriture atomique avec fsync, sauvegardes créées en « wx »'],
   ['modules/fsdcool/index.js', 'fsd-status.log : relevé en ajout (appendFile), une ligne par changement, jamais relu par l’app'],
   ['core/vigie.js', 'vigie.jsonl : journal des observations en ajout (appendFile), une ligne par mesure, jamais relu pour décider ; l’état, lui, passe par writeJsonAtomicSync'],
