@@ -172,7 +172,7 @@ Le détail de chaque partie de l’app est dans `docs/`, un fichier par sujet :
 | [Mes repères et Systèmes importants](docs/reperes.md) | Repères de minage, prospection, balayage, systèmes importants |
 | [Projet extension](docs/extension.md) | Routes Powerplay, mérites, calculateur de routes, « Où agir cette semaine » |
 | [Modes de jeu et fenêtres en jeu](docs/modes-de-jeu.md) | Menu « Mode de jeu », minage, matériaux, signaux, itinéraire, porteur, FSD, combat, sauvetage, bilans |
-| [Colonisation](docs/colonisation.md) | Chantiers suivis, liste de courses, stations proches |
+| [Colonisation](docs/colonisation.md) | Chantiers suivis, liste de courses, stations proches, projet de l'escadron |
 | [Outils](docs/outils.md) | Applications externes, Règles du jeu, Coup d’œil, commandes, couleurs du HUD, Compagnon, Moniteur PC |
 | [IA de bord (Alicia)](docs/ia.md) | Le copilote facultatif, sur ton PC |
 | [Escadron](docs/escadron.md) | Squadron Tracker : rejoindre, monter le serveur, route, suivi Discord |

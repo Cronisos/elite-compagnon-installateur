@@ -14,8 +14,13 @@ import { fileStore } from './store.js';
 import { Chef } from './chef/chef.js';
 import { Partage } from './partage.js';
 import { lireSources } from './sources.js';
+import { ColonisationEscadron } from './colonisation.js';
 
 const AUTO_MS = 2 * 60 * 1000; // un passage du partage automatique toutes les 2 min, s'il est réglé
+// Projet de colonisation : relu toutes les 2 min s'il est activé, et peu après chaque relevé du dépôt écrit par le jeu
+const COLO_MS = 2 * 60 * 1000;
+const COLO_APRES_DEPOT_MS = 10_000; // le jeu peut écrire le dépôt toutes les 15 s à quai : un passage pour la rafale
+const COLO_EVENTS = ['ColonisationConstructionDepot', 'ColonisationContribution', 'Docked'];
 
 const DATA_DIR = dataDir() + path.sep;
 const BROADCAST_MS = 500;
@@ -236,7 +241,68 @@ export function setup({ router, journal, broadcast, dataDir = DATA_DIR, fetch = 
   router.post('/partage/installations/:id/confirmer', asyncRoute(async (req, res) => res.json(await partage.confirmer(req.params.id))));
   router.delete('/partage/:id', asyncRoute(async (req, res) => res.json(await partage.retirer(req.params.id))));
 
-  return { sensor, stats: () => stats, chef, partage };
+  // --- Projet de colonisation de l'escadron (colonisation.js) : opt-in, par le serveur et le jeton du joueur ---
+  const localGet = async (chemin) => {
+    const res = await localFetch(`${selfUrl}${chemin}`, {}, { fetchImpl: localFetchImpl, timeoutMs: 10_000 });
+    if (res.status === 404) return null; // module absent de cette version, ou chantier oublié entre-temps
+    if (!res.ok) throw new Error(`Lecture locale refusée (${res.status})`);
+    return res.json();
+  };
+  const colonisation = new ColonisationEscadron({
+    dir: dataDir,
+    fetch,
+    acces: () => ({ base: sensor.workerBase ?? null, token: sensor.token ?? null }),
+    chef: () => chef.gere(),
+    onChange: () => broadcast('escadron:colonisation', {}),
+    // Chantiers suivis ici dans les systèmes du projet, lus par l'API locale du module Colonisation (jamais son code)
+    source: async (systemes) => {
+      if (!selfUrl) return [];
+      const dans = new Set(systemes.map((s) => s.toLowerCase()));
+      const vue = await localGet('/api/modules/colonisation/sites');
+      const ids = (vue?.sites ?? []).filter((s) => dans.has(String(s.system ?? '').toLowerCase())).map((s) => s.marketId).slice(0, 100);
+      const chantiers = [];
+      for (const id of ids) {
+        const site = await localGet(`/api/modules/colonisation/sites/${encodeURIComponent(id)}?local=1`);
+        if (site) chantiers.push(site);
+      }
+      return chantiers;
+    },
+  });
+  if (autoMs > 0) {
+    setInterval(() => colonisation.enFond(), COLO_MS).unref?.();
+    journal.addInterest(COLO_EVENTS);
+    const coloEvents = new Set(COLO_EVENTS);
+    let apresDepot = null;
+    journal.on('event', (ev) => {
+      if (!coloEvents.has(ev.event) || apresDepot) return;
+      apresDepot = setTimeout(() => {
+        apresDepot = null;
+        colonisation.enFond();
+      }, COLO_APRES_DEPOT_MS);
+      apresDepot.unref?.();
+    });
+  }
+  router.get('/colonisation', (req, res) => res.json(colonisation.view()));
+  router.put('/colonisation/actif', asyncRoute(async (req, res) => {
+    colonisation.activer(req.body?.actif);
+    if (req.body?.actif === true) await colonisation.enFond(); // une première lecture tout de suite (l'erreur est dans la vue)
+    res.json(colonisation.view());
+  }));
+  router.post('/colonisation/lire', asyncRoute(async (req, res) => res.json(await colonisation.lire({ force: req.body?.force === true }))));
+  // Côté chef : le projet du serveur (avec ses relevés), le publier, l'arrêter
+  router.post('/chef/colonisation/lire', asyncRoute(async (req, res) => res.json(await chef.colonisationServeur())));
+  router.put('/chef/colonisation', asyncRoute(async (req, res) => {
+    const r = await chef.envoyerColonisation(req.body?.projet);
+    await colonisation.enFond(); // le chef, s'il suit aussi le projet comme membre, le voit tout de suite
+    res.json(r);
+  }));
+  router.delete('/chef/colonisation', asyncRoute(async (req, res) => {
+    const r = await chef.arreterColonisation();
+    await colonisation.enFond();
+    res.json(r);
+  }));
+
+  return { sensor, stats: () => stats, chef, partage, colonisation };
 }
 
 export default {

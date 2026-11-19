@@ -3,7 +3,18 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { deadlineText, etaText, hudCells, hudLine, statusOf, toBuyList, toLocalInput } from './view.js';
+import { deadlineText, etaText, hudCells, hudLine, releveText, stationLabel, statusOf, toBuyList, toLocalInput } from './view.js';
+
+test('projet de l’escadron : nom d’un chantier relevé par un membre, et qui l’a relevé', () => {
+  assert.equal(stationLabel('$EXT_PANEL_ColonisationShip; Judson Depot'), 'Vaisseau de colonisation · Judson Depot');
+  assert.equal(stationLabel('$EXT_PNL_ColonisationShip:#index=2;'), 'Vaisseau de colonisation · n° 2');
+  assert.equal(stationLabel('Orbital Construction Site: Smith'), 'Chantier orbital · Smith');
+  assert.equal(stationLabel('Planetary Construction Site: '), 'Chantier planétaire');
+  assert.equal(stationLabel(null), null);
+  assert.equal(releveText(null), null);
+  assert.match(releveText({ by: 'Testeur', at: new Date().toISOString() }), /^relevé par Testeur /);
+  assert.match(releveText({ by: null, at: new Date().toISOString() }), /un membre de l’escadron/);
+});
 
 const item = (symbol, name, remaining, inHold = 0) => ({ symbol, name, remaining, inHold, toBuy: Math.max(0, remaining - inHold), done: remaining === 0 });
 const active = (over = {}) => ({

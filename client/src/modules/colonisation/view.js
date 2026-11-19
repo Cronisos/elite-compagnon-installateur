@@ -1,9 +1,34 @@
 // Mise en forme du module Colonisation, commune à la page et aux fenêtres de l'overlay (sans React : testée seule).
 
-import { duration, int, pct } from '../../core/format.js';
+import { ago, duration, int, pct } from '../../core/format.js';
 
 export const KIND_LABELS = { ship: 'Vaisseau de colonisation', orbital: 'Chantier orbital', planetary: 'Chantier planétaire' };
-export const REASONS = { docked: 'À quai', pinned: 'Épinglé', recent: 'Dernier en cours' };
+export const REASONS = { docked: 'À quai', pinned: 'Épinglé', escadron: 'Projet de l’escadron', recent: 'Dernier en cours' };
+
+/** Lecture du dépôt venue d'un membre de l'escadron, en clair : « relevé par CMDR il y a 5 min ». */
+export function releveText(releve) {
+  if (!releve) return null;
+  return `relevé par ${releve.by || 'un membre de l’escadron'} ${ago(releve.at)}`;
+}
+
+/**
+ * Nom affiché d'un chantier d'après son nom de station brut (relevé de l'escadron) : même lecture que le serveur
+ * (server/src/modules/colonisation/events.js, parseStationName).
+ */
+export function stationLabel(station) {
+  const s = typeof station === 'string' ? station.trim() : '';
+  let m = /^\$EXT_(?:PANEL|PNL)_ColonisationShip(?::#index=(\d+))?;\s*(.*)$/i.exec(s);
+  if (m) {
+    const name = m[2].trim() || (m[1] ? `n° ${m[1]}` : '');
+    return name ? `${KIND_LABELS.ship} · ${name}` : KIND_LABELS.ship;
+  }
+  m = /^(Orbital|Planetary) Construction Site:\s*(.*)$/i.exec(s);
+  if (m) {
+    const kind = KIND_LABELS[m[1].toLowerCase() === 'orbital' ? 'orbital' : 'planetary'];
+    return m[2].trim() ? `${kind} · ${m[2].trim()}` : kind;
+  }
+  return s || null;
+}
 export const LOOP_SOURCES = { saisie: 'saisie', mesurée: 'mesurée sur tes livraisons' };
 export const VERDICTS = {
   ok: { label: 'dans les temps', tone: 'good' },
@@ -60,7 +85,7 @@ export function hudCells(active) {
     ];
   }
   return [
-    { label: 'Avancement', value: pct(site.progress), color: site.complete ? '#5fd38d' : '#ffd24a', sub: site.complete ? 'terminé' : site.provisional ? 'estimé (tes livraisons)' : site.updatedAt ? 'lu au dépôt' : 'pas encore lu' },
+    { label: 'Avancement', value: pct(site.progress), color: site.complete ? '#5fd38d' : '#ffd24a', sub: site.complete ? 'terminé' : site.provisional ? 'estimé (tes livraisons)' : site.releve ? `relevé par ${site.releve.by || 'l’escadron'}` : site.updatedAt ? 'lu au dépôt' : 'pas encore lu' },
     { label: 'Reste', value: plan.known ? tonnes(plan.totals.remaining) : '?', color: '#6fd3ff', sub: plan.known ? `sur ${int(plan.totals.required)} t` : 'ouvre le contact du chantier' },
     { label: 'À acheter', value: plan.known ? tonnes(plan.totals.toBuy) : '?', color: 'var(--accent)', sub: !plan.known ? 'besoins inconnus' : plan.totals.inHold ? `${int(plan.totals.inHold)} t en soute` : 'rien en soute' },
     { label: 'Trajets', value: plan.trips == null ? '?' : int(plan.trips), color: '#5fd38d', sub: plan.capacity ? `soute ${int(plan.capacity)} t` : 'soute inconnue' },

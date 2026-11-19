@@ -10,7 +10,8 @@
           "ship": {
             "capacity": 1232,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -106,7 +107,8 @@
           "ship": {
             "capacity": 1232,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -219,7 +221,8 @@
               "pinned": false,
               "docked": false,
               "lastSeen": "2026-11-01T20:05:00Z",
-              "updatedAt": "2026-11-01T20:01:00Z"
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "releve": null
             }
           ],
           "claims": [
@@ -430,6 +433,8 @@
                 "loopMinutes": null,
                 "pinned": false
               },
+              "local": true,
+              "releve": null,
               "label": "Vaisseau de colonisation · Judson Depot",
               "docked": false,
               "mine": {
@@ -672,7 +677,8 @@
           "ship": {
             "capacity": null,
             "pad": null
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -870,6 +876,8 @@
               "loopMinutes": null,
               "pinned": false
             },
+            "local": true,
+            "releve": null,
             "label": "Vaisseau de colonisation · Judson Depot",
             "docked": false,
             "mine": {
@@ -1527,7 +1535,8 @@
               "pinned": false,
               "docked": false,
               "lastSeen": "2026-11-01T20:05:00Z",
-              "updatedAt": "2026-11-01T20:01:00Z"
+              "updatedAt": "2026-11-01T20:01:00Z",
+              "releve": null
             }
           ],
           "claims": [
@@ -1738,6 +1747,8 @@
                 "loopMinutes": null,
                 "pinned": false
               },
+              "local": true,
+              "releve": null,
               "label": "Vaisseau de colonisation · Judson Depot",
               "docked": false,
               "mine": {
@@ -1980,7 +1991,8 @@
           "ship": {
             "capacity": null,
             "pad": null
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -2178,6 +2190,8 @@
               "loopMinutes": null,
               "pinned": false
             },
+            "local": true,
+            "releve": null,
             "label": "Vaisseau de colonisation · Judson Depot",
             "docked": false,
             "mine": {
@@ -2822,7 +2836,8 @@
           "ship": {
             "capacity": 336,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -2918,7 +2933,8 @@
           "ship": {
             "capacity": 336,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3016,7 +3032,8 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3112,7 +3129,8 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3210,7 +3228,8 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3306,7 +3325,8 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3404,7 +3424,8 @@
           "ship": {
             "capacity": 28,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3500,7 +3521,8 @@
           "ship": {
             "capacity": 28,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3598,7 +3620,8 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3694,7 +3717,8 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3792,7 +3816,8 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3888,7 +3913,8 @@
           "ship": {
             "capacity": 0,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -3986,7 +4012,8 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4082,7 +4109,8 @@
           "ship": {
             "capacity": 1184,
             "pad": "L"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4180,7 +4208,8 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {
@@ -4276,7 +4305,8 @@
           "ship": {
             "capacity": 268,
             "pad": "M"
-          }
+          },
+          "escadron": null
         }
       },
       "GET /here": {

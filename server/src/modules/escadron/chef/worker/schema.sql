@@ -85,3 +85,15 @@ CREATE TABLE IF NOT EXISTS share_targets (
   cmdr TEXT NOT NULL COLLATE NOCASE,
   PRIMARY KEY (share_id, cmdr)
 );
+
+-- Projet de colonisation de l'escadron (le projet lui-même : state, clé 'colonisation'). Relevé du dépôt de chaque
+-- chantier des systèmes du projet, envoyé par l'app d'un membre : un seul par chantier, le plus récent d'après l'heure
+-- du journal (at).
+CREATE TABLE IF NOT EXISTS colonisation_releves (
+  market_id INTEGER PRIMARY KEY,
+  system TEXT NOT NULL COLLATE NOCASE,
+  cmdr TEXT NOT NULL COLLATE NOCASE,
+  at TEXT NOT NULL,
+  data TEXT NOT NULL,
+  received_at TEXT NOT NULL
+);

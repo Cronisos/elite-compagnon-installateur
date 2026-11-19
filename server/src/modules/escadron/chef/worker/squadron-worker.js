@@ -1,5 +1,7 @@
 // Copie du Worker du Squadron Tracker (dépôt squadron-tracker, api/src/index.js, commit 0c3c238), mise en ligne
 // telle quelle par l'app chez le chef de l'escadron (chef/cloudflare.js). Jamais importée ni exécutée par l'app.
+// Ajouté ici depuis (à reporter dans squadron-tracker) : le projet de colonisation de l'escadron (19 nov. 2026,
+// /v1/colonisation, /v1/colonisation/releve, /admin/colonisation, table colonisation_releves).
 
 // API du tableau de squadron : reçoit les mérites des plugins et sert le classement au générateur.
 
@@ -569,6 +571,159 @@ async function sharing(request, env, url, now) {
   return fail(404);
 }
 
+// --- Projet de colonisation de l'escadron ---
+//
+// Le chef choisit les systèmes à coloniser et classe leurs chantiers par priorité (PUT /admin/colonisation). L'app de
+// chaque membre envoie le relevé du dépôt de construction des chantiers de ces systèmes (besoins et livraisons de tous
+// les CMDR, écrits par le jeu à quai) : seul le plus récent est gardé, d'après l'heure du journal. Chacun voit ainsi
+// ce qu'il reste à livrer, même sans être passé au chantier. Lecture : membres confirmés, chef, suivi. Les relevés
+// d'un système retiré du projet sont effacés avec lui.
+
+const MAX_COLONISATION = 16 * 1024;
+const MAX_RELEVE = 8 * 1024;
+const MAX_COLO_SYSTEMS = 10;
+const MAX_COLO_SITES = 40;
+const MAX_RELEVES = 100; // chantiers relevés, tous systèmes du projet confondus
+const MAX_RESOURCES = 60; // marchandises d'un chantier (une vingtaine dans les relevés publiés)
+const MAX_TONNES = 10_000_000;
+const COMMODITY = /^[a-z0-9_]{1,48}$/;
+const isMarketId = (v) => Number.isSafeInteger(v) && v > 0;
+const stamp = (now) => new Date(now).toISOString().replace(/\.\d{3}Z$/, 'Z');
+
+/**
+ * Projet vérifié : { systems: [nom], sites: [{ marketId, system, name? }] } (sites dans l'ordre de priorité, chacun
+ * dans un système du projet) ; null s'il ne respecte pas le format.
+ */
+export function validColonisation(p) {
+  if (!p || typeof p !== 'object' || !Array.isArray(p.systems) || p.systems.length < 1 || p.systems.length > MAX_COLO_SYSTEMS) return null;
+  const byName = new Map();
+  for (const s of p.systems) {
+    if (!isName(s, 64) || byName.has(s.toLowerCase())) return null;
+    byName.set(s.toLowerCase(), s);
+  }
+  const list = p.sites ?? [];
+  if (!Array.isArray(list) || list.length > MAX_COLO_SITES) return null;
+  const ids = new Set();
+  const sites = [];
+  for (const s of list) {
+    if (!s || typeof s !== 'object' || !isMarketId(s.marketId) || ids.has(s.marketId) || !isName(s.system, 64)) return null;
+    const system = byName.get(s.system.toLowerCase());
+    if (!system || (s.name != null && !isName(s.name, 100))) return null;
+    ids.add(s.marketId);
+    sites.push({ marketId: s.marketId, system, ...(s.name ? { name: s.name } : {}) });
+  }
+  return { systems: [...byName.values()], sites };
+}
+
+/** Relevé du dépôt d'un chantier, vérifié ; null s'il ne respecte pas le format. */
+export function validReleve(r, now) {
+  if (!r || typeof r !== 'object' || !isMarketId(r.marketId) || !isName(r.system, 64)) return null;
+  if (typeof r.at !== 'string' || !TIMESTAMP.test(r.at)) return null;
+  const time = Date.parse(r.at);
+  if (Number.isNaN(time) || time > now + MAX_AHEAD_MS || time < now - MAX_AGE_MS) return null;
+  if (r.station != null && !isName(r.station, 100)) return null;
+  if (r.progress != null && !(typeof r.progress === 'number' && r.progress >= 0 && r.progress <= 1)) return null;
+  if (!Array.isArray(r.resources) || r.resources.length > MAX_RESOURCES) return null;
+  const symbols = new Set();
+  const resources = [];
+  for (const x of r.resources) {
+    if (!x || typeof x !== 'object' || !COMMODITY.test(x.symbol ?? '') || symbols.has(x.symbol)) return null;
+    const tonnes = (n) => Number.isInteger(n) && n >= 0 && n <= MAX_TONNES;
+    if (!tonnes(x.required) || !tonnes(x.provided) || (x.name != null && !isName(x.name, 64))) return null;
+    symbols.add(x.symbol);
+    resources.push({ symbol: x.symbol, ...(x.name ? { name: x.name } : {}), required: x.required, provided: x.provided });
+  }
+  return {
+    marketId: r.marketId, system: r.system, at: r.at, ...(r.station ? { station: r.station } : {}),
+    progress: r.progress ?? null, complete: r.complete === true, failed: r.failed === true, resources,
+  };
+}
+
+/** Le projet en service : { projet, version, updatedAt }, ou null. */
+async function colonisationOf(env) {
+  const row = await env.DB.prepare("SELECT value FROM state WHERE key = 'colonisation'").first();
+  return row ? JSON.parse(row.value) : null;
+}
+
+/** Le projet et les relevés de ses systèmes : { projet, version, updatedAt, releves }, ou { releves: [] }. */
+async function getColonisation(env) {
+  const p = await colonisationOf(env);
+  if (!p) return reply(200, { releves: [] });
+  const systems = new Set(p.projet.systems.map((s) => s.toLowerCase()));
+  const { results } = await env.DB.prepare('SELECT system, cmdr, data, received_at FROM colonisation_releves ORDER BY market_id').all();
+  const releves = results.filter((r) => systems.has(String(r.system).toLowerCase()))
+    .map((r) => ({ ...JSON.parse(r.data), cmdr: r.cmdr, receivedAt: r.received_at }));
+  return reply(200, { ...p, releves });
+}
+
+/** Nouveau projet (le chef) : version + 1 ; les relevés des systèmes qui n'en font plus partie sont effacés. */
+async function putColonisation(request, env, now) {
+  const { body, tooLarge } = await readJson(request, MAX_COLONISATION);
+  if (tooLarge) return fail(413);
+  const projet = validColonisation(body);
+  if (!projet) return fail(400);
+  const old = await colonisationOf(env);
+  const value = JSON.stringify({ projet, version: (old?.version ?? 0) + 1, updatedAt: stamp(now) });
+  const marks = projet.systems.map(() => '?').join(', ');
+  await env.DB.batch([
+    env.DB.prepare("INSERT INTO state (key, value) VALUES ('colonisation', ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value").bind(value),
+    env.DB.prepare(`DELETE FROM colonisation_releves WHERE system NOT IN (${marks})`).bind(...projet.systems),
+  ]);
+  return getColonisation(env);
+}
+
+/** Fin du projet (le chef) : le projet et tous ses relevés sont effacés. */
+async function deleteColonisation(env) {
+  await env.DB.batch([
+    env.DB.prepare("DELETE FROM state WHERE key = 'colonisation'"),
+    env.DB.prepare('DELETE FROM colonisation_releves'),
+  ]);
+  return reply(200, { releves: [] });
+}
+
+/**
+ * Relevé d'un membre : gardé s'il est plus récent que celui du serveur (heure du journal). Refus : pas de projet, ou
+ * chantier hors des systèmes du projet (409), trop de chantiers relevés (429). Rend le relevé gardé : { at, cmdr }.
+ */
+async function putReleve(request, env, me, now) {
+  const { body, tooLarge } = await readJson(request, MAX_RELEVE);
+  if (tooLarge) return fail(413);
+  const r = validReleve(body, now);
+  if (!r) return fail(400);
+  const p = await colonisationOf(env);
+  if (!p || !p.projet.systems.some((s) => s.toLowerCase() === r.system.toLowerCase())) return reply(409, { error: 409, outside: true });
+  const known = await env.DB.prepare('SELECT 1 AS k FROM colonisation_releves WHERE market_id = ?').bind(r.marketId).first();
+  if (!known && (await env.DB.prepare('SELECT COUNT(*) AS n FROM colonisation_releves').first()).n >= MAX_RELEVES) return fail(429);
+  await env.DB.prepare(
+    `INSERT INTO colonisation_releves (market_id, system, cmdr, at, data, received_at) VALUES (?, ?, ?, ?, ?, ?)
+     ON CONFLICT (market_id) DO UPDATE SET system = excluded.system, cmdr = excluded.cmdr, at = excluded.at,
+       data = excluded.data, received_at = excluded.received_at
+     WHERE excluded.at > colonisation_releves.at`
+  ).bind(r.marketId, r.system, me.cmdr, r.at, JSON.stringify(r), stamp(now)).run();
+  const kept = await env.DB.prepare('SELECT at, cmdr FROM colonisation_releves WHERE market_id = ?').bind(r.marketId).first();
+  return reply(200, { ok: true, at: kept.at, cmdr: kept.cmdr });
+}
+
+async function colonisation(request, env, path, now) {
+  const { method } = request;
+  if (path === '/admin/colonisation') {
+    if (!(await sameSecret(bearer(request), env.ADMIN_TOKEN))) return fail(401);
+    if (method === 'PUT') return putColonisation(request, env, now);
+    return method === 'DELETE' ? deleteColonisation(env) : fail(405);
+  }
+  const token = bearer(request);
+  if (path === '/v1/colonisation' && method === 'GET' && ((await sameSecret(token, env.TRACKER_TOKEN)) || (await sameSecret(token, env.ADMIN_TOKEN)))) {
+    return getColonisation(env);
+  }
+  const me = await installOf(env, request);
+  if (!me) return fail(401);
+  // Installation à confirmer : ni lecture (positions des membres) ni relevé (le code ne prouve pas qui l'envoie)
+  if (me.pending) return reply(403, { error: 403, pending: true });
+  if (!(await underRateLimit(env, me.hash, now))) return fail(429);
+  if (path === '/v1/colonisation') return method === 'GET' ? getColonisation(env) : fail(405);
+  return method === 'PUT' ? putReleve(request, env, me, now) : fail(405);
+}
+
 export async function handle(request, env, now = Date.now()) {
   try {
     const url = new URL(request.url);
@@ -576,6 +731,9 @@ export async function handle(request, env, now = Date.now()) {
     const path = url.pathname;
     if (path === '/v1/merits' && method === 'POST') return await postMerits(request, env, now);
     if (path === '/v1/join' && method === 'POST') return await joinSquadron(request, env, now);
+    if (path === '/v1/colonisation' || path === '/v1/colonisation/releve' || path === '/admin/colonisation') {
+      return await colonisation(request, env, path, now);
+    }
     const shared = await sharing(request, env, url, now);
     if (shared) return shared;
     // La route : lisible par le suivi, le chef et les membres inscrits ; modifiable par le chef seul

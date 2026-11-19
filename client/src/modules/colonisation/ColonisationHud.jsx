@@ -4,8 +4,9 @@ import { useActiveSite } from './useColonisation.jsx';
 import { hudCells, hudLine, REASONS, toBuyList } from './view.js';
 
 /**
- * HUD du mode Colonisation (/hud/colonisation) : chantier actif (à quai, épinglé ou le dernier en cours),
- * avancement, reste, à acheter (reste − soute) et trajets restants. Pas de chrono : rien à chronométrer.
+ * HUD du mode Colonisation (/hud/colonisation) : chantier actif (à quai, épinglé, le premier en cours du projet de
+ * l'escadron s'il est suivi, ou le dernier en cours), avancement, reste, à acheter (reste − soute) et trajets restants.
+ * Pas de chrono : rien à chronométrer.
  */
 export function ColonisationHud() {
   const active = useActiveSite();

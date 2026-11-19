@@ -147,6 +147,9 @@ sans console (`server/src/modules/escadron/chef/`) :
   rejoint de nouveau), retrait (jetons coupés, mérites effacés), inscriptions ouvertes ou fermées, et un jeton à
   l'ancienne pour un plugin d'avant le code. **Le mot de passe** et **la clé de chef** se changent avec la clé
   Cloudflare ; une nouvelle clé de chef rend caducs les codes de gestion déjà donnés, sans arrêter la carte.
+- **Le projet de colonisation** vit aussi sur le serveur (`PUT /admin/colonisation`) : les systèmes à coloniser et
+  leurs chantiers par priorité, composés depuis la page Colonisation, et tenus à jour par les relevés du dépôt
+  qu'envoient les apps des membres qui le suivent (voir [Colonisation](colonisation.md#projet-de-lescadron)).
 - **La carte GitHub** n'est installée que sur une copie du projet (un autre dépôt du même nom est refusé), sans
   toucher au réglage des actions permises. La page conseille une clé GitHub courte (1 à 7 jours), à supprimer une
   fois la carte en place.
@@ -232,7 +235,9 @@ déjà inscrit envoie ses mérites, mais ne lit ni n'écrit aucun partage tant q
 lui-même depuis une installation déjà confirmée (Paramètres), ou par le chef.
 
 **Serveur.** Le partage demande la version du serveur du 16 nov. 2026 (commit 3e7f9f0 du dépôt squadron-tracker) : le
-chef le remonte depuis sa page (étape 1). Sur un serveur plus ancien, l'app dit que le chef doit le mettre à jour.
+chef le remonte depuis sa page (étape 1). Sur un serveur plus ancien, l'app dit que le chef doit le mettre à jour. Le
+projet de colonisation demande celle du 19 nov. 2026, ajoutée à la copie de l'app (`chef/worker/`) et pas encore
+reportée dans squadron-tracker.
 
 API locale : `GET /api/modules/escadron/partage`, `PUT …/partage/actif`, `POST …/partage/lire`,
 `POST …/partage/envoyer` (`{ kind, ref, title, data, to }`), `DELETE …/partage/:id`, `PUT …/partage/masques`,

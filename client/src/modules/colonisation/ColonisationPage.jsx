@@ -7,9 +7,11 @@ import Tile from '../../core/Tile.jsx';
 import { ago, cr, date, dateTime, int, pct } from '../../core/format.js';
 import { colApi } from './api.js';
 import { useColonisation } from './useColonisation.jsx';
-import { deadlineText, etaText, KIND_LABELS, LOOP_SOURCES, REASONS, statusOf, toBuyList, toLocalInput, tonnes, VERDICTS } from './view.js';
+import { deadlineText, etaText, KIND_LABELS, LOOP_SOURCES, REASONS, releveText, statusOf, toBuyList, toLocalInput, tonnes, VERDICTS } from './view.js';
 import NomSysteme from '../../core/NomSysteme.jsx';
 import PageIntrouvable from '../../core/PageIntrouvable.jsx';
+import Progress from './Progress.jsx';
+import ProjetEscadron from './ProjetEscadron.jsx';
 
 /** Page du module : liste des chantiers, et le détail d'un chantier (/colonisation/<MarketID>). */
 export default function ColonisationPage() {
@@ -19,15 +21,6 @@ export default function ColonisationPage() {
       <Route path=":marketId" element={<SiteDetail />} />
       <Route path="*" element={<PageIntrouvable retour="/colonisation" nom="Colonisation" />} />
     </Routes>
-  );
-}
-
-function Progress({ value, done }) {
-  const w = Math.max(0, Math.min(100, (value || 0) * 100));
-  return (
-    <div className="progress small-progress" title={pct(value)}>
-      <div className={`progress-bar ${done ? 'bar-good' : ''}`} style={{ width: `${w}%` }} />
-    </div>
   );
 }
 
@@ -47,7 +40,7 @@ function ActivePanel({ active }) {
       </div>
       <Progress value={site.progress} done={site.complete} />
       <div className="tiles tiles-4" style={{ marginTop: '0.9rem' }}>
-        <Tile label="Avancement" value={pct(site.progress)} sub={site.provisional ? 'estimé avec tes livraisons, en attendant le dépôt' : site.updatedAt ? `lu ${ago(site.updatedAt)}` : 'pas encore lu'} />
+        <Tile label="Avancement" value={pct(site.progress)} sub={site.provisional ? 'estimé avec tes livraisons, en attendant le dépôt' : site.releve ? releveText(site.releve) : site.updatedAt ? `lu ${ago(site.updatedAt)}` : 'pas encore lu'} />
         <Tile label="Reste à livrer" value={plan.known ? tonnes(plan.totals.remaining) : '?'} sub={plan.known ? `sur ${int(plan.totals.required)} t` : 'ouvre le contact du chantier en jeu'} />
         <Tile label="À acheter" value={plan.known ? tonnes(plan.totals.toBuy) : '?'} sub={`reste − soute (${int(plan.totals.inHold || 0)} t utiles en soute)`} tone={plan.totals.toBuy === 0 && plan.known ? 'good' : undefined} />
         <Tile label="Trajets restants" value={plan.trips == null ? '?' : int(plan.trips)} sub={plan.capacity ? `avec ${int(plan.capacity)} t de soute` : 'capacité de soute inconnue'} />
@@ -75,6 +68,8 @@ function SiteList() {
       </header>
 
       {active && <ActivePanel active={active} />}
+
+      <ProjetEscadron />
 
       <h2>Chantiers</h2>
       {sites.length ? (
@@ -362,6 +357,7 @@ function SiteDetail() {
     load();
   }, [marketId]);
   useEvent('colonisation:update', load);
+  useEvent('escadron:colonisation', load); // relevé d'un membre de l'escadron
 
   async function forget() {
     if (!window.confirm(`Oublier « ${site.label} » ? Ses lectures et tes livraisons passées ne seront plus comptées.`)) return;
@@ -384,8 +380,14 @@ function SiteDetail() {
             {' · '}<Pill s={statusOf(site)} />
             {site.docked && <span className="pill pill-info">À quai</span>}
           </p>
+          {site.releve && (
+            <p className="small">
+              <span className="pill pill-info">Projet de l’escadron</span> Lecture du dépôt la plus récente : {releveText(site.releve)}
+              {site.local ? ', plus récente que la tienne' : ' (tu ne t’es pas encore amarré à ce chantier)'}.
+            </p>
+          )}
           <p className="tiny muted">
-            MarketID {site.marketId} · suivi depuis le {date(site.firstSeen)} · dernière lecture du dépôt {site.updatedAt ? dateTime(site.updatedAt) : 'jamais'}
+            MarketID {site.marketId} · {site.local ? `suivi depuis le ${date(site.firstSeen)} · ` : ''}dernière lecture du dépôt {site.updatedAt ? dateTime(site.updatedAt) : 'jamais'}
             {site.completedAt && ` · terminé le ${dateTime(site.completedAt)}${site.completedBy === 'amarrage' ? " (d'après l'amarrage)" : ''}`}
             {site.successorMarketId && ` · station terminée : MarketID ${site.successorMarketId}`}
             {site.failedAt && ` · échoué le ${dateTime(site.failedAt)}`}
@@ -393,7 +395,7 @@ function SiteDetail() {
         </div>
         <div className="form-actions">
           {site.system && <ExternalLinks kind="system" vars={{ system: site.system, systemAddress: site.systemAddress }} />}
-          <button className="btn btn-ghost" data-tuto="activites-chantier-oublier" onClick={forget}>Oublier</button>
+          {site.local && <button className="btn btn-ghost" data-tuto="activites-chantier-oublier" onClick={forget}>Oublier</button>}
         </div>
       </header>
 
@@ -423,10 +425,12 @@ function SiteDetail() {
           </dl>
           <p className="tiny muted">« Serré » : plus de soirées de jeu nécessaires que de jours avant l'échéance (une soirée par jour, durée réglée dans Paramètres).</p>
         </section>
-        <section className="panel" data-tuto="activites-chantier-reglages">
-          <h2>Réglages</h2>
-          <Settings site={site} onSaved={setSite} />
-        </section>
+        {site.local && (
+          <section className="panel" data-tuto="activites-chantier-reglages">
+            <h2>Réglages</h2>
+            <Settings site={site} onSaved={setSite} />
+          </section>
+        )}
       </div>
 
       <h2 data-tuto="activites-chantier-marchandises">Marchandises</h2>

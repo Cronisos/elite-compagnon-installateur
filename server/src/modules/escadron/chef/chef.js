@@ -79,6 +79,38 @@ export function routeValide(r) {
   };
 }
 
+/**
+ * Projet de colonisation de l'escadron, saisi par le chef : { systems: [nom], sites: [{ marketId, system, name? }] }
+ * (sites dans l'ordre de priorité, chacun dans un système du projet). Vérifié et nettoyé au format du serveur ; sinon
+ * erreur 400. Les noms de systèmes sont comparés sans tenir compte de la casse, comme ceux du journal.
+ */
+export function colonisationValide(p) {
+  const err = (m) => erreurPublique(400, `Projet de colonisation : ${m}`);
+  if (!p || typeof p !== 'object') throw err('illisible.');
+  const texte = (v, max) => (typeof v === 'string' && v.trim().length > 0 && v.trim().length <= max ? v.trim() : null);
+  if (!Array.isArray(p.systems) || p.systems.length === 0 || p.systems.length > 10) throw err('de 1 à 10 systèmes.');
+  const parNom = new Map();
+  p.systems.forEach((s, i) => {
+    const nom = texte(s, 64);
+    if (!nom) throw err(`système ${i + 1} sans nom (64 caractères au plus).`);
+    if (parNom.has(nom.toLowerCase())) throw err(`${nom} est deux fois dans le projet.`);
+    parNom.set(nom.toLowerCase(), nom);
+  });
+  const liste = p.sites ?? [];
+  if (!Array.isArray(liste) || liste.length > 40) throw err('40 chantiers au plus.');
+  const ids = new Set();
+  const sites = liste.map((s, i) => {
+    if (!Number.isSafeInteger(s?.marketId) || s.marketId <= 0) throw err(`chantier ${i + 1} sans MarketID.`);
+    if (ids.has(s.marketId)) throw err(`le chantier ${s.marketId} est deux fois dans les priorités.`);
+    ids.add(s.marketId);
+    const system = parNom.get(String(texte(s.system, 64) ?? '').toLowerCase());
+    if (!system) throw err(`le chantier ${texte(s.name, 100) ?? s.marketId} n'est dans aucun système du projet.`);
+    const name = texte(s.name, 100);
+    return { marketId: s.marketId, system, ...(name ? { name } : {}) };
+  });
+  return { systems: [...parNom.values()], sites };
+}
+
 export class Chef {
   /** `allowHost(hôte|null)` : ajoute le serveur géré à la liste blanche de la passerelle (core/net.js). */
   constructor({ dir, fetch, allowHost = () => {}, now = Date.now }) {
@@ -114,6 +146,7 @@ export class Chef {
       cleSuivi: Boolean(e.trackerToken),
       suivi: e.depot ? { depot: e.depot, adresse: e.depotAdresse ?? null, depuis: e.suiviLe ?? null } : null,
       route: e.routeEnvoyee ?? null,
+      colonisation: e.colonisationEnvoyee ?? null,
       occupe: this.occupe,
       etape: this.etapeEnCours,
     };
@@ -390,6 +423,33 @@ export class Chef {
       this.enregistrer();
       return this.view();
     });
+  }
+
+  /** Ce PC gère-t-il le serveur de l'escadron (adresse et clé de chef connues) ? */
+  gere() {
+    return Boolean(this.etat.url && this.etat.adminToken);
+  }
+
+  /** Le projet de colonisation en service sur le serveur, avec ses relevés : { projet, version, updatedAt, releves }. */
+  colonisationServeur() {
+    return this.admin('lire le projet de colonisation', 'GET', '/v1/colonisation');
+  }
+
+  /** Publie le projet de colonisation : les apps des membres le prennent à leur lecture suivante. */
+  async envoyerColonisation(projet) {
+    const p = colonisationValide(projet);
+    const res = await this.admin('enregistrer le projet de colonisation', 'PUT', '/admin/colonisation', p);
+    this.etat.colonisationEnvoyee = { systemes: p.systems.length, chantiers: p.sites.length, version: res?.version ?? null, le: res?.updatedAt ?? null };
+    this.enregistrer();
+    return res;
+  }
+
+  /** Fin du projet de colonisation : le serveur efface le projet et tous ses relevés. */
+  async arreterColonisation() {
+    const res = await this.admin('arrêter le projet de colonisation', 'DELETE', '/admin/colonisation');
+    this.etat.colonisationEnvoyee = null;
+    this.enregistrer();
+    return res;
   }
 
   /** Suivi Discord sur GitHub, 24 h/24 : installe le suivi sur le compte GitHub de la clé, puis envoie la route. */
