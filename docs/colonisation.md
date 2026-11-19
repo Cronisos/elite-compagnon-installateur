@@ -206,9 +206,21 @@ API locale : `GET /api/modules/colonisation/escadron` (le projet vu d'ici) ; mod
 `{ force? }` ; côté chef `POST …/chef/colonisation/lire`, `PUT …/chef/colonisation` `{ projet: { systems, sites:
 [{ marketId, system, name? }] } }`, `DELETE …/chef/colonisation`.
 
-Limites assumées : le code de l'escadron ne prouve pas l'identité, un membre confirmé pourrait envoyer un faux relevé
-(le serveur vérifie la forme, pas la vérité) ; le relevé suivant d'un autre membre le remplace. Pas de carte Discord
-du projet pour l'instant.
+**Carte Discord du projet** (facultative, « 3. Carte Discord » dans l'éditeur du chef, une fois le projet publié).
+Le chef colle le lien d'un webhook Discord (`PUT /admin/colonisation/discord { webhook }`, vérifié comme celui de
+la carte du Powerplay) : le serveur de l'escadron poste aussitôt un message, puis le **modifie** (même message) à
+chaque nouvelle version du projet et à chaque relevé gardé. Au plus une modification par minute : une modification
+retenue part à la lecture suivante d'un membre (toutes les 2 min) ; une nouvelle version du projet part tout de
+suite. Message supprimé dans Discord : reposté. Lien refusé par Discord : rien n'est gardé, la page le dit. Le
+message : les chantiers dans l'ordre du chef (10 au plus, puis « et N autres »), puis les autres relevés ; pour
+chacun une barre d'avancement, le reste en tonnes, l'heure du relevé (heure relative de Discord) et les trois
+marchandises qui manquent le plus ; « Projet terminé. » à l'arrêt. Aucun nom de commandant ; les noms venus du jeu
+sont échappés et aucune mention ne peut sonner (`allowed_mentions` vide). Le lien reste dans la base du serveur
+(`state`, clé `colonisation-discord`), jamais sur le PC du chef ni dans une réponse ; `{ webhook: null }` retire la
+carte. Pas de GitHub : contrairement à la carte du Powerplay, c'est le Worker qui écrit à Discord, quand un relevé
+arrive.
 
-Plus tard (hors périmètre) : carte Discord du projet de colonisation, recherche d'un système à coloniser, lien avec
-Raven Colonial.
+Limites assumées : le code de l'escadron ne prouve pas l'identité, un membre confirmé pourrait envoyer un faux relevé
+(le serveur vérifie la forme, pas la vérité) ; le relevé suivant d'un autre membre le remplace.
+
+Plus tard (hors périmètre) : recherche d'un système à coloniser, lien avec Raven Colonial.

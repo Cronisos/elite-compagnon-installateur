@@ -149,7 +149,8 @@ sans console (`server/src/modules/escadron/chef/`) :
   Cloudflare ; une nouvelle clé de chef rend caducs les codes de gestion déjà donnés, sans arrêter la carte.
 - **Le projet de colonisation** vit aussi sur le serveur (`PUT /admin/colonisation`) : les systèmes à coloniser et
   leurs chantiers par priorité, composés depuis la page Colonisation, et tenus à jour par les relevés du dépôt
-  qu'envoient les apps des membres qui le suivent (voir [Colonisation](colonisation.md#projet-de-lescadron)).
+  qu'envoient les apps des membres qui le suivent (voir [Colonisation](colonisation.md#projet-de-lescadron)). Sa
+  carte Discord (facultative) est écrite par le serveur lui-même, par un webhook, sans GitHub.
 - **La carte GitHub** n'est installée que sur une copie du projet (un autre dépôt du même nom est refusé), sans
   toucher au réglage des actions permises. La page conseille une clé GitHub courte (1 à 7 jours), à supprimer une
   fois la carte en place.

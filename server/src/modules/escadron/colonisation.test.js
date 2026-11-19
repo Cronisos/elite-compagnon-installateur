@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
-import { handle, validColonisation, validReleve } from './chef/worker/squadron-worker.js';
+import { colonisationCard, handle, validColonisation, validReleve } from './chef/worker/squadron-worker.js';
 import { ColonisationEscadron, releveDe } from './colonisation.js';
 import { Chef, colonisationValide } from './chef/chef.js';
 
@@ -35,13 +35,21 @@ function escadron() {
     first: async () => sqlite.prepare(sql).get(...args) ?? null,
     all: async () => ({ results: sqlite.prepare(sql).all(...args) }),
   });
-  const env = { DB: { prepare: (sql) => statement(sql), batch: async (l) => { for (const s of l) await s.run(); } }, ADMIN_TOKEN: 'chef', TRACKER_TOKEN: 'suivi', JOIN_PASSWORD: 'code' };
+  // Discord simulé (webhook) : POST ?wait=true rend le message, PATCH le modifie ; `discordRefuse` : lien supprimé
+  const discord = { appels: [], refuse: false };
+  const DISCORD_FETCH = async (url, options) => {
+    discord.appels.push({ url, method: options.method, body: JSON.parse(options.body) });
+    if (discord.refuse) return new Response('{"message":"Unknown Webhook"}', { status: 404 });
+    return new Response(JSON.stringify({ id: '1300000000000000001' }), { status: 200 });
+  };
+  const env = { DB: { prepare: (sql) => statement(sql), batch: async (l) => { for (const s of l) await s.run(); } }, ADMIN_TOKEN: 'chef', TRACKER_TOKEN: 'suivi', JOIN_PASSWORD: 'code', DISCORD_FETCH };
   const appels = [];
   let ip = 0;
+  const horloge = { decalage: 0 }; // le temps du serveur, avancé par les tests (une modification de carte par minute)
   const fetch = async (url, options = {}) => {
     appels.push({ url, method: options.method || 'GET', body: typeof options.body === 'string' ? options.body : null });
     const { signal: _, ...reste } = options;
-    return handle(new Request(url, { ...reste, headers: { ...reste.headers, 'cf-connecting-ip': `203.0.113.${(ip += 1) % 250}` } }), env);
+    return handle(new Request(url, { ...reste, headers: { ...reste.headers, 'cf-connecting-ip': `203.0.113.${(ip += 1) % 250}` } }), env, Date.now() + horloge.decalage);
   };
   const rejoindre = async (cmdr) => (await (await fetch(`${BASE}/v1/join`, { method: 'POST', body: JSON.stringify({ cmdr, password: 'code' }) })).json()).token;
   const chef = new Chef({ dir: tmp(), fetch });
@@ -55,8 +63,11 @@ function escadron() {
     return Object.assign(c, { ici, token });
   };
   const envois = () => appels.filter((a) => a.url.endsWith('/v1/colonisation/releve')).length;
-  return { fetch, appels, envois, chef, app };
+  return { fetch, appels, envois, chef, app, discord, horloge };
 }
+
+// Assemblé ici, comme dans chef.test.js : aucun lien de webhook entier dans le code (scripts/distribution.mjs)
+const WEBHOOK = ['https://discord.com/api/webhooks', '123456789012345678', 'abcdefghijklmnopqrstuvwxyz_ABCDEF-123'].join('/');
 
 const PROJET = { systems: [SYSTEME, 'Autre Système'], sites: [{ marketId: 2, system: 'autre système', name: 'Port de l’escadron' }, { marketId: 3963439106, system: SYSTEME }] };
 
@@ -191,6 +202,71 @@ test('page ouverte : relecture en arrière-plan seulement si le projet est suivi
   const lus = e.appels.length;
   a.rafraichirSiVieux(); // lu à l'instant : rien
   assert.equal(e.appels.length, lus);
+});
+
+test('carte Discord : postée à l’installation, dans l’ordre du chef, sans nom de commandant ; lien refusé : rien de gardé', async () => {
+  const e = escadron();
+  await e.chef.envoyerColonisation(PROJET);
+  const a = await e.app('Testeur', { chantiers: [chantier({ station: 'Orbital Construction Site: *Gras* @everyone' })] });
+  await a.passage();
+  e.discord.refuse = true;
+  await assert.rejects(e.chef.carteColonisation(WEBHOOK), (err) => err.status === 400 && /Discord refuse/.test(err.publicMessage));
+  assert.equal((await e.chef.colonisationServeur()).discord, false);
+  await assert.rejects(e.chef.carteColonisation('https://exemple.org/hook'), (err) => err.status === 400);
+  e.discord.refuse = false;
+  assert.equal((await e.chef.carteColonisation(WEBHOOK)).discord, true);
+  const poste = e.discord.appels.at(-1);
+  assert.equal(poste.method, 'POST');
+  assert.equal(poste.url, `${WEBHOOK}?wait=true`);
+  assert.deepEqual(poste.body.allowed_mentions, { parse: [] });
+  const [carte] = poste.body.embeds;
+  assert.deepEqual(carte.fields.map((f) => f.name.split(' — ')[0]), ['1. Port de l’escadron', '2. Chantier orbital · \\*Gras\\* \\@everyone']);
+  assert.match(carte.fields[0].value, /Pas encore relevé/);
+  assert.match(carte.fields[1].value, /▰▰▰▱▱▱▱▱▱▱ 25 %/);
+  assert.match(carte.fields[1].value, /Reste 1 125 t/);
+  assert.match(carte.fields[1].value, /Manque surtout : Acier 750 t · Aluminium 375 t/);
+  assert.doesNotMatch(JSON.stringify(poste.body), /Testeur/);
+  assert.equal((await e.chef.colonisationServeur()).discord, true);
+});
+
+test('carte Discord : un relevé la modifie, au plus une fois par minute ; projet arrêté : elle le dit', async () => {
+  const e = escadron();
+  await e.chef.envoyerColonisation(PROJET);
+  await e.chef.carteColonisation(WEBHOOK);
+  const a = await e.app('Testeur', { chantiers: [chantier()] });
+  const b = await e.app('Testeur 2');
+  await a.passage(); // relevé gardé moins d'une minute après l'installation : modification retenue
+  assert.equal(e.discord.appels.length, 1);
+  e.horloge.decalage = 61_000;
+  await b.lire({ force: true }); // lecture d'un membre une minute plus tard : la modification part
+  assert.equal(e.discord.appels.length, 2);
+  const modif = e.discord.appels.at(-1);
+  assert.equal(modif.method, 'PATCH');
+  assert.equal(modif.url, `${WEBHOOK}/messages/1300000000000000001`);
+  assert.match(modif.body.embeds[0].fields[1].value, /25 %/);
+  await b.lire({ force: true }); // rien de neuf : rien ne part
+  assert.equal(e.discord.appels.length, 2);
+  // Nouveau projet : tout de suite, sans attendre la minute
+  await e.chef.envoyerColonisation({ ...PROJET, sites: [...PROJET.sites].reverse() });
+  assert.equal(e.discord.appels.length, 3);
+  assert.match(e.discord.appels.at(-1).body.embeds[0].fields[0].name, /^1\. Vaisseau de colonisation · Judson Depot/);
+  await e.chef.arreterColonisation();
+  assert.equal(e.discord.appels.at(-1).body.embeds[0].description, 'Projet terminé.');
+  // Retirée : plus rien ne part
+  assert.equal((await e.chef.carteColonisation(null)).discord, false);
+  await e.chef.envoyerColonisation(PROJET);
+  assert.equal(e.discord.appels.length, 4);
+});
+
+test('carte Discord : 10 chantiers au plus, un chantier terminé coché', () => {
+  const sites = Array.from({ length: 12 }, (_, i) => ({ marketId: i + 1, system: 'A', name: `Chantier ${i + 1}` }));
+  const at = '2026-11-19T20:00:00Z';
+  const carte = colonisationCard({ projet: { systems: ['A'], sites }, version: 3 }, [{ marketId: 1, system: 'A', at, complete: true, resources: [] }], Date.parse(at));
+  const champs = carte.embeds[0].fields;
+  assert.equal(champs.length, 11);
+  assert.match(champs[0].value, /^✅ Terminé/);
+  assert.match(champs.at(-1).value, /et 2 autre\(s\) chantier\(s\)/);
+  assert.match(carte.embeds[0].footer.text, /Version 3/);
 });
 
 test('installation à confirmer : ni lecture ni relevé', async () => {

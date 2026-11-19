@@ -1,7 +1,8 @@
 // Copie du Worker du Squadron Tracker (dépôt squadron-tracker, api/src/index.js, commit 0c3c238), mise en ligne
 // telle quelle par l'app chez le chef de l'escadron (chef/cloudflare.js). Jamais importée ni exécutée par l'app.
 // Ajouté ici depuis (à reporter dans squadron-tracker) : le projet de colonisation de l'escadron (19 nov. 2026,
-// /v1/colonisation, /v1/colonisation/releve, /admin/colonisation, table colonisation_releves).
+// /v1/colonisation, /v1/colonisation/releve, /admin/colonisation, table colonisation_releves) et sa carte Discord
+// (/admin/colonisation/discord : message d'un webhook, modifié quand le projet ou un relevé change).
 
 // API du tableau de squadron : reçoit les mérites des plugins et sert le classement au générateur.
 
@@ -645,15 +646,163 @@ async function colonisationOf(env) {
   return row ? JSON.parse(row.value) : null;
 }
 
-/** Le projet et les relevés de ses systèmes : { projet, version, updatedAt, releves }, ou { releves: [] }. */
-async function getColonisation(env) {
-  const p = await colonisationOf(env);
-  if (!p) return reply(200, { releves: [] });
+/** Les relevés des systèmes du projet `p`. */
+async function relevesOf(env, p) {
   const systems = new Set(p.projet.systems.map((s) => s.toLowerCase()));
   const { results } = await env.DB.prepare('SELECT system, cmdr, data, received_at FROM colonisation_releves ORDER BY market_id').all();
-  const releves = results.filter((r) => systems.has(String(r.system).toLowerCase()))
+  return results.filter((r) => systems.has(String(r.system).toLowerCase()))
     .map((r) => ({ ...JSON.parse(r.data), cmdr: r.cmdr, receivedAt: r.received_at }));
-  return reply(200, { ...p, releves });
+}
+
+/**
+ * Le projet et les relevés de ses systèmes : { projet, version, updatedAt, releves, discord }, ou { releves: [] }.
+ * discord : une carte Discord est installée (son lien n'est jamais rendu). Une modification de la carte retenue
+ * (moins d'une minute après la précédente) part ici, à la lecture suivante d'un membre.
+ */
+async function getColonisation(env, now = Date.now()) {
+  const card = await cardOf(env);
+  if (card?.dirty) await refreshCard(env, now);
+  const p = await colonisationOf(env);
+  if (!p) return reply(200, { releves: [], discord: Boolean(card?.webhook) });
+  return reply(200, { ...p, releves: await relevesOf(env, p), discord: Boolean(card?.webhook) });
+}
+
+// --- Carte Discord du projet de colonisation ---
+//
+// Le chef donne un lien de webhook Discord (PUT /admin/colonisation/discord) : le serveur y poste un message, puis le
+// modifie à chaque nouvelle version du projet et à chaque relevé gardé, au plus une fois par minute (une
+// modification retenue part à la lecture suivante d'un membre, toutes les 2 min). Le lien reste dans la base, jamais
+// rendu. Ni nom de commandant, ni mention : les noms venus du jeu sont échappés, allowed_mentions vide.
+
+const WEBHOOK = /^https:\/\/discord\.com\/api\/webhooks\/\d{5,25}\/[\w-]{20,120}$/;
+const CARD_MIN_MS = 60_000;
+const CARD_SITES = 10; // chantiers montrés (Discord : 25 champs au plus par carte)
+const CARD_COLOR = 0xf07b05;
+const CARD_TITLE = '🏗 Projet de colonisation de l’escadron';
+
+/** Texte venu du jeu ou du chef, sans mise en forme Discord (ni lien masqué, ni titre, ni mention). */
+const plain = (v, max) => String(v ?? '').replace(/[\\*_~`|[\]>#@<:]/g, (c) => `\\${c}`).slice(0, max);
+const tonnes = (n) => `${String(Math.max(0, Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} t`;
+const bar = (p) => {
+  const n = Math.max(0, Math.min(10, Math.round((p ?? 0) * 10)));
+  return `${'▰'.repeat(n)}${'▱'.repeat(10 - n)}`;
+};
+
+/** Nom affiché d'un chantier : celui donné par le chef, sinon d'après son nom de station brut (relevé). */
+function siteLabel(name, station) {
+  if (name) return name;
+  const s = String(station ?? '').trim();
+  let m = /^\$EXT_(?:PANEL|PNL)_ColonisationShip(?::#index=(\d+))?;\s*(.*)$/i.exec(s);
+  if (m) return `Vaisseau de colonisation${m[2].trim() ? ` · ${m[2].trim()}` : ''}`;
+  m = /^(Orbital|Planetary) Construction Site:\s*(.*)$/i.exec(s);
+  if (m) return `Chantier ${m[1].toLowerCase() === 'orbital' ? 'orbital' : 'planétaire'}${m[2].trim() ? ` · ${m[2].trim()}` : ''}`;
+  return s || 'Chantier';
+}
+
+/**
+ * Le message de la carte (corps d'un webhook Discord) : les chantiers classés par le chef dans son ordre, puis les
+ * autres relevés dans les systèmes du projet ; pour chacun, l'avancement, le reste et ce qui manque le plus.
+ */
+export function colonisationCard(p, releves, now) {
+  const byId = new Map(releves.map((r) => [r.marketId, r]));
+  const ranked = p.projet.sites.map((s, i) => ({ n: i + 1, marketId: s.marketId, system: s.system, name: s.name }));
+  const others = releves.filter((r) => !p.projet.sites.some((s) => s.marketId === r.marketId)).map((r) => ({ n: null, marketId: r.marketId, system: r.system, name: null }));
+  const list = [...ranked, ...others];
+  const fields = list.slice(0, CARD_SITES).map((s) => {
+    const r = byId.get(s.marketId);
+    const name = `${s.n ? `${s.n}. ` : ''}${plain(siteLabel(s.name, r?.station), 160)} — ${plain(s.system, 64)}`;
+    if (!r) return { name, value: 'Pas encore relevé : il le sera au premier amarrage d’un membre qui suit le projet.' };
+    if (r.complete) return { name, value: `✅ Terminé · relevé <t:${Math.floor(Date.parse(r.at) / 1000)}:R>` };
+    const left = r.resources.map((x) => ({ name: x.name || x.symbol, rest: Math.max(0, x.required - x.provided) })).filter((x) => x.rest > 0)
+      .sort((a, b) => b.rest - a.rest);
+    const required = r.resources.reduce((a, x) => a + x.required, 0);
+    const progress = r.progress ?? (required ? r.resources.reduce((a, x) => a + x.provided, 0) / required : 0);
+    const lines = [
+      `${bar(progress)} ${Math.floor(progress * 100)} %${r.failed ? ' · ❌ échoué' : ''}`,
+      `Reste ${tonnes(left.reduce((a, x) => a + x.rest, 0))} · relevé <t:${Math.floor(Date.parse(r.at) / 1000)}:R>`,
+      ...(left.length ? [`Manque surtout : ${left.slice(0, 3).map((x) => `${plain(x.name, 40)} ${tonnes(x.rest)}`).join(' · ')}`] : []),
+    ];
+    return { name, value: lines.join('\n').slice(0, 1024) };
+  });
+  if (list.length > CARD_SITES) fields.push({ name: '…', value: `et ${list.length - CARD_SITES} autre(s) chantier(s), dans l’app` });
+  return {
+    embeds: [{
+      title: CARD_TITLE,
+      description: `${list.length ? '' : 'Aucun chantier relevé pour l’instant. '}Systèmes : ${p.projet.systems.map((s) => plain(s, 64)).join(', ')}`.slice(0, 2048),
+      color: CARD_COLOR,
+      fields,
+      footer: { text: `Version ${p.version} du projet · tenu à jour par les relevés des membres` },
+      timestamp: new Date(now).toISOString(),
+    }],
+    allowed_mentions: { parse: [] },
+  };
+}
+
+async function cardOf(env) {
+  const row = await env.DB.prepare("SELECT value FROM state WHERE key = 'colonisation-discord'").first();
+  return row ? JSON.parse(row.value) : null;
+}
+
+async function saveCard(env, card) {
+  await env.DB.prepare(
+    "INSERT INTO state (key, value) VALUES ('colonisation-discord', ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value"
+  ).bind(JSON.stringify(card)).run();
+}
+
+/**
+ * Met la carte à jour si son contenu a changé : au plus une fois par minute, sauf `force` (nouveau projet, carte
+ * installée) ; sinon retenue pour la lecture suivante. Message supprimé dans Discord : reposté. Ne lève jamais : un
+ * Discord injoignable n'empêche ni un relevé ni une lecture. Rend vrai si Discord a accepté.
+ */
+async function refreshCard(env, now, { force = false } = {}) {
+  try {
+    const card = await cardOf(env);
+    if (!card?.webhook) return false;
+    const p = await colonisationOf(env);
+    const body = p
+      ? colonisationCard(p, await relevesOf(env, p), now)
+      : { embeds: [{ title: CARD_TITLE, description: 'Projet terminé.', color: CARD_COLOR }], allowed_mentions: { parse: [] } };
+    const hash = await sha256(JSON.stringify(body.embeds.map(({ timestamp: _, ...e }) => e)));
+    if (hash === card.hash && card.messageId) {
+      if (card.dirty) await saveCard(env, { ...card, dirty: false });
+      return true;
+    }
+    if (!force && card.at && now - Date.parse(card.at) < CARD_MIN_MS) {
+      if (!card.dirty) await saveCard(env, { ...card, dirty: true });
+      return false;
+    }
+    const send = env.DISCORD_FETCH ?? fetch; // DISCORD_FETCH : tests seulement
+    const options = (method) => ({ method, headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), redirect: 'manual' });
+    let res = card.messageId ? await send(`${card.webhook}/messages/${card.messageId}`, options('PATCH')) : null;
+    let messageId = card.messageId;
+    if (!res || res.status === 404) {
+      res = await send(`${card.webhook}?wait=true`, options('POST'));
+      messageId = res.ok ? String((await res.json())?.id ?? '') || null : null;
+    }
+    if (!res.ok) return false;
+    await saveCard(env, { ...card, messageId, hash, at: stamp(now), dirty: false });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/** Installer la carte (le chef) : { webhook }, essayée tout de suite ; { webhook: null } la retire. */
+async function putCard(request, env, now) {
+  const { body, tooLarge } = await readJson(request, MAX_BODY);
+  if (tooLarge) return fail(413);
+  if (body?.webhook === null) {
+    await env.DB.prepare("DELETE FROM state WHERE key = 'colonisation-discord'").run();
+    return reply(200, { discord: false });
+  }
+  if (typeof body?.webhook !== 'string' || !WEBHOOK.test(body.webhook)) return fail(400);
+  const old = await cardOf(env);
+  await saveCard(env, { webhook: body.webhook, messageId: old?.webhook === body.webhook ? old.messageId ?? null : null, hash: null, at: null, dirty: false });
+  if (await refreshCard(env, now, { force: true })) return reply(200, { discord: true });
+  // Discord refuse le lien (webhook supprimé, faute de frappe) : rien n'est gardé
+  if (old) await saveCard(env, old);
+  else await env.DB.prepare("DELETE FROM state WHERE key = 'colonisation-discord'").run();
+  return reply(422, { error: 422, discord: false });
 }
 
 /** Nouveau projet (le chef) : version + 1 ; les relevés des systèmes qui n'en font plus partie sont effacés. */
@@ -669,16 +818,18 @@ async function putColonisation(request, env, now) {
     env.DB.prepare("INSERT INTO state (key, value) VALUES ('colonisation', ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value").bind(value),
     env.DB.prepare(`DELETE FROM colonisation_releves WHERE system NOT IN (${marks})`).bind(...projet.systems),
   ]);
-  return getColonisation(env);
+  await refreshCard(env, now, { force: true });
+  return getColonisation(env, now);
 }
 
-/** Fin du projet (le chef) : le projet et tous ses relevés sont effacés. */
-async function deleteColonisation(env) {
+/** Fin du projet (le chef) : le projet et tous ses relevés sont effacés ; la carte Discord le dit. */
+async function deleteColonisation(env, now) {
   await env.DB.batch([
     env.DB.prepare("DELETE FROM state WHERE key = 'colonisation'"),
     env.DB.prepare('DELETE FROM colonisation_releves'),
   ]);
-  return reply(200, { releves: [] });
+  await refreshCard(env, now, { force: true });
+  return reply(200, { releves: [], discord: Boolean((await cardOf(env))?.webhook) });
 }
 
 /**
@@ -701,26 +852,28 @@ async function putReleve(request, env, me, now) {
      WHERE excluded.at > colonisation_releves.at`
   ).bind(r.marketId, r.system, me.cmdr, r.at, JSON.stringify(r), stamp(now)).run();
   const kept = await env.DB.prepare('SELECT at, cmdr FROM colonisation_releves WHERE market_id = ?').bind(r.marketId).first();
+  if (kept.at === r.at && kept.cmdr.toLowerCase() === me.cmdr.toLowerCase()) await refreshCard(env, now); // gardé : la carte suit
   return reply(200, { ok: true, at: kept.at, cmdr: kept.cmdr });
 }
 
 async function colonisation(request, env, path, now) {
   const { method } = request;
-  if (path === '/admin/colonisation') {
+  if (path === '/admin/colonisation' || path === '/admin/colonisation/discord') {
     if (!(await sameSecret(bearer(request), env.ADMIN_TOKEN))) return fail(401);
+    if (path === '/admin/colonisation/discord') return method === 'PUT' ? putCard(request, env, now) : fail(405);
     if (method === 'PUT') return putColonisation(request, env, now);
-    return method === 'DELETE' ? deleteColonisation(env) : fail(405);
+    return method === 'DELETE' ? deleteColonisation(env, now) : fail(405);
   }
   const token = bearer(request);
   if (path === '/v1/colonisation' && method === 'GET' && ((await sameSecret(token, env.TRACKER_TOKEN)) || (await sameSecret(token, env.ADMIN_TOKEN)))) {
-    return getColonisation(env);
+    return getColonisation(env, now);
   }
   const me = await installOf(env, request);
   if (!me) return fail(401);
   // Installation à confirmer : ni lecture (positions des membres) ni relevé (le code ne prouve pas qui l'envoie)
   if (me.pending) return reply(403, { error: 403, pending: true });
   if (!(await underRateLimit(env, me.hash, now))) return fail(429);
-  if (path === '/v1/colonisation') return method === 'GET' ? getColonisation(env) : fail(405);
+  if (path === '/v1/colonisation') return method === 'GET' ? getColonisation(env, now) : fail(405);
   return method === 'PUT' ? putReleve(request, env, me, now) : fail(405);
 }
 
@@ -731,7 +884,7 @@ export async function handle(request, env, now = Date.now()) {
     const path = url.pathname;
     if (path === '/v1/merits' && method === 'POST') return await postMerits(request, env, now);
     if (path === '/v1/join' && method === 'POST') return await joinSquadron(request, env, now);
-    if (path === '/v1/colonisation' || path === '/v1/colonisation/releve' || path === '/admin/colonisation') {
+    if (path === '/v1/colonisation' || path === '/v1/colonisation/releve' || path === '/admin/colonisation' || path === '/admin/colonisation/discord') {
       return await colonisation(request, env, path, now);
     }
     const shared = await sharing(request, env, url, now);

@@ -33,4 +33,6 @@ export const projetApi = {
   serveur: () => api('/modules/escadron/chef/colonisation/lire', { method: 'POST', body: {} }),
   publier: (projet) => api('/modules/escadron/chef/colonisation', { method: 'PUT', body: { projet } }),
   arreter: () => api('/modules/escadron/chef/colonisation', { method: 'DELETE' }),
+  // Carte Discord du projet : lien d'un webhook (gardé par le serveur de l'escadron), ou null pour la retirer
+  carte: (webhook) => api('/modules/escadron/chef/colonisation/discord', { method: 'PUT', body: { webhook } }),
 };

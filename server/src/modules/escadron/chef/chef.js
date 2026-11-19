@@ -444,6 +444,20 @@ export class Chef {
     return res;
   }
 
+  /**
+   * Carte Discord du projet de colonisation : le lien d'un webhook Discord (gardé par le serveur de l'escadron, jamais
+   * ici ; il y poste un message et le modifie quand le projet ou un relevé change), ou null pour la retirer.
+   */
+  async carteColonisation(webhook) {
+    const lien = webhook == null || webhook === '' ? null : webhookValide(webhook);
+    try {
+      return await this.admin(lien ? 'installer la carte Discord du projet' : 'retirer la carte Discord du projet', 'PUT', '/admin/colonisation/discord', { webhook: lien });
+    } catch (err) {
+      if (/erreur 422/.test(err.publicMessage ?? '')) throw erreurPublique(400, 'Discord refuse ce lien de webhook (supprimé, ou mal copié) : rien n’a été installé.');
+      throw err;
+    }
+  }
+
   /** Fin du projet de colonisation : le serveur efface le projet et tous ses relevés. */
   async arreterColonisation() {
     const res = await this.admin('arrêter le projet de colonisation', 'DELETE', '/admin/colonisation');

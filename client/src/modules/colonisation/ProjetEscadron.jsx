@@ -168,6 +168,48 @@ function ChantiersTable({ rows, classes = false }) {
 }
 
 /**
+ * Carte Discord du projet (facultative) : le chef colle le lien d'un webhook ; le serveur de l'escadron y poste un
+ * message et le modifie quand le projet ou un relevé change. Le lien reste sur le serveur, jamais sur ce PC.
+ */
+function CarteDiscord({ actif, onChange }) {
+  const [lien, setLien] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState(null);
+  async function regler(webhook) {
+    setBusy(true);
+    setError(null);
+    try {
+      onChange((await projetApi.carte(webhook)).discord === true);
+      setLien('');
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <>
+      <h4>3. Carte Discord (facultatif)</h4>
+      <p className="small">
+        {actif
+          ? 'Installée : le message se met à jour tout seul quand le projet ou un relevé change (au plus une fois par minute).'
+          : 'Un message dans un salon Discord, tenu à jour tout seul : les chantiers dans ton ordre, leur avancement et ce qui manque le plus.'}
+      </p>
+      <div className="form-actions">
+        <input value={lien} placeholder="https://discord.com/api/webhooks/…" onChange={(ev) => setLien(ev.target.value)} aria-label="Lien du webhook Discord" />
+        <button className="btn" disabled={busy || !lien.trim()} onClick={() => regler(lien.trim())}>{actif ? 'Changer de salon' : 'Installer la carte'}</button>
+        {actif && <button className="btn btn-ghost" disabled={busy} onClick={() => regler(null)}>Retirer la carte</button>}
+        {error && <span className="small bad">{error}</span>}
+      </div>
+      <p className="tiny muted">
+        Dans Discord : Modifier le salon, Intégrations, Webhooks, « Copier l’URL du webhook ». Le lien reste sur le serveur
+        de l’escadron. La carte ne montre aucun nom de commandant.
+      </p>
+    </>
+  );
+}
+
+/**
  * Le chef compose le projet : les systèmes visés, puis leurs chantiers dans l'ordre de priorité. Les chantiers
  * proposés sont ceux que ce PC suit et ceux que les membres ont relevés dans ces systèmes (un chantier n'existe
  * qu'une fois la construction lancée en jeu). Publier remplace le projet du serveur pour tout l'escadron.
@@ -299,6 +341,8 @@ function EditeurProjet({ data, onClose, onSaved }) {
           amarré, ou qu’un membre qui suit le projet l’a relevé (publie d’abord les systèmes).
         </p>
       )}
+
+      {serveur.version != null && <CarteDiscord actif={Boolean(serveur.discord)} onChange={(discord) => setServeur({ ...serveur, discord })} />}
 
       <div className="form-actions" style={{ marginTop: '0.9rem' }}>
         <button className="btn btn-primary" disabled={busy || !systems.length} onClick={publier}>Publier à l’escadron</button>

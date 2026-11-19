@@ -300,6 +300,8 @@ export function setup({ router, journal, broadcast, dataDir = DATA_DIR, fetch = 
     await colonisation.enFond(); // le chef, s'il suit aussi le projet comme membre, le voit tout de suite
     res.json(r);
   }));
+  // { webhook } : carte Discord du projet (le lien reste sur le serveur de l'escadron) ; { webhook: null } la retire
+  router.put('/chef/colonisation/discord', asyncRoute(async (req, res) => res.json(await chef.carteColonisation(req.body?.webhook ?? null))));
   router.delete('/chef/colonisation', asyncRoute(async (req, res) => {
     const r = await chef.arreterColonisation();
     await colonisation.enFond();
